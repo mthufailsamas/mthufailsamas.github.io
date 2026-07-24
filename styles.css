@@ -462,8 +462,7 @@ h3 {
 .compact-note,
 .timeline div > p:last-child,
 .contact-copy > p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .projects-section {
@@ -1143,17 +1142,6 @@ h3 {
   .section-heading > p:last-child,
   .contact-copy > p {
     font-size: 15px;
-  }
-
-  .about-copy p,
-  .section-heading > p:last-child,
-  .case-details dd,
-  .project-note,
-  .compact-project h3 + p,
-  .compact-note,
-  .timeline div > p:last-child,
-  .contact-copy > p {
-    text-align: left;
   }
 
   .section-heading {
