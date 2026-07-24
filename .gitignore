@@ -1,0 +1,25 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Temporary local files
+*.tmp
+*.log
+
+# Optional local preview output
+dist/
+build/
+
+# Legacy dependency folders are not part of the static site
+node_modules/
+.vinext/
+.wrangler/
+.openai/
+work/
+outputs/
