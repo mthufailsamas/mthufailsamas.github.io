@@ -11,12 +11,12 @@ certification, and technical background.
 
 The featured case studies cover:
 
-- daily rainfall forecasting with XGBoost and Grid Search;
-- thyroid recurrence classification with XGBoost, Information Gain, and Grid
-  Search;
-- DWDM optical monitoring and data-pipeline design;
-- rainfall forecasting with Bidirectional LSTM; and
-- monthly rice-price forecasting with ARIMA and walk-forward validation.
+- Rainfall Forecasting with XGBoost and Grid Search;
+- Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and
+  Grid Search;
+- DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection;
+- Rainfall Forecasting with BiLSTM and Grid Search; and
+- Rice Price Forecasting with ARIMA and Walk-Forward Validation.
 
 Each case study focuses on the problem, analytical workflow, evaluation
 approach, and practical outcome. Public project repositories are linked where
