@@ -759,6 +759,14 @@ h3 {
   font-size: 14px;
 }
 
+.publication-record .publication-label {
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .publication-record .publication-title {
   color: white;
   font-size: 21px;

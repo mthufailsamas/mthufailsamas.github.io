@@ -3,9 +3,9 @@
 [View the live portfolio](https://mthufailsamas.github.io/)
 
 This repository contains my personal Data & AI portfolio. It presents selected
-work across data science, machine learning, statistical forecasting, and data
-engineering, together with my professional experience, publication,
-certification, and technical background.
+work across data analysis, data science, machine learning, statistical
+forecasting, and practical data engineering, together with my professional
+experience, publication, certification, and technical background.
 
 ## Portfolio Overview
 
@@ -14,7 +14,8 @@ The featured case studies cover:
 - Rainfall Forecasting with XGBoost and Grid Search;
 - Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and
   Grid Search;
-- DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection;
+- DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection,
+  developed as professional project-stage work at PT Aplikanusa Lintasarta;
 - Rainfall Forecasting with BiLSTM and Grid Search; and
 - Rice Price Forecasting with ARIMA and Walk-Forward Validation.
 
