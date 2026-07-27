@@ -78,7 +78,7 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260726a">
+    <link rel="stylesheet" href="styles.css?v=20260727a">
     <script src="script.js?v=20260723-1" defer></script>
   </head>
   <body>
@@ -176,7 +176,7 @@
           <p class="eyebrow">Selected Work</p>
           <h2>Applied Data &amp; AI Case Studies</h2>
           <p>
-            Each case study summarizes the problem, method, implementation role, and evaluation outcome.
+            Each case study highlights the problem, my contribution, technical approach, validation strategy, results, and practical limitations.
           </p>
         </div>
 
@@ -184,20 +184,21 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>01</span><p>Time-series forecasting</p></div>
+                <div class="project-kicker"><span>01</span><p>Time-series forecasting | Python, XGBoost</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during evaluation.</dd></div>
-                  <div><dt>Method</dt><dd>Built an XGBoost next-day rainfall forecasting workflow using one-day lag features from 1,461 daily BMKG weather observations, fold-wise Min-Max scaling, 10-fold TimeSeriesSplit, and Grid Search across 243 configurations, achieving MAAPE of 0.9152 and RMSE of 11.9566 mm.</dd></div>
-                  <div><dt>Tools</dt><dd>Python, Pandas, scikit-learn, XGBoost</dd></div>
-                  <div><dt>My contribution</dt><dd>Implemented the workflow from data validation and lag construction through model evaluation and experiment reporting, and served as first author on the resulting peer-reviewed publication.</dd></div>
+                  <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during model evaluation.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the end-to-end forecasting workflow from data validation and lag construction through temporal model evaluation and experiment reporting, and served as first author on the resulting peer-reviewed publication.</dd></div>
+                  <div><dt>Approach</dt><dd>Constructed one-day lagged predictors from BMKG meteorological observations and trained XGBoost regression models with fold-wise Min-Max scaling and Grid Search across 243 hyperparameter configurations.</dd></div>
+                  <div><dt>Validation</dt><dd>Evaluated the models using 10-fold TimeSeriesSplit, fitting preprocessing only on each training fold to preserve temporal order and reduce data leakage.</dd></div>
                 </dl>
-                <p class="project-note">The metrics below use the original restricted BMKG observations. The public repository provides a synthetic same-schema dataset for reproducibility.</p>
                 <div class="metric-row" aria-label="XGBoost rainfall project results">
                   <div><strong>0.9152</strong><span>MAAPE</span></div>
                   <div><strong>11.9566</strong><span>RMSE (mm)</span></div>
                   <div><strong>10</strong><span>Temporal Folds</span></div>
                 </div>
+                <p class="project-interpretation"><strong>Interpretation &amp; Limitations</strong><span>The selected model captured recurring rainfall behavior within the evaluated observations, while larger rainfall peaks remained more difficult to predict. Performance therefore reflects this dataset and evaluation design rather than guaranteed forecasting accuracy for extreme rainfall or other regions.</span></p>
+                <p class="project-note"><strong>Evidence</strong><span>Original BMKG observations are restricted. The public repository provides a synthetic same-schema dataset for reviewing and reproducing the workflow.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                   <a class="text-link" href="https://doi.org/10.26760/mindjournal.v11i1.30-43" target="_blank" rel="noopener noreferrer">Read publication <span aria-hidden="true">&#8599;</span></a>
@@ -215,21 +216,22 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Clinical classification</p></div>
+                <div class="project-kicker"><span>02</span><p>Clinical classification | Python, XGBoost</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Classify differentiated thyroid cancer recurrence while examining whether feature selection could reduce the encoded feature set without sacrificing predictive performance.</dd></div>
-                  <div><dt>Method</dt><dd>Built an XGBoost recurrence-classification workflow using the 383-record UCI dataset, duplicate and missing-row checks, explicit categorical encoding, fold-local entropy-based Information Gain, 10-fold cross-validation, and Grid Search, achieving 97.25% accuracy, a 95.37% F1-score, 98.05% specificity, and a 98.60% ROC-AUC.</dd></div>
-                  <div><dt>Tools</dt><dd>Python, Pandas, scikit-learn, XGBoost</dd></div>
-                  <div><dt>My contribution</dt><dd>Implemented the data audit, encoding, fold-local feature selection, checkpointed model search, and evaluation workflow for this collaborative academic project.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the data audit, feature encoding, fold-local Information Gain selection, checkpointed model search, and multi-metric evaluation workflow for this collaborative academic project.</dd></div>
+                  <div><dt>Approach</dt><dd>Prepared the 383-record UCI source dataset using explicit numeric, binary, ordinal, and nominal feature handling, then combined entropy-based Information Gain feature selection with XGBoost and Grid Search.</dd></div>
+                  <div><dt>Validation</dt><dd>Performed Information Gain selection separately within each training fold and evaluated models using 10-fold cross-validation and pooled out-of-fold predictions to avoid global feature-selection leakage.</dd></div>
                 </dl>
-                <p class="project-note">The metrics below come from pooled out-of-fold predictions across 10 folds. This is not a production clinical decision system; external validation and clinical review remain necessary before practical use.</p>
                 <div class="metric-row four-metrics" aria-label="Thyroid classification results">
                   <div><strong>97.25%</strong><span>Accuracy</span></div>
                   <div><strong>95.37%</strong><span>F1-score</span></div>
                   <div><strong>98.05%</strong><span>Specificity</span></div>
                   <div><strong>98.60%</strong><span>ROC-AUC</span></div>
                 </div>
+                <p class="project-interpretation"><strong>Interpretation &amp; Limitations</strong><span>The model showed strong discrimination within the experimental dataset, but the dataset is relatively small and the results do not establish clinical readiness. External validation and clinical-domain review would be required before practical medical use.</span></p>
+                <p class="project-note"><strong>Evidence</strong><span>Public UCI data and a reproducible implementation are available in the project repository.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-thyroid-classification" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -246,20 +248,23 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>Data engineering &amp; monitoring analytics</p></div>
+                <div class="project-kicker"><span>03</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Transform distributed DWDM optical telemetry into structured monitoring and investigation outputs for a project-stage operational workflow.</dd></div>
-                  <div><dt>Method</dt><dd>Incremental Python/PostgreSQL pipeline integrating 5-minute PRTG telemetry with ENIMS network metadata, clean-observation quality controls, failure-event detection, penalized PELT change-point analysis, Theil-Sen and serial-correlation-corrected Mann-Kendall degradation analysis, paired-sensor evidence, and dashboard delivery.</dd></div>
-                  <div><dt>Tools</dt><dd>Python, PostgreSQL, REST API, HTML, CSS, JavaScript</dd></div>
-                  <div><dt>My contribution</dt><dd>Implemented the Python/PostgreSQL data pipeline, data-quality and failure logic, statistical change-point and degradation detectors, paired-sensor analysis, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the Python/PostgreSQL data pipeline, data-quality and failure logic, statistical change-point and degradation detectors, paired-sensor analysis, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
+                  <div><dt>Data &amp; System Context</dt><dd>Approximately 400 directional sensors combining native 5-minute PRTG optical-power telemetry with ENIMS sensor, link, direction, endpoint, and location metadata.</dd></div>
+                  <div><dt>Approach</dt><dd>Built an incremental, checkpoint-based workflow from metadata synchronization and telemetry collection through processed observations, contiguous failure events, penalized PELT change-point detection with robust statistical regime checks, Theil-Sen slope and serial-correlation-corrected Mann-Kendall gradual-degradation analysis, paired and opposite-direction sensor evidence, priority ranking, and a local dashboard API.</dd></div>
+                  <div><dt>Analytical Safeguards</dt><dd>Statistical detectors use only clean observed values. Missing, downtime, zero-coverage, and low-signal failure intervals remain operational evidence but are excluded from statistical change and trend analysis rather than analytically interpolated.</dd></div>
                 </dl>
-                <p class="project-note">Confidential professional work. Internal telemetry, source code, credentials, infrastructure details, database contents, and operational screenshots are intentionally excluded.</p>
                 <div class="metric-row" aria-label="Optical monitoring project scope">
                   <div><strong>~400</strong><span>Directional Sensors</span></div>
                   <div><strong>5 min</strong><span>Telemetry Cadence</span></div>
                   <div><strong>3</strong><span>Operational Views</span></div>
                 </div>
+                <p class="project-output"><strong>Output</strong><span>Outputs include failure events, persistent downward change points, gradual degradation trends, paired-sensor evidence, sensor-priority rankings, Operations Board, Event Explorer, and Management Overview views.</span></p>
+                <p class="project-interpretation"><strong>Interpretation &amp; Limitations</strong><span>Statistical evidence supports operational investigation but does not confirm a physical root cause. The system does not claim quantified production impact and is a local/internal project-stage implementation rather than an internet-facing production service.</span></p>
+                <p class="project-note"><strong>Evidence &amp; Confidentiality</strong><span>Confidential professional work. Internal telemetry, source code, credentials, infrastructure details, database contents, and operational screenshots are intentionally excluded.</span></p>
               </div>
               <figure class="project-visual">
                 <a class="project-image-link" href="assets/projects/dwdm-monitoring.png?v=20260724f" target="_blank" rel="noopener noreferrer" aria-label="Open the optical monitoring project visual at full size">
@@ -287,12 +292,16 @@
             <div>
               <p class="project-type">Deep learning | Time-series forecasting</p>
               <h3>Rainfall Forecasting with BiLSTM and Grid Search</h3>
-              <p>Built a three-layer BiLSTM next-day rainfall forecasting workflow using seven-day multivariate sequences, training-fitted Min-Max normalization, an 80:20 chronological train-test split, and Grid Search, achieving MAAPE of 0.8073 and RMSE of 10.2734 mm.</p>
+              <dl class="compact-details">
+                <div><dt>Problem</dt><dd>Estimate next-day rainfall from short-term multivariate weather history using a deep-learning sequence model.</dd></div>
+                <div><dt>Approach</dt><dd>Constructed seven-day multivariate sequences from weather variables and historical rainfall, then trained a three-layer stacked BiLSTM with training-fitted Min-Max normalization and Grid Search.</dd></div>
+                <div><dt>Validation</dt><dd>Used an 80:20 chronological train-test split so the final evaluation period occurred after the training observations.</dd></div>
+              </dl>
               <dl class="compact-metrics">
                 <div><dt>0.81</dt><dd>MAAPE</dd></div>
                 <div><dt>10.27 mm</dt><dd>RMSE</dd></div>
               </dl>
-              <p class="compact-note">Reported metrics come from the original restricted BMKG observations. The public repository uses synthetic weather data with the same schema.</p>
+              <p class="compact-note"><strong>Interpretation &amp; Evidence</strong><span>The result indicates useful short-term temporal signal within the evaluated holdout, but a single chronological split does not establish performance across all future periods. Reported metrics come from the original restricted BMKG observations; the public repository uses synthetic same-schema data.</span></p>
               <div class="project-links">
                 <a class="text-link" href="https://github.com/mthufailsamas/bilstm-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
               </div>
@@ -309,12 +318,16 @@
             <div>
               <p class="project-type">Statistical modeling | Forecasting</p>
               <h3>Rice Price Forecasting with ARIMA and Walk-Forward Validation</h3>
-              <p>Built two univariate ARIMA forecasting models for 60 monthly East Java medium and premium rice price observations from January 2020 to December 2024, using ADF-based differencing, ACF/PACF inspection, residual diagnostics, and expanding-window walk-forward validation from an 80% initial history, achieving MAPE values of 2.081% and 1.8174%, respectively.</p>
+              <dl class="compact-details">
+                <div><dt>Problem</dt><dd>Forecast monthly medium and premium rice prices in East Java using an interpretable statistical time-series approach.</dd></div>
+                <div><dt>Approach</dt><dd>Modeled the two price series separately using ARIMA, with ADF-based differencing, ACF/PACF inspection, candidate-order evaluation, and residual diagnostics.</dd></div>
+                <div><dt>Validation</dt><dd>Used the first 80% of the 60 monthly observations as the initial history and evaluated one-step-ahead forecasts sequentially through expanding-window walk-forward validation.</dd></div>
+              </dl>
               <dl class="compact-metrics">
                 <div><dt>2.08%</dt><dd>Medium MAPE</dd></div>
                 <div><dt>1.82%</dt><dd>Premium MAPE</dd></div>
               </dl>
-              <p class="compact-note">Collaborative academic project with Hana Meidina Qurrota A'yun using public East Java price data.</p>
+              <p class="compact-note"><strong>Interpretation &amp; Evidence</strong><span>The selected models tracked monthly price movements closely during the evaluated period, but structural market or policy changes may not be captured by historical ARIMA dynamics. The workflow and public East Java price data are available in the repository. This was a collaborative academic project with Hana Meidina Qurrota A'yun.</span></p>
               <div class="project-links">
                 <a class="text-link" href="https://github.com/mthufailsamas/arima-rice-price-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
               </div>

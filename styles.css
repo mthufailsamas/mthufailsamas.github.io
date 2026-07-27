@@ -457,8 +457,10 @@ h3 {
 .about-copy p,
 .section-heading > p:last-child,
 .case-details dd,
+.project-output span,
+.project-interpretation span,
 .project-note,
-.compact-project h3 + p,
+.compact-details dd,
 .compact-note,
 .timeline div > p:last-child,
 .contact-copy > p {
@@ -563,7 +565,7 @@ h3 {
 
 .case-details > div {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 125px 1fr;
   gap: 18px;
   padding-block: 11px;
   border-bottom: 1px solid var(--detail-line);
@@ -580,6 +582,33 @@ h3 {
   color: var(--detail);
   font-size: 13px;
   line-height: 1.65;
+}
+
+.project-output,
+.project-interpretation {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.project-output strong,
+.project-interpretation strong,
+.project-note strong,
+.compact-note strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--heading);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.project-output span,
+.project-interpretation span,
+.project-note span,
+.compact-note span {
+  display: block;
 }
 
 .project-note,
@@ -708,10 +737,30 @@ h3 {
   font-size: 27px;
 }
 
-.compact-project h3 + p {
-  margin-top: 17px;
+.compact-details {
+  display: grid;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.compact-details > div {
+  padding-block: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.compact-details dt {
+  color: var(--heading);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.compact-details dd {
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .compact-metrics {
