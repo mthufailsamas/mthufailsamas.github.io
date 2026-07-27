@@ -516,7 +516,7 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(500px, 1.05fr);
-  align-items: center;
+  align-items: start;
   gap: 72px;
 }
 
@@ -524,9 +524,13 @@ h3 {
   grid-column: 2;
 }
 
-.project:nth-child(even) .project-visual {
+.project:nth-child(even) .project-result-column {
   grid-column: 1;
   grid-row: 1;
+}
+
+.project-result-column {
+  min-width: 0;
 }
 
 .project-kicker {
@@ -1073,7 +1077,7 @@ h3 {
   }
 
   .project:nth-child(even) .project-copy,
-  .project:nth-child(even) .project-visual {
+  .project:nth-child(even) .project-result-column {
     grid-column: auto;
     grid-row: auto;
   }
