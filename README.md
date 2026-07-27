@@ -33,7 +33,7 @@ includes:
 - persistent light and dark themes;
 - accessible navigation and structured page sections;
 - optimized project and social-preview images; and
-- downloadable English CV and extended portfolio documents.
+- downloadable English resume.
 
 The site has no frontend framework, build step, package manager, backend,
 analytics, or tracking.
@@ -52,8 +52,7 @@ Portfolio Website/
 |   |-- social-preview.jpg
 |   `-- projects/
 |-- documents/
-|   |-- m-thufail-alwannabil-samas-cv.pdf
-|   `-- m-thufail-alwannabil-samas-portfolio.pdf
+|   `-- m-thufail-alwannabil-samas-cv.pdf
 |-- LICENSE
 `-- README.md
 ```
