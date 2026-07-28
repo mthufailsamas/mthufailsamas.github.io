@@ -1161,14 +1161,13 @@ h3 {
 
   .hero-actions .button {
     width: 100%;
-  }
-
-  .hero-actions .button:first-child {
-    grid-column: 1 / -1;
+    padding-inline: 10px;
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .hero-actions .text-link {
-    justify-self: start;
+    justify-self: center;
     margin-top: 3px;
   }
 
