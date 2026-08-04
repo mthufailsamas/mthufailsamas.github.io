@@ -6,20 +6,20 @@
     <meta id="theme-color" name="theme-color" content="#0b2530">
     <meta
       name="description"
-      content="Portfolio of M. Thufail Alwannabil Samas, a Data Scientist working across data analysis, machine learning, data engineering, and applied AI."
+      content="Portfolio of M. Thufail Alwannabil Samas, a Data Scientist building data analysis, machine learning, data engineering, and applied AI automation systems."
     >
     <meta name="author" content="M. Thufail Alwannabil Samas">
     <meta name="robots" content="index, follow">
     <meta
       name="keywords"
-      content="Data Scientist, Data Analysis, Machine Learning, Data Engineering, Applied AI, Python, XGBoost, BiLSTM, ARIMA"
+      content="Data Scientist, Data Analysis, Machine Learning, Data Engineering, Applied AI, AI Automation, LLM, n8n, Python, PostgreSQL"
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mthufailsamas.github.io/">
     <meta property="og:title" content="M. Thufail Alwannabil Samas | Data Scientist | Data &amp; AI">
     <meta
       property="og:description"
-      content="Data science, machine learning, data engineering, and applied AI portfolio."
+      content="Data science, machine learning, data engineering, and applied AI automation portfolio."
     >
     <meta property="og:image" content="https://mthufailsamas.github.io/assets/social-preview.jpg">
     <meta property="og:image:width" content="1200">
@@ -32,7 +32,7 @@
     <meta name="twitter:title" content="M. Thufail Alwannabil Samas | Data Scientist | Data &amp; AI">
     <meta
       name="twitter:description"
-      content="Data science, machine learning, data engineering, and applied AI portfolio."
+      content="Data science, machine learning, data engineering, and applied AI automation portfolio."
     >
     <meta name="twitter:image" content="https://mthufailsamas.github.io/assets/social-preview.jpg">
     <meta
@@ -62,8 +62,12 @@
           "Data Analysis",
           "Machine Learning",
           "Data Engineering",
+          "AI Automation",
+          "Document Intelligence",
+          "LLM Applications",
           "Statistical Modeling",
-          "Python"
+          "Python",
+          "PostgreSQL"
         ]
       }
     </script>
@@ -129,7 +133,7 @@
             Turning complex data into reliable predictions, clear insights, and practical data solutions.
           </p>
           <p class="hero-support">
-            I build reproducible forecasting, classification, and monitoring workflows with Python, machine learning, and statistical methods.
+            I build reproducible forecasting, classification, monitoring, data-pipeline, and AI automation workflows with Python, SQL, machine learning, LLM APIs, and deterministic controls.
           </p>
           <div class="hero-actions" aria-label="Portfolio actions">
             <a class="button primary" href="#projects">View Work</a>
@@ -139,7 +143,7 @@
           </div>
           <div class="hero-meta">
             <span>Surabaya, Indonesia</span>
-            <span>Open to Data Science, Analytics, ML/AI, and Data Engineering roles</span>
+            <span>Open to Data Science, Analytics, Applied AI/Automation, and Data Engineering roles</span>
           </div>
         </div>
       </section>
@@ -147,10 +151,10 @@
       <section class="overview-strip" aria-label="Portfolio focus">
         <div class="content overview-grid">
           <strong>Selected Data &amp; AI Work</strong>
+          <span>AI Automation</span>
           <span>Forecasting</span>
           <span>Classification</span>
           <span>Data Engineering</span>
-          <span>Monitoring Analytics</span>
         </div>
       </section>
 
@@ -158,14 +162,14 @@
         <div class="content split-heading">
           <div>
             <p class="eyebrow">About</p>
-            <h2>Building Reproducible Models and Data Workflows</h2>
+            <h2>Building Reliable Data and AI Systems</h2>
           </div>
           <div class="about-copy">
             <p>
-              I am a Mathematics graduate and BNSP-certified Data Scientist with experience in data analysis, machine learning, time-series analysis, and Python/PostgreSQL data pipelines.
+              I am a Mathematics graduate and BNSP-certified Data Scientist with experience in data analysis, machine learning, time-series analysis, Python/PostgreSQL data pipelines, and applied AI automation.
             </p>
             <p>
-              My work spans monitoring, forecasting, and classification workflows across professional and project settings, including project-stage DWDM optical monitoring for approximately 400 directional sensors and a first-author peer-reviewed publication on XGBoost-based rainfall forecasting.
+              My work spans document automation, monitoring, forecasting, and classification across professional and project settings, including an evaluated LLM-assisted invoice workflow, project-stage DWDM optical monitoring for approximately 400 directional sensors, and a first-author peer-reviewed publication on XGBoost-based rainfall forecasting.
             </p>
           </div>
         </div>
@@ -184,7 +188,41 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>01</span><p>Time-series forecasting | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Python, Gemini, PostgreSQL</p></div>
+                <h3>AI Invoice Approval Automation with Human-Controlled ERP Handoff</h3>
+                <dl class="case-details">
+                  <div><dt>Problem</dt><dd>Invoice teams repeatedly copy data from visually different documents, while uncertain extraction, duplicates, invalid references, and retries can create financial-control risk.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented the end-to-end workflow: multi-file intake, Gemini extraction, canonical invoice schema, deterministic validation, PostgreSQL state and audit history, FastAPI services, three n8n workflows, human review and approval, an idempotent ERP sandbox, evaluation corpora, and automated tests.</dd></div>
+                  <div><dt>Approach</dt><dd>Each file is processed independently so one failure does not stop the batch. Gemini proposes document values; Python validates file integrity, confidence, references, currency, arithmetic, purchase-order rules, and ambiguous dates; people retain control of corrections and approval before ERP delivery.</dd></div>
+                  <div><dt>Validation</dt><dd>The final locked 10-document common-profile corpus matched 278/278 normalized values, 10/10 complete documents, and 10/10 expected routes. Separate automated contracts and a Docker end-to-end check verified both PO and non-PO flows through <code>ERP_RECORDED</code>.</dd></div>
+                </dl>
+              </div>
+              <div class="project-result-column">
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.svg?v=20260731a" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation architecture visual at full size">
+                    <img src="assets/projects/ai-invoice-automation.svg?v=20260731a" alt="AI invoice approval architecture from invoice intake through n8n, Gemini extraction, Python validation, PostgreSQL audit state, human approval, and ERP sandbox delivery" width="1600" height="960" decoding="async">
+                  </a>
+                  <figcaption>LLM-assisted extraction inside a deterministic, auditable, human-controlled workflow.</figcaption>
+                </figure>
+                <div class="metric-row" aria-label="AI invoice automation final controlled evaluation">
+                  <div><strong>278/278</strong><span>Fields Matched</span></div>
+                  <div><strong>10/10</strong><span>Exact Documents</span></div>
+                  <div><strong>10/10</strong><span>Routes Matched</span></div>
+                </div>
+                <p class="project-output"><strong>Operational Result</strong><span>Users can submit several invoices at once, focus attention on exceptions, approve controlled records, trace every state change, and deliver approved data exactly once to the accounting sandbox without manually re-entering each document.</span></p>
+                <p class="project-interpretation"><strong>Interpretation &amp; Limitations</strong><span>The 100% result belongs only to a locked synthetic 10-document corpus; it is not a claim of universal invoice accuracy. A separate 20-document public set is retained as exploratory failure evidence, while scans, handwriting, multi-page documents, wider language coverage, and real ERP deployment still require further evaluation.</span></p>
+                <p class="project-note"><strong>Evidence</strong><span>The repository includes locked ground truth and checksums, exported n8n workflows, sanitized evaluation JSON, automated failure-path tests, a reproducible Docker runner, source-backed public examples, and explicit production-hardening boundaries.</span></p>
+                <div class="project-links">
+                  <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project featured-project">
+            <div class="content project-grid">
+              <div class="project-copy">
+                <div class="project-kicker"><span>02</span><p>Time-series forecasting | Python, XGBoost</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during model evaluation.</dd></div>
@@ -218,7 +256,7 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Clinical classification | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>03</span><p>Clinical classification | Python, XGBoost</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Classify differentiated thyroid cancer recurrence while examining whether feature selection could reduce the encoded feature set without sacrificing predictive performance.</dd></div>
@@ -252,7 +290,7 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
+                <div class="project-kicker"><span>04</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Transform distributed DWDM optical telemetry into structured monitoring and investigation outputs for a project-stage operational workflow.</dd></div>

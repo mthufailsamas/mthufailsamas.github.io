@@ -509,6 +509,10 @@ h3 {
   background: var(--warm);
 }
 
+.project:nth-child(4) {
+  background: var(--mist);
+}
+
 .featured-project {
   border-top: 5px solid var(--lime);
 }

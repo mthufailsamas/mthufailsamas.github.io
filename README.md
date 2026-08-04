@@ -3,14 +3,17 @@
 [View the live portfolio](https://mthufailsamas.github.io/)
 
 This repository contains my personal Data & AI portfolio. It presents selected
-work across data analysis, data science, machine learning, statistical
-forecasting, and practical data engineering, together with my professional
-experience, publication, certification, and technical background.
+work across applied AI automation, data analysis, data science, machine
+learning, statistical forecasting, and practical data engineering, together
+with my professional experience, publication, certification, and technical
+background.
 
 ## Portfolio Overview
 
 The featured case studies cover:
 
+- auditable AI Invoice Approval Automation with Gemini, n8n, Python,
+  PostgreSQL, human review, and idempotent accounting delivery;
 - Rainfall Forecasting with XGBoost and Grid Search;
 - Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and
   Grid Search;
@@ -19,10 +22,10 @@ The featured case studies cover:
 - Rainfall Forecasting with BiLSTM and Grid Search; and
 - Rice Price Forecasting with ARIMA and Walk-Forward Validation.
 
-Each case study focuses on the problem, analytical workflow, evaluation
-approach, and practical outcome. Public project repositories are linked where
-available. Confidential work is presented only through approved summaries and
-non-sensitive visual material.
+Each case study focuses on the problem, my contribution, system or analytical
+workflow, validation evidence, practical output, and limitations. Public
+project repositories are linked where available. Confidential work is
+presented only through approved summaries and non-sensitive visual material.
 
 ## Technical Implementation
 
@@ -51,8 +54,11 @@ Portfolio Website/
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
 |   `-- projects/
+|       `-- ai-invoice-automation.svg
 |-- documents/
-|   `-- m-thufail-alwannabil-samas-cv.pdf
+|   |-- m-thufail-alwannabil-samas-cv.pdf
+|   |-- m-thufail-alwannabil-samas-ai-automation-resume.docx
+|   `-- m-thufail-alwannabil-samas-ai-automation-resume.pdf
 |-- LICENSE
 `-- README.md
 ```
