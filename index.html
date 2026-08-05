@@ -202,15 +202,15 @@
                 <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Python, Gemini, PostgreSQL</p></div>
                 <h3>End-to-End AI Invoice Approval Automation</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Finance teams repeatedly read and re-key fields from visually different invoice files, then check totals, references, duplicates, and approval requirements before data can reach accounting.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and built the complete workflow: multi-file intake, three n8n automations, Gemini document extraction, Python business controls, PostgreSQL state and audit history, human review and approval, and idempotent delivery to an ERP sandbox.</dd></div>
+                  <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: batch intake, three n8n automations, Gemini extraction, Python validation rules, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files, while each document keeps its own processing state and source identity.</dd></div>
-                    <div><dt>Approach</dt><dd>Users can upload up to 20 invoices in one batch. n8n creates one job per file, starts extraction and validation, and automatically routes approval-ready, review, and unreadable outcomes. A failed file remains isolated, while approved records continue through a retry-safe accounting handoff.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Every invoice receives its own source hash, workflow state, and audit history. Fixed controls verify file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing before data can reach the accounting handoff.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
+                    <div><dt>Approach</dt><dd>n8n creates one job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. One failed invoice does not stop the rest of the batch.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing before an invoice can move to the accounting handoff.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -226,8 +226,8 @@
                   <div><strong>3</strong><span>Event-Driven n8n Workflows</span></div>
                   <div><strong>Per-file</strong><span>Failure Isolation</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow moves finance work from re-keying every visible field to uploading a batch, reviewing extracted values, resolving exceptions, and authorizing the final handoff. Each invoice is processed independently, so one unreadable document does not stop the remaining batch.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The system produces structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records. n8n coordinates the process, Gemini reads the documents, Python enforces fixed controls, and PostgreSQL preserves workflow state.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>Finance users can upload a batch, review only the values that need attention, authorize ready invoices, and deliver approved records without retyping each document. Failed files remain isolated instead of blocking the full batch.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python, and PostgreSQL.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -241,15 +241,15 @@
                 <div class="project-kicker"><span>02</span><p>Production ML engineering | Genpact demand data, Python, FastAPI, Docker</p></div>
                 <h3>Production F&amp;B Demand Forecasting and Inventory Planning</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>F&amp;B teams must prepare inventory before demand is known, while forecasts that remain inside notebooks cannot be reused reliably by operational applications or monitored after deployment.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Selected and profiled the Genpact demand dataset, defined the center-meal-week forecasting target, and translated the modeling requirements into a production-oriented system blueprint.</dd></div>
+                  <div><dt>Problem</dt><dd>F&amp;B teams must prepare stock before weekly demand is known, while demand changes across centers, meals, prices, and promotions. A forecast that stays inside a notebook cannot support a recurring planning process.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Selected and profiled the Genpact dataset, defined the center-meal-week forecasting target, and designed how model comparison, API delivery, prediction history, and monitoring would work together.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The Genpact Food Demand Forecasting dataset provides 456,548 labeled weekly observations covering 77 fulfilment centers, 51 meals, prices, promotions, and center and meal attributes across weeks 1-145.</dd></div>
-                    <div><dt>Approach</dt><dd>The system blueprint compares seasonal baselines, an XGBoost forecaster, and a TensorFlow challenger for weekly demand at each center-meal combination.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>The design uses chronological validation, versioned preprocessing and model artifacts, FastAPI delivery, Docker packaging, prediction history, data-quality checks, drift monitoring, and evaluation-gated model replacement.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>The public dataset contains 456,548 labeled weekly observations across 77 fulfilment centers and 51 meals, with price, promotion, center, and meal information covering weeks 1-145.</dd></div>
+                    <div><dt>Approach</dt><dd>The planned modeling stage compares seasonal baselines, XGBoost, and a TensorFlow challenger to forecast weekly orders for each center-meal combination.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>The blueprint uses chronological splits, versioned preprocessing and model artifacts, FastAPI delivery, Docker packaging, data-quality checks, prediction logging, drift monitoring, and evaluation-gated model replacement.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -265,8 +265,8 @@
                   <div><strong>77</strong><span>Fulfilment Centers</span></div>
                   <div><strong>51</strong><span>Meals</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The current project establishes the verified dataset profile and an end-to-end engineering design for feature preparation, model comparison, versioned forecast delivery, prediction history, actual-demand feedback, and performance monitoring.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The displayed row, center, meal, and weekly-demand figures come from the selected public dataset. Model training, deployment, and monitored forecast performance remain the next implementation stages and are not presented here as completed results.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The project establishes a verified demand-data profile and a clear implementation blueprint for turning weekly order history into reusable forecasts, operational delivery, and ongoing performance checks.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The displayed demand pattern and dataset counts come directly from the public data. Current evidence covers data profiling and system design; forecast accuracy and deployed behavior will be reported after the modeling and delivery stages are implemented.</span></p>
               </div>
             </div>
           </article>
@@ -277,15 +277,15 @@
                 <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during model evaluation.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the end-to-end forecasting workflow from data validation and lag construction through temporal model evaluation and experiment reporting, and served as first author on the resulting peer-reviewed publication.</dd></div>
+                  <div><dt>Problem</dt><dd>Daily rainfall is highly variable, and random train-test splits can overstate how well a model will perform on future weather. This project estimates next-day rainfall while keeping evaluation in chronological order.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Built the complete forecasting workflow from data validation and lag construction through model search, temporal evaluation, and experiment reporting, then served as first author of the resulting peer-reviewed publication.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG meteorological observations for the Trunojoyo observation area in Sumenep Regency, using recent weather conditions and rainfall history to estimate the following day's rainfall.</dd></div>
-                    <div><dt>Approach</dt><dd>Constructed one-day lagged predictors from BMKG meteorological observations and trained XGBoost regression models with fold-wise Min-Max scaling and Grid Search across 243 hyperparameter configurations.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Evaluated the models using 10-fold TimeSeriesSplit, fitting preprocessing only on each training fold to preserve temporal order and reduce data leakage.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG observations from the Trunojoyo observation area in Sumenep Regency combine recent temperature, sunshine, humidity, wind, and rainfall history.</dd></div>
+                    <div><dt>Approach</dt><dd>Created one-day lagged predictors and searched 243 XGBoost configurations, with Min-Max scaling fitted separately inside each training fold.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Used 10-fold TimeSeriesSplit and pooled out-of-fold predictions so every test window followed its training data and future observations did not leak into preprocessing.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -301,8 +301,8 @@
                   <div><strong>11.9566</strong><span>RMSE (mm)</span></div>
                   <div><strong>10</strong><span>Temporal Folds</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow produces fold-level evaluation records, pooled out-of-fold rainfall predictions, model metrics, and an experiment report for the selected XGBoost configuration.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The model captured recurring rainfall behavior within the evaluated observations, while larger peaks remained more difficult to predict. Original BMKG observations are restricted; the public repository provides synthetic same-schema data for reviewing and reproducing the workflow.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow delivers a selected XGBoost model, fold-level results, pooled out-of-fold rainfall predictions, and a traceable experiment report rather than a single unsupported accuracy figure.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The work became a first-author peer-reviewed publication. Original BMKG observations remain restricted, so the public repository provides synthetic same-schema data for reviewing and reproducing the workflow.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                   <a class="text-link" href="https://doi.org/10.26760/mindjournal.v11i1.30-43" target="_blank" rel="noopener noreferrer">Read publication <span aria-hidden="true">&#8599;</span></a>
@@ -317,15 +317,15 @@
                 <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Classify differentiated thyroid cancer recurrence while examining whether feature selection could reduce the encoded feature set without sacrificing predictive performance.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the data audit, feature encoding, fold-local Information Gain selection, checkpointed model search, and multi-metric evaluation workflow for this collaborative academic project.</dd></div>
+                  <div><dt>Problem</dt><dd>Build a reproducible recurrence classifier while testing whether a smaller set of informative features can preserve performance and reduce unnecessary model input.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the data audit, feature encoding, fold-local Information Gain selection, checkpointed model search, and multi-metric evaluation for this collaborative academic project.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The public UCI differentiated thyroid cancer recurrence dataset contains 383 records with clinical, pathological, treatment, response, and recurrence variables.</dd></div>
-                    <div><dt>Approach</dt><dd>Prepared the 383-record UCI source dataset using explicit numeric, binary, ordinal, and nominal feature handling, then combined entropy-based Information Gain feature selection with XGBoost and Grid Search.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Performed Information Gain selection separately within each training fold and evaluated models using 10-fold cross-validation and pooled out-of-fold predictions to avoid global feature-selection leakage.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>The public UCI dataset contains 383 differentiated thyroid cancer records with clinical, pathological, treatment, response, and recurrence variables.</dd></div>
+                    <div><dt>Approach</dt><dd>Handled numeric, binary, ordinal, and nominal features explicitly, then combined entropy-based Information Gain selection with XGBoost and Grid Search.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Repeated feature selection inside every training fold and evaluated pooled out-of-fold predictions with 10-fold cross-validation, preventing the full dataset from influencing feature choice.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -342,8 +342,8 @@
                   <div><strong>98.05%</strong><span>Specificity</span></div>
                   <div><strong>98.60%</strong><span>ROC-AUC</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow produces fold-local feature rankings, pooled out-of-fold predictions, classification metrics, and a reproducible comparison of selected XGBoost configurations.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>Public UCI data and the reproducible implementation are available in the repository. Results show strong discrimination within this relatively small experimental dataset, but do not establish clinical readiness without external validation and clinical-domain review.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow delivers fold-specific feature rankings, pooled out-of-fold predictions, and a reproducible comparison of XGBoost configurations across accuracy, F1-score, specificity, and ROC-AUC.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public UCI data and runnable implementation are available in the repository. Results are strong within this experimental dataset, but the project supports model research rather than clinical diagnosis.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-thyroid-classification" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -357,15 +357,15 @@
                 <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Transform distributed DWDM optical telemetry into structured monitoring and investigation outputs for a project-stage operational workflow.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the Python/PostgreSQL data pipeline, data-quality and failure logic, statistical change-point and degradation detectors, paired-sensor analysis, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
+                  <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across hundreds of directional optical sensors.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combining native 5-minute PRTG optical-power telemetry with ENIMS sensor, link, direction, endpoint, and location metadata.</dd></div>
-                    <div><dt>Approach</dt><dd>Built an incremental, checkpoint-based workflow from metadata synchronization and telemetry collection through processed observations, contiguous failure events, penalized PELT change-point detection with robust statistical regime checks, Theil-Sen slope and serial-correlation-corrected Mann-Kendall gradual-degradation analysis, paired and opposite-direction sensor evidence, priority ranking, and a local dashboard API.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Statistical detectors use only clean observed values. Missing, downtime, zero-coverage, and low-signal failure intervals remain operational evidence but are excluded from statistical change and trend analysis rather than analytically interpolated.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combine native 5-minute PRTG optical-power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
+                    <div><dt>Approach</dt><dd>Built an incremental workflow from metadata synchronization and telemetry collection through failure grouping, PELT change-point detection, Theil-Sen and Mann-Kendall degradation analysis, paired-sensor evidence, priority ranking, and local dashboard delivery.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, zero coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -381,8 +381,8 @@
                   <div><strong>5 min</strong><span>Telemetry Cadence</span></div>
                   <div><strong>3</strong><span>Operational Views</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>Outputs include failure events, persistent downward change points, gradual degradation trends, paired-sensor evidence, sensor-priority rankings, Operations Board, Event Explorer, and Management Overview views.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>Statistical evidence supports operational investigation but does not confirm a physical root cause. This is confidential professional work, so internal telemetry, source code, credentials, infrastructure details, database contents, and operational screenshots are intentionally excluded.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The pipeline turns raw telemetry into prioritized, traceable investigation views: failure events, persistent downward shifts, gradual degradation, paired-sensor evidence, and dedicated operations, event, and management screens.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.</span></p>
               </div>
             </div>
           </article>
@@ -393,15 +393,15 @@
                 <div class="project-kicker"><span>06</span><p>Deep learning &amp; time-series forecasting | Python, TensorFlow</p></div>
                 <h3>Rainfall Forecasting with BiLSTM and Grid Search</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Estimate next-day rainfall from short-term multivariate weather history while preserving the sequence and temporal order of the observations.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Developed the complete rainfall forecasting workflow during my BMKG internship, including data audit, preprocessing, seven-day sequence construction, three-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
+                  <div><dt>Problem</dt><dd>Next-day rainfall depends on changing weather patterns across several recent days, making a sequence-based model more appropriate than treating each observation as an isolated row.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Developed the complete forecasting workflow during my BMKG internship, from data audit and seven-day sequence preparation through three-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG weather observations for the Trunojoyo observation area in Sumenep Regency, using four weather variables and historical rainfall as the sequence inputs.</dd></div>
-                    <div><dt>Approach</dt><dd>Constructed seven-day multivariate sequences, fitted Min-Max normalization on the training period, and trained a three-layer stacked BiLSTM while tuning units, batch size, and the learning-rate drop period.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Used an 80:20 chronological train-test split so the evaluation observations occurred after the training period, with negative rainfall predictions clipped to zero after denormalization.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG observations from the Trunojoyo observation area in Sumenep Regency provide four weather variables and historical rainfall for each input sequence.</dd></div>
+                    <div><dt>Approach</dt><dd>Built seven-day multivariate sequences, fitted Min-Max normalization on the training period, and trained a three-layer stacked BiLSTM while tuning units, batch size, and the learning-rate drop period.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Used an 80:20 chronological split so every evaluation observation followed the training period. Predictions were returned to millimeters and impossible negative rainfall values were clipped to zero.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -417,8 +417,8 @@
                   <div><strong>10.2734 mm</strong><span>RMSE</span></div>
                   <div><strong>7 days</strong><span>Input Sequence</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow produces a selected BiLSTM configuration, holdout predictions, MAAPE, MAE and RMSE summaries, trained model artifacts, and an actual-versus-predicted rainfall visual.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>Reported metrics come from the original restricted BMKG observations and reflect one chronological holdout period. The public repository provides synthetic same-schema data for reviewing and running the workflow without exposing the original observations.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow turns seven days of weather history into next-day rainfall estimates and preserves the selected model, holdout predictions, evaluation summaries, and actual-versus-predicted visual for review.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The reported BMKG internship results come from one chronological holdout period using restricted observations. The public repository includes synthetic same-schema data so the full workflow can still be inspected and run.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/bilstm-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -432,15 +432,15 @@
                 <div class="project-kicker"><span>07</span><p>Statistical time-series forecasting | Python, statsmodels</p></div>
                 <h3>Rice Price Forecasting with ARIMA and Walk-Forward Validation</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Forecast monthly medium and premium rice prices in East Java using an interpretable statistical method that can be evaluated in the same order that future prices would become available.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the end-to-end ARIMA workflow for this collaborative academic project, covering data audit, monthly preprocessing, stationarity checks, order planning, diagnostic screening, expanding-window evaluation, and forecast reporting.</dd></div>
+                  <div><dt>Problem</dt><dd>Price planning benefits from a forecast that is easy to explain and tested in the same order that future monthly prices would actually become available.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the end-to-end ARIMA workflow for this collaborative academic project, covering data audit, monthly preparation, stationarity checks, order selection, diagnostic screening, expanding-window evaluation, and forecast reporting.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Sixty monthly observations from January 2020 through December 2024, covering public medium and premium rice prices from the Open Data Jawa Timur portal.</dd></div>
-                    <div><dt>Approach</dt><dd>Modeled the two price series separately with ARIMA, using ADF-based differencing, ACF and PACF inspection, candidate-order evaluation, fit-convergence checks, and residual diagnostics.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Used the first 80% of observations as the initial history and evaluated the remaining 12 months one step at a time through expanding-window walk-forward validation.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Sixty public monthly observations from January 2020 through December 2024 cover medium and premium rice prices from the Open Data Jawa Timur portal.</dd></div>
+                    <div><dt>Approach</dt><dd>Modeled medium and premium prices separately with ARIMA, using ADF-based differencing, ACF and PACF inspection, candidate evaluation, convergence checks, and residual diagnostics.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Started with the first 80% of observations, forecast the next month, added the newly available actual price, and repeated the process across the remaining 12 months.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -456,8 +456,8 @@
                   <div><strong>1.82%</strong><span>Premium Rice MAPE</span></div>
                   <div><strong>12 months</strong><span>Walk-Forward Test</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow produces selected ARIMA orders, stationarity and residual-diagnostic records, one-step-ahead walk-forward predictions, error summaries, and actual-versus-forecast price visuals for both rice categories.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The selected models tracked the evaluated monthly movements closely, but use only each price series' own history and may not capture future market or policy shifts. The public data and reproducible workflow are included in the repository.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow turns public monthly price history into explainable one-step-ahead forecasts, selected ARIMA orders, diagnostic records, error summaries, and comparison visuals for both rice categories.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public data and runnable workflow are included in the repository. The models tracked the evaluated period closely, but rely only on past prices and do not include market events, policy changes, supply, or weather.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/arima-rice-price-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
