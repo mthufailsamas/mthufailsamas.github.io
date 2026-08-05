@@ -54,7 +54,7 @@ Portfolio Website/
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
 |   `-- projects/
-|       `-- ai-invoice-automation.svg
+|       `-- ai-invoice-automation.png
 |-- documents/
 |   |-- m-thufail-alwannabil-samas-cv.pdf
 |   |-- m-thufail-alwannabil-samas-ai-automation-resume.docx

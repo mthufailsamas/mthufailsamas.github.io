@@ -194,21 +194,21 @@
                   <div><dt>Problem</dt><dd>Invoice teams repeatedly copy data from visually different documents, while uncertain extraction, duplicates, invalid references, and retries can create financial-control risk.</dd></div>
                   <div><dt>My Contribution</dt><dd>Designed and implemented the end-to-end workflow: multi-file intake, Gemini extraction, canonical invoice schema, deterministic validation, PostgreSQL state and audit history, FastAPI services, three n8n workflows, human review and approval, an idempotent ERP sandbox, evaluation corpora, and automated tests.</dd></div>
                   <div><dt>Approach</dt><dd>Each file is processed independently so one failure does not stop the batch. Gemini proposes document values; Python validates file integrity, confidence, references, currency, arithmetic, purchase-order rules, and ambiguous dates; people retain control of corrections and approval before ERP delivery.</dd></div>
-                  <div><dt>Validation</dt><dd>The scored benchmark uses 10 locked synthetic invoices with ground truth. It matched 278/278 normalized values, 10/10 complete documents, and 10/10 expected routes. Separate automated contracts and a Docker end-to-end check verified both PO and non-PO flows through <code>ERP_RECORDED</code>.</dd></div>
+                  <div><dt>Validation</dt><dd>The controlled benchmark contains 10 synthetic invoices whose correct answers were fixed before testing. Across them, the evaluator checked 278 field values; all matched after normalization, so every invoice was a complete match. The system also selected the expected next step for all 10 invoices: approval-ready or manual review.</dd></div>
                 </dl>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.svg?v=20260805" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation architecture visual at full size">
-                    <img src="assets/projects/ai-invoice-automation.svg?v=20260805" alt="AI invoice approval architecture from batch intake through n8n, Gemini extraction, Python validation, PostgreSQL audit state, human approval, and ERP sandbox delivery" width="1600" height="960" decoding="async">
+                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260805b" target="_blank" rel="noopener noreferrer" aria-label="Open the invoice processing and approval workflow at full size">
+                    <img src="assets/projects/ai-invoice-automation.png?v=20260805b" alt="Invoice processing workflow from multi-file intake through Gemini extraction, Python validation, exception review, human approval, ERP sandbox delivery, and PostgreSQL audit evidence" width="1600" height="960" decoding="async">
                   </a>
-                  <figcaption>System architecture only; controlled evaluation evidence is reported separately below.</figcaption>
+                  <figcaption>Illustrative workflow showing where AI assists and where rules, people, and audit records remain in control.</figcaption>
                 </figure>
-                <p class="metric-context"><strong>Controlled Evaluation</strong><span>10 locked synthetic invoices with predefined ground truth</span></p>
+                <p class="metric-context"><strong>Controlled Evaluation</strong><span>278 is the total number of field-by-field comparisons across these 10 test invoices—not the number of invoices.</span></p>
                 <div class="metric-row" aria-label="AI invoice automation final controlled evaluation">
-                  <div><strong>278/278</strong><span>Normalized Values</span></div>
-                  <div><strong>10/10</strong><span>Exact Invoices</span></div>
-                  <div><strong>10/10</strong><span>Expected Routes</span></div>
+                  <div><strong>10</strong><span>Controlled Test Invoices</span></div>
+                  <div><strong>278/278</strong><span>Field Checks Matched</span></div>
+                  <div><strong>10/10</strong><span>Correct Next Steps</span></div>
                 </div>
                 <p class="project-output"><strong>Operational Result</strong><span>Users can submit several invoices at once, focus attention on exceptions, approve controlled records, trace every state change, and deliver approved data exactly once to the accounting sandbox without manually re-entering each document.</span></p>
                 <p class="project-interpretation"><strong>Public Robustness Exploration</strong><span>A separate set of 20 internet-sourced invoices tests layouts, languages, currencies, receipts, and other documents not designed for this system. It is deliberately unscored until every document has reviewed ground truth and one clean provider rerun.</span></p>
