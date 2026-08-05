@@ -416,30 +416,6 @@ h3 {
   color: white;
 }
 
-.overview-strip {
-  border-bottom: 1px solid #31505a;
-  background: var(--navy-900);
-  color: white;
-}
-
-.overview-grid {
-  display: grid;
-  grid-template-columns: 1.5fr repeat(4, auto);
-  min-height: 78px;
-  align-items: center;
-  gap: 28px;
-}
-
-.overview-grid strong {
-  color: #d1e75c;
-  font-size: 14px;
-}
-
-.overview-grid span {
-  color: #b9c8cb;
-  font-size: 12px;
-}
-
 .about-section {
   padding-block: 110px;
 }
@@ -1105,15 +1081,6 @@ h3 {
     font-size: 19px;
   }
 
-  .overview-grid {
-    grid-template-columns: 1fr 1fr;
-    padding-block: 16px;
-  }
-
-  .overview-grid span:nth-last-child(-n + 2) {
-    display: none;
-  }
-
   .split-heading,
   .project-grid,
   .publication-grid,
@@ -1180,6 +1147,15 @@ h3 {
   .hero {
     min-height: 700px;
     height: auto;
+    background-image:
+      radial-gradient(circle at 88% 10%, rgba(25, 143, 145, 0.24), transparent 42%),
+      linear-gradient(155deg, #071b24 0%, #0b303b 100%);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(7, 27, 36, 0.16), rgba(7, 27, 36, 0.42));
   }
 
   .hero-content {
@@ -1228,15 +1204,6 @@ h3 {
   .hero-meta span:last-child {
     padding-left: 0;
     border-left: 0;
-  }
-
-  .overview-grid {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-
-  .overview-grid span {
-    display: none;
   }
 
   .about-section,

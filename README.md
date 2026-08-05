@@ -13,9 +13,9 @@ The featured case studies cover:
 
 - auditable AI Invoice Approval Automation with Gemini, n8n, Python,
   PostgreSQL, human review, and idempotent accounting delivery;
-- an in-development production F&amp;B demand forecasting system using the
-  selected Genpact weekly meal-demand dataset, chronological evaluation,
-  FastAPI, Docker, monitoring, and controlled retraining;
+- an F&amp;B demand-data profile and production ML blueprint using the selected
+  Genpact weekly meal-demand dataset, chronological evaluation, FastAPI,
+  Docker, monitoring, and controlled retraining;
 - Rainfall Forecasting with XGBoost and Grid Search;
 - Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and
   Grid Search;
