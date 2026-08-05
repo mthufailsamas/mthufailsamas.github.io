@@ -189,30 +189,30 @@
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Python, Gemini, PostgreSQL</p></div>
-                <h3>AI Invoice Approval Automation with Human-Controlled ERP Handoff</h3>
+                <h3>End-to-End AI Invoice Approval Automation</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Invoice teams repeatedly copy data from visually different documents, while uncertain extraction, duplicates, invalid references, and retries can create financial-control risk.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and implemented the end-to-end workflow: multi-file intake, Gemini extraction, canonical invoice schema, deterministic validation, PostgreSQL state and audit history, FastAPI services, three n8n workflows, human review and approval, an idempotent ERP sandbox, evaluation corpora, and automated tests.</dd></div>
-                  <div><dt>Approach</dt><dd>Each file is processed independently so one failure does not stop the batch. Gemini proposes document values; Python validates file integrity, confidence, references, currency, arithmetic, purchase-order rules, and ambiguous dates; people retain control of corrections and approval before ERP delivery.</dd></div>
-                  <div><dt>Validation</dt><dd>The controlled benchmark contains 10 synthetic invoices whose correct answers were fixed before testing. Across them, the evaluator checked 278 field values; all matched after normalization, so every invoice was a complete match. The system also selected the expected next step for all 10 invoices: approval-ready or manual review.</dd></div>
+                  <div><dt>Problem</dt><dd>Finance teams repeatedly read and re-key fields from visually different invoice files, then check totals, references, duplicates, and approval requirements before data can reach accounting.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and built the complete workflow: multi-file intake, three n8n automations, Gemini document extraction, Python business controls, PostgreSQL state and audit history, human review and approval, and idempotent delivery to an ERP sandbox.</dd></div>
+                  <div><dt>Approach</dt><dd>Users can upload up to 20 invoices in one batch. n8n creates one job per file, starts extraction and validation, and automatically routes approval-ready, review, and unreadable outcomes. A failed file remains isolated, while approved records continue through a retry-safe accounting handoff.</dd></div>
+                  <div><dt>Validation</dt><dd>Robustness was explored with 20 public internet-sourced invoice examples covering different layouts, languages, currencies, and document purposes. The reviewed partial run contains 16 genuine Gemini outputs; 15 captured a useful value from the visible final-total area. The collection remains unscored until all documents have reviewed ground truth and one clean rerun.</dd></div>
                 </dl>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260805b" target="_blank" rel="noopener noreferrer" aria-label="Open the invoice processing and approval workflow at full size">
-                    <img src="assets/projects/ai-invoice-automation.png?v=20260805b" alt="Invoice processing workflow from multi-file intake through Gemini extraction, Python validation, exception review, human approval, ERP sandbox delivery, and PostgreSQL audit evidence" width="1600" height="960" decoding="async">
+                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260805c" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation operating flow at full size">
+                    <img src="assets/projects/ai-invoice-automation.png?v=20260805c" alt="AI invoice automation swimlane showing batch intake, three n8n workflows, Gemini extraction, Python controls, automatic routing, human review and approval, ERP delivery, and PostgreSQL audit state" width="1600" height="960" decoding="async">
                   </a>
-                  <figcaption>Illustrative workflow showing where AI assists and where rules, people, and audit records remain in control.</figcaption>
+                  <figcaption>Operational flow showing what n8n automates, which documents need human attention, and how approved records reach accounting safely.</figcaption>
                 </figure>
-                <p class="metric-context"><strong>Controlled Evaluation</strong><span>278 is the total number of field-by-field comparisons across these 10 test invoices—not the number of invoices.</span></p>
-                <div class="metric-row" aria-label="AI invoice automation final controlled evaluation">
-                  <div><strong>10</strong><span>Controlled Test Invoices</span></div>
-                  <div><strong>278/278</strong><span>Field Checks Matched</span></div>
-                  <div><strong>10/10</strong><span>Correct Next Steps</span></div>
+                <p class="metric-context"><strong>Public-Document Exploration</strong><span>These figures describe the reviewed internet-invoice run and the implemented upload capacity; they are not an overall accuracy score.</span></p>
+                <div class="metric-row" aria-label="AI invoice automation public-document exploration and batch capacity">
+                  <div><strong>20</strong><span>Public Invoice Examples</span></div>
+                  <div><strong>15/16</strong><span>Useful Final Total Captured</span></div>
+                  <div><strong>20 files</strong><span>Maximum Upload Batch</span></div>
                 </div>
-                <p class="project-output"><strong>Operational Result</strong><span>Users can submit several invoices at once, focus attention on exceptions, approve controlled records, trace every state change, and deliver approved data exactly once to the accounting sandbox without manually re-entering each document.</span></p>
-                <p class="project-interpretation"><strong>Public Robustness Exploration</strong><span>A separate set of 20 internet-sourced invoices tests layouts, languages, currencies, receipts, and other documents not designed for this system. It is deliberately unscored until every document has reviewed ground truth and one clean provider rerun.</span></p>
-                <p class="project-note"><strong>Evidence Boundary</strong><span>The headline scores apply only to the controlled 10-invoice benchmark. They do not estimate universal or production accuracy, throughput, availability, or business time savings. The repository preserves the ground truth, checksums, evaluation reports, public-source records, automated tests, and reproducible Docker workflow.</span></p>
+                <p class="project-output"><strong>Operational Result</strong><span>The workflow moves finance work from re-keying every visible field to uploading a batch, reviewing extracted values, resolving exceptions, and authorizing the final handoff. Each invoice is processed independently, so one unreadable document does not stop the remaining batch.</span></p>
+                <p class="project-interpretation"><strong>Automation Delivered</strong><span>n8n coordinates intake, review, notifications, approval, and retry-safe ERP delivery; Gemini proposes document values; Python enforces fixed controls; PostgreSQL preserves duplicate protection, workflow state, and an end-to-end audit trail.</span></p>
+                <p class="project-note"><strong>Evidence Boundary</strong><span>The 15/16 result measures only useful final-total capture in the reviewed public outputs—not full-document accuracy. Four other files exposed a persistence defect that has been fixed but still requires a clean provider rerun. No percentage time-saving claim is made because a manual-entry baseline has not yet been measured.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
