@@ -62,3 +62,56 @@ if (menuButton && navigation) {
     if (window.innerWidth > 860) closeMenu();
   });
 }
+
+const projectFilterButtons = document.querySelectorAll("[data-project-filter]");
+const filterableProjects = document.querySelectorAll("[data-project-category]");
+const filterStatus = document.querySelector(".filter-status");
+const additionalProjectsHeading = document.querySelector(".other-projects-heading");
+const additionalProjectsGrid = document.querySelector(".other-projects");
+
+function applyProjectFilter(selectedFilter) {
+  let visibleCount = 0;
+  let visibleAdditionalCount = 0;
+
+  filterableProjects.forEach((project) => {
+    const categories = project.dataset.projectCategory.split(" ");
+    const isVisible = selectedFilter === "all" || categories.includes(selectedFilter);
+    project.hidden = !isVisible;
+
+    if (isVisible) {
+      visibleCount += 1;
+      if (project.classList.contains("compact-project")) {
+        visibleAdditionalCount += 1;
+      }
+    }
+  });
+
+  if (additionalProjectsHeading) {
+    additionalProjectsHeading.hidden = visibleAdditionalCount === 0;
+  }
+
+  if (additionalProjectsGrid) {
+    additionalProjectsGrid.hidden = visibleAdditionalCount === 0;
+  }
+
+  projectFilterButtons.forEach((button) => {
+    const isActive = button.dataset.projectFilter === selectedFilter;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (filterStatus) {
+    const projectLabel = visibleCount === 1 ? "project" : "projects";
+    filterStatus.textContent = `Showing ${visibleCount} ${projectLabel}.`;
+  }
+}
+
+projectFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyProjectFilter(button.dataset.projectFilter);
+  });
+});
+
+if (projectFilterButtons.length > 0 && filterableProjects.length > 0) {
+  applyProjectFilter("all");
+}

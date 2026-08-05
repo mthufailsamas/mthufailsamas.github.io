@@ -82,8 +82,8 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260728a">
-    <script src="script.js?v=20260723-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260805a">
+    <script src="script.js?v=20260805a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -103,6 +103,7 @@
           <a href="#publication">Publication</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
+          <a href="documents/m-thufail-alwannabil-samas-cv.pdf?v=20260728" download>Resume</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -180,12 +181,23 @@
           <p class="eyebrow">Selected Work</p>
           <h2>Applied Data &amp; AI Case Studies</h2>
           <p>
-            Each case study highlights the problem, contribution, technical approach, safeguards, validation, and practical output.
+            Start with the problem, contribution, and outcome. Open the technical details when you want to inspect the implementation and validation choices.
           </p>
         </div>
 
+        <div class="content project-filter" aria-label="Filter projects by focus">
+          <p>Filter by focus</p>
+          <div class="project-filter-actions" role="group" aria-label="Project focus">
+            <button class="filter-button active" type="button" data-project-filter="all" aria-pressed="true">All work</button>
+            <button class="filter-button" type="button" data-project-filter="ai-automation" aria-pressed="false">AI &amp; Automation</button>
+            <button class="filter-button" type="button" data-project-filter="machine-learning" aria-pressed="false">Machine Learning</button>
+            <button class="filter-button" type="button" data-project-filter="data-engineering" aria-pressed="false">Data Engineering</button>
+          </div>
+          <p class="filter-status sr-only" aria-live="polite">Showing all seven projects.</p>
+        </div>
+
         <div class="project-list">
-          <article class="project featured-project">
+          <article class="project featured-project" data-project-category="ai-automation data-engineering">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Python, Gemini, PostgreSQL</p></div>
@@ -193,9 +205,14 @@
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Finance teams repeatedly read and re-key fields from visually different invoice files, then check totals, references, duplicates, and approval requirements before data can reach accounting.</dd></div>
                   <div><dt>My Contribution</dt><dd>Designed and built the complete workflow: multi-file intake, three n8n automations, Gemini document extraction, Python business controls, PostgreSQL state and audit history, human review and approval, and idempotent delivery to an ERP sandbox.</dd></div>
-                  <div><dt>Approach</dt><dd>Users can upload up to 20 invoices in one batch. n8n creates one job per file, starts extraction and validation, and automatically routes approval-ready, review, and unreadable outcomes. A failed file remains isolated, while approved records continue through a retry-safe accounting handoff.</dd></div>
-                  <div><dt>System Safeguards</dt><dd>Every invoice receives its own source hash, workflow state, and audit history. Fixed controls verify file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing before data can reach the accounting handoff.</dd></div>
                 </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Approach</dt><dd>Users can upload up to 20 invoices in one batch. n8n creates one job per file, starts extraction and validation, and automatically routes approval-ready, review, and unreadable outcomes. A failed file remains isolated, while approved records continue through a retry-safe accounting handoff.</dd></div>
+                    <div><dt>System Safeguards</dt><dd>Every invoice receives its own source hash, workflow state, and audit history. Fixed controls verify file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing before data can reach the accounting handoff.</dd></div>
+                  </dl>
+                </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
@@ -218,7 +235,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" id="fnb-demand-forecasting">
+          <article class="project featured-project" id="fnb-demand-forecasting" data-project-category="machine-learning data-engineering">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>02</span><p>Production ML engineering | Genpact demand data, Python, FastAPI, Docker</p></div>
@@ -226,9 +243,14 @@
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>F&amp;B teams must prepare inventory before demand is known, while forecasts that remain inside notebooks cannot be reused reliably by operational applications or monitored after deployment.</dd></div>
                   <div><dt>Selected Data</dt><dd>The Genpact Food Demand Forecasting dataset provides 456,548 labeled weekly observations covering 77 fulfilment centers, 51 meals, prices, promotions, and center and meal attributes across weeks 1-145.</dd></div>
-                  <div><dt>Modeling Approach</dt><dd>Weekly order forecasting for every center-meal combination, with seasonal baselines, an XGBoost forecaster, a TensorFlow challenger, and a locked chronological validation and test design.</dd></div>
-                  <div><dt>System Architecture</dt><dd>Versioned preprocessing and model artifacts, validated FastAPI endpoints, Docker packaging, prediction logging, data-quality checks, drift monitoring, and evaluation-gated model replacement.</dd></div>
                 </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Modeling Approach</dt><dd>Weekly order forecasting for every center-meal combination, with seasonal baselines, an XGBoost forecaster, a TensorFlow challenger, and a locked chronological validation and test design.</dd></div>
+                    <div><dt>System Architecture</dt><dd>Versioned preprocessing and model artifacts, validated FastAPI endpoints, Docker packaging, prediction logging, data-quality checks, drift monitoring, and evaluation-gated model replacement.</dd></div>
+                  </dl>
+                </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
@@ -248,7 +270,7 @@
             </div>
           </article>
 
-          <article class="project featured-project">
+          <article class="project featured-project" data-project-category="machine-learning">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost</p></div>
@@ -256,9 +278,14 @@
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during model evaluation.</dd></div>
                   <div><dt>My Contribution</dt><dd>Implemented the end-to-end forecasting workflow from data validation and lag construction through temporal model evaluation and experiment reporting, and served as first author on the resulting peer-reviewed publication.</dd></div>
-                  <div><dt>Approach</dt><dd>Constructed one-day lagged predictors from BMKG meteorological observations and trained XGBoost regression models with fold-wise Min-Max scaling and Grid Search across 243 hyperparameter configurations.</dd></div>
-                  <div><dt>Validation</dt><dd>Evaluated the models using 10-fold TimeSeriesSplit, fitting preprocessing only on each training fold to preserve temporal order and reduce data leakage.</dd></div>
                 </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Approach</dt><dd>Constructed one-day lagged predictors from BMKG meteorological observations and trained XGBoost regression models with fold-wise Min-Max scaling and Grid Search across 243 hyperparameter configurations.</dd></div>
+                    <div><dt>Validation</dt><dd>Evaluated the models using 10-fold TimeSeriesSplit, fitting preprocessing only on each training fold to preserve temporal order and reduce data leakage.</dd></div>
+                  </dl>
+                </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
@@ -282,7 +309,7 @@
             </div>
           </article>
 
-          <article class="project featured-project">
+          <article class="project featured-project" data-project-category="machine-learning">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost</p></div>
@@ -290,9 +317,14 @@
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Classify differentiated thyroid cancer recurrence while examining whether feature selection could reduce the encoded feature set without sacrificing predictive performance.</dd></div>
                   <div><dt>My Contribution</dt><dd>Implemented the data audit, feature encoding, fold-local Information Gain selection, checkpointed model search, and multi-metric evaluation workflow for this collaborative academic project.</dd></div>
-                  <div><dt>Approach</dt><dd>Prepared the 383-record UCI source dataset using explicit numeric, binary, ordinal, and nominal feature handling, then combined entropy-based Information Gain feature selection with XGBoost and Grid Search.</dd></div>
-                  <div><dt>Validation</dt><dd>Performed Information Gain selection separately within each training fold and evaluated models using 10-fold cross-validation and pooled out-of-fold predictions to avoid global feature-selection leakage.</dd></div>
                 </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Approach</dt><dd>Prepared the 383-record UCI source dataset using explicit numeric, binary, ordinal, and nominal feature handling, then combined entropy-based Information Gain feature selection with XGBoost and Grid Search.</dd></div>
+                    <div><dt>Validation</dt><dd>Performed Information Gain selection separately within each training fold and evaluated models using 10-fold cross-validation and pooled out-of-fold predictions to avoid global feature-selection leakage.</dd></div>
+                  </dl>
+                </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
@@ -316,7 +348,7 @@
             </div>
           </article>
 
-          <article class="project featured-project">
+          <article class="project featured-project" data-project-category="data-engineering">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
@@ -324,10 +356,15 @@
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Transform distributed DWDM optical telemetry into structured monitoring and investigation outputs for a project-stage operational workflow.</dd></div>
                   <div><dt>My Contribution</dt><dd>Implemented the Python/PostgreSQL data pipeline, data-quality and failure logic, statistical change-point and degradation detectors, paired-sensor analysis, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
-                  <div><dt>Data &amp; System Context</dt><dd>Approximately 400 directional sensors combining native 5-minute PRTG optical-power telemetry with ENIMS sensor, link, direction, endpoint, and location metadata.</dd></div>
-                  <div><dt>Approach</dt><dd>Built an incremental, checkpoint-based workflow from metadata synchronization and telemetry collection through processed observations, contiguous failure events, penalized PELT change-point detection with robust statistical regime checks, Theil-Sen slope and serial-correlation-corrected Mann-Kendall gradual-degradation analysis, paired and opposite-direction sensor evidence, priority ranking, and a local dashboard API.</dd></div>
-                  <div><dt>Analytical Safeguards</dt><dd>Statistical detectors use only clean observed values. Missing, downtime, zero-coverage, and low-signal failure intervals remain operational evidence but are excluded from statistical change and trend analysis rather than analytically interpolated.</dd></div>
                 </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Data &amp; System Context</dt><dd>Approximately 400 directional sensors combining native 5-minute PRTG optical-power telemetry with ENIMS sensor, link, direction, endpoint, and location metadata.</dd></div>
+                    <div><dt>Approach</dt><dd>Built an incremental, checkpoint-based workflow from metadata synchronization and telemetry collection through processed observations, contiguous failure events, penalized PELT change-point detection with robust statistical regime checks, Theil-Sen slope and serial-correlation-corrected Mann-Kendall gradual-degradation analysis, paired and opposite-direction sensor evidence, priority ranking, and a local dashboard API.</dd></div>
+                    <div><dt>Analytical Safeguards</dt><dd>Statistical detectors use only clean observed values. Missing, downtime, zero-coverage, and low-signal failure intervals remain operational evidence but are excluded from statistical change and trend analysis rather than analytically interpolated.</dd></div>
+                  </dl>
+                </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
@@ -355,7 +392,7 @@
         </div>
 
         <div class="content other-projects">
-          <article class="compact-project">
+          <article class="compact-project" data-project-category="machine-learning">
             <figure class="compact-visual">
                   <a class="project-image-link" href="assets/projects/bilstm-rainfall.png?v=20260724d" target="_blank" rel="noopener noreferrer" aria-label="Open the BiLSTM rainfall project visual at full size">
                     <img src="assets/projects/bilstm-rainfall.png?v=20260724d" alt="Observed rainfall and next-day BiLSTM predictions over the chronological test period" width="1600" height="960" loading="lazy" decoding="async">
@@ -381,7 +418,7 @@
             </div>
           </article>
 
-          <article class="compact-project">
+          <article class="compact-project" data-project-category="machine-learning">
             <figure class="compact-visual">
                   <a class="project-image-link" href="assets/projects/arima-rice.png?v=20260724e" target="_blank" rel="noopener noreferrer" aria-label="Open the ARIMA rice-price project visual at full size">
                     <img src="assets/projects/arima-rice.png?v=20260724e" alt="Observed and one-step-ahead forecast prices for medium and premium rice during walk-forward evaluation" width="1600" height="960" loading="lazy" decoding="async">
