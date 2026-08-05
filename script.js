@@ -66,11 +66,9 @@ if (menuButton && navigation) {
 const projectFilterButtons = document.querySelectorAll("[data-project-filter]");
 const filterableProjects = document.querySelectorAll("[data-project-category]");
 const filterStatus = document.querySelector(".filter-status");
-const additionalProjectsGrid = document.querySelector(".other-projects");
 
 function applyProjectFilter(selectedFilter) {
   let visibleCount = 0;
-  let visibleAdditionalCount = 0;
 
   filterableProjects.forEach((project) => {
     const categories = project.dataset.projectCategory.split(" ");
@@ -79,15 +77,8 @@ function applyProjectFilter(selectedFilter) {
 
     if (isVisible) {
       visibleCount += 1;
-      if (project.classList.contains("compact-project")) {
-        visibleAdditionalCount += 1;
-      }
     }
   });
-
-  if (additionalProjectsGrid) {
-    additionalProjectsGrid.hidden = visibleAdditionalCount === 0;
-  }
 
   projectFilterButtons.forEach((button) => {
     const isActive = button.dataset.projectFilter === selectedFilter;

@@ -476,8 +476,6 @@ h3 {
 .project-output span,
 .project-interpretation span,
 .project-note,
-.compact-details dd,
-.compact-note,
 .timeline div > p:last-child,
 .contact-copy > p {
   text-align: left;
@@ -565,15 +563,15 @@ h3 {
   background: var(--surface-card);
 }
 
-.project:nth-child(2) {
+.project:nth-child(4n + 2) {
   background: var(--teal-soft);
 }
 
-.project:nth-child(3) {
+.project:nth-child(4n + 3) {
   background: var(--warm);
 }
 
-.project:nth-child(4) {
+.project:nth-child(4n + 4) {
   background: var(--mist);
 }
 
@@ -623,8 +621,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.project-copy h3,
-.compact-project h3 {
+.project-copy h3 {
   margin-top: 17px;
   color: var(--heading);
   font-size: 35px;
@@ -726,8 +723,7 @@ h3 {
 
 .project-output strong,
 .project-interpretation strong,
-.project-note strong,
-.compact-note strong {
+.project-note strong {
   display: block;
   margin-bottom: 4px;
   color: var(--heading);
@@ -738,13 +734,11 @@ h3 {
 
 .project-output span,
 .project-interpretation span,
-.project-note span,
-.compact-note span {
+.project-note span {
   display: block;
 }
 
-.project-note,
-.compact-note {
+.project-note {
   margin-top: 18px;
   padding-left: 13px;
   border-left: 3px solid var(--coral);
@@ -835,16 +829,14 @@ h3 {
   outline-offset: -3px;
 }
 
-.project-visual img,
-.compact-visual img {
+.project-visual img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.project-visual figcaption,
-.compact-visual figcaption {
+.project-visual figcaption {
   padding: 12px 15px;
   border-top: 1px solid var(--detail-line);
   background: var(--surface-card);
@@ -852,85 +844,6 @@ h3 {
   font-size: 11px;
   line-height: 1.55;
   text-align: center;
-}
-
-.other-projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding-block: 52px 105px;
-}
-
-.compact-project {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface-card);
-}
-
-.compact-project > .compact-visual {
-  background: var(--image-surface);
-  border-bottom: 1px solid var(--line);
-}
-
-.compact-project > div {
-  padding: 30px;
-}
-
-.compact-project h3 {
-  font-size: 27px;
-}
-
-.compact-details {
-  display: grid;
-  margin-top: 20px;
-  border-top: 1px solid var(--line);
-}
-
-.compact-details > div {
-  padding-block: 12px;
-  border-bottom: 1px solid var(--line);
-}
-
-.compact-details dt {
-  color: var(--heading);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.compact-details dd {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.65;
-}
-
-.compact-metrics {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 23px;
-  padding-block: 16px;
-  border-block: 1px solid var(--line);
-}
-
-.compact-metrics > div + div {
-  padding-left: 20px;
-  border-left: 1px solid var(--line);
-}
-
-.compact-metrics dt {
-  color: var(--heading);
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.compact-metrics dd {
-  color: var(--muted);
-  font-size: 11px;
 }
 
 .publication-section {
@@ -1232,10 +1145,6 @@ h3 {
     max-width: 760px;
   }
 
-  .other-projects {
-    grid-template-columns: 1fr;
-  }
-
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1396,10 +1305,6 @@ h3 {
   .metric-row > div:nth-child(n + 3) {
     padding-top: 12px;
     border-top: 1px solid var(--detail-line);
-  }
-
-  .compact-project > div {
-    padding: 24px;
   }
 
   .timeline article {
