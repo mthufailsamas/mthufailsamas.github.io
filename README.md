@@ -52,7 +52,6 @@ Portfolio Website/
 |-- script.js
 |-- assets/
 |   |-- favicon.svg
-|   |-- hero-data-visual.jpg
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
 |   `-- projects/
