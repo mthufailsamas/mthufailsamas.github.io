@@ -192,18 +192,18 @@
           <article class="project featured-project" data-project-category="ai">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Python, Gemini, PostgreSQL</p></div>
+                <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Gemini, Python/FastAPI, PostgreSQL, Docker</p></div>
                 <h3>End-to-End AI Invoice Approval Automation</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: batch intake, three n8n automations, Gemini extraction, Python validation rules, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, three n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
                     <div><dt>Approach</dt><dd>n8n creates one job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. One failed invoice does not stop the rest of the batch.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing before an invoice can move to the accounting handoff.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing. Docker Compose packages the local services, while an optional Apps Script integration sends final read-only records to Google Sheets.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -220,7 +220,7 @@
                   <div><strong>Per-file</strong><span>Failure Isolation</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>Finance users can upload a batch, review only the values that need attention, authorize ready invoices, and deliver approved records without retyping each document. Failed files remain isolated instead of blocking the full batch.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python, and PostgreSQL.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable local project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python/FastAPI, PostgreSQL, and Docker Compose.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -231,18 +231,18 @@
           <article class="project featured-project" id="fnb-demand-forecasting" data-project-category="data ai">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Demand data analysis &amp; ML system design | Python, FastAPI, Docker</p></div>
+                <div class="project-kicker"><span>02</span><p>Demand data analysis &amp; production ML blueprint | Python, Pandas, Matplotlib</p></div>
                 <h3>F&amp;B Demand Forecasting: Data Profile and Production Blueprint</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>F&amp;B teams must prepare stock before weekly demand is known, while demand changes across centers, meals, prices, and promotions. A forecast that stays inside a notebook cannot support a recurring planning process.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Selected and profiled the Genpact dataset, defined the center-meal-week forecasting target, and designed how model comparison, API delivery, prediction history, and monitoring would work together.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Selected and audited the Genpact dataset, built a reproducible Pandas profiling workflow and demand-history visual, defined the center-meal-week target, and documented the production ML architecture that will connect training, API delivery, and monitoring.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>The public dataset contains 456,548 labeled weekly observations across 77 fulfilment centers and 51 meals, with price, promotion, center, and meal information covering weeks 1-145.</dd></div>
-                    <div><dt>Approach</dt><dd>The planned modeling stage compares seasonal baselines, XGBoost, and a TensorFlow challenger to forecast weekly orders for each center-meal combination.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>The blueprint uses chronological splits, versioned preprocessing and model artifacts, FastAPI delivery, Docker packaging, data-quality checks, prediction logging, drift monitoring, and evaluation-gated model replacement.</dd></div>
+                    <div><dt>Approach</dt><dd>The implemented profiling stage aggregates weekly demand and a four-week moving average with Pandas. The modeling blueprint then compares seasonal baselines, XGBoost, and a TensorFlow challenger for each center-meal combination.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Current evidence covers source documentation, raw-file checksums, dataset dimensions, and reproducible profile outputs. The next stages specify chronological evaluation, versioned artifacts, FastAPI delivery, Docker packaging, prediction logging, and evaluation-gated model replacement.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -267,11 +267,11 @@
           <article class="project featured-project" data-project-category="data ai">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost, scikit-learn</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Daily rainfall is highly variable, and random train-test splits can overstate how well a model will perform on future weather. This project estimates next-day rainfall while keeping evaluation in chronological order.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Built the complete forecasting workflow from data validation and lag construction through model search, temporal evaluation, and experiment reporting, then served as first author of the resulting peer-reviewed publication.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Built the Python forecasting workflow from data validation and lag construction through XGBoost search, scikit-learn temporal evaluation, and experiment reporting, then served as first author of the resulting peer-reviewed publication.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
@@ -307,11 +307,11 @@
           <article class="project featured-project" data-project-category="data ai">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost, scikit-learn</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Build a reproducible recurrence classifier while testing whether a smaller set of informative features can preserve performance and reduce unnecessary model input.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the data audit, feature encoding, fold-local Information Gain selection, checkpointed model search, and multi-metric evaluation for this collaborative academic project.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the Python data audit, scikit-learn preprocessing, fold-local Information Gain selection, checkpointed XGBoost search, and multi-metric evaluation for this collaborative academic project.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
@@ -347,11 +347,11 @@
           <article class="project featured-project" data-project-category="data">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
+                <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across hundreds of directional optical sensors.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, API outputs, priority workflow, and monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the incremental Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, local API, priority workflow, and browser-based monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
@@ -383,11 +383,11 @@
           <article class="project featured-project" data-project-category="data ai">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>06</span><p>Deep learning &amp; time-series forecasting | Python, TensorFlow</p></div>
+                <div class="project-kicker"><span>06</span><p>Deep learning &amp; time-series forecasting | Python, TensorFlow/Keras, NumPy, Pandas</p></div>
                 <h3>Rainfall Forecasting with BiLSTM and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Next-day rainfall depends on changing weather patterns across several recent days, making a sequence-based model more appropriate than treating each observation as an isolated row.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Developed the complete forecasting workflow during my BMKG internship, from data audit and seven-day sequence preparation through three-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Developed the Python forecasting workflow during my BMKG internship, using NumPy and Pandas for seven-day sequence preparation and TensorFlow/Keras for three-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
@@ -422,11 +422,11 @@
           <article class="project featured-project" data-project-category="data">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>07</span><p>Statistical time-series forecasting | Python, statsmodels</p></div>
+                <div class="project-kicker"><span>07</span><p>Statistical time-series forecasting | Python, statsmodels, Pandas</p></div>
                 <h3>Rice Price Forecasting with ARIMA and Walk-Forward Validation</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Price planning benefits from a forecast that is easy to explain and tested in the same order that future monthly prices would actually become available.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the end-to-end ARIMA workflow for this collaborative academic project, covering data audit, monthly preparation, stationarity checks, order selection, diagnostic screening, expanding-window evaluation, and forecast reporting.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the Python/statsmodels ARIMA workflow for this collaborative academic project, covering Pandas-based monthly preparation, stationarity checks, order selection, diagnostic screening, expanding-window evaluation, and forecast reporting.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>

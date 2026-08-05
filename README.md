@@ -11,18 +11,18 @@ publication, certification, and technical background.
 
 The featured case studies cover:
 
-- auditable AI Invoice Approval Automation with Gemini, n8n, Python,
-  PostgreSQL, human review, and idempotent accounting delivery;
-- an F&amp;B demand-data profile and production ML blueprint using the selected
-  Genpact weekly meal-demand dataset, chronological evaluation, FastAPI,
-  Docker, monitoring, and controlled retraining;
-- Rainfall Forecasting with XGBoost and Grid Search;
-- Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and
-  Grid Search;
+- auditable AI Invoice Approval Automation with n8n, Gemini, Python/FastAPI,
+  PostgreSQL, Docker Compose, human review, and idempotent accounting delivery;
+- an implemented F&amp;B demand-data profile using Python, Pandas, and Matplotlib,
+  paired with a clearly separated production ML blueprint for chronological
+  modeling, API delivery, monitoring, and controlled retraining;
+- Rainfall Forecasting with Python, XGBoost, scikit-learn, and Grid Search;
+- Thyroid Cancer Recurrence Classification with Python, XGBoost,
+  scikit-learn, Information Gain, and Grid Search;
 - DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection,
   developed as professional project-stage work at PT Aplikanusa Lintasarta;
-- Rainfall Forecasting with BiLSTM and Grid Search; and
-- Rice Price Forecasting with ARIMA and Walk-Forward Validation.
+- Rainfall Forecasting with TensorFlow/Keras BiLSTM and Grid Search; and
+- Rice Price Forecasting with statsmodels ARIMA and Walk-Forward Validation.
 
 Each case study focuses on the problem, my contribution, system or analytical
 workflow, validation evidence, practical output, and limitations. Public
