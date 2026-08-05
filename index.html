@@ -221,29 +221,29 @@
           <article class="project featured-project" id="fnb-demand-forecasting">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Production ML engineering | Python, TensorFlow, FastAPI, Docker</p></div>
+                <div class="project-kicker"><span>02</span><p>Production ML engineering | Genpact demand data, Python, FastAPI, Docker</p></div>
                 <h3>Production F&amp;B Demand Forecasting and Inventory Planning</h3>
-                <p class="project-stage"><span aria-hidden="true"></span>In development · Blueprint approved, implementation not yet published</p>
+                <p class="project-stage"><span aria-hidden="true"></span>In development &middot; Dataset selected, implementation not yet published</p>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>F&amp;B teams must prepare inventory before demand is known, while forecasts that remain inside notebooks cannot be reused reliably by operational applications or monitored after deployment.</dd></div>
-                  <div><dt>Planned Build</dt><dd>Develop one end-to-end ML system covering a public demand-data contract, reproducible feature engineering, chronological evaluation, model versioning, application serving, operational monitoring, and controlled model improvement.</dd></div>
-                  <div><dt>Modeling Plan</dt><dd>Establish seasonal baselines, then compare an XGBoost forecaster with a TensorFlow sequence-model challenger. Evaluation will use time-ordered validation and an untouched final test period, with performance reviewed by horizon, product, and location.</dd></div>
+                  <div><dt>Selected Data</dt><dd>Use 456,548 labeled weekly observations from the Genpact Food Demand Forecasting dataset, covering 77 fulfilment centers, 51 meals, prices, promotions, and center and meal attributes across weeks 1-145.</dd></div>
+                  <div><dt>Modeling Plan</dt><dd>Forecast weekly orders for each center-meal combination. Establish seasonal baselines, then compare an XGBoost forecaster with a TensorFlow sequence-model challenger using a locked chronological validation and test design.</dd></div>
                   <div><dt>Engineering Plan</dt><dd>Package the selected preprocessing and model artifacts behind validated FastAPI endpoints and Docker, then log predictions, latency, data quality, drift, and realized forecast error before any retraining candidate can replace the active model.</dd></div>
                 </dl>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805a" target="_blank" rel="noopener noreferrer" aria-label="Open the planned F and B demand forecasting system at full size">
-                    <img src="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805a" alt="Planned production machine-learning lifecycle for F and B demand forecasting, including time-aware training, API serving, monitoring, and controlled retraining" width="1600" height="960" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805b" target="_blank" rel="noopener noreferrer" aria-label="Open the planned F and B demand forecasting system at full size">
+                    <img src="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805b" alt="Planned production machine-learning lifecycle for F and B demand forecasting, including time-aware training, API serving, monitoring, and controlled retraining" width="1600" height="960" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>Target architecture for the production ML portfolio build; implementation evidence and a repository will be added only after end-to-end verification.</figcaption>
+                  <figcaption>Target architecture using the selected Genpact food-demand data; implementation evidence and a repository will be added only after end-to-end verification.</figcaption>
                 </figure>
-                <div class="metric-row" aria-label="Planned F and B demand forecasting system scope">
-                  <div><strong>Time-aware</strong><span>Model Validation</span></div>
-                  <div><strong>API + Docker</strong><span>Application Serving</span></div>
-                  <div><strong>Drift + Error</strong><span>Model Monitoring</span></div>
+                <div class="metric-row" aria-label="Selected F and B demand dataset scope">
+                  <div><strong>456,548</strong><span>Labeled Weekly Rows</span></div>
+                  <div><strong>77</strong><span>Fulfilment Centers</span></div>
+                  <div><strong>51</strong><span>Meals</span></div>
                 </div>
-                <p class="project-output"><strong>Target Workflow</strong><span>Demand data will move through a reproducible feature pipeline, model comparison, versioned registry, forecast API, prediction log, actual-demand feedback, and threshold-gated retraining loop.</span></p>
+                <p class="project-output"><strong>Target Workflow</strong><span>Weekly demand, price, promotion, center, and meal data will move through a reproducible feature pipeline, model comparison, versioned registry, forecast API, prediction log, actual-demand feedback, and threshold-gated retraining loop.</span></p>
                 <p class="project-interpretation"><strong>Definition of Done</strong><span>The project will be marked complete only after a public dataset is documented, metrics are reproduced from saved evidence, the same artifacts power training and inference, Docker starts the system cleanly, and monitoring can compare forecasts with later actual demand.</span></p>
               </div>
             </div>
