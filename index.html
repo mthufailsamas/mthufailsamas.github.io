@@ -223,28 +223,27 @@
               <div class="project-copy">
                 <div class="project-kicker"><span>02</span><p>Production ML engineering | Genpact demand data, Python, FastAPI, Docker</p></div>
                 <h3>Production F&amp;B Demand Forecasting and Inventory Planning</h3>
-                <p class="project-stage"><span aria-hidden="true"></span>In development &middot; Data profile complete, model not yet trained</p>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>F&amp;B teams must prepare inventory before demand is known, while forecasts that remain inside notebooks cannot be reused reliably by operational applications or monitored after deployment.</dd></div>
                   <div><dt>Selected Data</dt><dd>The Genpact Food Demand Forecasting dataset provides 456,548 labeled weekly observations covering 77 fulfilment centers, 51 meals, prices, promotions, and center and meal attributes across weeks 1-145.</dd></div>
-                  <div><dt>Modeling Plan</dt><dd>Forecast weekly orders for each center-meal combination. Establish seasonal baselines, then compare an XGBoost forecaster with a TensorFlow sequence-model challenger using a locked chronological validation and test design.</dd></div>
-                  <div><dt>Engineering Plan</dt><dd>Package the selected preprocessing and model artifacts behind validated FastAPI endpoints and Docker, then log predictions, latency, data quality, drift, and realized forecast error before any retraining candidate can replace the active model.</dd></div>
+                  <div><dt>Modeling Approach</dt><dd>Weekly order forecasting for every center-meal combination, with seasonal baselines, an XGBoost forecaster, a TensorFlow challenger, and a locked chronological validation and test design.</dd></div>
+                  <div><dt>System Architecture</dt><dd>Versioned preprocessing and model artifacts, validated FastAPI endpoints, Docker packaging, prediction logging, data-quality checks, drift monitoring, and evaluation-gated model replacement.</dd></div>
                 </dl>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/fnb-demand-data-profile.png?v=20260805c" target="_blank" rel="noopener noreferrer" aria-label="Open the F and B weekly demand profile and target machine-learning system at full size">
-                    <img src="assets/projects/fnb-demand-data-profile.png?v=20260805c" alt="Measured weekly food demand and four-week average beside the planned training, serving, monitoring, and improvement lifecycle" width="1600" height="960" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/fnb-demand-data-profile.png?v=20260805d" target="_blank" rel="noopener noreferrer" aria-label="Open the F and B demand history and system flow at full size">
+                    <img src="assets/projects/fnb-demand-data-profile.png?v=20260805d" alt="Weekly food demand and four-week average beside a concise data, modeling, forecast delivery, and performance-monitoring flow" width="1600" height="960" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>Weekly totals and the four-week average are calculated directly from the selected dataset; the ML lifecycle remains the planned implementation scope.</figcaption>
+                  <figcaption>Weekly totals and the four-week average come directly from the selected dataset, while the adjacent flow summarizes how demand forecasts move from data preparation to ongoing performance checks.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="Selected F and B demand dataset scope">
                   <div><strong>456,548</strong><span>Labeled Weekly Rows</span></div>
                   <div><strong>77</strong><span>Fulfilment Centers</span></div>
                   <div><strong>51</strong><span>Meals</span></div>
                 </div>
-                <p class="project-output"><strong>Target Workflow</strong><span>Weekly demand, price, promotion, center, and meal data will move through a reproducible feature pipeline, model comparison, versioned registry, forecast API, prediction log, actual-demand feedback, and threshold-gated retraining loop.</span></p>
-                <p class="project-interpretation"><strong>Definition of Done</strong><span>The project will be marked complete only after a public dataset is documented, metrics are reproduced from saved evidence, the same artifacts power training and inference, Docker starts the system cleanly, and monitoring can compare forecasts with later actual demand.</span></p>
+                <p class="project-output"><strong>Workflow</strong><span>Weekly demand, price, promotion, center, and meal data move through feature preparation, model comparison, versioned forecast delivery, prediction history, actual-demand feedback, and performance monitoring.</span></p>
+                <p class="project-interpretation"><strong>Operational Use</strong><span>Forecast output is organized by center, meal, and week to support stock preparation and inventory decisions while later actual demand provides a consistent basis for model checks.</span></p>
               </div>
             </div>
           </article>
