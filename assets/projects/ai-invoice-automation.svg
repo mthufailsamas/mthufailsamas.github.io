@@ -25,7 +25,7 @@
   <text x="90" y="105" fill="#b0c742" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="4">APPLIED AI AUTOMATION</text>
   <text x="90" y="165" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="750">AI Invoice Approval</text>
   <text x="90" y="218" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="750">Automation</text>
-  <text x="90" y="265" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="23">LLM proposal • deterministic controls • human approval</text>
+  <text x="90" y="265" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="23">LLM proposal / deterministic controls / human approval</text>
 
   <g filter="url(#shadow)">
     <rect x="90" y="350" width="230" height="250" rx="20" fill="#ffffff"/>
@@ -45,8 +45,8 @@
     <path d="M98 0 V42 H140" fill="none" stroke="#0d7975" stroke-width="5"/>
     <path d="M42 75 H115 M42 98 H115 M42 121 H90" stroke="#b84d38" stroke-width="7" stroke-linecap="round"/>
   </g>
-  <text x="205" y="570" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="750">Synthetic invoice</text>
-  <text x="205" y="593" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="15">PDF / image</text>
+  <text x="205" y="570" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="750">Invoice batch</text>
+  <text x="205" y="593" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="15">PDF / PNG / JPEG</text>
 
   <g transform="translate(438 390)">
     <circle cx="52" cy="60" r="48" fill="none" stroke="#58bdb5" stroke-width="10"/>
@@ -54,7 +54,7 @@
     <path d="M52 0 V18 M52 102 V120 M-8 60 H10 M94 60 H112 M10 18 L23 31 M81 89 L94 102 M10 102 L23 89 M81 31 L94 18" stroke="#58bdb5" stroke-width="9" stroke-linecap="round"/>
   </g>
   <text x="490" y="548" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="750">n8n</text>
-  <text x="490" y="577" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="16">Auth • branch • retry</text>
+  <text x="490" y="577" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="16">Auth / branch / retry</text>
 
   <g transform="translate(706 382)">
     <rect x="0" y="0" width="168" height="64" rx="16" fill="#0d7975"/>
@@ -63,7 +63,7 @@
     <text x="84" y="122" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="750">PYTHON</text>
   </g>
   <text x="790" y="555" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750">Extract + validate</text>
-  <text x="790" y="582" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="15">Schema • rules • guard</text>
+  <text x="790" y="582" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="15">Schema / rules / guard</text>
 
   <g transform="translate(1022 390)">
     <ellipse cx="68" cy="24" rx="64" ry="24" fill="#58bdb5"/>
@@ -72,7 +72,7 @@
     <ellipse cx="68" cy="132" rx="64" ry="24" fill="none" stroke="#58bdb5" stroke-width="5"/>
   </g>
   <text x="1090" y="570" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="750">PostgreSQL</text>
-  <text x="1090" y="593" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="15">State • audit • idempotency</text>
+  <text x="1090" y="593" text-anchor="middle" fill="#bfd0d3" font-family="Segoe UI, Arial, sans-serif" font-size="15">State / audit / idempotency</text>
 
   <g transform="translate(1305 382)">
     <circle cx="78" cy="42" r="35" fill="#0d7975"/>
@@ -88,13 +88,13 @@
     <line x1="474" y1="35" x2="474" y2="145" stroke="#ccd9d6" stroke-width="2"/>
     <line x1="947" y1="35" x2="947" y2="145" stroke="#ccd9d6" stroke-width="2"/>
 
-    <text x="237" y="91" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">99.72%</text>
-    <text x="237" y="125" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">FIELD MATCH</text>
+    <text x="237" y="78" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">AI PROPOSES</text>
+    <text x="237" y="113" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17">Values + source confidence</text>
 
-    <text x="710" y="91" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">95%</text>
-    <text x="710" y="125" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">ROUTE MATCH</text>
+    <text x="710" y="78" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">RULES VERIFY</text>
+    <text x="710" y="113" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17">Schema + totals + references</text>
 
-    <text x="1184" y="91" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">53</text>
-    <text x="1184" y="125" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">TESTS PASSED</text>
+    <text x="1184" y="78" text-anchor="middle" fill="#071b24" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800">PEOPLE AUTHORIZE</text>
+    <text x="1184" y="113" text-anchor="middle" fill="#5d7077" font-family="Segoe UI, Arial, sans-serif" font-size="17">Exceptions + approval + ERP</text>
   </g>
 </svg>

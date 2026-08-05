@@ -630,6 +630,25 @@ h3 {
   line-height: 1.65;
 }
 
+.metric-context {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.metric-context strong,
+.metric-context span {
+  display: block;
+}
+
+.metric-context strong {
+  color: var(--heading);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
 .metric-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -637,6 +656,10 @@ h3 {
   margin-top: 24px;
   padding-block: 18px;
   border-block: 1px solid var(--detail-line);
+}
+
+.metric-context + .metric-row {
+  margin-top: 8px;
 }
 
 .metric-row.four-metrics {
