@@ -66,7 +66,6 @@ if (menuButton && navigation) {
 const projectFilterButtons = document.querySelectorAll("[data-project-filter]");
 const filterableProjects = document.querySelectorAll("[data-project-category]");
 const filterStatus = document.querySelector(".filter-status");
-const additionalProjectsHeading = document.querySelector(".other-projects-heading");
 const additionalProjectsGrid = document.querySelector(".other-projects");
 
 function applyProjectFilter(selectedFilter) {
@@ -85,10 +84,6 @@ function applyProjectFilter(selectedFilter) {
       }
     }
   });
-
-  if (additionalProjectsHeading) {
-    additionalProjectsHeading.hidden = visibleAdditionalCount === 0;
-  }
 
   if (additionalProjectsGrid) {
     additionalProjectsGrid.hidden = visibleAdditionalCount === 0;

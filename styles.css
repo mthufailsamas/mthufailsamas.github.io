@@ -854,21 +854,11 @@ h3 {
   text-align: center;
 }
 
-.other-projects-heading {
-  padding-block: 95px 42px;
-}
-
-.other-projects-heading h2 {
-  margin-top: 15px;
-  color: var(--heading);
-  font-size: 38px;
-}
-
 .other-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  padding-bottom: 105px;
+  padding-block: 52px 105px;
 }
 
 .compact-project {
@@ -1376,7 +1366,7 @@ h3 {
   }
 
   .filter-button {
-    flex: 1 1 calc(50% - 8px);
+    flex: 1 1 calc(33.333% - 8px);
   }
 
   .project {
@@ -1406,10 +1396,6 @@ h3 {
   .metric-row > div:nth-child(n + 3) {
     padding-top: 12px;
     border-top: 1px solid var(--detail-line);
-  }
-
-  .other-projects-heading {
-    padding-top: 72px;
   }
 
   .compact-project > div {
