@@ -2,11 +2,10 @@
 
 [View the live portfolio](https://mthufailsamas.github.io/)
 
-This repository contains my personal Data & AI portfolio. It presents selected
-work across applied AI automation, data analysis, data science, machine
-learning, statistical forecasting, and practical data engineering, together
-with my professional experience, publication, certification, and technical
-background.
+This repository contains my personal Data & AI portfolio. It connects selected
+work across data analysis, statistical modeling, machine learning, practical
+data engineering, and applied AI automation with my professional experience,
+publication, certification, and technical background.
 
 ## Portfolio Overview
 
