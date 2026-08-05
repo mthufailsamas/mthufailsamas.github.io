@@ -566,6 +566,27 @@ h3 {
   font-size: 35px;
 }
 
+.project-stage {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(215, 154, 37, 0.45);
+  border-radius: 999px;
+  background: rgba(215, 154, 37, 0.10);
+  color: var(--detail);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.project-stage span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d79a25;
+}
+
 .case-details {
   display: grid;
   margin-top: 26px;

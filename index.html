@@ -180,7 +180,7 @@
           <p class="eyebrow">Selected Work</p>
           <h2>Applied Data &amp; AI Case Studies</h2>
           <p>
-            Each case study highlights the problem, my contribution, technical approach, validation strategy, results, and practical limitations.
+            Each case study highlights the problem, contribution, technical approach, safeguards, validation, and practical output.
           </p>
         </div>
 
@@ -218,10 +218,41 @@
             </div>
           </article>
 
+          <article class="project featured-project" id="fnb-demand-forecasting">
+            <div class="content project-grid">
+              <div class="project-copy">
+                <div class="project-kicker"><span>02</span><p>Production ML engineering | Python, TensorFlow, FastAPI, Docker</p></div>
+                <h3>Production F&amp;B Demand Forecasting and Inventory Planning</h3>
+                <p class="project-stage"><span aria-hidden="true"></span>In development · Blueprint approved, implementation not yet published</p>
+                <dl class="case-details">
+                  <div><dt>Problem</dt><dd>F&amp;B teams must prepare inventory before demand is known, while forecasts that remain inside notebooks cannot be reused reliably by operational applications or monitored after deployment.</dd></div>
+                  <div><dt>Planned Build</dt><dd>Develop one end-to-end ML system covering a public demand-data contract, reproducible feature engineering, chronological evaluation, model versioning, application serving, operational monitoring, and controlled model improvement.</dd></div>
+                  <div><dt>Modeling Plan</dt><dd>Establish seasonal baselines, then compare an XGBoost forecaster with a TensorFlow sequence-model challenger. Evaluation will use time-ordered validation and an untouched final test period, with performance reviewed by horizon, product, and location.</dd></div>
+                  <div><dt>Engineering Plan</dt><dd>Package the selected preprocessing and model artifacts behind validated FastAPI endpoints and Docker, then log predictions, latency, data quality, drift, and realized forecast error before any retraining candidate can replace the active model.</dd></div>
+                </dl>
+              </div>
+              <div class="project-result-column">
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805a" target="_blank" rel="noopener noreferrer" aria-label="Open the planned F and B demand forecasting system at full size">
+                    <img src="assets/projects/fnb-demand-forecasting-blueprint.svg?v=20260805a" alt="Planned production machine-learning lifecycle for F and B demand forecasting, including time-aware training, API serving, monitoring, and controlled retraining" width="1600" height="960" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Target architecture for the production ML portfolio build; implementation evidence and a repository will be added only after end-to-end verification.</figcaption>
+                </figure>
+                <div class="metric-row" aria-label="Planned F and B demand forecasting system scope">
+                  <div><strong>Time-aware</strong><span>Model Validation</span></div>
+                  <div><strong>API + Docker</strong><span>Application Serving</span></div>
+                  <div><strong>Drift + Error</strong><span>Model Monitoring</span></div>
+                </div>
+                <p class="project-output"><strong>Target Workflow</strong><span>Demand data will move through a reproducible feature pipeline, model comparison, versioned registry, forecast API, prediction log, actual-demand feedback, and threshold-gated retraining loop.</span></p>
+                <p class="project-interpretation"><strong>Definition of Done</strong><span>The project will be marked complete only after a public dataset is documented, metrics are reproduced from saved evidence, the same artifacts power training and inference, Docker starts the system cleanly, and monitoring can compare forecasts with later actual demand.</span></p>
+              </div>
+            </div>
+          </article>
+
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Time-series forecasting | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Estimate next-day rainfall in Sumenep Regency from recent meteorological conditions while preserving temporal order during model evaluation.</dd></div>
@@ -255,7 +286,7 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>Clinical classification | Python, XGBoost</p></div>
+                <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Classify differentiated thyroid cancer recurrence while examining whether feature selection could reduce the encoded feature set without sacrificing predictive performance.</dd></div>
@@ -289,7 +320,7 @@
           <article class="project featured-project">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>04</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
+                <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Transform distributed DWDM optical telemetry into structured monitoring and investigation outputs for a project-stage operational workflow.</dd></div>
