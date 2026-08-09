@@ -85,7 +85,9 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260805f">
+    <link rel="preload" as="image" href="assets/hero/data-ai-system-desktop.webp?v=20260809" media="(min-width: 721px)">
+    <link rel="preload" as="image" href="assets/hero/data-ai-system-mobile.webp?v=20260809" media="(max-width: 720px)">
+    <link rel="stylesheet" href="styles.css?v=20260809a">
     <script src="script.js?v=20260805d" defer></script>
   </head>
   <body>
@@ -129,6 +131,10 @@
 
     <main id="main-content">
       <section class="hero" id="top">
+        <picture class="hero-wallpaper" aria-hidden="true">
+          <source media="(max-width: 720px)" srcset="assets/hero/data-ai-system-mobile.webp?v=20260809">
+          <img src="assets/hero/data-ai-system-desktop.webp?v=20260809" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+        </picture>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="content hero-content">
           <p class="eyebrow light">Data &amp; AI Professional</p>
