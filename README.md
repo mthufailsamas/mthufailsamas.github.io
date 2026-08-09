@@ -35,7 +35,7 @@ The website uses semantic HTML, responsive CSS, and vanilla JavaScript. It
 includes:
 
 - responsive desktop and mobile layouts;
-- persistent light and dark themes;
+- a permanent dark interface with a consistent color palette;
 - accessible navigation and structured page sections;
 - optimized project and social-preview images; and
 - downloadable English resume.

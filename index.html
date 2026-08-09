@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta id="theme-color" name="theme-color" content="#0b2530">
+    <meta name="theme-color" content="#071b24">
     <meta
       name="description"
       content="Portfolio of M. Thufail Alwannabil Samas across data analysis, data science, machine learning, data engineering, and applied AI automation."
@@ -74,21 +74,10 @@
         ]
       }
     </script>
-    <script>
-      (() => {
-        try {
-          const savedTheme = localStorage.getItem("portfolio-theme");
-          const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-          document.documentElement.dataset.theme = savedTheme || preferredTheme;
-        } catch {
-          document.documentElement.dataset.theme = "light";
-        }
-      })();
-    </script>
     <link rel="preload" as="image" href="assets/hero/data-ai-system-desktop.webp?v=20260809" media="(min-width: 601px)">
     <link rel="preload" as="image" href="assets/hero/data-ai-system-mobile-v2.webp?v=20260809" media="(max-width: 600px)">
-    <link rel="stylesheet" href="styles.css?v=20260809e">
-    <script src="script.js?v=20260805d" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260809f">
+    <script src="script.js?v=20260809e" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -111,11 +100,6 @@
           <a href="documents/m-thufail-alwannabil-samas-cv.pdf?v=20260808" download>Resume</a>
           <a href="#contact">Contact</a>
         </nav>
-
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-          <span class="theme-icon theme-icon-moon" aria-hidden="true">&#9790;</span>
-          <span class="theme-icon theme-icon-sun" aria-hidden="true">&#9788;</span>
-        </button>
 
         <button
           class="menu-button"
