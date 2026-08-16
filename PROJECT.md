@@ -101,7 +101,7 @@ The following rules are mandatory for every future user-visible website revision
 
 This safeguard removes the normal post-deployment cache wait after it has reached a visitor's browser. It cannot make an unfinished GitHub Pages deployment available early, and the first installation of the guard still requires the current versioned page to be loaded once.
 
-**Release-freshness safeguard status:** Approved for publication on 2026-08-16 with release `20260816-01`.
+**Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
 ## 2. Evidence required for each role family
 
