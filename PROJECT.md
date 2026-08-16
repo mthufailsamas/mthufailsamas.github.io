@@ -43,6 +43,23 @@ Use job responsibilities as the basis for positioning because job titles vary be
 
 Do not fill the Hero with a list of job titles. Communicate job-family coverage through capabilities, project filters, or explicit project-role alignment.
 
+### Project-context filter
+
+The public project filter uses four context labels:
+
+- **All:** every selected project;
+- **Professional:** work delivered inside an employment or organizational context;
+- **Independent:** self-directed portfolio systems built outside an employer or academic assignment; and
+- **Academic:** research, thesis, internship-linked academic modeling, or collaborative academic work.
+
+This filter describes where the work was developed. It does not rank project quality, seniority, or technical maturity, and it does not replace evidence-based role-family mapping.
+
+The approved current context mapping is:
+
+- **Professional:** DWDM Optical Sensor Monitoring;
+- **Independent:** AI Invoice Approval Automation and Retail Sales Forecasting & Planning System; and
+- **Academic:** Rainfall Forecasting with XGBoost, Thyroid Cancer Recurrence Classification, Rainfall Forecasting with BiLSTM, and Rice Price Forecasting with ARIMA.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -180,7 +197,103 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Audited project records
 
-No project has a completed canonical registry record yet. This is intentional: the records must be created from fresh workspace audits, not reconstructed from conversation history or existing portfolio copy.
+### retail-sales-forecasting-ai-engineering
+
+- **Workspace folder:** `AI Engineer/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `AI Engineer/AGENTS.md`, `AI Engineer/PROJECT.md`, `AI Engineer/README.md`, the current Git worktree, public `main`, release `v1.0.0`, and the two GitHub Actions runs for commit `71de0055bf61767d7c1e4e995c22efad9d7c6d48`.
+- **Last audited:** 2026-08-16
+- **Display title:** Retail Sales Forecasting & Planning System
+- **Context:** Independent portfolio project using authorized Kaggle competition data, controlled chronological model evaluation, and locally verified batch, API, and Docker inference.
+- **Primary role family:** AI/ML Engineering
+- **Supporting role families:** Data Science
+- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions contract-test runs `31933494858` and `31933502820` completed successfully on the published v1.0.0 commit.
+- **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
+- **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
+- **Portfolio status:** Approved
+
+### ai-invoice-approval-automation
+
+- **Workspace folder:** `AI Automation/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `AI Automation/AGENTS.md`, `AI Automation/PROJECT.md`, `AI Automation/README.md`, the current Git worktree, and its configured public repository remote.
+- **Last audited:** 2026-08-16
+- **Display title:** The live card currently uses `End-to-End AI Invoice Approval Automation`; the accepted replacement project title is `AI Service Request Automation`, with new public wording pending the project audit and implementation.
+- **Context:** Independent portfolio project.
+- **Primary role family:** Pending. The legacy invoice implementation is an AI Automation candidate, but the current `AI Automation/PROJECT.md` explicitly resets accepted evidence for the replacement service-request project.
+- **Supporting role families:** Pending.
+- **Verified metrics:** Unverified for the newly accepted service-request project. Legacy invoice metrics have not been accepted into the current project source of truth and must not be transferred to the replacement project.
+- **Public repository:** https://github.com/mthufailsamas/ai-invoice-approval-automation (legacy invoice repository; replacement repository status pending)
+- **Limitations:** The current website card and public README describe the legacy invoice workflow, while the current project source of truth has accepted a replacement service-request direction and marks implementation evidence as not yet verified. The worktree is also mid-revision. Do not revise or republish its technical claims until the new project audit and user approval are complete.
+- **Portfolio status:** Revision required
+
+### dwdm-optical-sensor-monitoring
+
+- **Workspace folder:** `C:/Users/Thufail/Documents/Lintasarta/`
+- **Source-of-truth files inspected:** `C:/Users/Thufail/Documents/Lintasarta/README.md` and the current local project structure.
+- **Last audited:** 2026-08-16
+- **Display title:** DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
+- **Context:** Professional project-stage work at PT Aplikanusa Lintasarta using confidential operational sources.
+- **Primary role family:** Data Engineering
+- **Supporting role families:** Data Analysis
+- **Verified metrics:** Pending a dedicated evidence audit. The native 5-minute telemetry contract is documented; do not import the current website's sensor count or another quantitative claim without tracing it to current project evidence.
+- **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
+- **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
+- **Portfolio status:** Audit in progress
+
+### xgboost-rainfall-forecasting
+
+- **Workspace folder:** `XGBoost Skripsi/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `XGBoost Skripsi/README.md`, the current Git worktree, and its configured public repository remote.
+- **Last audited:** 2026-08-16
+- **Display title:** Rainfall Forecasting with XGBoost and Grid Search
+- **Context:** Academic research project that also supported a peer-reviewed publication.
+- **Primary role family:** Data Science
+- **Supporting role families:** Pending a dedicated evidence audit.
+- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Public repository:** https://github.com/mthufailsamas/xgboost-rainfall-prediction
+- **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data, and the current notebook has uncommitted changes that must be reconciled before a claims audit.
+- **Portfolio status:** Audit in progress
+
+### xgboost-thyroid-recurrence-classification
+
+- **Workspace folder:** `XGBoost Skripsi HANA/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `XGBoost Skripsi HANA/README.md`, the current Git worktree, and its configured public repository remote.
+- **Last audited:** 2026-08-16
+- **Display title:** Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search
+- **Context:** Collaborative academic research project.
+- **Primary role family:** Data Science
+- **Supporting role families:** Pending a dedicated evidence audit.
+- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
+- **Limitations:** The experimental dataset does not support clinical diagnosis or deployment claims. The current notebook has uncommitted changes that must be reconciled before a claims audit.
+- **Portfolio status:** Audit in progress
+
+### bilstm-rainfall-forecasting
+
+- **Workspace folder:** `BiLSTM MBKM/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `BiLSTM MBKM/README.md`, the current Git worktree, and its configured public repository remote.
+- **Last audited:** 2026-08-16
+- **Display title:** Rainfall Forecasting with BiLSTM and Grid Search
+- **Context:** Internship-linked academic forecasting project developed with BMKG observations.
+- **Primary role family:** Data Science
+- **Supporting role families:** Pending a dedicated evidence audit.
+- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
+- **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data, and the current notebook has uncommitted changes that must be reconciled before a claims audit.
+- **Portfolio status:** Audit in progress
+
+### arima-rice-price-forecasting
+
+- **Workspace folder:** `ARIMA MBKM HANA/` under the shared portfolio-project workspace
+- **Source-of-truth files inspected:** `ARIMA MBKM HANA/README.md`, the current Git worktree, and its configured public repository remote.
+- **Last audited:** 2026-08-16
+- **Display title:** Rice Price Forecasting with ARIMA and Walk-Forward Validation
+- **Context:** Collaborative academic forecasting project.
+- **Primary role family:** Data Science
+- **Supporting role families:** Pending a dedicated evidence audit.
+- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
+- **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same walk-forward period, so the selected score is not an untouched generalization estimate. The current notebook has uncommitted changes that must be reconciled before a claims audit.
+- **Portfolio status:** Audit in progress
 
 ### Registry audit queue
 
@@ -188,11 +301,10 @@ These entries are audit directions only. They are not completed registry records
 
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
-| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Candidate primary: AI/ML Engineering; candidate supporting: Data Science | Unreviewed |
-| Invoice Operations | `AI Invoice Approval Automation/`; inspect its project instructions and source of truth | Candidate primary: AI Automation | Unreviewed |
-| DWDM Monitoring | Identify and verify the actual workspace folder before any claim | Audit before choosing between Data Engineering, Data Analysis, or supporting AI/ML Engineering | Unreviewed |
-| Thyroid Cancer Recurrence Classification | `XGBoost Skripsi HANA/`; audit the academic workflow before revising any claim | Candidate primary: Data Science; public repository renamed and verified as `mthufailsamas/xgboost-thyroid-recurrence-classification` on 2026-08-16 | Unreviewed |
-| Academic projects | Identify and audit each project separately | Generally candidates for Data Science or Data Analysis; context must remain academic | Unreviewed |
+| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Card wording, placement, and evidence were approved by the user on 2026-08-16 | Approved |
+| AI Service Request Automation | `AI Automation/`; follow its `AGENTS.md` and project source of truth | Replace the legacy Invoice card only after the new project's evidence and wording are approved | Revision required |
+| DWDM Monitoring | `C:/Users/Thufail/Documents/Lintasarta/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
+| Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
 ## 5. Evidence-first portfolio rules
 
@@ -228,3 +340,15 @@ Keep the following evidence levels distinct:
 10. Re-check that no evidence or status has crossed project boundaries.
 11. Verify that the proposed or live project card matches the canonical registry record.
 12. Update this file in the same revision whenever an approved portfolio policy, project evidence, role-family mapping, limitation, repository link, metric, or portfolio status changes.
+
+## 6. Project-to-portfolio handoff
+
+A project task does not publish or revise its own portfolio card. When a project is ready for portfolio review:
+
+1. identify the exact workspace folder and confirm that its project-level source of truth marks the intended handoff stage;
+2. ask the Portfolio Website task to audit or refresh the canonical Project Registry record in this file;
+3. treat the registry as `Draft` after the evidence audit while card wording, placement, or role mapping still requires user review;
+4. change the registry to `Approved` only after the user accepts the proposed public card and claims; and
+5. change the registry to `Published` only after the live website matches the approved record.
+
+A message from another task is a routing signal, not project evidence. The Portfolio Website task must still inspect the project workspace and current reproducible sources before changing a registry record or public card.

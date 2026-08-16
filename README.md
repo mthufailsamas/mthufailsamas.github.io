@@ -13,9 +13,9 @@ The featured case studies cover:
 
 - auditable AI Invoice Approval Automation with n8n, Gemini, Python/FastAPI,
   PostgreSQL, Docker Compose, human review, and idempotent accounting delivery;
-- an implemented F&amp;B demand-data profile using Python, Pandas, and Matplotlib,
-  paired with a clearly separated production ML blueprint for chronological
-  modeling, API delivery, monitoring, and controlled retraining;
+- a Retail Sales Forecasting &amp; Planning System with chronological Ridge and
+  XGBoost evaluation, a versioned model artifact, reusable batch inference,
+  local FastAPI delivery, Docker packaging, and contract tests;
 - Rainfall Forecasting with Python, XGBoost, scikit-learn, and Grid Search;
 - Thyroid Cancer Recurrence Classification with Python, XGBoost,
   scikit-learn, Information Gain, and Grid Search;
@@ -36,6 +36,7 @@ includes:
 
 - responsive desktop and mobile layouts;
 - a permanent dark interface with a consistent color palette;
+- project-context filters for Professional, Independent, and Academic work;
 - accessible navigation and structured page sections;
 - optimized project and social-preview images; and
 - downloadable English resume.
@@ -55,7 +56,8 @@ Portfolio Website/
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
 |   `-- projects/
-|       `-- ai-invoice-automation.png
+|       |-- ai-invoice-automation.png
+|       `-- retail-sales-forecasting.png
 |-- documents/
 |   |-- m-thufail-alwannabil-samas-cv.pdf
 |   |-- m-thufail-alwannabil-samas-ai-automation-resume.docx

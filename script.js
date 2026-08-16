@@ -30,15 +30,14 @@ if (menuButton && navigation) {
 }
 
 const projectFilterButtons = document.querySelectorAll("[data-project-filter]");
-const filterableProjects = document.querySelectorAll("[data-project-category]");
+const filterableProjects = document.querySelectorAll("[data-project-context]");
 const filterStatus = document.querySelector(".filter-status");
 
 function applyProjectFilter(selectedFilter) {
   let visibleCount = 0;
 
   filterableProjects.forEach((project) => {
-    const categories = project.dataset.projectCategory.split(" ");
-    const isVisible = selectedFilter === "all" || categories.includes(selectedFilter);
+    const isVisible = selectedFilter === "all" || project.dataset.projectContext === selectedFilter;
     project.hidden = !isVisible;
 
     if (isVisible) {

@@ -76,8 +76,8 @@
     </script>
     <link rel="preload" as="image" href="assets/hero/data-ai-system-desktop.webp?v=20260809" media="(min-width: 601px)">
     <link rel="preload" as="image" href="assets/hero/data-ai-system-mobile-v2.webp?v=20260809" media="(max-width: 600px)">
-    <link rel="stylesheet" href="styles.css?v=20260809f">
-    <script src="script.js?v=20260809e" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260816a">
+    <script src="script.js?v=20260816a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -167,18 +167,19 @@
           </p>
         </div>
 
-        <div class="content project-filter" aria-label="Filter projects by focus">
-          <p>Filter by focus</p>
-          <div class="project-filter-actions" role="group" aria-label="Project focus">
-            <button class="filter-button active" type="button" data-project-filter="all" aria-pressed="true">All work</button>
-            <button class="filter-button" type="button" data-project-filter="data" aria-pressed="false">Data</button>
-            <button class="filter-button" type="button" data-project-filter="ai" aria-pressed="false">AI</button>
+        <div class="content project-filter" aria-label="Filter projects by context">
+          <p>Project context</p>
+          <div class="project-filter-actions" role="group" aria-label="Project context">
+            <button class="filter-button active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-project-filter="professional" aria-pressed="false">Professional</button>
+            <button class="filter-button" type="button" data-project-filter="independent" aria-pressed="false">Independent</button>
+            <button class="filter-button" type="button" data-project-filter="academic" aria-pressed="false">Academic</button>
           </div>
           <p class="filter-status sr-only" aria-live="polite">Showing all seven projects.</p>
         </div>
 
         <div class="project-list">
-          <article class="project featured-project" data-project-category="ai">
+          <article class="project featured-project" data-project-context="independent">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Gemini, Python/FastAPI, PostgreSQL, Docker</p></div>
@@ -217,43 +218,46 @@
             </div>
           </article>
 
-          <article class="project featured-project" id="fnb-demand-forecasting" data-project-category="data ai">
+          <article class="project featured-project" id="retail-sales-forecasting" data-project-context="independent">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>02</span><p>Demand data analysis &amp; production ML blueprint | Python, Pandas, Matplotlib</p></div>
-                <h3>F&amp;B Demand Forecasting: Data Profile and Production Blueprint</h3>
+                <div class="project-kicker"><span>02</span><p>AI/ML engineering &amp; retail forecasting | Python, XGBoost, FastAPI, Docker</p></div>
+                <h3>Retail Sales Forecasting &amp; Planning System</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>F&amp;B teams must prepare stock before weekly demand is known, while demand changes across centers, meals, prices, and promotions. A forecast that stays inside a notebook cannot support a recurring planning process.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Selected and audited the Genpact dataset, built a reproducible Pandas profiling workflow and demand-history visual, defined the center-meal-week target, and documented the production ML architecture that will connect training, API delivery, and monitoring.</dd></div>
+                  <div><dt>Problem</dt><dd>Retail planning requires a consistent 16-day view of category demand across 54 stores and 33 product families, while promotions, holidays, transactions, and local operating conditions vary across 1,782 store-family series.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Built the end-to-end system from seven-source preprocessing and forecast-safe feature engineering through chronological Ridge/XGBoost evaluation, a versioned model artifact, reusable batch inference, and locally verified FastAPI and Docker delivery.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The public dataset contains 456,548 labeled weekly observations across 77 fulfilment centers and 51 meals, with price, promotion, center, and meal information covering weeks 1-145.</dd></div>
-                    <div><dt>Approach</dt><dd>The implemented profiling stage aggregates weekly demand and a four-week moving average with Pandas. The modeling blueprint then compares seasonal baselines, XGBoost, and a TensorFlow challenger for each center-meal combination.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Current evidence covers source documentation, raw-file checksums, dataset dimensions, and reproducible profile outputs. The next stages specify chronological evaluation, versioned artifacts, FastAPI delivery, Docker packaging, prediction logging, and evaluation-gated model replacement.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Used 3,000,888 labeled rows from the Kaggle Store Sales competition covering 2013–2017. The prediction contract produces one forecast for every date, store, and product-family combination over the next 16 days.</dd></div>
+                    <div><dt>Approach</dt><dd>Compared three Ridge settings with 27 XGBoost configurations on a fixed chronological validation window. XGBoost was selected by RMSLE before the frozen configuration was evaluated once on the protected internal-test window.</dd></div>
+                    <div><dt>Validation &amp; Delivery</dt><dd>The selected model recorded internal-test RMSLE of 0.4140 and WAPE of 15.6431%. Its versioned artifact generated 28,512 forecasts, while fresh-process batch, local FastAPI, and healthy Docker inference matched the notebook output. All 38 synthetic contract tests also passed in GitHub Actions.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/fnb-demand-data-profile.png?v=20260805f" target="_blank" rel="noopener noreferrer" aria-label="Open the F and B demand history and system flow at full size">
-                    <img src="assets/projects/fnb-demand-data-profile.png?v=20260805f" alt="Weekly food demand and four-week average beside a concise data, modeling, forecast delivery, and performance-monitoring flow" width="1600" height="960" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.png?v=20260816a" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
+                    <img src="assets/projects/retail-sales-forecasting.png?v=20260816a" alt="Retail forecasting flow from seven source tables through feature engineering, chronological model evaluation, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1600" height="960" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>Weekly totals and the four-week average come directly from the selected dataset, while the adjacent flow summarizes how demand forecasts move from data preparation to ongoing performance checks.</figcaption>
+                  <figcaption>One versioned XGBoost artifact drives the same 16-day contract across batch, FastAPI, and Docker inference.</figcaption>
                 </figure>
-                <div class="metric-row" aria-label="Selected F and B demand dataset scope">
-                  <div><strong>456,548</strong><span>Labeled Weekly Rows</span></div>
-                  <div><strong>77</strong><span>Fulfilment Centers</span></div>
-                  <div><strong>51</strong><span>Meals</span></div>
+                <div class="metric-row" aria-label="Retail forecasting internal-test and delivery results">
+                  <div><strong>15.6431%</strong><span>Internal-Test WAPE</span></div>
+                  <div><strong>28,512</strong><span>16-Day Forecast Rows</span></div>
+                  <div><strong>38/38</strong><span>Contract Tests Passed</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The project establishes a verified demand-data profile and a clear implementation blueprint for turning weekly order history into reusable forecasts, operational delivery, and ongoing performance checks.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The displayed demand pattern and dataset counts come directly from the public data. Current evidence covers data profiling and system design; forecast accuracy and deployed behavior will be reported after the modeling and delivery stages are implemented.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The system produces a checked 16-day store-family forecast batch from one reusable artifact, with identical predictions across notebook, API, and containerized inference.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>Results come from one fixed validation window and one protected internal-test window on 2013–2017 competition data. The API is locally verified and containerized, not externally deployed. The forecasts do not include inventory, supplier, cost, margin, or capacity constraints.</span></p>
+                <div class="project-links">
+                  <a class="text-link" href="https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="project featured-project" data-project-category="data ai">
+          <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost, scikit-learn</p></div>
@@ -293,7 +297,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-category="data ai">
+          <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost, scikit-learn</p></div>
@@ -333,7 +337,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-category="data">
+          <article class="project featured-project" data-project-context="professional">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
@@ -369,7 +373,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-category="data ai">
+          <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>06</span><p>Deep learning &amp; time-series forecasting | Python, TensorFlow/Keras, NumPy, Pandas</p></div>
@@ -408,7 +412,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-category="data">
+          <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>07</span><p>Statistical time-series forecasting | Python, statsmodels, Pandas</p></div>
