@@ -323,6 +323,13 @@ Keep the following evidence levels distinct:
 ### Claim and wording controls
 
 - Never convert WAPE, RMSLE, MAE, or another error metric into “accuracy.”
+- Use digits for every explicit quantity, count, duration, range, measurement,
+  configuration total, version, metric, and ordinal position in visible copy,
+  captions, alt text, diagrams, and public README prose. Before publication,
+  scan for spelled-out numeric facts such as `three settings`, `seven-day`, or
+  `first author` and write them as `3 settings`, `7-day`, or `1st author`.
+  Preserve nonnumeric idioms, proper names, and standard compounds such as
+  `third-party` when the word is not reporting a number.
 - Write public project-card copy in affirmative language centered on Problem,
   My Contribution, Project Output, and Evidence & Scope. Prefer direct
   statements of what exists and what was measured.

@@ -152,7 +152,7 @@
               Professional experience covers operational monitoring, data science, and technical education. Work at PT Aplikanusa Lintasarta centered on DWDM monitoring and assurance analytics for approximately 400 directional sensors. Earlier roles involved BMKG forecasting tools and programming and AI education across school and university settings.
             </p>
             <p>
-              Beyond those roles, the portfolio includes machine-learning forecasting and classification, data pipelines, and LLM-assisted invoice automation with human review. Credentials include BNSP Data Scientist certification and a first-author peer-reviewed publication on XGBoost rainfall forecasting.
+              Beyond those roles, the portfolio includes machine-learning forecasting and classification, data pipelines, and LLM-assisted invoice automation with human review. Credentials include BNSP Data Scientist certification and a peer-reviewed XGBoost rainfall publication as 1st author.
             </p>
           </div>
         </div>
@@ -175,7 +175,7 @@
             <button class="filter-button" type="button" data-project-filter="independent" aria-pressed="false">Independent</button>
             <button class="filter-button" type="button" data-project-filter="academic" aria-pressed="false">Academic</button>
           </div>
-          <p class="filter-status sr-only" aria-live="polite">Showing all seven projects.</p>
+          <p class="filter-status sr-only" aria-live="polite">Showing all 7 projects.</p>
         </div>
 
         <div class="project-list">
@@ -186,13 +186,13 @@
                 <h3>End-to-End AI Invoice Approval Automation</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, three n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, 3 n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
-                    <div><dt>Approach</dt><dd>n8n creates one job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. One failed invoice does not stop the rest of the batch.</dd></div>
+                    <div><dt>Approach</dt><dd>n8n creates 1 job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. A failed invoice does not stop the rest of the batch.</dd></div>
                     <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing. Docker Compose packages the local services, while an optional Apps Script integration sends final read-only records to Google Sheets.</dd></div>
                   </dl>
                 </details>
@@ -202,7 +202,7 @@
                   <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260805i" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation operating flow at full size">
                     <img src="assets/projects/ai-invoice-automation.png?v=20260805i" alt="AI invoice automation flow showing batch intake, automated checks, human review, accounting delivery, and a structured record of status, decisions, and duplicate protection" width="1600" height="960" decoding="async">
                   </a>
-                  <figcaption>One project is split into three n8n workflows so intake, human review, and accounting delivery can start independently and be retried safely.</figcaption>
+                  <figcaption>The project is split into 3 n8n workflows so intake, human review, and accounting delivery can start independently and be retried safely.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="AI invoice automation workflow scope">
                   <div><strong>20 files</strong><span>Maximum Upload Batch</span></div>
@@ -230,8 +230,8 @@
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Used 3,000,888 labeled rows from the Kaggle Store Sales competition covering 2013–2017. The prediction contract produces one forecast for every date, store, and product-family combination over the next 16 days.</dd></div>
-                    <div><dt>Approach</dt><dd>Compared three Ridge settings with 27 XGBoost configurations on a fixed chronological validation window. XGBoost was selected by RMSLE before the frozen configuration was evaluated once on the protected internal-test window.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Used 3,000,888 labeled rows from the Kaggle Store Sales competition covering 2013–2017. The prediction contract produces 1 forecast for every date, store, and product-family combination over the next 16 days.</dd></div>
+                    <div><dt>Approach</dt><dd>Compared 3 Ridge settings with 27 XGBoost configurations on a fixed chronological validation window. XGBoost was selected by RMSLE, then the frozen configuration was evaluated in 1 protected internal-test window.</dd></div>
                     <div><dt>Validation &amp; Delivery</dt><dd>The selected model recorded internal-test RMSLE of 0.4140 and WAPE of 15.6431%. Its versioned artifact generated 28,512 forecasts, while fresh-process batch, local FastAPI, and healthy Docker inference matched the notebook output. All 38 synthetic contract tests also passed in GitHub Actions.</dd></div>
                   </dl>
                 </details>
@@ -239,17 +239,17 @@
               <div class="project-result-column">
                 <figure class="project-visual">
                   <a class="project-image-link" href="assets/projects/retail-sales-forecasting.png?v=20260816e" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
-                    <img src="assets/projects/retail-sales-forecasting.png?v=20260816e" alt="Retail forecasting flow from six source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1600" height="960" loading="lazy" decoding="async">
+                    <img src="assets/projects/retail-sales-forecasting.png?v=20260816e" alt="Retail forecasting flow from 6 source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1600" height="960" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>One versioned XGBoost artifact drives the same 16-day contract across batch, FastAPI, and Docker inference.</figcaption>
+                  <figcaption>1 versioned XGBoost artifact drives the same 16-day contract across batch, FastAPI, and Docker inference.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="Retail forecasting internal-test and delivery results">
                   <div><strong>15.6431%</strong><span>Internal-Test WAPE</span></div>
                   <div><strong>28,512</strong><span>16-Day Forecast Rows</span></div>
                   <div><strong>38/38</strong><span>Contract Tests Passed</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The system produces a checked 16-day forecast for every store-family series, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>1 fixed validation window and 1 protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -264,13 +264,13 @@
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Daily rainfall is highly variable, and random train-test splits can overstate how well a model will perform on future weather. This project estimates next-day rainfall while keeping evaluation in chronological order.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Built the Python forecasting workflow from data validation and lag construction through XGBoost search, scikit-learn temporal evaluation, and experiment reporting, then served as first author of the resulting peer-reviewed publication.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Built the Python forecasting workflow from data validation and lag construction through XGBoost search, scikit-learn temporal evaluation, and experiment reporting, then authored the resulting peer-reviewed publication as 1st author.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>Daily BMKG observations from the Trunojoyo observation area in Sumenep Regency combine recent temperature, sunshine, humidity, wind, and rainfall history.</dd></div>
-                    <div><dt>Approach</dt><dd>Created one-day lagged predictors and searched 243 XGBoost configurations, with Min-Max scaling fitted separately inside each training fold.</dd></div>
+                    <div><dt>Approach</dt><dd>Created 1-day lagged predictors and searched 243 XGBoost configurations, with Min-Max scaling fitted separately inside each training fold.</dd></div>
                     <div><dt>Validation &amp; Controls</dt><dd>Used 10-fold TimeSeriesSplit and pooled out-of-fold predictions so every test window followed its training data and future observations did not leak into preprocessing.</dd></div>
                   </dl>
                 </details>
@@ -278,7 +278,7 @@
               <div class="project-result-column">
                 <figure class="project-visual">
                   <a class="project-image-link" href="assets/projects/xgboost-rainfall.png?v=20260724d" target="_blank" rel="noopener noreferrer" aria-label="Open the XGBoost rainfall project visual at full size">
-                    <img src="assets/projects/xgboost-rainfall.png?v=20260724d" alt="Observed rainfall and pooled out-of-fold XGBoost predictions across ten temporal test windows" width="1600" height="960" decoding="async">
+                    <img src="assets/projects/xgboost-rainfall.png?v=20260724d" alt="Observed rainfall and pooled out-of-fold XGBoost predictions across 10 temporal test windows" width="1600" height="960" decoding="async">
                   </a>
                   <figcaption>Observed rainfall and pooled out-of-fold predictions from the 10-fold temporal evaluation.</figcaption>
                 </figure>
@@ -287,8 +287,8 @@
                   <div><strong>11.9566</strong><span>RMSE (mm)</span></div>
                   <div><strong>10</strong><span>Temporal Folds</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow delivers a selected XGBoost model, fold-level results, pooled out-of-fold rainfall predictions, and a traceable experiment report rather than a single unsupported accuracy figure.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The work became a first-author peer-reviewed publication. Original BMKG observations remain restricted, so the public repository provides synthetic same-schema data for reviewing and reproducing the workflow.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow delivers a selected XGBoost model, fold-level results, pooled out-of-fold rainfall predictions, and a traceable experiment report.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The work became a peer-reviewed publication with Thufail as 1st author. Original BMKG observations remain restricted, so the public repository provides synthetic same-schema data for reviewing and reproducing the workflow.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                   <a class="text-link" href="https://doi.org/10.26760/mindjournal.v11i1.30-43" target="_blank" rel="noopener noreferrer">Read publication <span aria-hidden="true">&#8599;</span></a>
@@ -318,7 +318,7 @@
               <div class="project-result-column">
                 <figure class="project-visual">
                   <a class="project-image-link" href="assets/projects/thyroid-classification.png?v=20260724g" target="_blank" rel="noopener noreferrer" aria-label="Open the thyroid classification project visual at full size">
-                    <img src="assets/projects/thyroid-classification.png?v=20260724g" alt="Top ten encoded features using their original column names, ranked by mean Information Gain across ten training folds" width="1619" height="971" loading="lazy" decoding="async">
+                    <img src="assets/projects/thyroid-classification.png?v=20260724g" alt="Top 10 encoded features using their original column names, ranked by mean Information Gain across 10 training folds" width="1619" height="971" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Top 10 encoded features by mean Information Gain across 10 training folds.</figcaption>
                 </figure>
@@ -343,7 +343,7 @@
                 <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
                 <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across hundreds of directional optical sensors.</dd></div>
+                  <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across a large directional optical-sensor estate.</dd></div>
                   <div><dt>My Contribution</dt><dd>Implemented the incremental Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, local API, priority workflow, and browser-based monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
@@ -351,7 +351,7 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combine native 5-minute PRTG optical-power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
                     <div><dt>Approach</dt><dd>Built an incremental workflow from metadata synchronization and telemetry collection through failure grouping, PELT change-point detection, Theil-Sen and Mann-Kendall degradation analysis, paired-sensor evidence, priority ranking, and local dashboard delivery.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, zero coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, 0 coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -380,14 +380,14 @@
                 <h3>Rainfall Forecasting with BiLSTM and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Next-day rainfall depends on changing weather patterns across several recent days, making a sequence-based model more appropriate than treating each observation as an isolated row.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Developed the Python forecasting workflow during my BMKG internship, using NumPy and Pandas for seven-day sequence preparation and TensorFlow/Keras for three-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Developed the Python forecasting workflow during my BMKG internship, using NumPy and Pandas for 7-day sequence preparation and TensorFlow/Keras for 3-layer BiLSTM training, focused Grid Search, chronological evaluation, and result reporting.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG observations from the Trunojoyo observation area in Sumenep Regency provide four weather variables and historical rainfall for each input sequence.</dd></div>
-                    <div><dt>Approach</dt><dd>Built seven-day multivariate sequences, fitted Min-Max normalization on the training period, and trained a three-layer stacked BiLSTM while tuning units, batch size, and the learning-rate drop period.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Used an 80:20 chronological split so every evaluation observation followed the training period. Predictions were returned to millimeters and impossible negative rainfall values were clipped to zero.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Daily BMKG observations from the Trunojoyo observation area in Sumenep Regency provide 4 weather variables and historical rainfall for each input sequence.</dd></div>
+                    <div><dt>Approach</dt><dd>Built 7-day multivariate sequences, fitted Min-Max normalization on the training period, and trained a 3-layer stacked BiLSTM while tuning units, batch size, and the learning-rate drop period.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Used an 80:20 chronological split so every evaluation observation followed the training period. Predictions were returned to millimeters and impossible negative rainfall values were clipped to 0.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -403,8 +403,8 @@
                   <div><strong>10.2734 mm</strong><span>RMSE</span></div>
                   <div><strong>7 days</strong><span>Input Sequence</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow turns seven days of weather history into next-day rainfall estimates and preserves the selected model, holdout predictions, evaluation summaries, and actual-versus-predicted visual for review.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The reported BMKG internship results come from one chronological holdout period using restricted observations. The public repository includes synthetic same-schema data so the full workflow can still be inspected and run.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow turns 7 days of weather history into next-day rainfall estimates and preserves the selected model, holdout predictions, evaluation summaries, and actual-versus-predicted visual for review.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The reported BMKG internship results come from 1 chronological holdout period using restricted observations. The public repository includes synthetic same-schema data so the full workflow can still be inspected and run.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/bilstm-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -424,25 +424,25 @@
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Sixty public monthly observations from January 2020 through December 2024 cover medium and premium rice prices from the Open Data Jawa Timur portal.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>60 public monthly observations from January 2020 through December 2024 cover medium and premium rice prices from the Open Data Jawa Timur portal.</dd></div>
                     <div><dt>Approach</dt><dd>Modeled medium and premium prices separately with ARIMA, using ADF-based differencing, ACF and PACF inspection, candidate evaluation, convergence checks, and residual diagnostics.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Started with the first 80% of observations, forecast the next month, added the newly available actual price, and repeated the process across the remaining 12 months.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Started with the initial 80% of observations, forecast the next month, added the newly available actual price, and repeated the process across the remaining 12 months.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
                   <a class="project-image-link" href="assets/projects/arima-rice.png?v=20260724e" target="_blank" rel="noopener noreferrer" aria-label="Open the ARIMA rice-price project visual at full size">
-                    <img src="assets/projects/arima-rice.png?v=20260724e" alt="Observed and one-step-ahead forecast prices for medium and premium rice during walk-forward evaluation" width="1600" height="960" loading="lazy" decoding="async">
+                    <img src="assets/projects/arima-rice.png?v=20260724e" alt="Observed and 1-step-ahead forecast prices for medium and premium rice during walk-forward evaluation" width="1600" height="960" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>Observed and one-step-ahead forecasts over the walk-forward test period.</figcaption>
+                  <figcaption>Observed and 1-step-ahead forecasts over the walk-forward test period.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="ARIMA rice-price project results">
                   <div><strong>2.08%</strong><span>Medium Rice MAPE</span></div>
                   <div><strong>1.82%</strong><span>Premium Rice MAPE</span></div>
                   <div><strong>12 months</strong><span>Walk-Forward Test</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow turns public monthly price history into explainable one-step-ahead forecasts, selected ARIMA orders, diagnostic records, error summaries, and comparison visuals for both rice categories.</span></p>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow turns public monthly price history into explainable 1-step-ahead forecasts, selected ARIMA orders, diagnostic records, error summaries, and comparison visuals for both rice categories.</span></p>
                 <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public data and runnable workflow are included in the repository. The models tracked the evaluated period closely, but rely only on past prices and do not include market events, policy changes, supply, or weather.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/arima-rice-price-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
@@ -460,7 +460,7 @@
             <h2>Peer-Reviewed Rainfall Forecasting Study</h2>
           </div>
           <article class="publication-record">
-            <p class="publication-label">First Author | Peer-Reviewed Article</p>
+            <p class="publication-label">1st Author | Peer-Reviewed Article</p>
             <p class="publication-title">Prediksi Curah Hujan di Kabupaten Sumenep Menggunakan Metode Extreme Gradient Boosting (XGBoost) dan Algoritma Grid Search</p>
             <p>M. Thufail Alwannabil Samas, Nurissaidah Ulinnuha, Moh. Hafiyusholeh</p>
             <p>MIND (Multimedia Artificial Intelligent Networking Database) Journal, Vol. 11, No. 1, June 2026, pp. 30&ndash;43</p>
@@ -481,7 +481,7 @@
           </article>
           <article>
             <time datetime="2025-08">Aug 2025 - Dec 2025</time>
-            <div><h3>Coding and AI Teacher</h3><p class="organization">SMP GIKI 3 Surabaya</p><p>Taught Python fundamentals and introductory AI concepts to Grade 8 and 9 students over five months, using Teachable Machine and practical coding exercises while designing lesson materials, quizzes, and image-classification activities to strengthen programming logic, problem-solving, and foundational AI understanding.</p></div>
+            <div><h3>Coding and AI Teacher</h3><p class="organization">SMP GIKI 3 Surabaya</p><p>Taught Python fundamentals and introductory AI concepts to Grade 8 and 9 students over 5 months, using Teachable Machine and practical coding exercises while designing lesson materials, quizzes, and image-classification activities to strengthen programming logic, problem-solving, and foundational AI understanding.</p></div>
           </article>
           <article>
             <time datetime="2024-02">Feb 2024 - Jun 2024</time>
@@ -489,7 +489,7 @@
           </article>
           <article>
             <time datetime="2022-08">Aug 2022 - Jul 2024</time>
-            <div><h3>Programming Teaching Assistant</h3><p class="organization">Universitas Islam Negeri Sunan Ampel Surabaya (UINSA)</p><p>Guided undergraduate students across four semesters of Basic Programming and Programming courses in MATLAB and Python, providing hands-on support in debugging, data handling, computational problem-solving, and algorithmic thinking while developing introductory machine-learning materials covering Linear Regression, K-Nearest Neighbors, and K-Means clustering.</p></div>
+            <div><h3>Programming Teaching Assistant</h3><p class="organization">Universitas Islam Negeri Sunan Ampel Surabaya (UINSA)</p><p>Guided undergraduate students across 4 semesters of Basic Programming and Programming courses in MATLAB and Python, providing hands-on support in debugging, data handling, computational problem-solving, and algorithmic thinking while developing introductory machine-learning materials covering Linear Regression, K-Nearest Neighbors, and K-Means clustering.</p></div>
           </article>
         </div>
       </section>
