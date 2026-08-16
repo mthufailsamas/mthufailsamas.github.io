@@ -200,17 +200,17 @@ Copy this block for each audited project. Do not remove required fields.
 ### retail-sales-forecasting-ai-engineering
 
 - **Workspace folder:** `AI Engineer/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `AI Engineer/AGENTS.md`, `AI Engineer/PROJECT.md`, `AI Engineer/README.md`, the current Git worktree, public `main`, release `v1.0.0`, and the two GitHub Actions runs for commit `71de0055bf61767d7c1e4e995c22efad9d7c6d48`.
+- **Source-of-truth files inspected:** `AI Engineer/AGENTS.md`, `AI Engineer/PROJECT.md`, `AI Engineer/README.md`, the current Git worktree, public `main` at `91d363da7b536d25989e0465e8b767a0e9613196`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and their successful GitHub Actions evidence.
 - **Last audited:** 2026-08-16
 - **Display title:** Retail Sales Forecasting & Planning System
 - **Context:** Independent portfolio project using authorized Kaggle competition data, controlled chronological model evaluation, and locally verified batch, API, and Docker inference.
 - **Primary role family:** AI/ML Engineering
 - **Supporting role families:** Data Science
-- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions contract-test runs `31933494858` and `31933502820` completed successfully on the published v1.0.0 commit.
+- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions runs `31933494858`, `31933502820`, and documentation-audit run `31945863065` completed successfully.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
-- **Approved Evidence & Scope wording:** Results come from one fixed validation window and one protected internal-test window on 2013–2017 competition data. The locally verified, containerized API produces product-family sales forecasts rather than inventory decisions.
+- **Approved Verified Evidence wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
 - **Portfolio status:** Published. The evidence-aligned wording and corrected system visual are current on the live website.
 
 ### ai-invoice-approval-automation
@@ -322,6 +322,17 @@ Keep the following evidence levels distinct:
 ### Claim and wording controls
 
 - Never convert WAPE, RMSLE, MAE, or another error metric into “accuracy.”
+- Write public project-card copy in affirmative language centered on Problem,
+  Contribution, Project Output, and Verified Evidence. Prefer direct statements
+  of what exists and what was measured.
+- Do not use `not X`, `does not Y`, `rather than Z`, `without A`, or similar
+  contrast constructions merely to list missing features, deferred work, or
+  hypothetical claims. Keep those details in the registry or relevant
+  technical documentation.
+- Publish a limitation only when omitting it would materially misrepresent the
+  data, evaluation, confidentiality, license, deployment state, or measured
+  result. State it once, directly, and without turning the card into a defense
+  of what the project is not.
 - Do not claim cost savings, waste reduction, faster work, increased revenue, or other business impact without a real measurement.
 - Do not use **production-ready**, **enterprise-ready**, **deployed**, **real-time**, or **live** unless current evidence supports the exact claim.
 - If an API runs only locally through Docker, describe it as **locally verified and containerized**, not deployed.
