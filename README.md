@@ -41,6 +41,11 @@ includes:
 - optimized project and social-preview images; and
 - downloadable English resume.
 
+The retail-system visual uses icons from the official
+[Bootstrap Icons](https://icons.getbootstrap.com/) library under its MIT
+license. The icons are bundled into the local project image rather than loaded
+from a third-party service at runtime.
+
 The site has no frontend framework, build step, package manager, backend,
 analytics, or tracking.
 

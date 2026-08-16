@@ -208,10 +208,11 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions runs `31933494858`, `31933502820`, and documentation-audit run `31945863065` completed successfully.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
+- **Visual asset source:** Five stage icons from the official MIT-licensed Bootstrap Icons library, rasterized into the local project PNG with no runtime third-party request.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
-- **Portfolio status:** Published. The evidence-aligned wording and corrected system visual are current on the live website.
+- **Portfolio status:** Published. The evidence-aligned wording and streamlined model-selection visual are current on the live website.
 
 ### ai-invoice-approval-automation
 
@@ -366,6 +367,17 @@ Every project visual uses a centered primary title. Diagram and chart text must
 remain readable at card size, and every number, method, system component, and
 result shown in the image must be traceable to the project's current registry
 record and source evidence.
+
+Every public visual uses a deliberate alignment grid with consistent spacing,
+padding, component dimensions, text alignment, icon placement, and hierarchy.
+Approval requires inspection at the visual's real website-card size; visibly
+off-center, cramped, uneven, or accidentally wrapped elements must be fixed.
+
+General-purpose icons and illustrations must come from one reputable official
+or open-license asset library with a consistent style. Verify and document the
+source and license, bundle the approved asset locally, and do not mix unrelated
+web images. Project-native charts, screenshots, and diagrams remain preferable
+when they communicate actual project evidence.
 
 Do not place a role-family, category, or eyebrow label above the primary title
 inside a project visual. The project-card kicker already owns that information.
