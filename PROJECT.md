@@ -84,7 +84,7 @@ This order leads with verified professional work, follows with the AI/ML Enginee
 
 **Filter-numbering status:** Published at portfolio commit `9f86dc07d0e62e2e044f0bcb936d72b492a4acc6`; Pages run `31954160246` completed successfully, and the live script contains the approved filter-relative renumbering behavior.
 
-**Filter-numbering delivery correction:** Approved for publication on 2026-08-16. The JavaScript asset version in `index.html` must change with this behavior revision so previously cached browsers retrieve the published numbering logic.
+**Filter-numbering delivery correction:** Published at portfolio commit `267ea56b034526463d37b460fe2ceeafb54517ab`; Pages run `31954400865` completed successfully. The live HTML now requests `script.js?v=9f86dc0`, forcing previously cached browsers to retrieve the published numbering logic.
 
 ## 2. Evidence required for each role family
 
