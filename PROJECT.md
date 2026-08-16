@@ -212,7 +212,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
-- **Portfolio status:** Published. The evidence-aligned wording and streamlined model-selection visual are current on the live website.
+- **Portfolio status:** Published at portfolio commit `bd89470a0e9a03cd9d01f3a592daef469b3ae0f7`; Pages run `31949697620` completed successfully. The live card uses the evidence-aligned wording and streamlined model-selection visual. Desktop and 390-pixel mobile checks found no horizontal overflow, missing asset, or browser warning.
 
 ### ai-invoice-approval-automation
 
