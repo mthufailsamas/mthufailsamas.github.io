@@ -42,6 +42,11 @@ function applyProjectFilter(selectedFilter) {
 
     if (isVisible) {
       visibleCount += 1;
+
+      const projectNumber = project.querySelector(".project-kicker span");
+      if (projectNumber) {
+        projectNumber.textContent = String(visibleCount).padStart(2, "0");
+      }
     }
   });
 

@@ -36,7 +36,8 @@ includes:
 
 - responsive desktop and mobile layouts;
 - a permanent dark interface with a consistent color palette;
-- project-context filters for Professional, Independent, and Academic work;
+- project-context filters for Professional, Independent, and Academic work,
+  with visible cards renumbered sequentially from `01`;
 - accessible navigation and structured page sections;
 - native `1920x1080` Full HD project visuals plus optimized platform-specific
   profile, hero, and social-preview images; and

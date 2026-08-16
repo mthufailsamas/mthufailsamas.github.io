@@ -76,6 +76,14 @@ The public project list and its visible numbering use this order:
 
 This order leads with verified professional work, follows with the AI/ML Engineering flagship, keeps the current AI Automation card in the accepted 3rd position pending its later replacement, and then presents the academic projects.
 
+### Filter-relative project numbering
+
+- **All** uses the canonical display order and numbers the 7 cards from `01` through `07`.
+- **Professional**, **Independent**, and **Academic** preserve that relative order but renumber only the visible cards, starting from `01`.
+- Returning to **All** restores the canonical numbering from `01` through `07`.
+
+**Filter-numbering status:** Approved for publication on 2026-08-16.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
