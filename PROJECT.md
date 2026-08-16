@@ -210,7 +210,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
-- **Approved Verified Evidence wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
+- **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
 - **Portfolio status:** Published. The evidence-aligned wording and corrected system visual are current on the live website.
 
 ### ai-invoice-approval-automation
@@ -323,8 +323,8 @@ Keep the following evidence levels distinct:
 
 - Never convert WAPE, RMSLE, MAE, or another error metric into “accuracy.”
 - Write public project-card copy in affirmative language centered on Problem,
-  Contribution, Project Output, and Verified Evidence. Prefer direct statements
-  of what exists and what was measured.
+  My Contribution, Project Output, and Evidence & Scope. Prefer direct
+  statements of what exists and what was measured.
 - Do not use `not X`, `does not Y`, `rather than Z`, `without A`, or similar
   contrast constructions merely to list missing features, deferred work, or
   hypothetical claims. Keep those details in the registry or relevant
@@ -338,6 +338,34 @@ Keep the following evidence levels distinct:
 - If an API runs only locally through Docker, describe it as **locally verified and containerized**, not deployed.
 - Older datasets may still be used, but their time-relevance limitation must be stated.
 - Do not hide imperfect results. Present each metric together with its evaluation context.
+
+### Canonical project-card structure
+
+Every project card uses the same reader-facing order:
+
+1. role family and core stack;
+2. project title;
+3. Problem;
+4. My Contribution;
+5. expandable Technical details;
+6. project visual;
+7. a compact headline metrics or evidence row;
+8. Project Output;
+9. Evidence & Scope; and
+10. relevant repository or publication links.
+
+`Problem`, `My Contribution`, `Technical details`, `Project Output`, and
+`Evidence & Scope` are canonical card-level labels and must not be renamed
+without explicit user approval. Technical-detail subheadings may adapt to the
+project, but together they cover inputs and context, approach or system design,
+and validation or delivery. Use three headline items by default and at most
+four when the additional metric is necessary to represent the evaluation;
+supporting metrics remain inside Technical details.
+
+Every project visual uses a centered primary title. Diagram and chart text must
+remain readable at card size, and every number, method, system component, and
+result shown in the image must be traceable to the project's current registry
+record and source evidence.
 
 ## Mandatory workflow before publishing or revising claims
 
