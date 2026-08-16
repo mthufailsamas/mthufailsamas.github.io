@@ -11,16 +11,16 @@ publication, certification, and technical background.
 
 The featured case studies cover:
 
-- auditable AI Invoice Approval Automation with n8n, Gemini, Python/FastAPI,
-  PostgreSQL, Docker Compose, human review, and idempotent accounting delivery;
+- DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection,
+  developed as professional project-stage work at PT Aplikanusa Lintasarta;
 - a Retail Sales Forecasting &amp; Planning System with chronological Ridge and
   XGBoost evaluation, a versioned model artifact, reusable batch inference,
   local FastAPI delivery, Docker packaging, and contract tests;
+- auditable AI Invoice Approval Automation with n8n, Gemini, Python/FastAPI,
+  PostgreSQL, Docker Compose, human review, and idempotent accounting delivery;
 - Rainfall Forecasting with Python, XGBoost, scikit-learn, and Grid Search;
 - Thyroid Cancer Recurrence Classification with Python, XGBoost,
   scikit-learn, Information Gain, and Grid Search;
-- DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection,
-  developed as professional project-stage work at PT Aplikanusa Lintasarta;
 - Rainfall Forecasting with TensorFlow/Keras BiLSTM and Grid Search; and
 - Rice Price Forecasting with statsmodels ARIMA and Walk-Forward Validation.
 

@@ -179,41 +179,38 @@
         </div>
 
         <div class="project-list">
-          <article class="project featured-project" data-project-context="independent">
+          <article class="project featured-project" data-project-context="professional">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>01</span><p>AI automation &amp; document intelligence | n8n, Gemini, Python/FastAPI, PostgreSQL, Docker</p></div>
-                <h3>End-to-End AI Invoice Approval Automation</h3>
+                <div class="project-kicker"><span>01</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
+                <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, 3 n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
+                  <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across a large directional optical-sensor estate.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Implemented the incremental Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, local API, priority workflow, and browser-based monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
-                    <div><dt>Approach</dt><dd>n8n creates 1 job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. A failed invoice does not stop the rest of the batch.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing. Docker Compose packages the local services, while an optional Apps Script integration sends final read-only records to Google Sheets.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combine native 5-minute PRTG optical-power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
+                    <div><dt>Approach</dt><dd>Built an incremental workflow from metadata synchronization and telemetry collection through failure grouping, PELT change-point detection, Theil-Sen and Mann-Kendall degradation analysis, paired-sensor evidence, priority ranking, and local dashboard delivery.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, 0 coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260816g" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation operating flow at full size">
-                    <img src="assets/projects/ai-invoice-automation.png?v=20260816g" alt="AI invoice automation flow showing batch intake, automated checks, human review, accounting delivery, and a structured record of status, decisions, and duplicate protection" width="1920" height="1080" decoding="async">
+                  <a class="project-image-link" href="assets/projects/dwdm-monitoring.png?v=20260816g" target="_blank" rel="noopener noreferrer" aria-label="Open the optical monitoring project visual at full size">
+                    <img src="assets/projects/dwdm-monitoring.png?v=20260816g" alt="Illustrative DWDM optical signal trace with a change point, degradation trend, failure interval, missing interval, and monitoring output" width="1920" height="1080" decoding="async">
                   </a>
-                  <figcaption>The project is split into 3 n8n workflows so intake, human review, and accounting delivery can start independently and be retried safely.</figcaption>
+                  <figcaption>Illustrative, non-confidential view of signal events, missing intervals, and monitoring output used by the workflow.</figcaption>
                 </figure>
-                <div class="metric-row" aria-label="AI invoice automation workflow scope">
-                  <div><strong>20 files</strong><span>Maximum Upload Batch</span></div>
-                  <div><strong>3</strong><span>Event-Driven n8n Workflows</span></div>
-                  <div><strong>Per-file</strong><span>Failure Isolation</span></div>
+                <div class="metric-row" aria-label="Optical monitoring project scope">
+                  <div><strong>~400</strong><span>Directional Sensors</span></div>
+                  <div><strong>5 min</strong><span>Telemetry Cadence</span></div>
+                  <div><strong>3</strong><span>Operational Views</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>Finance users can upload a batch, review only the values that need attention, authorize ready invoices, and deliver approved records without retyping each document. Failed files remain isolated instead of blocking the full batch.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable local project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python/FastAPI, PostgreSQL, and Docker Compose.</span></p>
-                <div class="project-links">
-                  <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
-                </div>
+                <p class="project-output"><strong>Project Output</strong><span>The pipeline turns raw telemetry into prioritized, traceable investigation views: failure events, persistent downward shifts, gradual degradation, paired-sensor evidence, and dedicated operations, event, and management screens.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.</span></p>
               </div>
             </div>
           </article>
@@ -257,10 +254,49 @@
             </div>
           </article>
 
+          <article class="project featured-project" data-project-context="independent">
+            <div class="content project-grid">
+              <div class="project-copy">
+                <div class="project-kicker"><span>03</span><p>AI automation &amp; document intelligence | n8n, Gemini, Python/FastAPI, PostgreSQL, Docker</p></div>
+                <h3>End-to-End AI Invoice Approval Automation</h3>
+                <dl class="case-details">
+                  <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, 3 n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
+                </dl>
+                <details class="project-deep-dive">
+                  <summary>Technical details</summary>
+                  <dl class="case-details">
+                    <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
+                    <div><dt>Approach</dt><dd>n8n creates 1 job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. A failed invoice does not stop the rest of the batch.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing. Docker Compose packages the local services, while an optional Apps Script integration sends final read-only records to Google Sheets.</dd></div>
+                  </dl>
+                </details>
+              </div>
+              <div class="project-result-column">
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260816g" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation operating flow at full size">
+                    <img src="assets/projects/ai-invoice-automation.png?v=20260816g" alt="AI invoice automation flow showing batch intake, automated checks, human review, accounting delivery, and a structured record of status, decisions, and duplicate protection" width="1920" height="1080" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>The project is split into 3 n8n workflows so intake, human review, and accounting delivery can start independently and be retried safely.</figcaption>
+                </figure>
+                <div class="metric-row" aria-label="AI invoice automation workflow scope">
+                  <div><strong>20 files</strong><span>Maximum Upload Batch</span></div>
+                  <div><strong>3</strong><span>Event-Driven n8n Workflows</span></div>
+                  <div><strong>Per-file</strong><span>Failure Isolation</span></div>
+                </div>
+                <p class="project-output"><strong>Project Output</strong><span>Finance users can upload a batch, review only the values that need attention, authorize ready invoices, and deliver approved records without retyping each document. Failed files remain isolated instead of blocking the full batch.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable local project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python/FastAPI, PostgreSQL, and Docker Compose.</span></p>
+                <div class="project-links">
+                  <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>Time-series forecasting | Python, XGBoost, scikit-learn</p></div>
+                <div class="project-kicker"><span>04</span><p>Time-series forecasting | Python, XGBoost, scikit-learn</p></div>
                 <h3>Rainfall Forecasting with XGBoost and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Daily rainfall is highly variable, and random train-test splits can overstate how well a model will perform on future weather. This project estimates next-day rainfall while keeping evaluation in chronological order.</dd></div>
@@ -300,7 +336,7 @@
           <article class="project featured-project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>04</span><p>Clinical classification | Python, XGBoost, scikit-learn</p></div>
+                <div class="project-kicker"><span>05</span><p>Clinical classification | Python, XGBoost, scikit-learn</p></div>
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Build a reproducible recurrence classifier while testing whether a smaller set of informative features can preserve performance and reduce unnecessary model input.</dd></div>
@@ -333,42 +369,6 @@
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project featured-project" data-project-context="professional">
-            <div class="content project-grid">
-              <div class="project-copy">
-                <div class="project-kicker"><span>05</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
-                <h3>DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection</h3>
-                <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Operations teams need a consistent way to separate missing telemetry, short failures, persistent signal shifts, and gradual degradation across a large directional optical-sensor estate.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the incremental Python/PostgreSQL pipeline, data-quality and failure rules, change-point and degradation analysis, paired-sensor evidence, local API, priority workflow, and browser-based monitoring interface as a Junior Programmer at PT Aplikanusa Lintasarta.</dd></div>
-                </dl>
-                <details class="project-deep-dive">
-                  <summary>Technical details</summary>
-                  <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combine native 5-minute PRTG optical-power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
-                    <div><dt>Approach</dt><dd>Built an incremental workflow from metadata synchronization and telemetry collection through failure grouping, PELT change-point detection, Theil-Sen and Mann-Kendall degradation analysis, paired-sensor evidence, priority ranking, and local dashboard delivery.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, 0 coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
-                  </dl>
-                </details>
-              </div>
-              <div class="project-result-column">
-                <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/dwdm-monitoring.png?v=20260816g" target="_blank" rel="noopener noreferrer" aria-label="Open the optical monitoring project visual at full size">
-                    <img src="assets/projects/dwdm-monitoring.png?v=20260816g" alt="Illustrative DWDM optical signal trace with a change point, degradation trend, failure interval, missing interval, and monitoring output" width="1920" height="1080" loading="lazy" decoding="async">
-                  </a>
-                  <figcaption>Illustrative, non-confidential view of signal events, missing intervals, and monitoring output used by the workflow.</figcaption>
-                </figure>
-                <div class="metric-row" aria-label="Optical monitoring project scope">
-                  <div><strong>~400</strong><span>Directional Sensors</span></div>
-                  <div><strong>5 min</strong><span>Telemetry Cadence</span></div>
-                  <div><strong>3</strong><span>Operational Views</span></div>
-                </div>
-                <p class="project-output"><strong>Project Output</strong><span>The pipeline turns raw telemetry into prioritized, traceable investigation views: failure events, persistent downward shifts, gradual degradation, paired-sensor evidence, and dedicated operations, event, and management screens.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.</span></p>
               </div>
             </div>
           </article>

@@ -60,6 +60,22 @@ The approved current context mapping is:
 - **Independent:** AI Invoice Approval Automation and Retail Sales Forecasting & Planning System; and
 - **Academic:** Rainfall Forecasting with XGBoost, Thyroid Cancer Recurrence Classification, Rainfall Forecasting with BiLSTM, and Rice Price Forecasting with ARIMA.
 
+### Approved project display order
+
+The public project list and its visible numbering use this order:
+
+1. DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
+2. Retail Sales Forecasting & Planning System
+3. End-to-End AI Invoice Approval Automation
+4. Rainfall Forecasting with XGBoost and Grid Search
+5. Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search
+6. Rainfall Forecasting with BiLSTM and Grid Search
+7. Rice Price Forecasting with ARIMA and Walk-Forward Validation
+
+**Display-order status:** Approved for publication on 2026-08-16.
+
+This order leads with verified professional work, follows with the AI/ML Engineering flagship, keeps the current AI Automation card in the accepted 3rd position pending its later replacement, and then presents the academic projects.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
