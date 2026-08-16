@@ -38,6 +38,8 @@ includes:
 - a permanent dark interface with a consistent color palette;
 - project-context filters for Professional, Independent, and Academic work,
   with visible cards renumbered sequentially from `01`;
+- an automatic release-freshness check that replaces a cached page with the
+  current published revision;
 - accessible navigation and structured page sections;
 - native `1920x1080` Full HD project visuals plus optimized platform-specific
   profile, hero, and social-preview images; and
@@ -58,6 +60,7 @@ Portfolio Website/
 |-- index.html
 |-- styles.css
 |-- script.js
+|-- site-version.json
 |-- assets/
 |   |-- favicon.svg
 |   |-- profile-photo.jpg

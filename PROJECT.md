@@ -86,6 +86,23 @@ This order leads with verified professional work, follows with the AI/ML Enginee
 
 **Filter-numbering delivery correction:** Published at portfolio commit `267ea56b034526463d37b460fe2ceeafb54517ab`; Pages run `31954400865` completed successfully. The live HTML now requests `script.js?v=9f86dc0`, forcing previously cached browsers to retrieve the published numbering logic.
 
+### Website release freshness safeguard
+
+GitHub Pages controls the cache lifetime of the unversioned HTML, so a browser may temporarily reuse an older copy after a successful deployment. The website therefore uses an inline release check and `site-version.json` to move a cached page automatically to the current versioned URL.
+
+The following rules are mandatory for every future user-visible website revision:
+
+1. Update both the `release` value in `site-version.json` and the inline `embeddedRelease` value in `index.html` in the same revision as the public website change. Both values must match, use a new monotonically increasing release, and never reuse a previous release value.
+2. Keep the release check inline in `index.html`. On every page load it must fetch `site-version.json` with `cache: "no-store"` and a unique query value, compare the published release with the embedded HTML release, and use `window.location.replace` when they differ.
+3. Give every changed CSS, JavaScript, image, document, or other public asset a new query version or filename in `index.html`. Refreshing the HTML does not invalidate an asset whose URL remains unchanged.
+4. Do not update `site-version.json` for an internal documentation-only commit that cannot change the rendered website.
+5. Do not call a revision live until the Pages deployment succeeds and the public site returns the new release marker, the versioned HTML, and every changed asset.
+6. If the freshness check fails, keep the currently loaded page usable. The guard must never replace the portfolio with a blank or blocking error state.
+
+This safeguard removes the normal post-deployment cache wait after it has reached a visitor's browser. It cannot make an unfinished GitHub Pages deployment available early, and the first installation of the guard still requires the current versioned page to be loaded once.
+
+**Release-freshness safeguard status:** Approved for publication on 2026-08-16 with release `20260816-01`.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis

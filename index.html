@@ -74,6 +74,38 @@
         ]
       }
     </script>
+    <script>
+      (() => {
+        const releaseParameter = "release";
+        const embeddedRelease = "20260816-01";
+        const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
+        const releaseMarkerUrl = new URL("site-version.json", window.location.href);
+        releaseMarkerUrl.searchParams.set("check", Date.now().toString());
+
+        fetch(releaseMarkerUrl, { cache: "no-store" })
+          .then((response) => (response.ok ? response.json() : null))
+          .then((releaseMarker) => {
+            const latestRelease = releaseMarker?.release;
+            if (!latestRelease) return;
+
+            if (latestRelease !== embeddedRelease) {
+              const latestUrl = new URL(window.location.href);
+              latestUrl.searchParams.set(releaseParameter, latestRelease);
+              window.location.replace(latestUrl);
+              return;
+            }
+
+            if (loadedRelease) {
+              const cleanUrl = new URL(window.location.href);
+              cleanUrl.searchParams.delete(releaseParameter);
+              window.history.replaceState(null, "", cleanUrl);
+            }
+          })
+          .catch(() => {
+            // Keep the current page usable if the release check is unavailable.
+          });
+      })();
+    </script>
     <link rel="preload" as="image" href="assets/hero/data-ai-system-desktop.webp?v=20260816h" media="(min-width: 601px)">
     <link rel="preload" as="image" href="assets/hero/data-ai-system-mobile-v2.webp?v=20260816h" media="(max-width: 600px)">
     <link rel="stylesheet" href="styles.css?v=20260816b">
