@@ -209,7 +209,9 @@ Copy this block for each audited project. Do not remove required fields.
 - **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions contract-test runs `31933494858` and `31933502820` completed successfully on the published v1.0.0 commit.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
-- **Portfolio status:** Published
+- **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
+- **Approved Evidence & Scope wording:** Results come from one fixed validation window and one protected internal-test window on 2013–2017 competition data. The locally verified, containerized API produces product-family sales forecasts rather than inventory decisions.
+- **Portfolio status:** Approved
 
 ### ai-invoice-approval-automation
 
@@ -301,7 +303,7 @@ These entries are audit directions only. They are not completed registry records
 
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
-| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved wording, placement, visual, and evidence scope | Published |
+| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Sharper Project Output and Evidence & Scope wording approved by the user; live update pending | Approved |
 | AI Service Request Automation | `AI Automation/`; follow its `AGENTS.md` and project source of truth | Replace the legacy Invoice card only after the new project's evidence and wording are approved | Revision required |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Lintasarta/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
