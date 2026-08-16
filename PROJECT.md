@@ -211,7 +211,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Results come from one fixed validation window and one protected internal-test window on 2013–2017 competition data. The locally verified, containerized API produces product-family sales forecasts rather than inventory decisions.
-- **Portfolio status:** Published
+- **Portfolio status:** Published. The evidence-aligned wording and corrected system visual are current on the live website.
 
 ### ai-invoice-approval-automation
 
@@ -343,7 +343,39 @@ Keep the following evidence levels distinct:
 11. Verify that the proposed or live project card matches the canonical registry record.
 12. Update this file in the same revision whenever an approved portfolio policy, project evidence, role-family mapping, limitation, repository link, metric, or portfolio status changes.
 
-## 6. Project-to-portfolio handoff
+## 6. Full website audit standard
+
+When the user asks for a `full audit`, the Portfolio Website task must inspect
+the complete requested scope in one pass rather than stopping after the first
+card, file, or visible issue.
+
+The audit must cover:
+
+- all tracked HTML, CSS, JavaScript, configuration, metadata, and dependencies;
+- all visible copy, project cards, links, images, diagrams, and downloadable or
+  generated public assets;
+- the rendered desktop and mobile experience, including layout, hierarchy,
+  readability, contrast, responsive behavior, image cropping, navigation, and
+  interactive states;
+- browser console or runtime errors, broken links and assets, accessibility-
+  relevant structure, performance risks visible from the current
+  implementation, and repository hygiene; and
+- every public capability, technology, metric, result, role-family mapping, and
+  project status against the canonical Project Registry and the corresponding
+  source project's current evidence.
+
+Report all material findings in the first audit response. Group them as
+critical, material, and optional polish, and give the evidence, practical
+impact, and recommended action for each. Name the audited areas where no
+material issue was found so the coverage is explicit. If response limits
+require several messages, declare every remaining audit area up front and do
+not call the audit complete until all declared areas have been covered.
+
+A full-audit request is read-only. Do not change files, regenerate assets,
+publish, deploy, or change external state unless the user separately authorizes
+those actions after reviewing the findings.
+
+## 7. Project-to-portfolio handoff
 
 A project task does not publish or revise its own portfolio card. When a project is ready for portfolio review:
 
