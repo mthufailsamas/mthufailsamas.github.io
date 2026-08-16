@@ -38,7 +38,8 @@ includes:
 - a permanent dark interface with a consistent color palette;
 - project-context filters for Professional, Independent, and Academic work;
 - accessible navigation and structured page sections;
-- optimized project and social-preview images; and
+- native `1920x1080` Full HD project visuals plus optimized platform-specific
+  profile, hero, and social-preview images; and
 - downloadable English resume.
 
 The retail-system visual uses icons from the official

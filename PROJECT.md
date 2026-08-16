@@ -380,6 +380,13 @@ padding, component dimensions, text alignment, icon placement, and hierarchy.
 Approval requires inspection at the visual's real website-card size; visibly
 off-center, cramped, uneven, or accidentally wrapped elements must be fixed.
 
+Every portfolio project visual is exported as a native `1920x1080` Full HD
+image in a `16:9` ratio. Approval verifies the actual file dimensions instead
+of relying on HTML attributes. Preserve the source aspect ratio without
+stretching, and inspect text, charts, and diagrams again after export. Profile
+photos, social previews, desktop heroes, and mobile heroes retain the dimensions
+required by their own platform or responsive-layout contract.
+
 General-purpose icons and illustrations must come from one reputable official
 or open-license asset library with a consistent style. Verify and document the
 source and license, bundle the approved asset locally, and do not mix unrelated
