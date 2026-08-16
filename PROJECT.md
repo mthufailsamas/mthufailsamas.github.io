@@ -72,7 +72,7 @@ The public project list and its visible numbering use this order:
 6. Rainfall Forecasting with BiLSTM and Grid Search
 7. Rice Price Forecasting with ARIMA and Walk-Forward Validation
 
-**Display-order status:** Approved for publication on 2026-08-16.
+**Display-order status:** Published at portfolio commit `c34231e00c949578d3212a27a64d4ead4b176c0e`; Pages run `31953829281` completed successfully, and the live HTML exposes the approved titles in numbered order `01` through `07`.
 
 This order leads with verified professional work, follows with the AI/ML Engineering flagship, keeps the current AI Automation card in the accepted 3rd position pending its later replacement, and then presents the academic projects.
 
