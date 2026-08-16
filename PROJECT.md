@@ -82,7 +82,7 @@ This order leads with verified professional work, follows with the AI/ML Enginee
 - **Professional**, **Independent**, and **Academic** preserve that relative order but renumber only the visible cards, starting from `01`.
 - Returning to **All** restores the canonical numbering from `01` through `07`.
 
-**Filter-numbering status:** Approved for publication on 2026-08-16.
+**Filter-numbering status:** Published at portfolio commit `9f86dc07d0e62e2e044f0bcb936d72b492a4acc6`; Pages run `31954160246` completed successfully, and the live script contains the approved filter-relative renumbering behavior.
 
 ## 2. Evidence required for each role family
 
