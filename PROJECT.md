@@ -191,6 +191,7 @@ These entries are audit directions only. They are not completed registry records
 | Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Candidate primary: AI/ML Engineering; candidate supporting: Data Science | Unreviewed |
 | Invoice Operations | `AI Invoice Approval Automation/`; inspect its project instructions and source of truth | Candidate primary: AI Automation | Unreviewed |
 | DWDM Monitoring | Identify and verify the actual workspace folder before any claim | Audit before choosing between Data Engineering, Data Analysis, or supporting AI/ML Engineering | Unreviewed |
+| Thyroid Cancer Recurrence Classification | `XGBoost Skripsi HANA/`; audit the academic workflow before revising any claim | Candidate primary: Data Science; public repository renamed and verified as `mthufailsamas/xgboost-thyroid-recurrence-classification` on 2026-08-16 | Unreviewed |
 | Academic projects | Identify and audit each project separately | Generally candidates for Data Science or Data Analysis; context must remain academic | Unreviewed |
 
 ## 5. Evidence-first portfolio rules
