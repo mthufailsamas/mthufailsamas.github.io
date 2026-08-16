@@ -367,6 +367,18 @@ remain readable at card size, and every number, method, system component, and
 result shown in the image must be traceable to the project's current registry
 record and source evidence.
 
+Do not place a role-family, category, or eyebrow label above the primary title
+inside a project visual. The project-card kicker already owns that information.
+The image begins with its centered project title, followed by only the subtitle,
+system or analytical story, and verified evidence needed for that visual.
+
+Before a visual is approved or published, create a factual inventory of every
+visible title, sentence, number, method count, configuration count, technology,
+metric, caption, and alt-text claim. Trace every item to the project's registry
+record and current source evidence. Then perform a separate consistency pass for
+title alignment, hierarchy, readability, terminology, dimensions, and card-size
+rendering. Passing one pass never substitutes for the other.
+
 ## Mandatory workflow before publishing or revising claims
 
 1. Read this file completely.
