@@ -211,7 +211,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Results come from one fixed validation window and one protected internal-test window on 2013–2017 competition data. The locally verified, containerized API produces product-family sales forecasts rather than inventory decisions.
-- **Portfolio status:** Approved
+- **Portfolio status:** Published
 
 ### ai-invoice-approval-automation
 
@@ -303,7 +303,7 @@ These entries are audit directions only. They are not completed registry records
 
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
-| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Sharper Project Output and Evidence & Scope wording approved by the user; live update pending | Approved |
+| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved sharper Project Output and Evidence & Scope wording | Published |
 | AI Service Request Automation | `AI Automation/`; follow its `AGENTS.md` and project source of truth | Replace the legacy Invoice card only after the new project's evidence and wording are approved | Revision required |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Lintasarta/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
