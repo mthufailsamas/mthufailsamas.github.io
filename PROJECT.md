@@ -4,7 +4,7 @@ Last updated: 2026-08-16
 
 ## Purpose and authority
 
-This file is the source of truth for Portfolio Website positioning, role-family mapping, evidence standards, and claim wording. Read it completely before auditing, writing, or changing the website.
+This file is the source of truth for Portfolio Website positioning, the canonical Project Registry, role-family mapping, evidence standards, and claim wording. Read it completely before auditing, writing, or changing the website.
 
 Do not rely on conversation memory. Technical claims, metrics, technologies, implementation status, and validation status must be re-checked against the current source-of-truth files and reproducible evidence inside the relevant project repository.
 
@@ -124,18 +124,76 @@ A single Gemini API call is not enough to claim AI Automation.
 - Audit the repository and source of truth for every relevant project before publishing a claim.
 - If the evidence has not been inspected, label the claim **unverified** or **pending** instead of guessing from conversation history.
 
-### Provisional mapping directions
+## 4. Canonical Project Registry
 
-These are audit directions, not approved publishing claims:
+The Project Registry in this file is the canonical portfolio record for every project card. A project card must not be written or revised until its actual workspace folder and required source-of-truth files have been inspected and its registry record has been created or updated.
 
-| Project | Provisional role-family direction | Current status |
-| --- | --- | --- |
-| Retail Sales Forecasting | Primary: AI/ML Engineering; supporting: Data Science | Unverified until the current project source of truth and reproducible evidence are audited |
-| Invoice Operations | Primary: AI Automation | Unverified until the current project source of truth and reproducible evidence are audited |
-| DWDM Monitoring | Audit before choosing between Data Engineering, Data Analysis, or supporting AI/ML Engineering | Unverified; no role-family mapping may be published yet |
-| Academic projects | Generally Data Science or Data Analysis, depending on evidence | Must remain explicitly identified as academic projects and be audited individually |
+Never populate a registry field from conversation memory, the current website card, or another project. The current website may be audited for consistency only after the project evidence has established the canonical record.
 
-## 4. Evidence-first portfolio rules
+### Required registry fields
+
+Every project record must contain:
+
+- **Workspace folder:** the exact local project directory used for the audit.
+- **Source-of-truth files inspected:** the current project files that support the record, including any `AGENTS.md` or `PROJECT.md` required by project routing.
+- **Last audited:** the date of the most recent evidence audit.
+- **Display title:** the approved public-facing project title.
+- **Context:** whether the work is professional, independent, academic, a controlled demonstration, confidential, or another accurately supported context.
+- **Primary role family:** exactly one evidence-supported role family.
+- **Supporting role families:** zero to two evidence-supported role families.
+- **Verified metrics:** only metrics reproduced or traced to current project evidence, together with their evaluation context and source.
+- **Public repository:** the verified public repository URL, or an explicit statement that no public repository is available.
+- **Limitations:** material limitations involving data recency, evaluation scope, deployment, validation, confidentiality, or implementation status.
+- **Portfolio status:** the current registry state defined below.
+
+If a required fact is not established by the audit, write **Unverified** or **Pending**. Do not fill the gap with a plausible value.
+
+### Portfolio status values
+
+- **Unreviewed:** no complete evidence audit has been performed.
+- **Audit in progress:** the source-of-truth review has started but required registry fields remain unresolved.
+- **Draft:** the audit is complete enough to draft a card, but the wording or mapping is not yet approved.
+- **Approved:** the registry record and proposed card are evidence-backed and approved for publication.
+- **Published:** the live card matches the current approved registry record.
+- **Revision required:** the live card no longer matches current evidence or the approved registry record.
+- **Hold:** the project must not currently be presented as a portfolio card.
+
+### Canonical record template
+
+Copy this block for each audited project. Do not remove required fields.
+
+```markdown
+### [Internal project identifier]
+
+- Workspace folder:
+- Source-of-truth files inspected:
+- Last audited:
+- Display title:
+- Context:
+- Primary role family:
+- Supporting role families:
+- Verified metrics:
+- Public repository:
+- Limitations:
+- Portfolio status:
+```
+
+### Audited project records
+
+No project has a completed canonical registry record yet. This is intentional: the records must be created from fresh workspace audits, not reconstructed from conversation history or existing portfolio copy.
+
+### Registry audit queue
+
+These entries are audit directions only. They are not completed registry records and must not be used as approved publishing claims.
+
+| Project candidate | Workspace routing | Provisional direction | Registry status |
+| --- | --- | --- | --- |
+| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | Candidate primary: AI/ML Engineering; candidate supporting: Data Science | Unreviewed |
+| Invoice Operations | `AI Invoice Approval Automation/`; inspect its project instructions and source of truth | Candidate primary: AI Automation | Unreviewed |
+| DWDM Monitoring | Identify and verify the actual workspace folder before any claim | Audit before choosing between Data Engineering, Data Analysis, or supporting AI/ML Engineering | Unreviewed |
+| Academic projects | Identify and audit each project separately | Generally candidates for Data Science or Data Analysis; context must remain academic | Unreviewed |
+
+## 5. Evidence-first portfolio rules
 
 Every metric must be traceable to a current notebook, test output, README, CI result, report, or other project source of truth.
 
@@ -159,10 +217,13 @@ Keep the following evidence levels distinct:
 
 1. Read this file completely.
 2. Identify every project affected by the proposed website change.
-3. Read that project's current `AGENTS.md`, `PROJECT.md`, README, and any source-of-truth files required by its own routing instructions.
-4. Inspect reproducible evidence for every metric, technology, implementation, and validation statement.
-5. Assign the correct evidence status and evidence level.
-6. Select one primary role family and no more than two evidence-supported supporting families.
-7. Write only claims supported by the audit; mark anything else unverified, planned, pending, or blocked.
-8. Re-check that no evidence or status has crossed project boundaries.
-9. Update this file in the same revision whenever an approved portfolio policy or role-family mapping changes.
+3. Locate and inspect the project's actual workspace folder; do not treat the existing website card as project evidence.
+4. Read that project's current `AGENTS.md`, `PROJECT.md`, README, and any source-of-truth files required by its own routing instructions.
+5. Inspect reproducible evidence for every metric, technology, implementation, validation statement, public repository, context, and limitation.
+6. Create or update the project's canonical Project Registry record, including every required field.
+7. Assign the correct evidence status and evidence level.
+8. Select one primary role family and no more than two evidence-supported supporting families.
+9. Write only claims supported by the registry and project audit; mark anything else unverified, planned, pending, or blocked.
+10. Re-check that no evidence or status has crossed project boundaries.
+11. Verify that the proposed or live project card matches the canonical registry record.
+12. Update this file in the same revision whenever an approved portfolio policy, project evidence, role-family mapping, limitation, repository link, metric, or portfolio status changes.
