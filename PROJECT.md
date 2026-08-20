@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-08-16
+Last updated: 2026-08-20
 
 ## Purpose and authority
 
@@ -57,7 +57,7 @@ This filter describes where the work was developed. It does not rank project qua
 The approved current context mapping is:
 
 - **Professional:** DWDM Optical Sensor Monitoring;
-- **Independent:** AI Invoice Approval Automation and Retail Sales Forecasting & Planning System; and
+- **Independent:** AI Service Request Automation and Retail Sales Forecasting & Planning System; and
 - **Academic:** Rainfall Forecasting with XGBoost, Thyroid Cancer Recurrence Classification, Rainfall Forecasting with BiLSTM, and Rice Price Forecasting with ARIMA.
 
 ### Approved project display order
@@ -66,7 +66,7 @@ The public project list and its visible numbering use this order:
 
 1. DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
 2. Retail Sales Forecasting & Planning System
-3. End-to-End AI Invoice Approval Automation
+3. AI Service Request Automation
 4. Rainfall Forecasting with XGBoost and Grid Search
 5. Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search
 6. Rainfall Forecasting with BiLSTM and Grid Search
@@ -74,7 +74,7 @@ The public project list and its visible numbering use this order:
 
 **Display-order status:** Published at portfolio commit `c34231e00c949578d3212a27a64d4ead4b176c0e`; Pages run `31953829281` completed successfully, and the live HTML exposes the approved titles in numbered order `01` through `07`.
 
-This order leads with verified professional work, follows with the AI/ML Engineering flagship, keeps the current AI Automation card in the accepted 3rd position pending its later replacement, and then presents the academic projects.
+This order leads with verified professional work, follows with the AI/ML Engineering flagship, keeps the AI Automation flagship in the accepted 3rd position, and then presents the academic projects.
 
 ### Filter-relative project numbering
 
@@ -242,8 +242,8 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### retail-sales-forecasting-ai-engineering
 
-- **Workspace folder:** `AI Engineer/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `AI Engineer/AGENTS.md`, `AI Engineer/PROJECT.md`, `AI Engineer/README.md`, the current Git worktree, public `main` at `91d363da7b536d25989e0465e8b767a0e9613196`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and their successful GitHub Actions evidence.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the current Git worktree, public `main` at `91d363da7b536d25989e0465e8b767a0e9613196`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and their successful GitHub Actions evidence in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** Retail Sales Forecasting & Planning System
 - **Context:** Independent portfolio project using authorized Kaggle competition data, controlled chronological model evaluation, and locally verified batch, API, and Docker inference.
@@ -257,24 +257,27 @@ Copy this block for each audited project. Do not remove required fields.
 - **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
 - **Portfolio status:** Published at portfolio commit `bd89470a0e9a03cd9d01f3a592daef469b3ae0f7`; Pages run `31949697620` completed successfully. The live card uses the evidence-aligned wording and streamlined model-selection visual. Desktop and 390-pixel mobile checks found no horizontal overflow, missing asset, or browser warning.
 
-### ai-invoice-approval-automation
+### ai-service-request-automation
 
-- **Workspace folder:** `AI Automation/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `AI Automation/AGENTS.md`, `AI Automation/PROJECT.md`, `AI Automation/README.md`, the current Git worktree, and its configured public repository remote.
-- **Last audited:** 2026-08-16
-- **Display title:** The live card currently uses `End-to-End AI Invoice Approval Automation`; the accepted replacement project title is `AI Service Request Automation`, with new public wording pending the project audit and implementation.
-- **Context:** Independent portfolio project.
-- **Primary role family:** Pending. The legacy invoice implementation is an AI Automation candidate, but the current `AI Automation/PROJECT.md` explicitly resets accepted evidence for the replacement service-request project.
-- **Supporting role families:** Pending.
-- **Verified metrics:** Unverified for the newly accepted service-request project. Legacy invoice metrics have not been accepted into the current project source of truth and must not be transferred to the replacement project.
-- **Public repository:** https://github.com/mthufailsamas/ai-invoice-approval-automation (legacy invoice repository; replacement repository status pending)
-- **Limitations:** The current website card and public README describe the legacy invoice workflow, while the current project source of truth has accepted a replacement service-request direction and marks implementation evidence as not yet verified. The worktree is also mid-revision. Do not revise or republish its technical claims until the new project audit and user approval are complete.
-- **Portfolio status:** Revision required
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, and local Git commit `3167a03` in the workspace above.
+- **Last audited:** 2026-08-20
+- **Display title:** AI Service Request Automation
+- **Context:** Independent portfolio project using fictional bilingual service requests, policies, users, permissions, and downstream records in controlled local evaluation.
+- **Primary role family:** AI Automation
+- **Supporting role families:** AI/ML Engineering and Data Engineering
+- **Verified metrics:** The locked 50-case controlled evaluation completed 40 semantic and 10 workflow-control cases. Classification macro F1 was 94.6%, required-field accuracy 88.3%, policy retrieval Recall@3 0.0%, citation validity 0.0%, route and final-state accuracy 30.0%, semantic task success 20.0%, workflow-control pass rate 100.0%, and recoverable-failure pass rate 100.0%. The combined local lifecycle passed 7/7 groups; scheduled recovery and operations passed 6/6 groups. Hosted or paid AI calls were 0.
+- **Public repository:** No public repository is available. The reviewed local repository snapshot is commit `3167a03`; no remote is configured.
+- **Visual asset source:** Project-native lifecycle and evaluation diagram rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
+- **Limitations:** Evidence uses fictional data and controlled local services. The fixed quality gate is `CHECK`: the selected local analysis pipeline still requires human review, and no external deployment, real-user use, or measured business impact has been demonstrated.
+- **Approved Project Output wording:** Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.
+- **Approved Evidence & Scope wording:** The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. Deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.
+- **Portfolio status:** Approved for publication in the current website revision.
 
 ### dwdm-optical-sensor-monitoring
 
-- **Workspace folder:** `C:/Users/Thufail/Documents/Lintasarta/`
-- **Source-of-truth files inspected:** `C:/Users/Thufail/Documents/Lintasarta/README.md` and the current local project structure.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/`
+- **Source-of-truth files inspected:** `README.md` and the current local project structure in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
 - **Context:** Professional project-stage work at PT Aplikanusa Lintasarta using confidential operational sources.
@@ -287,8 +290,8 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### xgboost-rainfall-forecasting
 
-- **Workspace folder:** `XGBoost Skripsi/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `XGBoost Skripsi/README.md`, the current Git worktree, and its configured public repository remote.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/XGBoost Rainfall Forecasting/`
+- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** Rainfall Forecasting with XGBoost and Grid Search
 - **Context:** Academic research project that also supported a peer-reviewed publication.
@@ -301,8 +304,8 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### xgboost-thyroid-recurrence-classification
 
-- **Workspace folder:** `XGBoost Skripsi HANA/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `XGBoost Skripsi HANA/README.md`, the current Git worktree, and its configured public repository remote.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/XGBoost Thyroid Recurrence Classification/`
+- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search
 - **Context:** Collaborative academic research project.
@@ -315,8 +318,8 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### bilstm-rainfall-forecasting
 
-- **Workspace folder:** `BiLSTM MBKM/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `BiLSTM MBKM/README.md`, the current Git worktree, and its configured public repository remote.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/BiLSTM Rainfall Forecasting/`
+- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** Rainfall Forecasting with BiLSTM and Grid Search
 - **Context:** Internship-linked academic forecasting project developed with BMKG observations.
@@ -329,8 +332,8 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### arima-rice-price-forecasting
 
-- **Workspace folder:** `ARIMA MBKM HANA/` under the shared portfolio-project workspace
-- **Source-of-truth files inspected:** `ARIMA MBKM HANA/README.md`, the current Git worktree, and its configured public repository remote.
+- **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/ARIMA Rice Price Forecasting/`
+- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
 - **Last audited:** 2026-08-16
 - **Display title:** Rice Price Forecasting with ARIMA and Walk-Forward Validation
 - **Context:** Collaborative academic forecasting project.
@@ -347,9 +350,9 @@ These entries are audit directions only. They are not completed registry records
 
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
-| Retail Sales Forecasting | `AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved sharper Project Output and Evidence & Scope wording | Published |
-| AI Service Request Automation | `AI Automation/`; follow its `AGENTS.md` and project source of truth | Replace the legacy Invoice card only after the new project's evidence and wording are approved | Revision required |
-| DWDM Monitoring | `C:/Users/Thufail/Documents/Lintasarta/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
+| Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved sharper Project Output and Evidence & Scope wording | Published |
+| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | Publish the approved service-request card from the current registry record | Approved |
+| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
 ## 5. Evidence-first portfolio rules

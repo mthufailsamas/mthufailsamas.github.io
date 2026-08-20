@@ -64,7 +64,7 @@
           "Model Evaluation",
           "Data Engineering",
           "AI Automation",
-          "Document Intelligence",
+          "Workflow Orchestration",
           "LLM Applications",
           "Statistical Modeling",
           "Python",
@@ -77,7 +77,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260816-01";
+        const embeddedRelease = "20260820-01";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -184,7 +184,7 @@
               Professional experience covers operational monitoring, data science, and technical education. Work at PT Aplikanusa Lintasarta centered on DWDM monitoring and assurance analytics for approximately 400 directional sensors. Earlier roles involved BMKG forecasting tools and programming and AI education across school and university settings.
             </p>
             <p>
-              Beyond those roles, the portfolio includes machine-learning forecasting and classification, data pipelines, and LLM-assisted invoice automation with human review. Credentials include BNSP Data Scientist certification and a peer-reviewed XGBoost rainfall publication as 1st author.
+              Beyond those roles, the portfolio includes machine-learning forecasting and classification, data pipelines, and local AI service-request automation with deterministic controls and human review. Credentials include BNSP Data Scientist certification and a peer-reviewed XGBoost rainfall publication as 1st author.
             </p>
           </div>
         </div>
@@ -289,38 +289,36 @@
           <article class="project featured-project" data-project-context="independent">
             <div class="content project-grid">
               <div class="project-copy">
-                <div class="project-kicker"><span>03</span><p>AI automation &amp; document intelligence | n8n, Gemini, Python/FastAPI, PostgreSQL, Docker</p></div>
-                <h3>End-to-End AI Invoice Approval Automation</h3>
+                <div class="project-kicker"><span>03</span><p>AI automation &amp; workflow engineering | Python/FastAPI, n8n, PostgreSQL/pgvector, Ollama, Docker</p></div>
+                <h3>AI Service Request Automation</h3>
                 <dl class="case-details">
-                  <div><dt>Problem</dt><dd>Finance teams lose time and introduce avoidable errors when invoices arrive in different layouts and must be re-entered before totals, references, duplicates, and approval rules can be checked.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Designed and implemented the workflow end to end: multi-file intake, 3 n8n automations, Gemini extraction, a Python/FastAPI validation service, PostgreSQL workflow history, human review, and duplicate-safe delivery to an ERP sandbox.</dd></div>
+                  <div><dt>Problem</dt><dd>Service teams repeatedly interpret requests, verify required details, consult policies, decide routes, create downstream records, and communicate outcomes. Manual handling makes consistent decisions, duplicate protection, failure recovery, and auditability difficult to maintain.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Designed and implemented 1 end-to-end automation for 5 request types across REST and web intake, local AI analysis, policy retrieval, deterministic validation, role-based human decisions, durable orchestration, downstream delivery, notification, and operational recovery.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The interface accepts PDF, PNG, and JPEG vendor invoices in batches of up to 20 files. Each document keeps its own source identity, processing state, and audit history.</dd></div>
-                    <div><dt>Approach</dt><dd>n8n creates 1 job for every uploaded file, starts extraction and validation, then routes the result to approval, finance review, or an unreadable-document queue. A failed invoice does not stop the rest of the batch.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Python rules check file integrity, required fields, totals, currencies, references, dates, duplicates, and approval routing. Docker Compose packages the local services, while an optional Apps Script integration sends final read-only records to Google Sheets.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>The controlled local system handles policy questions, incident reports, access requests, data-change requests, and status requests using fictional bilingual cases, policies, users, permissions, and downstream records.</dd></div>
+                    <div><dt>Approach</dt><dd>FastAPI and PostgreSQL own permissions, state, approvals, idempotency, retries, and audit evidence. n8n coordinates 3 workflow entries, Ollama supplies local analysis and embeddings, and a separate Service Desk Sandbox reproduces downstream outcomes.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>The locked 50-case evaluation reached 94.6% classification macro F1, 88.3% required-field accuracy, 30.0% route accuracy, and 20.0% semantic task success. The fixed quality gate is CHECK, so human review remains part of the reliable operating boundary.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-invoice-automation.png?v=20260816g" target="_blank" rel="noopener noreferrer" aria-label="Open the AI invoice automation operating flow at full size">
-                    <img src="assets/projects/ai-invoice-automation.png?v=20260816g" alt="AI invoice automation flow showing batch intake, automated checks, human review, accounting delivery, and a structured record of status, decisions, and duplicate protection" width="1920" height="1080" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/ai-service-request-automation.png?v=20260820b" target="_blank" rel="noopener noreferrer" aria-label="Open the AI Service Request Automation lifecycle and evaluation visual at full size">
+                    <img src="assets/projects/ai-service-request-automation.png?v=20260820b" alt="AI Service Request Automation lifecycle from intake through local AI understanding, deterministic control, and durable delivery, with 50 completed evaluation cases, 94.6% classification macro F1, 100.0% workflow controls, 100.0% recoverable failures, and quality gate CHECK" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
-                  <figcaption>The project is split into 3 n8n workflows so intake, human review, and accounting delivery can start independently and be retried safely.</figcaption>
+                  <figcaption>The local lifecycle keeps model proposals behind deterministic validation, role-based human decisions, durable delivery, and recovery evidence.</figcaption>
                 </figure>
-                <div class="metric-row" aria-label="AI invoice automation workflow scope">
-                  <div><strong>20 files</strong><span>Maximum Upload Batch</span></div>
-                  <div><strong>3</strong><span>Event-Driven n8n Workflows</span></div>
-                  <div><strong>Per-file</strong><span>Failure Isolation</span></div>
+                <div class="metric-row four-metrics" aria-label="AI Service Request Automation controlled evaluation results">
+                  <div><strong>50/50</strong><span>Cases Completed</span></div>
+                  <div><strong>94.6%</strong><span>Classification Macro F1</span></div>
+                  <div><strong>100.0%</strong><span>Workflow Controls</span></div>
+                  <div><strong>100.0%</strong><span>Recoverable Failures</span></div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>Finance users can upload a batch, review only the values that need attention, authorize ready invoices, and deliver approved records without retyping each document. Failed files remain isolated instead of blocking the full batch.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The runnable local project includes structured invoice records, exception queues, approval tasks, searchable history, audit events, and duplicate-safe ERP sandbox records across n8n, Gemini, Python/FastAPI, PostgreSQL, and Docker Compose.</span></p>
-                <div class="project-links">
-                  <a class="text-link" href="https://github.com/mthufailsamas/ai-invoice-approval-automation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
-                </div>
+                <p class="project-output"><strong>Project Output</strong><span>Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. Deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.</span></p>
               </div>
             </div>
           </article>
@@ -535,7 +533,7 @@
           <article><h3>Data Analysis &amp; Statistics</h3><p>Python, SQL, R, Pandas, NumPy, data preparation, exploratory analysis, statistical modeling, and visualization</p></article>
           <article><h3>Machine Learning &amp; Evaluation</h3><p>Scikit-learn, XGBoost, Statsmodels, TensorFlow/Keras, feature engineering, cross-validation, and time-series evaluation</p></article>
           <article><h3>Data Engineering &amp; APIs</h3><p>PostgreSQL, MySQL, ingestion, transformation, validation, incremental pipelines, FastAPI, and REST APIs</p></article>
-          <article><h3>AI Automation &amp; Integration</h3><p>n8n, Gemini API, structured LLM output, document extraction, webhooks, human review, and duplicate-safe workflows</p></article>
+          <article><h3>AI Automation &amp; Integration</h3><p>n8n, Ollama, structured LLM output, FastAPI, PostgreSQL/pgvector, webhooks, human review, idempotency, and recovery workflows</p></article>
           <article><h3>Development &amp; Delivery</h3><p>Git, GitHub, Docker, unittest, Jupyter Notebook, HTML, CSS, JavaScript, and dashboard development</p></article>
         </div>
       </section>

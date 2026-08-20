@@ -16,8 +16,8 @@ The featured case studies cover:
 - a Retail Sales Forecasting &amp; Planning System with chronological Ridge and
   XGBoost evaluation, a versioned model artifact, reusable batch inference,
   local FastAPI delivery, Docker packaging, and contract tests;
-- auditable AI Invoice Approval Automation with n8n, Gemini, Python/FastAPI,
-  PostgreSQL, Docker Compose, human review, and idempotent accounting delivery;
+- AI Service Request Automation with FastAPI, n8n, PostgreSQL/pgvector, local
+  Ollama models, human review, downstream delivery, and scheduled recovery;
 - Rainfall Forecasting with Python, XGBoost, scikit-learn, and Grid Search;
 - Thyroid Cancer Recurrence Classification with Python, XGBoost,
   scikit-learn, Information Gain, and Grid Search;
@@ -66,7 +66,7 @@ Portfolio Website/
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
 |   `-- projects/
-|       |-- ai-invoice-automation.png
+|       |-- ai-service-request-automation.png
 |       `-- retail-sales-forecasting.png
 |-- documents/
 |   |-- m-thufail-alwannabil-samas-cv.pdf
