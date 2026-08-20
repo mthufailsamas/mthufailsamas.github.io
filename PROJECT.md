@@ -271,7 +271,7 @@ Copy this block for each audited project. Do not remove required fields.
 ### ai-service-request-automation
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`
-- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, local Git commit `3167a03`, and public `main` at the same commit in the workspace above.
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, local Git commit `3167a03`, public `main` at the same commit, and public release `v1.0.0` in the workspace above.
 - **Last audited:** 2026-08-20
 - **Display title:** AI Service Request Automation
 - **Context:** Independent portfolio project using fictional bilingual service requests, policies, users, permissions, and downstream records in controlled local evaluation.
