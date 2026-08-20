@@ -107,9 +107,12 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 was published at portfolio commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6`
 with release `20260820-02`; Pages run `32332704734` completed successfully. Its
 dedicated public repository is now verified at
-`https://github.com/mthufailsamas/ai-service-request-automation`, and release
-`20260820-03` adds that source link to the card. Final Pages verification for
-the new release is pending publication.
+`https://github.com/mthufailsamas/ai-service-request-automation`. Portfolio
+commit `66ac77b042cfd5e305a47a5dde9648e1c6d515f3` and Pages run `32333546672`
+published its card link through release `20260820-03`. The live release marker,
+repository HTTP response, link target and rel attributes, visible `CHECK`
+boundary, horizontal layout, and browser warning/error state all passed final
+verification.
 
 ## 2. Evidence required for each role family
 
@@ -280,7 +283,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** Evidence uses fictional data and controlled local services. The fixed quality gate is `CHECK`: the selected local analysis pipeline still requires human review, and no external deployment, real-user use, or measured business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.
 - **Approved Evidence & Scope wording:** The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. The fixed quality gate is `CHECK`: deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.
-- **Portfolio status:** The evidence-bounded card is published. Release `20260820-03` adds the verified public repository link and is pending final Pages verification.
+- **Portfolio status:** Published with its verified repository link at portfolio commit `66ac77b042cfd5e305a47a5dde9648e1c6d515f3`; Pages run `32333546672` completed successfully, and live release `20260820-03` matches this registry record.
 
 ### dwdm-optical-sensor-monitoring
 
