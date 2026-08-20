@@ -77,7 +77,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260820-01";
+        const embeddedRelease = "20260820-02";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -318,7 +318,7 @@
                   <div><strong>100.0%</strong><span>Recoverable Failures</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. Deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. The fixed quality gate is CHECK: deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.</span></p>
               </div>
             </div>
           </article>
