@@ -103,13 +103,13 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 
 **Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
-**AI Service Request Automation publication status:** Published at portfolio
-commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6` with release
-`20260820-02`; Pages run `32332704734` completed successfully. The live
-card exposes the approved title, 4 evidence items, visible `CHECK` quality
-boundary, versioned 1920x1080 visual, and filter-relative numbering. Desktop
-and 390-pixel local checks found no horizontal overflow, broken project asset,
-or console warning/error.
+**AI Service Request Automation publication status:** The evidence-bounded card
+was published at portfolio commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6`
+with release `20260820-02`; Pages run `32332704734` completed successfully. Its
+dedicated public repository is now verified at
+`https://github.com/mthufailsamas/ai-service-request-automation`, and release
+`20260820-03` adds that source link to the card. Final Pages verification for
+the new release is pending publication.
 
 ## 2. Evidence required for each role family
 
@@ -268,19 +268,19 @@ Copy this block for each audited project. Do not remove required fields.
 ### ai-service-request-automation
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`
-- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, and local Git commit `3167a03` in the workspace above.
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, local Git commit `3167a03`, and public `main` at the same commit in the workspace above.
 - **Last audited:** 2026-08-20
 - **Display title:** AI Service Request Automation
 - **Context:** Independent portfolio project using fictional bilingual service requests, policies, users, permissions, and downstream records in controlled local evaluation.
 - **Primary role family:** AI Automation
 - **Supporting role families:** AI/ML Engineering and Data Engineering
 - **Verified metrics:** The locked 50-case controlled evaluation completed 40 semantic and 10 workflow-control cases. Classification macro F1 was 94.6%, required-field accuracy 88.3%, policy retrieval Recall@3 0.0%, citation validity 0.0%, route and final-state accuracy 30.0%, semantic task success 20.0%, workflow-control pass rate 100.0%, and recoverable-failure pass rate 100.0%. The combined local lifecycle passed 7/7 groups; scheduled recovery and operations passed 6/6 groups. Hosted or paid AI calls were 0.
-- **Public repository:** No public repository is available. The reviewed local repository snapshot is commit `3167a03`; no remote is configured.
+- **Public repository:** https://github.com/mthufailsamas/ai-service-request-automation
 - **Visual asset source:** Project-native lifecycle and evaluation diagram rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
 - **Limitations:** Evidence uses fictional data and controlled local services. The fixed quality gate is `CHECK`: the selected local analysis pipeline still requires human review, and no external deployment, real-user use, or measured business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.
 - **Approved Evidence & Scope wording:** The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. The fixed quality gate is `CHECK`: deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.
-- **Portfolio status:** Published at portfolio commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6`; Pages run `32332704734` completed successfully, and live release `20260820-02` matches this registry record.
+- **Portfolio status:** The evidence-bounded card is published. Release `20260820-03` adds the verified public repository link and is pending final Pages verification.
 
 ### dwdm-optical-sensor-monitoring
 
