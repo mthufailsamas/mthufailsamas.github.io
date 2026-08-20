@@ -103,6 +103,14 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 
 **Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
+**AI Service Request Automation publication status:** Published at portfolio
+commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6` with release
+`20260820-02`; Pages run `32332704734` completed successfully. The live
+card exposes the approved title, 4 evidence items, visible `CHECK` quality
+boundary, versioned 1920x1080 visual, and filter-relative numbering. Desktop
+and 390-pixel local checks found no horizontal overflow, broken project asset,
+or console warning/error.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -272,7 +280,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** Evidence uses fictional data and controlled local services. The fixed quality gate is `CHECK`: the selected local analysis pipeline still requires human review, and no external deployment, real-user use, or measured business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.
 - **Approved Evidence & Scope wording:** The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. The fixed quality gate is `CHECK`: deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.
-- **Portfolio status:** Approved for publication in the current website revision.
+- **Portfolio status:** Published at portfolio commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6`; Pages run `32332704734` completed successfully, and live release `20260820-02` matches this registry record.
 
 ### dwdm-optical-sensor-monitoring
 
@@ -351,7 +359,7 @@ These entries are audit directions only. They are not completed registry records
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved sharper Project Output and Evidence & Scope wording | Published |
-| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | Publish the approved service-request card from the current registry record | Approved |
+| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card matches the evidence-bounded service-request registry record | Published |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
