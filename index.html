@@ -77,7 +77,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260823-01";
+        const embeddedRelease = "20260823-02";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -306,8 +306,8 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-service-request-automation.png?v=20260823a" target="_blank" rel="noopener noreferrer" aria-label="Open the AI Service Request Automation lifecycle and evaluation visual at full size">
-                    <img src="assets/projects/ai-service-request-automation.png?v=20260823a" alt="AI Service Request Automation flow from a short employee request through local AI triage, rule validation, human authority, and Service Desk delivery, with 40 of 40 final cases completed, 100 percent classification and required fields, 100 percent retrieval and citation validity, 96.7 percent route and task success, and a passing controlled local quality gate" width="1920" height="1080" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/ai-service-request-automation.png?v=20260823b" target="_blank" rel="noopener noreferrer" aria-label="Open the AI Service Request Automation lifecycle and architecture visual at full size">
+                    <img src="assets/projects/ai-service-request-automation.png?v=20260823b" alt="AI Service Request Automation flow from a short employee request through local AI triage, rule validation, human authority, and Service Desk delivery, with a technical backbone mapping Ollama, FastAPI, PostgreSQL with pgvector, n8n, and Docker to their responsibilities" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Short employee messages become catalog-matched service work while deterministic rules and accountable people retain authority.</figcaption>
                 </figure>

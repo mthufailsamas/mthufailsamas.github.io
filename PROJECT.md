@@ -103,12 +103,11 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 
 **Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
-**AI Service Request Automation publication status:** Portfolio commit
-`6c38681468a9e1ba23799d114a3f84fa2dde0133` and Pages run `32631716909`
-published release `20260823-01`. The live card uses the corrected public
-`v1.0.0` source, the 40-case final `PASS`, and a Full HD lifecycle visual.
-Desktop and 390-pixel mobile checks found no horizontal overflow, missing
-asset, stale `CHECK` claim, or browser warning/error.
+**AI Service Request Automation publication status:** A focused visual revision
+is prepared locally for release `20260823-02`. It preserves the illustrated
+five-stage lifecycle, removes evaluation metrics duplicated by the card below,
+and uses the freed space to map the local AI, control/data, and workflow/delivery
+responsibilities. Publication and live Pages verification are pending.
 
 ## 2. Evidence required for each role family
 
@@ -275,11 +274,11 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** AI/ML Engineering and Data Engineering
 - **Verified metrics:** The frozen final gate completed 40/40 cases: 30 untouched bilingual semantic cases and 10 deterministic workflow controls. Classification macro F1, required-field accuracy, policy Recall@3, citation validity, workflow controls, and recoverable failures were 100.0%; route and final-state accuracy and semantic task success were 96.7%. 27/30 semantic requests (90.0%) progressed without service-agent triage review, with 3 safely held for review. Hosted or paid AI calls were 0.
 - **Public repository:** https://github.com/mthufailsamas/ai-service-request-automation
-- **Visual asset source:** Project-native 5-stage lifecycle and evaluation infographic rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
+- **Visual asset source:** Project-native 5-stage lifecycle and technical-backbone infographic rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
 - **Limitations:** Evidence uses fictional data, installed local models, and controlled local services. The system retains deterministic and human authority around probabilistic output. No external deployment, real-user adoption, production throughput, employee hours saved, uptime change, financial return, or other live business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.
 - **Approved Evidence & Scope wording:** The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.
-- **Portfolio status:** Published at portfolio commit `6c38681468a9e1ba23799d114a3f84fa2dde0133`; Pages run `32631716909` completed successfully. Live release `20260823-01` shows the corrected public `v1.0.0` source, the 40-case final `PASS`, and the new Full HD lifecycle visual. Desktop and 390-pixel mobile verification found no horizontal overflow, missing asset, stale result, or browser warning/error.
+- **Portfolio status:** A focused Full HD visual revision is prepared locally for release `20260823-02`; it removes duplicated metrics while preserving the illustrated lifecycle and adding a technical-responsibility map. Publication and Pages verification are pending.
 
 ### dwdm-optical-sensor-monitoring
 
@@ -358,7 +357,7 @@ These entries are audit directions only. They are not completed registry records
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
-| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card shows the 40-case final `PASS`, 90.0% controlled triage result, and corrected `v1.0.0` source | Published |
+| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | Publish the non-redundant lifecycle and technical-backbone visual without changing accepted evidence | Approved; publication pending |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
