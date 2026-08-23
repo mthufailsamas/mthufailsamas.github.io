@@ -103,11 +103,12 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 
 **Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
-**AI Service Request Automation publication status:** A focused visual revision
-is prepared locally for release `20260823-02`. It preserves the illustrated
-five-stage lifecycle, removes evaluation metrics duplicated by the card below,
-and uses the freed space to map the local AI, control/data, and workflow/delivery
-responsibilities. Publication and live Pages verification are pending.
+**AI Service Request Automation publication status:** Portfolio commit
+`32a87a08a9447851e0533f765dbc1d8192282bb5` and Pages run `32632656702`
+published release `20260823-02`. The live visual preserves the illustrated
+five-stage lifecycle, removes metrics duplicated by the card below, and maps
+the local AI, control/data, and workflow/delivery responsibilities. Desktop,
+390-pixel mobile, asset, release-marker, and browser warning/error checks pass.
 
 ## 2. Evidence required for each role family
 
@@ -278,7 +279,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** Evidence uses fictional data, installed local models, and controlled local services. The system retains deterministic and human authority around probabilistic output. No external deployment, real-user adoption, production throughput, employee hours saved, uptime change, financial return, or other live business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.
 - **Approved Evidence & Scope wording:** The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.
-- **Portfolio status:** A focused Full HD visual revision is prepared locally for release `20260823-02`; it removes duplicated metrics while preserving the illustrated lifecycle and adding a technical-responsibility map. Publication and Pages verification are pending.
+- **Portfolio status:** Published at portfolio commit `32a87a08a9447851e0533f765dbc1d8192282bb5`; Pages run `32632656702` completed successfully. Live release `20260823-02` removes duplicated image metrics while preserving the illustrated lifecycle and adding the technical-responsibility map. Desktop and 390-pixel mobile verification found no horizontal overflow, missing asset, stale image, or browser warning/error.
 
 ### dwdm-optical-sensor-monitoring
 
@@ -357,7 +358,7 @@ These entries are audit directions only. They are not completed registry records
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
-| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | Publish the non-redundant lifecycle and technical-backbone visual without changing accepted evidence | Approved; publication pending |
+| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card uses the non-redundant lifecycle and technical-backbone visual without changing accepted evidence | Published |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
