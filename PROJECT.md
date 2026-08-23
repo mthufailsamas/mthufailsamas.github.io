@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-08-20
+Last updated: 2026-08-23
 
 ## Purpose and authority
 
@@ -433,6 +433,14 @@ English visual headings, short labels, and metric labels use natural title case;
 complete descriptive sentences use sentence case. Indonesian visual text
 follows PUEBI. Full capitals are reserved for acronyms, initialisms, and official
 brand styling.
+
+**Portfolio visual typography audit:** Release `20260823-05` audits all 7
+displayed project visuals against this rule. The DWDM legend, XGBoost and BiLSTM
+rainfall-axis labels, and ARIMA test-axis label required capitalization
+corrections. The Retail Sales Forecasting, AI Service Request Automation, and
+thyroid-classification visuals already complied and remain unchanged. The
+revision changes only those text regions; chart series, numbers, evidence,
+layout, and project meaning remain unchanged.
 
 Every public visual uses a deliberate alignment grid with consistent spacing,
 padding, component dimensions, text alignment, icon placement, and hierarchy.
