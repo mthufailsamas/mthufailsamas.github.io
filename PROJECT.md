@@ -439,10 +439,17 @@ applicable.
 displayed project visuals against this rule. The DWDM Monitoring, XGBoost
 Rainfall, Thyroid Classification, BiLSTM Rainfall, and ARIMA Rice Forecasting
 visuals required human-readable title-case corrections. The Retail Sales
-Forecasting and AI Service Request Automation visuals already complied and
-remain unchanged. Official and technical names retain their canonical casing.
-The revision changes only approved text regions; charts, series, numbers,
-evidence, layout, and project meaning remain unchanged.
+Forecasting and AI Service Request Automation visuals required no typography
+changes during that pass. Official and technical names retain their canonical
+casing. The revision changes only approved text regions; charts, series,
+numbers, evidence, layout, and project meaning remain unchanged.
+
+**AI Service Request Automation visual alignment audit:** Release
+`20260823-07` centers all 4 workflow arrows within their equal inter-card gaps
+and aligns them to the cards' vertical center. The lower technology panel
+retains equal left and right margins and now has equal whitespace above and
+below its anti-aliased bounds. Titles, icons, labels, technologies, colors, and
+project meaning remain unchanged.
 
 Every public visual uses a deliberate alignment grid with consistent spacing,
 padding, component dimensions, text alignment, icon placement, and hierarchy.
