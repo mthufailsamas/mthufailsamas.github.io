@@ -429,18 +429,20 @@ remain readable at card size, and every number, method, system component, and
 result shown in the image must be traceable to the project's current registry
 record and source evidence.
 
-English visual headings, short labels, and metric labels use natural title case;
-complete descriptive sentences use sentence case. Indonesian visual text
-follows PUEBI. Full capitals are reserved for acronyms, initialisms, and official
-brand styling.
+All human-readable English text inside project visuals uses natural title case.
+Official brand names, acronyms, initialisms, units, filenames, identifiers, and
+source column names preserve their canonical casing. Indonesian visual text
+follows PUEBI while retaining the approved title-case hierarchy where
+applicable.
 
-**Portfolio visual typography audit:** Release `20260823-05` audits all 7
-displayed project visuals against this rule. The DWDM legend, XGBoost and BiLSTM
-rainfall-axis labels, and ARIMA test-axis label required capitalization
-corrections. The Retail Sales Forecasting, AI Service Request Automation, and
-thyroid-classification visuals already complied and remain unchanged. The
-revision changes only those text regions; chart series, numbers, evidence,
-layout, and project meaning remain unchanged.
+**Portfolio visual typography audit:** Release `20260823-06` audits all 7
+displayed project visuals against this rule. The DWDM Monitoring, XGBoost
+Rainfall, Thyroid Classification, BiLSTM Rainfall, and ARIMA Rice Forecasting
+visuals required human-readable title-case corrections. The Retail Sales
+Forecasting and AI Service Request Automation visuals already complied and
+remain unchanged. Official and technical names retain their canonical casing.
+The revision changes only approved text regions; charts, series, numbers,
+evidence, layout, and project meaning remain unchanged.
 
 Every public visual uses a deliberate alignment grid with consistent spacing,
 padding, component dimensions, text alignment, icon placement, and hierarchy.
