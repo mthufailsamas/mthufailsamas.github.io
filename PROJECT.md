@@ -103,16 +103,11 @@ This safeguard removes the normal post-deployment cache wait after it has reache
 
 **Release-freshness safeguard status:** Published at portfolio commit `3d4fd4a17167ff96a9552dcb03af3809afeef916` with release `20260816-01`; Pages run `31955310151` completed successfully. The live release marker and versioned HTML expose the approved freshness check.
 
-**AI Service Request Automation publication status:** The evidence-bounded card
-was published at portfolio commit `96cd06614a5dd268f991c9b7ab9885a78c1ffed6`
-with release `20260820-02`; Pages run `32332704734` completed successfully. Its
-dedicated public repository is now verified at
-`https://github.com/mthufailsamas/ai-service-request-automation`. Portfolio
-commit `66ac77b042cfd5e305a47a5dde9648e1c6d515f3` and Pages run `32333546672`
-published its card link through release `20260820-03`. The live release marker,
-repository HTTP response, link target and rel attributes, visible `CHECK`
-boundary, horizontal layout, and browser warning/error state all passed final
-verification.
+**AI Service Request Automation publication status:** A new evidence-aligned
+card is prepared locally from the accepted 40-case final `PASS`. It replaces
+the superseded locked-50-case `CHECK` metrics, uses the corrected public
+`v1.0.0` source, and adds a Full HD lifecycle visual. Publication and live
+Pages verification are pending.
 
 ## 2. Evidence required for each role family
 
@@ -254,36 +249,36 @@ Copy this block for each audited project. Do not remove required fields.
 ### retail-sales-forecasting-ai-engineering
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`
-- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the current Git worktree, public `main` at `91d363da7b536d25989e0465e8b767a0e9613196`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and their successful GitHub Actions evidence in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the current Git worktree, public `main` at `b044bfafe251254d02606f4e326fc98f15a8d1c9`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and successful GitHub Actions run `32442894170`.
+- **Last audited:** 2026-08-21
 - **Display title:** Retail Sales Forecasting & Planning System
 - **Context:** Independent portfolio project using authorized Kaggle competition data, controlled chronological model evaluation, and locally verified batch, API, and Docker inference.
 - **Primary role family:** AI/ML Engineering
 - **Supporting role families:** Data Science
-- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 38/38 synthetic contract tests passed; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions; GitHub Actions runs `31933494858`, `31933502820`, and documentation-audit run `31945863065` completed successfully.
+- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 44/44 core contract tests passed locally and in GitHub Actions; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
 - **Visual asset source:** Five stage icons from the official MIT-licensed Bootstrap Icons library, rasterized into the local project PNG with no runtime third-party request.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
-- **Portfolio status:** Published at portfolio commit `bd89470a0e9a03cd9d01f3a592daef469b3ae0f7`; Pages run `31949697620` completed successfully. The live card uses the evidence-aligned wording and streamlined model-selection visual. Desktop and 390-pixel mobile checks found no horizontal overflow, missing asset, or browser warning.
+- **Portfolio status:** Approved revision prepared locally with 44/44 core contract evidence and an updated Full HD visual. Publication and Pages verification are pending.
 
 ### ai-service-request-automation
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`
-- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the locked evidence JSON, local Git commit `3167a03`, public `main` at the same commit, and public release `v1.0.0` in the workspace above.
-- **Last audited:** 2026-08-20
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `docs/PORTFOLIO_HANDOFF.md`, `docs/EVALUATION_RESULTS.md`, `docs/END_TO_END_CONTRACT.md`, `docs/RECOVERY_OPERATIONS_CONTRACT.md`, the frozen final evidence JSON, local and public `main` at `8695a60e77d92504e9fa402a0d818082cd82712d`, and the sole public release `v1.0.0` at the same commit.
+- **Last audited:** 2026-08-23
 - **Display title:** AI Service Request Automation
 - **Context:** Independent portfolio project using fictional bilingual service requests, policies, users, permissions, and downstream records in controlled local evaluation.
 - **Primary role family:** AI Automation
 - **Supporting role families:** AI/ML Engineering and Data Engineering
-- **Verified metrics:** The locked 50-case controlled evaluation completed 40 semantic and 10 workflow-control cases. Classification macro F1 was 94.6%, required-field accuracy 88.3%, policy retrieval Recall@3 0.0%, citation validity 0.0%, route and final-state accuracy 30.0%, semantic task success 20.0%, workflow-control pass rate 100.0%, and recoverable-failure pass rate 100.0%. The combined local lifecycle passed 7/7 groups; scheduled recovery and operations passed 6/6 groups. Hosted or paid AI calls were 0.
+- **Verified metrics:** The frozen final gate completed 40/40 cases: 30 untouched bilingual semantic cases and 10 deterministic workflow controls. Classification macro F1, required-field accuracy, policy Recall@3, citation validity, workflow controls, and recoverable failures were 100.0%; route and final-state accuracy and semantic task success were 96.7%. 27/30 semantic requests (90.0%) progressed without service-agent triage review, with 3 safely held for review. Hosted or paid AI calls were 0.
 - **Public repository:** https://github.com/mthufailsamas/ai-service-request-automation
-- **Visual asset source:** Project-native lifecycle and evaluation diagram rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
-- **Limitations:** Evidence uses fictional data and controlled local services. The fixed quality gate is `CHECK`: the selected local analysis pipeline still requires human review, and no external deployment, real-user use, or measured business impact has been demonstrated.
-- **Approved Project Output wording:** Delivered a reproducible local application with role-based case handling, durable orchestration, human approval and exception paths, downstream API integration, scheduled recovery, controlled runners, and checksum-locked evaluation evidence.
-- **Approved Evidence & Scope wording:** The locked bilingual evaluation used 50 fictional cases and fixed pre-observation targets. The fixed quality gate is `CHECK`: deterministic workflow and recovery safeguards passed, while the selected local analysis pipeline still requires human review. Evidence is controlled local testing; production, real-user, and business-impact validation remain outside this result.
-- **Portfolio status:** Published with its verified repository link at portfolio commit `66ac77b042cfd5e305a47a5dde9648e1c6d515f3`; Pages run `32333546672` completed successfully, and live release `20260820-03` matches this registry record.
+- **Visual asset source:** Project-native 5-stage lifecycle and evaluation infographic rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
+- **Limitations:** Evidence uses fictional data, installed local models, and controlled local services. The system retains deterministic and human authority around probabilistic output. No external deployment, real-user adoption, production throughput, employee hours saved, uptime change, financial return, or other live business impact has been demonstrated.
+- **Approved Project Output wording:** Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.
+- **Approved Evidence & Scope wording:** The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.
+- **Portfolio status:** Approved revision prepared locally from the corrected public `v1.0.0` source, the 40-case final `PASS`, and a new Full HD lifecycle visual. Publication and Pages verification are pending.
 
 ### dwdm-optical-sensor-monitoring
 
@@ -361,8 +356,8 @@ These entries are audit directions only. They are not completed registry records
 
 | Project candidate | Workspace routing | Provisional direction | Registry status |
 | --- | --- | --- | --- |
-| Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card matches the approved sharper Project Output and Evidence & Scope wording | Published |
-| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card matches the evidence-bounded service-request registry record | Published |
+| Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | Publish the verified 44/44 core contract evidence | Approved; publication pending |
+| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | Publish the 40-case final `PASS`, 90.0% controlled triage result, and corrected `v1.0.0` source | Approved; publication pending |
 | DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
 | Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
 
