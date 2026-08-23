@@ -77,7 +77,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260823-03";
+        const embeddedRelease = "20260823-04";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -267,8 +267,8 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.png?v=20260821a" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
-                    <img src="assets/projects/retail-sales-forecasting.png?v=20260821a" alt="Retail forecasting flow from 6 source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.png?v=20260823c" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
+                    <img src="assets/projects/retail-sales-forecasting.png?v=20260823c" alt="Retail forecasting flow from 6 source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>1 versioned XGBoost artifact drives the same 16-day contract across batch, FastAPI, and Docker inference.</figcaption>
                 </figure>

@@ -429,6 +429,11 @@ remain readable at card size, and every number, method, system component, and
 result shown in the image must be traceable to the project's current registry
 record and source evidence.
 
+English visual headings, short labels, and metric labels use natural title case;
+complete descriptive sentences use sentence case. Indonesian visual text
+follows PUEBI. Full capitals are reserved for acronyms, initialisms, and official
+brand styling.
+
 Every public visual uses a deliberate alignment grid with consistent spacing,
 padding, component dimensions, text alignment, icon placement, and hierarchy.
 Approval requires inspection at the visual's real website-card size; visibly
