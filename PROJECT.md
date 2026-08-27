@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-08-23
+Last updated: 2026-08-27
 
 ## Purpose and authority
 
@@ -98,6 +98,7 @@ The following rules are mandatory for every future user-visible website revision
 4. Do not update `site-version.json` for an internal documentation-only commit that cannot change the rendered website.
 5. Do not call a revision live until the Pages deployment succeeds and the public site returns the new release marker, the versioned HTML, and every changed asset.
 6. If the freshness check fails, keep the currently loaded page usable. The guard must never replace the portfolio with a blank or blocking error state.
+7. After a user-authorized website revision passes the mandatory evidence, static, desktop, and mobile checks, commit and push it to `main` in the same task and verify the resulting GitHub Pages deployment. Do not introduce a separate pre-publication approval checkpoint unless the user explicitly requests a draft-only or local-only revision.
 
 This safeguard removes the normal post-deployment cache wait after it has reached a visitor's browser. It cannot make an unfinished GitHub Pages deployment available early, and the first installation of the guard still requires the current versioned page to be loaded once.
 
@@ -299,16 +300,20 @@ Copy this block for each audited project. Do not remove required fields.
 ### xgboost-rainfall-forecasting
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/XGBoost Rainfall Forecasting/`
-- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, `XGBoost_Rainfall_Forecasting_V2.ipynb` with all 14 code cells completed and no error output, `outputs_v2/xgboost_rainfall_v2_20260827-141510/development_decision.json`, `final_comparison.csv`, `final_predictions.csv`, `final_intensity_confusion.csv`, `final_intensity_class_metrics.csv`, `run_metadata.json`, the current Git worktree, and the configured public repository remote.
+- **Last audited:** 2026-08-27
 - **Display title:** Rainfall Forecasting with XGBoost and Grid Search
-- **Context:** Academic research project that also supported a peer-reviewed publication.
+- **Context:** Academic next-day rainfall forecasting study using authorized private BMKG observations from the Trunojoyo area in Sumenep Regency. V1 is the journal-bound reference that supported the linked publication; V2 is the active flagship experiment and source of the current portfolio metrics.
 - **Primary role family:** Data Science
-- **Supporting role families:** Pending a dedicated evidence audit.
-- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Supporting role families:** None.
+- **Verified metrics:** The 2026-08-27 canonical V2 Run All completed all 14 code cells without notebook errors and produced 47 local evidence artifacts after 5,184 temporal CV fits. Development OOF evidence selected a 40% 2-stage and 60% direct Tweedie ensemble with a 0.50 wet threshold. Across 308 observed targets in the reused 366-day final calendar period, the ensemble recorded RMSE 9.2521 mm, MAE 4.1061 mm, total bias 5.8982%, R-squared 0.2370, wet-day balanced accuracy 0.7679, wet-day F1 0.6897, BMKG intensity accuracy 75.0%, and BMKG Macro-F1 0.4429. Correct-category counts were 175/206 dry, 52/84 light, 4/15 moderate, and 0/3 heavy; the final period contained no observed very-heavy target.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-rainfall-prediction
-- **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data, and the current notebook has uncommitted changes that must be reconciled before a claims audit.
-- **Portfolio status:** Audit in progress
+- **Visual asset source:** Project-native selected-ensemble actual-versus-forecast evidence rendered locally from `final_predictions.csv` as a `1920x1080` PNG. The visual contains no third-party image or runtime request.
+- **Visual factual inventory:** Centered title `XGBoost Rainfall Forecasting`; subtitle `Actual and Forecast Rainfall across the Reused Final Calendar Period`; legend labels `Actual Rainfall` and `Daily XGBoost Forecast`; footer values `366 Daily Forecasts`, `308 Observed Targets`, `RMSE 9.2521 mm`, and `Wet/Dry Balanced Accuracy 0.7679`. The time-series lines and every displayed value trace to `final_predictions.csv` and `final_comparison.csv` from the canonical V2 output directory.
+- **Limitations:** The original observations are private and are not redistributed. The 4-year source represents 1 observation context, 58 of 366 final targets are unknown, and only 2 full-year development checks are available. The final year had informed prior analysis and is reused temporal evidence. Moderate and heavy rainfall remain weak: 4/15 moderate and 0/3 heavy dates received the correct BMKG category. V2 does not establish regional transfer, warning capability, deployment, or measured salt-production impact.
+- **Draft Project Output wording:** The selected V2 experiment produces 366 next-day forecasts with wet/dry alerts and BMKG intensity labels, supported by development-selection tables, calibration, error-regime diagnostics, feature importance, and a reproducible local evidence bundle.
+- **Draft Evidence & Scope wording:** Controlled evidence comes from 2 annual development checks and 1 reused final year. Correct-category counts were 4/15 for moderate and 0/3 for heavy rainfall, which remains the main model limitation. Original observations remain private; the linked publication documents V1, while the displayed metrics report V2.
+- **Portfolio status:** Approved for immediate publication. The evidence audit, card revision, and local verification are complete; the user authorized direct commit, push, and live verification on 2026-08-27.
 
 ### xgboost-thyroid-recurrence-classification
 
@@ -530,12 +535,12 @@ those actions after reviewing the findings.
 
 ## 7. Project-to-portfolio handoff
 
-A project task does not publish or revise its own portfolio card. When a project is ready for portfolio review:
+A project task does not publish or revise its own portfolio card. When a project is ready for portfolio delivery:
 
 1. identify the exact workspace folder and confirm that its project-level source of truth marks the intended handoff stage;
 2. ask the Portfolio Website task to audit or refresh the canonical Project Registry record in this file;
-3. treat the registry as `Draft` after the evidence audit while card wording, placement, or role mapping still requires user review;
-4. change the registry to `Approved` only after the user accepts the proposed public card and claims; and
-5. change the registry to `Published` only after the live website matches the approved record.
+3. use `Draft` only while evidence or wording remains unresolved, or when the user explicitly requests a draft-only or local-only revision;
+4. after an authorized revision passes the required evidence and website checks, change the registry to `Approved`, commit it, and push it to `main` in the same task without another publication-confirmation step; and
+5. change the registry to `Published` only after the GitHub Pages deployment succeeds and the live website matches the approved record.
 
 A message from another task is a routing signal, not project evidence. The Portfolio Website task must still inspect the project workspace and current reproducible sources before changing a registry record or public card.

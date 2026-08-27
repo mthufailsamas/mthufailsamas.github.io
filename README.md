@@ -18,7 +18,8 @@ The featured case studies cover:
   local FastAPI delivery, Docker packaging, and contract tests;
 - AI Service Request Automation with FastAPI, n8n, PostgreSQL/pgvector, local
   Ollama models, human review, downstream delivery, and scheduled recovery;
-- Rainfall Forecasting with Python, XGBoost, scikit-learn, and Grid Search;
+- next-day Rainfall Forecasting with 2-stage and direct Tweedie XGBoost,
+  Grid Search, and annual TimeSeriesSplit evaluation;
 - Thyroid Cancer Recurrence Classification with Python, XGBoost,
   scikit-learn, Information Gain, and Grid Search;
 - Rainfall Forecasting with TensorFlow/Keras BiLSTM and Grid Search; and
