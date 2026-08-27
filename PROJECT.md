@@ -119,6 +119,10 @@ embeddings, vector search, Docker Compose, GitHub Actions, CI/CD, model serving,
 and batch-inference capabilities demonstrated across the 2 independent
 flagship projects. All 3 resume links use the same cache-versioned PDF.
 
+**Resume synchronization status:** Published at portfolio commit `18d2fadd71d83e8d926b935aa792b9fc53b46dd4`;
+Pages run `33087663392` completed successfully, and the live HTML, release marker,
+and downloadable PDF match release `20260827-03`.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
