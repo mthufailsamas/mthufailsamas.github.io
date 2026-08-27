@@ -112,6 +112,13 @@ five illustrated workflow stages, and normalizes capitalization and typography
 across the three supporting system layers. The public page, release marker, and
 versioned image each returned successfully.
 
+**Resume and capability synchronization:** Release `20260827-03` aligns the
+downloadable resume and Skills section with the verified 2026-08-26 general
+Data and AI resume. The website now exposes the verified RAG,
+embeddings, vector search, Docker Compose, GitHub Actions, CI/CD, model serving,
+and batch-inference capabilities demonstrated across the 2 independent
+flagship projects. All 3 resume links use the same cache-versioned PDF.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
