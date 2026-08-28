@@ -92,7 +92,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260828-01";
+        const embeddedRelease = "20260828-02";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -121,9 +121,7 @@
           });
       })();
     </script>
-    <link rel="preload" as="image" href="assets/hero/data-ai-system-desktop.webp?v=20260816h" media="(min-width: 601px)">
-    <link rel="preload" as="image" href="assets/hero/data-ai-system-mobile-v2.webp?v=20260816h" media="(max-width: 600px)">
-    <link rel="stylesheet" href="styles.css?v=20260816b">
+    <link rel="stylesheet" href="styles.css?v=20260828d">
     <script src="script.js?v=9f86dc0" defer></script>
   </head>
   <body>
@@ -132,7 +130,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="M. Thufail Alwannabil Samas, back to top">
         <span class="brand-photo" aria-hidden="true">
-          <img src="assets/profile-photo.jpg?v=20260724" alt="" width="40" height="40">
+          <img src="assets/profile-photo.webp?v=20260828a" alt="" width="40" height="40" decoding="async">
         </span>
         <span>M. Thufail Alwannabil Samas</span>
       </a>
@@ -163,6 +161,7 @@
     <main id="main-content">
       <section class="hero" id="top">
         <picture class="hero-wallpaper" aria-hidden="true">
+          <source media="(max-width: 600px)" srcset="assets/hero/data-ai-system-mobile.webp?v=20260828a">
           <img src="assets/hero/data-ai-system-desktop.webp?v=20260816h" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
         </picture>
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -196,7 +195,7 @@
           </div>
           <div class="about-copy">
             <p>
-              Professional experience covers operational monitoring, data science, and technical education. Work at PT Aplikanusa Lintasarta centered on DWDM monitoring and assurance analytics for approximately 400 directional sensors. Earlier roles involved BMKG forecasting tools and programming and AI education across school and university settings.
+              Professional experience covers operational monitoring, data science, and technical education. Work at PT Aplikanusa Lintasarta centered on DWDM monitoring and assurance analytics across directional optical-sensor telemetry. Earlier roles involved BMKG forecasting tools and programming and AI education across school and university settings.
             </p>
             <p>
               Beyond those roles, the portfolio includes machine-learning forecasting and classification, data pipelines, and local AI service-request automation with deterministic controls and human review. Credentials include BNSP Data Scientist certification and a peer-reviewed XGBoost rainfall publication as 1st author.
@@ -238,7 +237,7 @@
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>Approximately 400 directional sensors combine native 5-minute PRTG optical-power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>Directional optical sensors combine native 5-minute PRTG power telemetry with ENIMS metadata for sensors, links, directions, endpoints, and locations.</dd></div>
                     <div><dt>Approach</dt><dd>Built an incremental workflow from metadata synchronization and telemetry collection through failure grouping, PELT change-point detection, Theil-Sen and Mann-Kendall degradation analysis, paired-sensor evidence, priority ranking, and local dashboard delivery.</dd></div>
                     <div><dt>Validation &amp; Controls</dt><dd>Statistical analysis uses only clean observations. Missing data, downtime, 0 coverage, and low-signal failures remain visible to operations but are excluded from change and trend calculations instead of being filled with invented values.</dd></div>
                   </dl>
@@ -246,13 +245,13 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/dwdm-monitoring.png?v=20260823i" target="_blank" rel="noopener noreferrer" aria-label="Open the optical monitoring project visual at full size">
-                    <img src="assets/projects/dwdm-monitoring.png?v=20260823i" alt="Illustrative DWDM optical signal trace with a change point, degradation trend, failure interval, missing interval, and monitoring output" width="1920" height="1080" decoding="async">
+                  <a class="project-image-link" href="assets/projects/dwdm-monitoring.webp?v=20260828a" target="_blank" rel="noopener noreferrer" aria-label="Open the optical monitoring project visual at full size">
+                    <img src="assets/projects/dwdm-monitoring.webp?v=20260828a" alt="Illustrative DWDM optical signal trace with a change point, degradation trend, failure interval, missing interval, and monitoring output" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Illustrative, non-confidential view of signal events, missing intervals, and monitoring output used by the workflow.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="Optical monitoring project scope">
-                  <div><strong>~400</strong><span>Directional Sensors</span></div>
+                  <div><strong>2</strong><span>Source Systems</span></div>
                   <div><strong>5 min</strong><span>Telemetry Cadence</span></div>
                   <div><strong>3</strong><span>Operational Views</span></div>
                 </div>
@@ -282,8 +281,8 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.png?v=20260823c" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
-                    <img src="assets/projects/retail-sales-forecasting.png?v=20260823c" alt="Retail forecasting flow from 6 source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.webp?v=20260828a" target="_blank" rel="noopener noreferrer" aria-label="Open the retail forecasting system visual at full size">
+                    <img src="assets/projects/retail-sales-forecasting.webp?v=20260828a" alt="Retail forecasting flow from 6 source tables through forecast-safe features, Ridge and XGBoost selection by validation RMSLE, a versioned artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>1 versioned XGBoost artifact drives the same 16-day contract across batch, FastAPI, and Docker inference.</figcaption>
                 </figure>
@@ -321,8 +320,8 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/ai-service-request-automation.png?v=20260823d" target="_blank" rel="noopener noreferrer" aria-label="Open the AI Service Request Automation workflow visual at full size">
-                    <img src="assets/projects/ai-service-request-automation.png?v=20260823d" alt="AI Service Request Automation workflow from employee request through local AI triage, rule validation, human authority, and Service Desk delivery, supported by Ollama, FastAPI, PostgreSQL with pgvector, n8n, and Docker" width="1920" height="1080" loading="lazy" decoding="async">
+                  <a class="project-image-link" href="assets/projects/ai-service-request-automation.webp?v=20260828a" target="_blank" rel="noopener noreferrer" aria-label="Open the AI Service Request Automation workflow visual at full size">
+                    <img src="assets/projects/ai-service-request-automation.webp?v=20260828a" alt="AI Service Request Automation workflow from employee request through local AI triage, rule validation, human authority, and Service Desk delivery, supported by Ollama, FastAPI, PostgreSQL with pgvector, n8n, and Docker" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Short employee messages become catalog-matched service work while deterministic rules and accountable people retain authority.</figcaption>
                 </figure>
@@ -361,8 +360,8 @@
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/xgboost-rainfall.png?v=20260827a" target="_blank" rel="noopener noreferrer" aria-label="Open the XGBoost rainfall forecasting visual at full size">
-                    <img src="assets/projects/xgboost-rainfall.png?v=20260827a" alt="Actual rainfall where observed and the selected daily XGBoost ensemble forecast across the reused 366-day final calendar period" width="1920" height="1080" decoding="async">
+                  <a class="project-image-link" href="assets/projects/xgboost-rainfall.webp?v=20260828a" target="_blank" rel="noopener noreferrer" aria-label="Open the XGBoost rainfall forecasting visual at full size">
+                    <img src="assets/projects/xgboost-rainfall.webp?v=20260828a" alt="Actual rainfall where observed and the selected daily XGBoost ensemble forecast across the reused 366-day final calendar period" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Actual and selected ensemble forecasts across all 366 final dates; error metrics use the 308 dates with observed rainfall.</figcaption>
                 </figure>
@@ -388,32 +387,33 @@
                 <h3>Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search</h3>
                 <dl class="case-details">
                   <div><dt>Problem</dt><dd>Build a reproducible recurrence classifier while testing whether a smaller set of informative features can preserve performance and reduce unnecessary model input.</dd></div>
-                  <div><dt>My Contribution</dt><dd>Implemented the Python data audit, scikit-learn preprocessing, fold-local Information Gain selection, checkpointed XGBoost search, and multi-metric evaluation for this collaborative academic project.</dd></div>
+                  <div><dt>My Contribution</dt><dd>Developed the Python V1 workflow for data audit, mixed-type preprocessing, fold-local Information Gain selection, checkpointed XGBoost search, and multi-metric evaluation for this collaborative academic project.</dd></div>
                 </dl>
                 <details class="project-deep-dive">
                   <summary>Technical details</summary>
                   <dl class="case-details">
-                    <div><dt>Data &amp; Context</dt><dd>The public UCI dataset contains 383 differentiated thyroid cancer records with clinical, pathological, treatment, response, and recurrence variables.</dd></div>
-                    <div><dt>Approach</dt><dd>Handled numeric, binary, ordinal, and nominal features explicitly, then combined entropy-based Information Gain selection with XGBoost and Grid Search.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Repeated feature selection inside every training fold and evaluated pooled out-of-fold predictions with 10-fold cross-validation, preventing the full dataset from influencing feature choice.</dd></div>
+                    <div><dt>Data &amp; Context</dt><dd>The public UCI file contains 383 differentiated thyroid cancer rows with clinical, pathological, treatment, response, and recurrence variables. V1 removes 19 exact full-row repetitions and retains 364 rows.</dd></div>
+                    <div><dt>Approach</dt><dd>Handled numeric, binary, ordinal, and nominal features explicitly, then combined entropy-based Information Gain selection with XGBoost and a checkpointed Grid Search path.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>The current V1 design uses shuffled, non-nested 10-fold K-Fold evaluation and repeats feature selection inside each training fold. The complete V1 model run and model-quality results remain under revalidation; V2 is planned and not yet implemented.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
-                <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/thyroid-classification.png?v=20260823i" target="_blank" rel="noopener noreferrer" aria-label="Open the thyroid classification project visual at full size">
-                    <img src="assets/projects/thyroid-classification.png?v=20260823i" alt="Top 10 encoded features using their original column names, ranked by mean Information Gain across 10 training folds" width="1920" height="1080" loading="lazy" decoding="async">
-                  </a>
-                  <figcaption>Top 10 encoded features by mean Information Gain across 10 training folds.</figcaption>
-                </figure>
-                <div class="metric-row four-metrics" aria-label="Thyroid classification results">
-                  <div><strong>97.25%</strong><span>Accuracy</span></div>
-                  <div><strong>95.37%</strong><span>F1-score</span></div>
-                  <div><strong>98.05%</strong><span>Specificity</span></div>
-                  <div><strong>98.60%</strong><span>ROC-AUC</span></div>
+                <div class="project-workflow" aria-label="Thyroid classification V1 workflow">
+                  <p class="project-workflow-title">V1 workflow under model-quality revalidation</p>
+                  <div class="project-workflow-steps" role="list">
+                    <div role="listitem"><span>01</span><strong>Data Audit</strong><small>Mixed feature types and exact-row review</small></div>
+                    <div role="listitem"><span>02</span><strong>Fold-Local Selection</strong><small>Information Gain inside each training fold</small></div>
+                    <div role="listitem"><span>03</span><strong>Checkpointed Search</strong><small>XGBoost evaluation path prepared for rerun</small></div>
+                  </div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow delivers fold-specific feature rankings, pooled out-of-fold predictions, and a reproducible comparison of XGBoost configurations across accuracy, F1-score, specificity, and ROC-AUC.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public UCI data and runnable implementation are available in the repository. Results are strong within this experimental dataset, but the project supports model research rather than clinical diagnosis.</span></p>
+                <div class="metric-row" aria-label="Thyroid classification verified V1 scope">
+                  <div><strong>383</strong><span>Source Rows</span></div>
+                  <div><strong>364</strong><span>V1 Retained Rows</span></div>
+                  <div><strong>10</strong><span>Shuffled Folds</span></div>
+                </div>
+                <p class="project-output"><strong>Project Output</strong><span>The repository preserves the public dataset, V1 preparation contract, fold-specific feature-selection path, checkpointed search design, and the documented V2 evaluation plan.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The verified evidence currently covers the dataset and V1 preparation path. Model-quality metrics are withheld until the full run is revalidated; the project remains experimental research and is not evidence for clinical diagnosis or deployment.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -440,19 +440,21 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/bilstm-rainfall.png?v=20260823i" target="_blank" rel="noopener noreferrer" aria-label="Open the BiLSTM rainfall project visual at full size">
-                    <img src="assets/projects/bilstm-rainfall.png?v=20260823i" alt="Observed rainfall and next-day BiLSTM predictions over the chronological test period" width="1920" height="1080" loading="lazy" decoding="async">
-                  </a>
-                  <figcaption>Observed rainfall and next-day predictions over the chronological test period.</figcaption>
-                </figure>
-                <div class="metric-row" aria-label="BiLSTM rainfall project results">
-                  <div><strong>0.8073</strong><span>MAAPE</span></div>
-                  <div><strong>10.2734 mm</strong><span>RMSE</span></div>
-                  <div><strong>7 days</strong><span>Input Sequence</span></div>
+                <div class="project-workflow" aria-label="BiLSTM rainfall forecasting workflow">
+                  <p class="project-workflow-title">Sequence forecasting workflow</p>
+                  <div class="project-workflow-steps" role="list">
+                    <div role="listitem"><span>01</span><strong>Sequence Build</strong><small>Chronological weather windows</small></div>
+                    <div role="listitem"><span>02</span><strong>Focused Search</strong><small>Units, batch size, and learning-rate period</small></div>
+                    <div role="listitem"><span>03</span><strong>Holdout Review</strong><small>Predictions returned to millimeters</small></div>
+                  </div>
                 </div>
-                <p class="project-output"><strong>Project Output</strong><span>The workflow turns 7 days of weather history into next-day rainfall estimates and preserves the selected model, holdout predictions, evaluation summaries, and actual-versus-predicted visual for review.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The reported BMKG internship results come from 1 chronological holdout period using restricted observations. The public repository includes synthetic same-schema data so the full workflow can still be inspected and run.</span></p>
+                <div class="metric-row" aria-label="BiLSTM rainfall verified experiment design">
+                  <div><strong>7 days</strong><span>Input Window</span></div>
+                  <div><strong>3</strong><span>BiLSTM Layers</span></div>
+                  <div><strong>27</strong><span>Search Configurations</span></div>
+                </div>
+                <p class="project-output"><strong>Project Output</strong><span>The workflow turns 7 days of weather history into next-day rainfall estimates and can preserve the selected model, holdout predictions, evaluation summaries, and actual-versus-predicted visual for review.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public repository provides a runnable same-schema sample and a chronological 80:20 experiment design. The same holdout selects and reports the best configuration, so it is model-selection evidence rather than an untouched final estimate. Historical internship metrics remain withheld pending revalidation.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/bilstm-rainfall-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -479,19 +481,21 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <figure class="project-visual">
-                  <a class="project-image-link" href="assets/projects/arima-rice.png?v=20260823i" target="_blank" rel="noopener noreferrer" aria-label="Open the ARIMA rice-price project visual at full size">
-                    <img src="assets/projects/arima-rice.png?v=20260823i" alt="Observed and 1-step-ahead forecast prices for medium and premium rice during walk-forward evaluation" width="1920" height="1080" loading="lazy" decoding="async">
-                  </a>
-                  <figcaption>Observed and 1-step-ahead forecasts over the walk-forward test period.</figcaption>
-                </figure>
-                <div class="metric-row" aria-label="ARIMA rice-price project results">
-                  <div><strong>2.08%</strong><span>Medium Rice MAPE</span></div>
-                  <div><strong>1.82%</strong><span>Premium Rice MAPE</span></div>
-                  <div><strong>12 months</strong><span>Walk-Forward Test</span></div>
+                <div class="project-workflow" aria-label="ARIMA rice-price forecasting workflow">
+                  <p class="project-workflow-title">Explainable monthly forecasting workflow</p>
+                  <div class="project-workflow-steps" role="list">
+                    <div role="listitem"><span>01</span><strong>Series Audit</strong><small>Public monthly prices and stationarity checks</small></div>
+                    <div role="listitem"><span>02</span><strong>Order Plan</strong><small>ADF, ACF, PACF, and diagnostic screening</small></div>
+                    <div role="listitem"><span>03</span><strong>Walk-Forward</strong><small>Expanding history and 1-step forecasts</small></div>
+                  </div>
+                </div>
+                <div class="metric-row" aria-label="ARIMA rice-price verified experiment design">
+                  <div><strong>60</strong><span>Monthly Records</span></div>
+                  <div><strong>2</strong><span>Price Series</span></div>
+                  <div><strong>12</strong><span>Walk-Forward Steps</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>The workflow turns public monthly price history into explainable 1-step-ahead forecasts, selected ARIMA orders, diagnostic records, error summaries, and comparison visuals for both rice categories.</span></p>
-                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public data and runnable workflow are included in the repository. The models tracked the evaluated period closely, but rely only on past prices and do not include market events, policy changes, supply, or weather.</span></p>
+                <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.</span></p>
                 <div class="project-links">
                   <a class="text-link" href="https://github.com/mthufailsamas/arima-rice-price-forecasting" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&#8599;</span></a>
                 </div>
@@ -525,7 +529,7 @@
         <div class="content timeline">
           <article>
             <time datetime="2026-01">January 2026 &ndash; April 2026</time>
-            <div><h3>Junior Programmer</h3><p class="organization">PT Aplikanusa Lintasarta</p><p>Developed a project-stage DWDM optical monitoring and assurance analytics system for approximately 400 directional sensors, integrating 5-minute PRTG telemetry with ENIMS network metadata through an incremental Python/PostgreSQL pipeline, failure detection, statistical change-point and degradation analysis, paired-sensor evidence, and dashboard-based operational monitoring.</p></div>
+            <div><h3>Junior Programmer</h3><p class="organization">PT Aplikanusa Lintasarta</p><p>Developed a project-stage DWDM optical monitoring and assurance analytics system for directional optical sensors, integrating 5-minute PRTG telemetry with ENIMS network metadata through an incremental Python/PostgreSQL pipeline, failure detection, statistical change-point and degradation analysis, paired-sensor evidence, and dashboard-based operational monitoring.</p></div>
           </article>
           <article>
             <time datetime="2025-08">Aug 2025 - Dec 2025</time>
@@ -533,7 +537,7 @@
           </article>
           <article>
             <time datetime="2024-02">Feb 2024 - Jun 2024</time>
-            <div><h3>Data Science Intern</h3><p class="organization">Stasiun Meteorologi Maritim Kelas II Tanjung Perak Surabaya (BMKG)</p><p>Developed an internal extreme-weather monitoring dashboard, processed and compared BMKG cloud-prediction imagery with Himawari IR observations using Python, and built a 3-layer BiLSTM rainfall forecasting model using 7-day sequences and an 80:20 chronological split, achieving MAAPE of 0.8073 and RMSE of 10.2734 mm.</p></div>
+            <div><h3>Data Science Intern</h3><p class="organization">Stasiun Meteorologi Maritim Kelas II Tanjung Perak Surabaya (BMKG)</p><p>Developed an internal extreme-weather monitoring dashboard, processed and compared BMKG cloud-prediction imagery with Himawari IR observations using Python, and built a 3-layer BiLSTM rainfall forecasting workflow using 7-day sequences and an 80:20 chronological split.</p></div>
           </article>
           <article>
             <time datetime="2022-08">Aug 2022 - Jul 2024</time>

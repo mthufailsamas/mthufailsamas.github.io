@@ -1,10 +1,14 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 ## Purpose and authority
 
-This file is the source of truth for Portfolio Website positioning, the canonical Project Registry, role-family mapping, evidence standards, and claim wording. Read it completely before auditing, writing, or changing the website.
+This file is the source of truth for Portfolio Website positioning, the
+canonical Project Registry, role-family mapping, evidence standards, claim
+wording, resume synchronization, user-experience requirements, public-source
+performance, cleanup, and release status. Read it completely before auditing,
+writing, or changing the website.
 
 Do not rely on conversation memory. Technical claims, metrics, technologies, implementation status, and validation status must be re-checked against the current source-of-truth files and reproducible evidence inside the relevant project repository.
 
@@ -21,6 +25,113 @@ Use these labels consistently when auditing portfolio claims:
 - **Unverified:** a claim may be plausible, but its current evidence has not yet been inspected.
 
 Never silently promote planned, pending, blocked, or unverified work to verified.
+
+## Resume-to-website synchronization contract
+
+The downloadable resume and portfolio website are 2 views of the same
+professional record. The website may provide more depth and the resume may
+select fewer projects, but every overlapping fact must keep the same meaning,
+scope, evidence level, evaluation boundary, and chronology.
+
+Omission for space is acceptable. Contradiction, unsupported precision,
+status inflation, or copying the same unsupported claim onto both surfaces is
+not acceptable. Exact file equality between the local and live resume confirms
+delivery only; it does not prove that the resume content is correct.
+
+Use these synchronization states:
+
+- **Synced:** overlapping facts have the same evidence-backed meaning;
+- **Website broader:** the website adds verified detail without changing the
+  resume's meaning;
+- **Resume broader:** the resume adds verified detail without changing the
+  website's meaning;
+- **Pending resume update:** the website correction is approved but the resume
+  artifact still requires the user's manual edit or explicit authorization;
+- **Revision required:** one or both public surfaces contain a material claim
+  that must be corrected; and
+- **Blocked:** the canonical fact cannot yet be established from available
+  evidence.
+
+Do not call the overall portfolio synchronized while any overlapping fact is
+`Pending resume update`, `Revision required`, or `Blocked`.
+
+### Current resume artifact and audit state
+
+- **Active local artifact:** `documents/m-thufail-alwannabil-samas-cv.pdf`
+- **Local/live SHA-256:**
+  `22C69A32996DE3D74BF3A769D9454A2F78029434A99D399666445A61EFDA5146`
+- **Delivery state:** Synced; all current website download links resolve to the
+  same PDF and the live file matches the local artifact byte for byte.
+- **Content state:** Revision required; the 2026-08-28 audit found unsupported
+  or overstated meaning in the Thyroid project metrics and the Retail CI/parity
+  wording. The exact corrections must be provided as text for manual resume
+  editing unless the user explicitly authorizes replacing the PDF.
+
+### Current cross-surface synchronization matrix
+
+| Shared record | Current state | Required control or action |
+| --- | --- | --- |
+| Identity, contact, experience chronology, education, certification, and publication metadata | Synced across resume and website | Preserve one canonical spelling, date, link, and status on every surface; external-record evidence remains subject to its own audit when changed. |
+| AI Service Request Automation | Synced and verified | Preserve controlled-local-evidence wording and the distinction from production or measured business impact. |
+| Retail Sales Forecasting & Planning System | Pending resume update | The website correctly separates the 44/44 local-and-CI core tests from locally verified notebook/API/Docker parity. The resume must receive the same boundary. |
+| Thyroid Cancer Recurrence Classification | Pending resume update | Release `20260828-02` removes 97.25% accuracy, 95.37% F1, 98.05% specificity, and 98.60% ROC-AUC from the website. The current resume still publishes them and should replace this project entry with the verified XGBoost rainfall project. |
+| DWDM Optical Sensor Monitoring | Pending resume update | Release `20260828-02` removes the unverified `~400 sensors` quantity from the website. The current resume still contains it. |
+| Rainfall Forecasting with BiLSTM | Pending resume update | Release `20260828-02` replaces the unverified historical MAAPE and RMSE on the website with verified experiment-design facts. The current resume still contains rounded versions of those metrics. |
+| Rice Price Forecasting with ARIMA | Website broader | Release `20260828-02` replaces the unverified exact MAPE values with the verified 60-month, 2-series, 12-step design and states the reused reporting boundary. |
+| Rainfall Forecasting with XGBoost | Website broader and verified | Preserve the 23 prior-only features, 3 searches, 5,184 temporal CV fits, reused 366-day final period, 308 observed targets, and corresponding limitations exactly as recorded in its audited registry entry. |
+
+The matrix records current public risk; it does not authorize publishing an
+unverified row. Each affected project's registry record and project-level
+source of truth still control the final wording.
+
+### HR-readable confident framing
+
+The portfolio leads with verified responsibility, delivered systems,
+professional context, and measurable results in concise natural English. The
+user's `fake it till you make it` direction means presenting the strongest
+verified evidence confidently and translating it into clear professional
+value. It never permits invented experience, seniority, technology, metric,
+deployment, scale, ownership, or business impact.
+
+Avoid fresh-graduate framing, first-person owner narration, keyword stuffing,
+generic self-praise, and defensive copy. Keep the positioning centered on a
+Data & AI Professional whose work is demonstrated through current evidence.
+
+### Required manual resume replacements after release `20260828-02`
+
+The current PDF remains unchanged until the user manually edits it or
+explicitly authorizes artifact replacement. Use these exact evidence-aligned
+replacements:
+
+1. **Lintasarta experience, 1st bullet:** `Developed a project-stage DWDM
+   optical monitoring and assurance system for directional optical sensors,
+   integrating 5-minute PRTG telemetry with ENIMS network metadata to identify
+   operational failures, persistent signal shifts, gradual degradation, and
+   investigation priorities.`
+2. **BMKG experience, BiLSTM bullet:** `Built a 3-layer BiLSTM workflow for
+   next-day rainfall forecasting using 7-day multivariate sequences, a focused
+   27-configuration Grid Search, and an 80:20 chronological split; packaged the
+   workflow for reproducible training and holdout review.`
+3. **Retail selected-project paragraph:** `Addressed daily sales forecasting
+   across 54 stores and 33 product families by developing an end-to-end 16-day
+   pipeline on more than 3 million labeled rows with chronological Ridge and
+   XGBoost evaluation. Selected XGBoost at 15.6431% internal-test WAPE and
+   generated 28,512 forecasts using 1 versioned artifact. All 44/44 core
+   contract tests passed locally and in GitHub Actions; local batch, FastAPI,
+   and Docker predictions matched, while CI separately verified Docker build
+   and non-root readiness.`
+4. **Replace the complete Thyroid selected-project entry with:**
+   `Rainfall Forecasting with XGBoost and Grid Search` followed by `Developed a
+   next-day rainfall workflow using 1,461 BMKG observation dates, 23 prior-only
+   features, 3 XGBoost searches, and 5,184 temporal cross-validation fits.
+   Across 308 observed targets in a reused 366-day final period, the selected
+   ensemble recorded RMSE of 9.2521 mm and wet/dry balanced accuracy of 0.7679;
+   moderate and heavy category performance remained the main limitation.`
+
+After a revised PDF is supplied, confirm the complete text and rendered 2-page
+layout, replace the old PDF rather than retaining both, update every resume link
+to 1 versioned path, verify the live hash, and change the affected matrix rows
+to `Synced` only after the meanings match.
 
 ## 1. Portfolio positioning
 
@@ -142,6 +253,62 @@ copies in the active repository; Git history is the recovery record.
 Only delete a file after confirming that no current runtime, crawler, legal,
 documentation, deployment, or source-of-truth requirement uses it. Update the
 README repository tree in the same revision whenever the active file set changes.
+
+The cleanup pass also removes superseded formats after a successful asset
+conversion, obsolete selectors and variables after a layout revision, replaced
+resume files after all links move to the accepted artifact, and temporary QA
+outputs before commit. Do not retain files that function as `old`, `backup`,
+`copy`, `final2`, `previous`, or a dated fallback. Git history is the recovery
+record.
+
+### Navigation, reading-comfort, and performance safeguard
+
+Keep the public site as one coherent semantic page using static HTML, CSS, and
+small vanilla JavaScript. Preserve the narrative order `Hero`, `About`,
+`Selected Work`, `Publication`, `Experience`, `Skills`, `Education and
+Certification`, and `Contact`. Navigation must remain usable by keyboard,
+touch, and pointer; the mobile menu must expose state through ARIA, close on
+selection and Escape, and never hide the document behind a stuck overlay.
+
+Core content must remain available if JavaScript fails. Preserve a skip link,
+visible focus, logical headings, comfortable touch targets, reduced-motion
+support, readable line lengths, and layouts without horizontal overflow on
+narrow devices or at 200% zoom. Avoid autoplay, parallax, scroll hijacking,
+hover-only meaning, web-font downloads, runtime third-party libraries, and
+persistent expensive effects.
+
+Use the following public-source budgets before server compression:
+
+- `index.html` at most 80 KB;
+- `styles.css` at most 50 KB;
+- `script.js` at most 20 KB;
+- profile image at most 80 KB;
+- ordinary project visual target at most 250 KB and hard limit 400 KB;
+- responsive above-the-fold image payload target at most 350 KB; and
+- no public asset above 1 MB without a documented exception.
+
+Every image needs explicit rendered dimensions. Load below-the-fold visuals
+lazily with asynchronous decoding, and use a broadly supported efficient
+format while preserving chart and diagram readability. A release is not
+performance-approved merely because source code is small; inspect the actual
+encoded public assets and the responsive payload.
+
+**2026-08-28 pre-correction baseline:** `index.html` (47,927 bytes),
+`styles.css` (21,116 bytes), and `script.js` (2,493 bytes) passed their budgets.
+The 460,159 byte profile JPEG, 2,243,039 byte Retail PNG, and 999,042 byte
+Thyroid PNG failed the applicable image budgets, with the Retail and Thyroid
+assets alone accounting for more than 3.2 MB.
+
+**2026-08-28 optimization revision:** Release `20260828-02` converts the 4
+retained evidence-backed project visuals to inspected WebP files between 81,890
+and 112,502 bytes, reduces the profile image to 11,312 bytes, and reduces the
+mobile hero to 178,186 bytes. The unverified Thyroid, BiLSTM, and ARIMA result
+figures are replaced by semantic HTML workflow panels. The superseded profile,
+mobile-hero, and 7 PNG project assets are removed rather than kept as backups.
+The final HTML, CSS, and JavaScript sources are 48,228, 22,654, and 2,493 bytes;
+the complete active `assets/` tree is 788,131 bytes. A responsive `<picture>`
+selects the 88,154 byte desktop hero or 178,186 byte mobile hero instead of
+requesting both intentionally.
 
 ## 2. Evidence required for each role family
 
@@ -291,7 +458,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 44/44 core contract tests passed locally and in GitHub Actions; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual asset source:** Five stage icons from the official MIT-licensed Bootstrap Icons library, rasterized into the local project PNG with no runtime third-party request.
+- **Visual asset source:** 5 stage icons from the official MIT-licensed Bootstrap Icons library, rasterized into the local WebP project visual with no runtime third-party request.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
@@ -308,7 +475,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** AI/ML Engineering and Data Engineering
 - **Verified metrics:** The frozen final gate completed 40/40 cases: 30 untouched bilingual semantic cases and 10 deterministic workflow controls. Classification macro F1, required-field accuracy, policy Recall@3, citation validity, workflow controls, and recoverable failures were 100.0%; route and final-state accuracy and semantic task success were 96.7%. 27/30 semantic requests (90.0%) progressed without service-agent triage review, with 3 safely held for review. Hosted or paid AI calls were 0.
 - **Public repository:** https://github.com/mthufailsamas/ai-service-request-automation
-- **Visual asset source:** Project-native 5-stage lifecycle and technical-backbone infographic rendered locally as a 1920x1080 PNG with no third-party image or runtime request.
+- **Visual asset source:** Project-native 5-stage lifecycle and technical-backbone infographic rendered locally as a 1920x1080 WebP with no third-party image or runtime request.
 - **Limitations:** Evidence uses fictional data, installed local models, and controlled local services. The system retains deterministic and human authority around probabilistic output. No external deployment, real-user adoption, production throughput, employee hours saved, uptime change, financial return, or other live business impact has been demonstrated.
 - **Approved Project Output wording:** Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.
 - **Approved Evidence & Scope wording:** The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.
@@ -317,16 +484,17 @@ Copy this block for each audited project. Do not remove required fields.
 ### dwdm-optical-sensor-monitoring
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/`
-- **Source-of-truth files inspected:** `README.md` and the current local project structure in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `README.md`, the implementation under `src/`, the complete contract suite under `tests/`, and the current local workspace structure. The project has no usable Git baseline at this path.
+- **Last audited:** 2026-08-28
 - **Display title:** DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
 - **Context:** Professional project-stage work at PT Aplikanusa Lintasarta using confidential operational sources.
 - **Primary role family:** Data Engineering
 - **Supporting role families:** Data Analysis
-- **Verified metrics:** Pending a dedicated evidence audit. The native 5-minute telemetry contract is documented; do not import the current website's sensor count or another quantitative claim without tracing it to current project evidence.
+- **Verified metrics:** The implemented contract combines 2 source systems, preserves native 5-minute PRTG telemetry, and exposes 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed on 2026-08-28 when the project's `src` directory was placed on `PYTHONPATH`. No authorized source currently establishes the former `~400 sensors` quantity, so that number is omitted.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
-- **Portfolio status:** Audit in progress
+- **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
+- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
 
 ### xgboost-rainfall-forecasting
 
@@ -339,7 +507,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** None.
 - **Verified metrics:** The 2026-08-27 canonical Run All completed all 14 code cells without notebook errors and produced 47 local evidence artifacts after 5,184 temporal CV fits. Development OOF evidence selected a 40% 2-stage and 60% direct Tweedie ensemble with a 0.50 wet threshold. Across 308 observed targets in the reused 366-day final calendar period, the ensemble recorded RMSE 9.2521 mm, MAE 4.1061 mm, total bias 5.8982%, R-squared 0.2370, wet-day balanced accuracy 0.7679, wet-day F1 0.6897, BMKG intensity accuracy 75.0%, and BMKG Macro-F1 0.4429. Correct-category counts were 175/206 dry, 52/84 light, 4/15 moderate, and 0/3 heavy; the final period contained no observed very-heavy target.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-rainfall-prediction
-- **Visual asset source:** Project-native selected-ensemble actual-versus-forecast evidence rendered locally from `final_predictions.csv` as a `1920x1080` PNG. The visual contains no third-party image or runtime request.
+- **Visual asset source:** Project-native selected-ensemble actual-versus-forecast evidence rendered locally from `final_predictions.csv` as a `1920x1080` WebP. The visual contains no third-party image or runtime request.
 - **Visual factual inventory:** Centered title `XGBoost Rainfall Forecasting`; subtitle `Actual and Forecast Rainfall across the Reused Final Calendar Period`; legend labels `Actual Rainfall` and `Daily XGBoost Forecast`; footer values `366 Daily Forecasts`, `308 Observed Targets`, `RMSE 9.2521 mm`, and `Wet/Dry Balanced Accuracy 0.7679`. The time-series lines and every displayed value trace to `final_predictions.csv` and `final_comparison.csv` from the canonical output directory.
 - **Limitations:** The original observations are private and are not redistributed. The 4-year source represents 1 observation context, 58 of 366 final targets are unknown, and only 2 full-year development checks are available. The final year had informed prior analysis and is reused temporal evidence. Moderate and heavy rainfall remain weak: 4/15 moderate and 0/3 heavy dates received the correct BMKG category. The experiment does not establish regional transfer, warning capability, deployment, or measured salt-production impact.
 - **Approved Project Output wording:** The selected experiment produces 366 next-day forecasts with wet/dry alerts and BMKG intensity labels, supported by development-selection tables, calibration, error-regime diagnostics, feature importance, and a reproducible local evidence bundle.
@@ -349,44 +517,47 @@ Copy this block for each audited project. Do not remove required fields.
 ### xgboost-thyroid-recurrence-classification
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/XGBoost Thyroid Recurrence Classification/`
-- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the V1 notebook and implementation path, the current Git worktree, and the configured public repository remote in the workspace above.
+- **Last audited:** 2026-08-28
 - **Display title:** Thyroid Cancer Recurrence Classification with XGBoost, Information Gain, and Grid Search
 - **Context:** Collaborative academic research project.
 - **Primary role family:** Data Science
-- **Supporting role families:** Pending a dedicated evidence audit.
-- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Supporting role families:** None.
+- **Verified metrics:** The V1 preparation path loads 383 source rows and 17 columns, removes 19 exact full-row repetitions, and retains 364 rows with 256 `No` and 108 `Yes` labels. V1 uses shuffled, non-nested 10-fold K-Fold, fold-local Information Gain, and a checkpointed XGBoost Grid Search design. The complete V1 run and model-quality metrics are unverified; V2 remains planned rather than implemented.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
-- **Limitations:** The experimental dataset does not support clinical diagnosis or deployment claims. The current notebook has uncommitted changes that must be reconciled before a claims audit.
-- **Portfolio status:** Audit in progress
+- **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
+- **Approved Evidence & Scope wording:** The verified evidence currently covers the dataset and V1 preparation path. Model-quality metrics are withheld until the full run is revalidated; the project remains experimental research and is not evidence for clinical diagnosis or deployment.
+- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
 
 ### bilstm-rainfall-forecasting
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/BiLSTM Rainfall Forecasting/`
-- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `README.md`, `train_bilstm_rainfall.py`, the current modified notebook worktree, the same-schema sample data, and the configured public repository remote in the workspace above.
+- **Last audited:** 2026-08-28
 - **Display title:** Rainfall Forecasting with BiLSTM and Grid Search
 - **Context:** Internship-linked academic forecasting project developed with BMKG observations.
 - **Primary role family:** Data Science
-- **Supporting role families:** Pending a dedicated evidence audit.
-- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Supporting role families:** None.
+- **Verified metrics:** The runnable reference workflow uses a 7-day input window, 3 stacked BiLSTM layers, and a focused 27-configuration grid across units, batch size, and learning-rate drop period. It uses an 80:20 chronological split and returns predictions to millimeters before scoring. Historical MAAPE 0.8073 and RMSE 10.2734 mm are not present in current tracked evidence and are therefore unverified.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
-- **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data, and the current notebook has uncommitted changes that must be reconciled before a claims audit.
-- **Portfolio status:** Audit in progress
+- **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
+- **Approved Evidence & Scope wording:** The public repository provides a runnable same-schema sample and a chronological 80:20 experiment design. The same holdout selects and reports the best configuration, so it is model-selection evidence rather than an untouched final estimate. Historical internship metrics remain withheld pending revalidation.
+- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
 
 ### arima-rice-price-forecasting
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Academic Projects/ARIMA Rice Price Forecasting/`
-- **Source-of-truth files inspected:** `README.md`, the current Git worktree, and its configured public repository remote in the workspace above.
-- **Last audited:** 2026-08-16
+- **Source-of-truth files inspected:** `README.md`, `train_arima_rice_price.py`, `rice_price_jatim_monthly.csv`, the current Git worktree, and the configured public repository remote in the workspace above.
+- **Last audited:** 2026-08-28
 - **Display title:** Rice Price Forecasting with ARIMA and Walk-Forward Validation
 - **Context:** Collaborative academic forecasting project.
 - **Primary role family:** Data Science
-- **Supporting role families:** Pending a dedicated evidence audit.
-- **Verified metrics:** Unverified in this context-only audit; the current live-card metrics must be traced to the current notebook or reproducible outputs before any revision.
+- **Supporting role families:** None.
+- **Verified metrics:** The included public dataset contains 60 monthly observations from January 2020 through December 2024 for 2 price series. The default 80:20 design uses 48 initial months and 12 expanding-history 1-step forecasts. Former MAPE values of 2.08% and 1.82% are not present in current tracked outputs and are therefore unverified.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
-- **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same walk-forward period, so the selected score is not an untouched generalization estimate. The current notebook has uncommitted changes that must be reconciled before a claims audit.
-- **Portfolio status:** Audit in progress
+- **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
+- **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
+- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
 
 ### Registry audit queue
 
@@ -396,8 +567,8 @@ These entries are audit directions only. They are not completed registry records
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
 | AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card uses the focused workflow visual without cost, quality, duplicate metric, or redundant architecture labels | Published |
-| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Context verified; complete the quantitative evidence audit before revising technical claims | Audit in progress |
-| Academic project claims | Use each project-specific workspace record above | Context verified; metrics and live wording still require project-by-project evidence audits | Audit in progress |
+| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests are verified; the former sensor count is omitted | Corrective release pending live verification |
+| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Verified experiment-design facts replace result metrics absent from current tracked evidence | Corrective release pending live verification |
 
 ## 5. Evidence-first portfolio rules
 
@@ -521,17 +692,37 @@ rendering. Passing one pass never substitutes for the other.
 ## Mandatory workflow before publishing or revising claims
 
 1. Read this file completely.
-2. Identify every project affected by the proposed website change.
-3. Locate and inspect the project's actual workspace folder; do not treat the existing website card as project evidence.
-4. Read that project's current `AGENTS.md`, `PROJECT.md`, README, and any source-of-truth files required by its own routing instructions.
-5. Inspect reproducible evidence for every metric, technology, implementation, validation statement, public repository, context, and limitation.
-6. Create or update the project's canonical Project Registry record, including every required field.
-7. Assign the correct evidence status and evidence level.
-8. Select one primary role family and no more than two evidence-supported supporting families.
-9. Write only claims supported by the registry and project audit; mark anything else unverified, planned, pending, or blocked.
-10. Re-check that no evidence or status has crossed project boundaries.
-11. Verify that the proposed or live project card matches the canonical registry record.
-12. Update this file in the same revision whenever an approved portfolio policy, project evidence, role-family mapping, limitation, repository link, metric, or portfolio status changes.
+2. Read `AGENTS.md`, inspect Git status, confirm the active release marker, and
+   identify every visible and machine-readable surface affected by the change.
+3. Inspect the complete current resume whenever the change can affect a shared
+   professional fact, project, capability, link, or positioning statement.
+4. Identify every project affected by the proposed website change.
+5. Locate and inspect the project's actual workspace folder; do not treat the
+   existing website card, resume, or visual as project evidence.
+6. Read that project's current `AGENTS.md`, `PROJECT.md`, README, and any
+   source-of-truth files required by its own routing instructions.
+7. Inspect reproducible evidence for every metric, technology, implementation,
+   validation statement, public repository, context, and limitation.
+8. Create or update the project's canonical Project Registry record, including
+   every required field.
+9. Assign the correct evidence status and evidence level.
+10. Select one primary role family and no more than 2 evidence-supported
+    supporting families.
+11. Write only claims supported by the registry and project audit; mark
+    anything else unverified, planned, pending, or blocked.
+12. Re-check that no evidence or status has crossed project boundaries.
+13. Compare every affected shared fact against the website, resume, metadata,
+    README, and visual; update the synchronization matrix and keep one meaning.
+14. Verify navigation, keyboard and touch behavior, narrow mobile and desktop
+    layout, reading comfort, reduced motion, image rendering, console output,
+    internal links, public-source budgets, and release-marker consistency in
+    proportion to the change.
+15. Trace replaced files through all repository references, delete every
+    superseded or temporary artifact, update the README tree, and run an orphan
+    scan.
+16. Update this file in the same revision whenever an approved policy, project
+    evidence, synchronization state, role-family mapping, limitation,
+    repository link, metric, asset contract, or portfolio status changes.
 
 ## 6. Full website audit standard
 
@@ -552,7 +743,13 @@ The audit must cover:
   implementation, and repository hygiene; and
 - every public capability, technology, metric, result, role-family mapping, and
   project status against the canonical Project Registry and the corresponding
-  source project's current evidence.
+  source project's current evidence;
+- complete resume text and every rendered resume page, plus a field-by-field
+  synchronization matrix for identity, chronology, capabilities, projects,
+  metrics, evidence levels, publications, and links; and
+- source-file and responsive-image budgets, unnecessary third-party requests,
+  obsolete assets, duplicate or backup files, orphaned references, and current
+  release-marker consistency.
 
 Report all material findings in the first audit response. Group them as
 critical, material, and optional polish, and give the evidence, practical

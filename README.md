@@ -42,8 +42,9 @@ includes:
 - an automatic release-freshness check that replaces a cached page with the
   current published revision;
 - accessible navigation and structured page sections;
-- native `1920x1080` Full HD project visuals plus optimized platform-specific
-  profile, hero, and social-preview images; and
+- optimized `1920x1080` WebP visuals for evidence-backed project figures,
+  lightweight semantic HTML workflow panels where result claims remain under
+  revalidation, and responsive profile, hero, and social-preview images; and
 - downloadable English resume.
 
 The retail-system visual uses icons from the official
@@ -60,6 +61,7 @@ analytics, or tracking.
 Portfolio Website/
 |-- .gitignore
 |-- .nojekyll
+|-- AGENTS.md
 |-- index.html
 |-- styles.css
 |-- script.js
@@ -68,19 +70,16 @@ Portfolio Website/
 |-- sitemap.xml
 |-- assets/
 |   |-- favicon.svg
-|   |-- profile-photo.jpg
+|   |-- profile-photo.webp
 |   |-- social-preview.jpg
 |   |-- hero/
 |   |   |-- data-ai-system-desktop.webp
-|   |   `-- data-ai-system-mobile-v2.webp
+|   |   `-- data-ai-system-mobile.webp
 |   `-- projects/
-|       |-- ai-service-request-automation.png
-|       |-- arima-rice.png
-|       |-- bilstm-rainfall.png
-|       |-- dwdm-monitoring.png
-|       |-- retail-sales-forecasting.png
-|       |-- thyroid-classification.png
-|       `-- xgboost-rainfall.png
+|       |-- ai-service-request-automation.webp
+|       |-- dwdm-monitoring.webp
+|       |-- retail-sales-forecasting.webp
+|       `-- xgboost-rainfall.webp
 |-- documents/
 |   `-- m-thufail-alwannabil-samas-cv.pdf
 |-- LICENSE
