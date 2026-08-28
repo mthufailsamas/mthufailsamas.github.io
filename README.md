@@ -58,22 +58,33 @@ analytics, or tracking.
 
 ```text
 Portfolio Website/
+|-- .gitignore
+|-- .nojekyll
 |-- index.html
 |-- styles.css
 |-- script.js
 |-- site-version.json
+|-- robots.txt
+|-- sitemap.xml
 |-- assets/
 |   |-- favicon.svg
 |   |-- profile-photo.jpg
 |   |-- social-preview.jpg
+|   |-- hero/
+|   |   |-- data-ai-system-desktop.webp
+|   |   `-- data-ai-system-mobile-v2.webp
 |   `-- projects/
 |       |-- ai-service-request-automation.png
-|       `-- retail-sales-forecasting.png
+|       |-- arima-rice.png
+|       |-- bilstm-rainfall.png
+|       |-- dwdm-monitoring.png
+|       |-- retail-sales-forecasting.png
+|       |-- thyroid-classification.png
+|       `-- xgboost-rainfall.png
 |-- documents/
-|   |-- m-thufail-alwannabil-samas-cv.pdf
-|   |-- m-thufail-alwannabil-samas-ai-automation-resume.docx
-|   `-- m-thufail-alwannabil-samas-ai-automation-resume.pdf
+|   `-- m-thufail-alwannabil-samas-cv.pdf
 |-- LICENSE
+|-- PROJECT.md
 `-- README.md
 ```
 

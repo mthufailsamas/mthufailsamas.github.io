@@ -130,6 +130,19 @@ verified capabilities already present in the Skills section. The revision also
 adds an explicit crawler policy and sitemap, and versions the social-preview URL
 so external preview caches receive a new asset address.
 
+### Replacement and repository cleanup safeguard
+
+Every website revision, addition, replacement, or removal includes a focused
+repository-cleanup pass. Trace affected files through the current HTML, CSS,
+JavaScript, metadata, documentation, and deployment configuration, then remove
+superseded assets, documents, code, and temporary outputs that no longer serve
+the published portfolio. Do not keep `old`, `backup`, duplicate, or prior-version
+copies in the active repository; Git history is the recovery record.
+
+Only delete a file after confirming that no current runtime, crawler, legal,
+documentation, deployment, or source-of-truth requirement uses it. Update the
+README repository tree in the same revision whenever the active file set changes.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
