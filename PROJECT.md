@@ -74,8 +74,8 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Identity, contact, experience chronology, education, certification, and publication metadata | Synced across resume and website | Preserve one canonical spelling, date, link, and status on every surface; external-record evidence remains subject to its own audit when changed. |
 | AI Service Request Automation | Synced and verified | Preserve controlled-local-evidence wording and the distinction from production or measured business impact. |
 | Retail Sales Forecasting & Planning System | Pending resume update | The website correctly separates the 44/44 local-and-CI core tests from locally verified notebook/API/Docker parity. The resume must receive the same boundary. |
-| Thyroid Cancer Recurrence Classification | Pending resume update | Release `20260828-02` removes 97.25% accuracy, 95.37% F1, 98.05% specificity, and 98.60% ROC-AUC from the website. The current resume still publishes them and should replace this project entry with the verified XGBoost rainfall project. |
-| DWDM Optical Sensor Monitoring | Pending resume update | Release `20260828-02` removes the unverified `~400 sensors` quantity from the website. The current resume still contains it. |
+| Thyroid Cancer Recurrence Classification | Pending resume update | Release `20260828-02` keeps the classification project but removes 97.25% accuracy, 95.37% F1, 98.05% specificity, and 98.60% ROC-AUC from the website. The resume should likewise retain the project while replacing those unverified model-quality metrics with the verified preparation and evaluation-framework scope. |
+| DWDM Optical Sensor Monitoring | Pending resume update | Release `20260828-02` removes the unverified `~400 sensors` quantity from the website. The current resume still contains it; neither current implementation evidence nor the inspected proposal and research-design documents establishes that count. |
 | Rainfall Forecasting with BiLSTM | Pending resume update | Release `20260828-02` replaces the unverified historical MAAPE and RMSE on the website with verified experiment-design facts. The current resume still contains rounded versions of those metrics. |
 | Rice Price Forecasting with ARIMA | Website broader | Release `20260828-02` replaces the unverified exact MAPE values with the verified 60-month, 2-series, 12-step design and states the reused reporting boundary. |
 | Rainfall Forecasting with XGBoost | Website broader and verified | Preserve the 23 prior-only features, 3 searches, 5,184 temporal CV fits, reused 366-day final period, 308 observed targets, and corresponding limitations exactly as recorded in its audited registry entry. |
@@ -120,13 +120,13 @@ replacements:
    contract tests passed locally and in GitHub Actions; local batch, FastAPI,
    and Docker predictions matched, while CI separately verified Docker build
    and non-root readiness.`
-4. **Replace the complete Thyroid selected-project entry with:**
-   `Rainfall Forecasting with XGBoost and Grid Search` followed by `Developed a
-   next-day rainfall workflow using 1,461 BMKG observation dates, 23 prior-only
-   features, 3 XGBoost searches, and 5,184 temporal cross-validation fits.
-   Across 308 observed targets in a reused 366-day final period, the selected
-   ensemble recorded RMSE of 9.2521 mm and wet/dry balanced accuracy of 0.7679;
-   moderate and heavy category performance remained the main limitation.`
+4. **Keep the Thyroid selected-project entry and replace its paragraph with:**
+   `Built a reproducible preparation and evaluation framework for an XGBoost
+   thyroid cancer recurrence classifier using 383 UCI records, with mixed-type
+   preprocessing, an exact-row audit, fold-local Information Gain feature
+   selection, checkpointed Grid Search, and 10-fold evaluation. Documented the
+   current evaluation limitations and a group-aware redesign for the next
+   validated run.`
 
 After a revised PDF is supplied, confirm the complete text and rendered 2-page
 layout, replace the old PDF rather than retaining both, update every resume link
@@ -310,6 +310,13 @@ the complete active `assets/` tree is 788,131 bytes. A responsive `<picture>`
 selects the 88,154 byte desktop hero or 178,186 byte mobile hero instead of
 requesting both intentionally.
 
+**2026-08-28 optimization publication status:** Published at portfolio commit
+`b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257`
+completed successfully. Live QA at 1440x1000 and 390x844 confirmed release
+`20260828-02`, the correct responsive hero source, no horizontal overflow,
+working menu and project filters, 44-pixel mobile controls, no browser
+warning/error, and removal of the former unverified public metrics.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -484,17 +491,17 @@ Copy this block for each audited project. Do not remove required fields.
 ### dwdm-optical-sensor-monitoring
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/`
-- **Source-of-truth files inspected:** `README.md`, the implementation under `src/`, the complete contract suite under `tests/`, and the current local workspace structure. The project has no usable Git baseline at this path.
+- **Source-of-truth files inspected:** `README.md`, the implementation under `src/`, the complete contract suite under `tests/`, `Proposal_Tesis_DWDM_Data_Science.docx`, `Rancangan_Penelitian_DWDM_Final.docx`, and the current local workspace structure. The project has no usable Git baseline at this path.
 - **Last audited:** 2026-08-28
 - **Display title:** DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
 - **Context:** Professional project-stage work at PT Aplikanusa Lintasarta using confidential operational sources.
 - **Primary role family:** Data Engineering
 - **Supporting role families:** Data Analysis
-- **Verified metrics:** The implemented contract combines 2 source systems, preserves native 5-minute PRTG telemetry, and exposes 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed on 2026-08-28 when the project's `src` directory was placed on `PYTHONPATH`. No authorized source currently establishes the former `~400 sensors` quantity, so that number is omitted.
+- **Verified metrics:** The implemented contract combines 2 source systems, preserves native 5-minute PRTG telemetry, and exposes 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed on 2026-08-28 when the project's `src` directory was placed on `PYTHONPATH`. No current implementation source, proposal, or research-design document establishes the former `~400 sensors` quantity, so that number is omitted.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
 - **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
-- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
+- **Portfolio status:** Published at portfolio commit `b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257` completed successfully. Live release `20260828-02` omits the unsupported sensor count and passed desktop/mobile verification.
 
 ### xgboost-rainfall-forecasting
 
@@ -527,7 +534,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** The verified evidence currently covers the dataset and V1 preparation path. Model-quality metrics are withheld until the full run is revalidated; the project remains experimental research and is not evidence for clinical diagnosis or deployment.
-- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
+- **Portfolio status:** Published at portfolio commit `b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257` completed successfully. Live release `20260828-02` keeps the classification project, withholds unverified model-quality metrics, and passed desktop/mobile verification.
 
 ### bilstm-rainfall-forecasting
 
@@ -542,7 +549,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** The public repository provides a runnable same-schema sample and a chronological 80:20 experiment design. The same holdout selects and reports the best configuration, so it is model-selection evidence rather than an untouched final estimate. Historical internship metrics remain withheld pending revalidation.
-- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
+- **Portfolio status:** Published at portfolio commit `b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257` completed successfully. Live release `20260828-02` replaces the historical unverified metrics with the verified experiment design and passed desktop/mobile verification.
 
 ### arima-rice-price-forecasting
 
@@ -557,7 +564,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
-- **Portfolio status:** Corrective release `20260828-02` prepared; live publication verification pending.
+- **Portfolio status:** Published at portfolio commit `b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257` completed successfully. Live release `20260828-02` replaces the unverified exact MAPE values with the verified walk-forward design and passed desktop/mobile verification.
 
 ### Registry audit queue
 
@@ -567,8 +574,8 @@ These entries are audit directions only. They are not completed registry records
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
 | AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card uses the focused workflow visual without cost, quality, duplicate metric, or redundant architecture labels | Published |
-| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests are verified; the former sensor count is omitted | Corrective release pending live verification |
-| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Verified experiment-design facts replace result metrics absent from current tracked evidence | Corrective release pending live verification |
+| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests are verified; the former sensor count is omitted | Published in `20260828-02` |
+| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Verified experiment-design facts replace result metrics absent from current tracked evidence | Published in `20260828-02` |
 
 ## 5. Evidence-first portfolio rules
 
