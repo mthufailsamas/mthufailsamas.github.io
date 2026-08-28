@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mthufailsamas.github.io/sitemap.xml

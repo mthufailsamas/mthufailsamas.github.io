@@ -99,6 +99,7 @@ The following rules are mandatory for every future user-visible website revision
 5. Do not call a revision live until the Pages deployment succeeds and the public site returns the new release marker, the versioned HTML, and every changed asset.
 6. If the freshness check fails, keep the currently loaded page usable. The guard must never replace the portfolio with a blank or blocking error state.
 7. After a user-authorized website revision passes the mandatory evidence, static, desktop, and mobile checks, commit and push it to `main` in the same task and verify the resulting GitHub Pages deployment. Do not introduce a separate pre-publication approval checkpoint unless the user explicitly requests a draft-only or local-only revision.
+8. Keep the page descriptions, JSON-LD capabilities, and sitemap `lastmod` synchronized with every public positioning or capability revision so machine-readable metadata does not trail the visible website.
 
 This safeguard removes the normal post-deployment cache wait after it has reached a visitor's browser. It cannot make an unfinished GitHub Pages deployment available early, and the first installation of the guard still requires the current versioned page to be loaded once.
 
@@ -122,6 +123,12 @@ flagship projects. All 3 resume links use the same cache-versioned PDF.
 **Resume synchronization status:** Published at portfolio commit `18d2fadd71d83e8d926b935aa792b9fc53b46dd4`;
 Pages run `33087663392` completed successfully, and the live HTML, release marker,
 and downloadable PDF match release `20260827-03`.
+
+**Crawler metadata revision:** Release `20260828-01` aligns the machine-readable
+Person metadata with the approved Data & AI Professional positioning and the
+verified capabilities already present in the Skills section. The revision also
+adds an explicit crawler policy and sitemap, and versions the social-preview URL
+so external preview caches receive a new asset address.
 
 ## 2. Evidence required for each role family
 
