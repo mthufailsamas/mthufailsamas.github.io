@@ -83,16 +83,19 @@ drafts.
 
 ## Resume Experience Bullet Contract
 
-Every Experience entry must contain at least 3 and at most 5 bullets. Within 1
-experience entry, every bullet must have the same word count during drafting,
-excluding the bullet marker. Different experience entries may use different
-word counts when their scope requires it.
+Every Experience entry must contain at least 3 and at most 5 bullets. Bullets
+within 1 experience entry must be visually equal in length at the resume's
+actual font, size, bullet indent, and usable column width. Word count is only a
+secondary diagnostic because words have different rendered widths; equal word
+counts must never be presented as proof of equal visual length.
 
-Word-count equality is only the drafting gate. In the final resume PDF, render
-and verify that every bullet within the same experience occupies the same number
-of lines at the actual column width. If equal word counts wrap differently,
-revise wording until both word count and rendered line count are equal without
-padding, repetition, vague filler, or loss of meaning.
+During drafting, measure each bullet with the actual resume typography and
+wrapping geometry. Every bullet within the same entry must occupy the same
+number of rendered lines. The spread between the shortest and longest total
+typographic widths must be no greater than 3% of the longest bullet, and the
+spread between final-line widths must be no greater than 3% of the usable line
+width. Aim tighter whenever natural wording permits. Revise wording until all
+3 gates pass without padding, repetition, vague filler, or loss of meaning.
 
 Each bullet must:
 
@@ -107,9 +110,11 @@ Each bullet must:
 - avoid invented outcomes, decorative adjectives, self-praise, and empty
   responsibility statements.
 
-Before recommending an Experience entry, count every bullet, report the common
-word count, and confirm the 3-to-5-bullet limit. After the revised resume is
-rendered, report the common line count for that entry before giving `ACC`.
+Before recommending an Experience entry, report the bullet count, simulated
+line count, total-width spread, and final-line-width spread at the current
+resume geometry. Word counts may be reported for transparency but are not an
+acceptance gate. After the revised resume is rendered, repeat the measurements
+from the final PDF before giving `ACC`.
 
 ## Source of Truth and Scope
 

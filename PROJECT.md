@@ -145,20 +145,25 @@ new material information changes the decision.
    equality remains a final PDF verification gate.
 4. **SMP GIKI 3 Experience - under review:** Preserve the employer, location,
    role, and dates as displayed in the current resume. The 1 active bullet set
-   contains 3 bullets of exactly 26 words each:
+   contains 3 visually balanced bullets:
    - `Taught Python fundamentals to Grade 8 and 9 students through structured
      lessons and hands-on exercises covering variables, data types, operators,
      conditionals, loops, and practical programming logic.`
-   - `Introduced artificial intelligence concepts using Teachable Machine,
-     guiding students through dataset preparation, model training, and
-     image-classification experiments to demonstrate how machine-learning
-     systems transform examples into predictions.`
+   - `Introduced artificial intelligence concepts with Teachable Machine,
+     guiding students to prepare datasets, train models, and run
+     image-classification experiments showing how examples become predictions.`
    - `Developed lesson materials, coding exercises, quizzes, sample programs,
-     and structured assessments that reinforced instruction, supported
-     practice, and evaluated student understanding across Python programming
-     and artificial intelligence.`
-   This remains unapproved until the user gives `ACC`; rendered line-count
-   equality remains a final PDF verification gate.
+     and structured assessments that reinforced classroom instruction, guided
+     hands-on practice, and evaluated student understanding.`
+   At the current resume geometry of Times New Roman 11.04 pt and approximately
+   524.7 pt usable width, the draft simulation produces 2 lines per bullet.
+   Total typographic widths are approximately 888.8, 904.4, and 895.2 pt; the
+   15.6 pt range is 1.72% of the longest bullet. Final-line widths are
+   approximately 378.0, 379.9, and 380.5 pt; the 2.5 pt range is 0.48% of the
+   usable line width. This replaces the invalid equal-word-count proxy that
+   produced visibly unequal wrapping. The entry remains unapproved until the
+   user gives `ACC`, and the final edited PDF must be rendered and measured
+   again before final resume approval.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
