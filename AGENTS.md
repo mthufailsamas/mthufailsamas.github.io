@@ -36,6 +36,35 @@ When goals conflict, prioritize:
 8. Maintainability, scope discipline, and cleanup
 9. Speed
 
+## Recommendation and Decision Discipline
+
+Every recommendation must be the best current recommendation after weighing
+correctness, the user's stated objective, ATS compatibility, HR readability,
+professional positioning, resume-website consistency, and practical tradeoffs.
+Do not improvise cosmetic changes merely to produce feedback.
+
+For every review decision:
+
+1. classify it as `Required fix`, `Recommended improvement`, or `Optional
+   alternative`;
+2. give exactly 1 primary recommendation when 1 option is materially better;
+3. state that the current wording should remain when alternatives are merely
+   stylistic and offer no material improvement;
+4. never present a personal style preference as a correctness, ATS, or
+   consistency requirement;
+5. when the user asks why, explain and defend the existing recommendation
+   rather than reversing it reflexively;
+6. change an accepted recommendation only when new evidence, a newly stated
+   user preference, or a previously missed constraint materially changes the
+   decision, and explicitly name that new information; and
+7. treat each user-approved decision as locked until the user asks to reopen it
+   or material new evidence creates a real conflict.
+
+For sequential resume review, inspect and decide 1 section at a time from top
+to bottom. Do not pre-empt later sections. End each section with a clear
+`ACC as-is` or 1 copy-ready recommended replacement, not multiple competing
+drafts.
+
 ## Source of Truth and Scope
 
 - `PROJECT.md` is the Portfolio Website source of truth for positioning,
@@ -47,9 +76,10 @@ When goals conflict, prioritize:
 - The current resume PDF is a public artifact to audit, not an authority that
   can override project evidence.
 - The current website is a public surface to audit, not project evidence.
-- A conversation, another project, an old website card, a visual, a prior
-  resume, or an unreviewed notebook output must never be used as the sole source
-  for a material claim.
+- Except for an explicit user attestation recorded as an authorized
+  professional or academic fact in `PROJECT.md`, a conversation, another
+  project, an old website card, a visual, a prior resume, or an unreviewed
+  notebook output must never be used as the sole source for a material claim.
 - Keep this repository scoped to the portfolio website. Do not import another
   project's architecture, metrics, maturity status, or implementation claims.
 
@@ -101,6 +131,15 @@ resume links to one versioned file, and rerun the synchronization audit.
 - Every quantitative claim must trace to a current notebook output, evidence
   file, test result, report, CI run, authorized professional record, or another
   explicit source accepted in `PROJECT.md`.
+- The user has explicitly confirmed that all existing project results and
+  metrics in the current resume and portfolio are authentic and real. Treat
+  that confirmation as an authorized professional/academic record. Do not
+  delete, downgrade, relabel, or add defensive caveats to those results solely
+  because an old run artifact or notebook output is absent from the current
+  repository. Focus revision on accurate wording, units, context, consistency,
+  ATS quality, STAR structure, and HR readability. Reopen authenticity only if
+  the user does so or concrete contradictory evidence is discovered, and show
+  that contradiction before recommending a change.
 - Preserve the exact evaluation context beside results. A metric without its
   dataset, split, replay, support, or validation level is incomplete.
 - Never convert WAPE, RMSLE, MAE, RMSE, MAPE, or another error metric into
