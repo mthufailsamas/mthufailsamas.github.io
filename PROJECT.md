@@ -65,9 +65,9 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 - **Content state:** Sequential resume review in progress. On 2026-08-29 the
   user confirmed that every existing project result and metric is authentic and
   real. Preserve those results and focus the review on the best ATS-friendly,
-  STAR-oriented, HR-readable wording. Header and Summary are `ACC`; the
-  Lintasarta Experience entry is under review. Do not pre-empt or revise later
-  sections before they are reached.
+  STAR-oriented, HR-readable wording. Header, Summary, and Lintasarta Experience
+  are `ACC`; the SMP GIKI 3 Experience entry is under review. Do not pre-empt or
+  revise later sections before they are reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -117,7 +117,7 @@ new material information changes the decision.
    FastAPI services, Docker-based inference, and local LLM workflows with
    human-in-the-loop controls. BNSP-certified Data Scientist and first author
    of a peer-reviewed XGBoost rainfall forecasting publication.`
-3. **Lintasarta Experience - under review:** Preserve the employer, location,
+3. **Lintasarta Experience - ACC:** Preserve the employer, location,
    role, and dates as displayed in the current resume. The 1 active bullet set
    contains 4 bullets of exactly 35 words each and is derived from the current
    DWDM implementation:
@@ -141,8 +141,24 @@ new material information changes the decision.
      to examine failures, historical events, paired-sensor evidence,
      investigation charts, and prioritized sensor conditions in one
      interface.`
-   This remains unapproved until the user gives `ACC` and rendered line-count
-   equality is checked in the revised PDF.
+   The wording and 35-word drafting balance are approved. Rendered line-count
+   equality remains a final PDF verification gate.
+4. **SMP GIKI 3 Experience - under review:** Preserve the employer, location,
+   role, and dates as displayed in the current resume. The 1 active bullet set
+   contains 3 bullets of exactly 26 words each:
+   - `Taught Python fundamentals to Grade 8 and 9 students through structured
+     lessons and hands-on exercises covering variables, data types, operators,
+     conditionals, loops, and practical programming logic.`
+   - `Introduced artificial intelligence concepts using Teachable Machine,
+     guiding students through dataset preparation, model training, and
+     image-classification experiments to demonstrate how machine-learning
+     systems transform examples into predictions.`
+   - `Developed lesson materials, coding exercises, quizzes, sample programs,
+     and structured assessments that reinforced instruction, supported
+     practice, and evaluated student understanding across Python programming
+     and artificial intelligence.`
+   This remains unapproved until the user gives `ACC`; rendered line-count
+   equality remains a final PDF verification gate.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
