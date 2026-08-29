@@ -91,7 +91,7 @@ deployment, scale, ownership, or business impact.
 
 Avoid fresh-graduate framing, first-person owner narration, keyword stuffing,
 generic self-praise, and defensive copy. Keep the positioning centered on a
-Data & AI Professional whose work is demonstrated through current evidence.
+Data and AI Professional whose work is demonstrated through current evidence.
 
 ### Locked sequential resume-review decisions
 
@@ -105,7 +105,18 @@ new material information changes the decision.
    Professional | Machine Learning, Data Systems and Applied AI`, `Surabaya,
    East Java, Indonesia`, the current email and phone number, and the current
    portfolio, LinkedIn, and GitHub links exactly as displayed in the PDF.
-2. **Summary - next:** No recommendation is locked yet.
+2. **Summary - under review:** The user's question about classification and
+   ARIMA is discussion input, not a requirement to enumerate every model in the
+   Summary. Independent judgment supports naming `classification` as a core
+   capability while leaving ARIMA to Skills and Projects to prevent the Summary
+   from becoming a tool list. The 1 active recommendation is: `Data and AI
+   professional experienced in building end-to-end data pipelines,
+   classification and forecasting systems, and applied AI automation.
+   Delivered Python/PostgreSQL monitoring pipelines, XGBoost and BiLSTM models,
+   FastAPI services, Docker-based inference, and local LLM workflows with
+   human-in-the-loop controls. BNSP-certified Data Scientist and first author
+   of a peer-reviewed XGBoost rainfall forecasting publication.` This remains
+   unapproved until the user gives `ACC`.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
