@@ -66,9 +66,9 @@ Do not call the overall portfolio synchronized while any overlapping fact is
   user confirmed that every existing project result and metric is authentic and
   real. Preserve those results and focus the review on the best ATS-friendly,
   STAR-oriented, HR-readable wording. Header, Summary, Lintasarta Experience,
-  and SMP GIKI 3 Experience are `ACC`; the UINSA Programming Teaching Assistant
-  entry is under review. Do not pre-empt or revise later sections before they
-  are reached.
+  SMP GIKI 3 Experience, and UINSA Programming Teaching Assistant Experience
+  are `ACC`; the BMKG Data Science Intern entry is under review. Do not pre-empt
+  or revise later sections before they are reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -165,7 +165,7 @@ new material information changes the decision.
    produced visibly unequal wrapping. The user accepted this wording by asking
    to continue on 2026-08-29. The final edited PDF must still be rendered and
    measured again before final resume approval.
-5. **UINSA Programming Teaching Assistant Experience - under review:** Preserve
+5. **UINSA Programming Teaching Assistant Experience - ACC:** Preserve
    the institution, location, role, and dates as displayed in the current
    resume. The 1 active recommendation contains 3 bullets:
    - `Guided undergraduate students across 4 semesters of programming courses
@@ -182,9 +182,31 @@ new material information changes the decision.
    Total typographic widths are approximately 870.7, 868.6, and 867.0 pt; the
    3.7 pt range is 0.42% of the longest bullet. Final-line widths are
    approximately 352.0, 356.2, and 347.0 pt; the 9.2 pt range is 1.75% of the
-   usable line width. This entry remains unapproved until the user gives `ACC`,
-   and the final edited PDF must be rendered and measured again before final
-   resume approval.
+   usable line width. The user accepted this wording by asking to continue on
+   2026-08-29. The final edited PDF must still be rendered and measured again
+   before final resume approval.
+6. **BMKG Data Science Intern Experience - under review:** Preserve the
+   institution, location, role, and dates as displayed in the current resume.
+   The 1 active recommendation contains 3 bullets:
+   - `Developed a 1-page extreme-weather early-warning dashboard using HTML,
+     CSS, JavaScript, PHP, MySQL, and periodic API updates to centralize forecast
+     data for the BMKG operational workflow.`
+   - `Processed and compared BMKG cloud-prediction imagery with Himawari IR
+     satellite imagery using Python to assess cloud movement, temperature
+     patterns, and differences across both imagery sources.`
+   - `Built a 3-layer BiLSTM rainfall forecasting model with 7-day multivariate
+     sequences, 27 Grid Search configurations, and an 80:20 chronological split,
+     achieving MAAPE 0.8073 and RMSE 10.2734 mm.`
+   The model wording matches the current BiLSTM project registry and preserves
+   the user-confirmed completed metrics without converting either error metric
+   into accuracy. At the current resume geometry of Times New Roman 11.04 pt
+   and approximately 524.7 pt usable width, the draft simulation produces 2
+   lines per bullet. Total typographic widths are approximately 884.8, 896.8,
+   and 899.6 pt; the 14.8 pt range is 1.65% of the longest bullet. Final-line
+   widths are approximately 377.7, 373.4, and 378.1 pt; the 4.7 pt range is
+   0.90% of the usable line width. This entry remains unapproved until the user
+   gives `ACC`, and the final edited PDF must be rendered and measured again
+   before final resume approval.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
