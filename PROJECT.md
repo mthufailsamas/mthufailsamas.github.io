@@ -65,8 +65,9 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 - **Content state:** Sequential resume review in progress. On 2026-08-29 the
   user confirmed that every existing project result and metric is authentic and
   real. Preserve those results and focus the review on the best ATS-friendly,
-  STAR-oriented, HR-readable wording. The Header is `ACC as-is`; Summary is the
-  next section. Do not pre-empt or revise later sections before they are reached.
+  STAR-oriented, HR-readable wording. Header and Summary are `ACC`; the
+  Lintasarta Experience entry is under review. Do not pre-empt or revise later
+  sections before they are reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -105,18 +106,43 @@ new material information changes the decision.
    Professional | Machine Learning, Data Systems and Applied AI`, `Surabaya,
    East Java, Indonesia`, the current email and phone number, and the current
    portfolio, LinkedIn, and GitHub links exactly as displayed in the PDF.
-2. **Summary - under review:** The user's question about classification and
-   ARIMA is discussion input, not a requirement to enumerate every model in the
-   Summary. Independent judgment supports naming `classification` as a core
-   capability while leaving ARIMA to Skills and Projects to prevent the Summary
-   from becoming a tool list. The 1 active recommendation is: `Data and AI
+2. **Summary - ACC:** The user's question about classification and ARIMA was
+   discussion input, not a requirement to enumerate every model in the Summary.
+   Independent judgment supports naming `classification` as a core capability
+   while leaving ARIMA to Skills and Projects to prevent the Summary from
+   becoming a tool list. Preserve: `Data and AI
    professional experienced in building end-to-end data pipelines,
    classification and forecasting systems, and applied AI automation.
    Delivered Python/PostgreSQL monitoring pipelines, XGBoost and BiLSTM models,
    FastAPI services, Docker-based inference, and local LLM workflows with
    human-in-the-loop controls. BNSP-certified Data Scientist and first author
-   of a peer-reviewed XGBoost rainfall forecasting publication.` This remains
-   unapproved until the user gives `ACC`.
+   of a peer-reviewed XGBoost rainfall forecasting publication.`
+3. **Lintasarta Experience - under review:** Preserve the employer, location,
+   role, and dates as displayed in the current resume. The 1 active bullet set
+   contains 4 bullets of exactly 35 words each and is derived from the current
+   DWDM implementation:
+   - `Developed an end-to-end DWDM monitoring and assurance system covering
+     approximately 400 configured directional sensors, integrating 5-minute
+     PRTG telemetry with ENIMS network metadata to identify active failures,
+     persistent signal shifts, gradual degradation, and operational
+     investigation priorities.`
+   - `Built an incremental Python and PostgreSQL pipeline that synchronized
+     sensor metadata, collected telemetry, repaired missing intervals,
+     generated quality-controlled observations, detected events, correlated
+     opposite-direction sensor evidence, maintained checkpoints, and updated
+     current sensor-priority rankings for operational review.`
+   - `Implemented sensor-adaptive analytics using robust 6-hour medians, PELT
+     change-point detection, Theil-Sen slope estimation, and
+     serial-correlation-corrected Mann-Kendall testing to distinguish persistent
+     downward shifts and gradual degradation from failures, missing
+     observations, and short-term telemetry noise across sensors.`
+   - `Created a Python API and browser-based interface with Operations Board,
+     Event Explorer, and Management Overview views, enabling operations teams
+     to examine failures, historical events, paired-sensor evidence,
+     investigation charts, and prioritized sensor conditions in one
+     interface.`
+   This remains unapproved until the user gives `ACC` and rendered line-count
+   equality is checked in the revised PDF.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
@@ -486,12 +512,12 @@ Copy this block for each audited project. Do not remove required fields.
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/`
 - **Source-of-truth files inspected:** `README.md`, the implementation under `src/`, the complete contract suite under `tests/`, `Proposal_Tesis_DWDM_Data_Science.docx`, `Rancangan_Penelitian_DWDM_Final.docx`, and the current local workspace structure. The project has no usable Git baseline at this path.
-- **Last audited:** 2026-08-28
+- **Last audited:** 2026-08-29
 - **Display title:** DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection
 - **Context:** Professional project-stage work at PT Aplikanusa Lintasarta using confidential operational sources.
 - **Primary role family:** Data Engineering
 - **Supporting role families:** Data Analysis
-- **Verified metrics:** The implemented contract combines 2 source systems, approximately 400 configured directional optical sensors with the active subset varying over time below or above 300, native 5-minute PRTG telemetry, and 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed on 2026-08-28 when the project's `src` directory was placed on `PYTHONPATH`. The scale and variability are an explicit user-attested professional record accepted on 2026-08-29.
+- **Verified metrics:** The implemented contract combines 2 source systems, approximately 400 configured directional optical sensors with the active subset varying over time below or above 300, native 5-minute PRTG telemetry, and 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed again on 2026-08-29 when the project's `src` directory was placed on `PYTHONPATH`. The scale and variability are an explicit user-attested professional record accepted on 2026-08-29.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
 - **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.

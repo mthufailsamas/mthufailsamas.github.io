@@ -81,6 +81,36 @@ to bottom. Do not pre-empt later sections. End each section with a clear
 `ACC as-is` or 1 copy-ready recommended replacement, not multiple competing
 drafts.
 
+## Resume Experience Bullet Contract
+
+Every Experience entry must contain at least 3 and at most 5 bullets. Within 1
+experience entry, every bullet must have the same word count during drafting,
+excluding the bullet marker. Different experience entries may use different
+word counts when their scope requires it.
+
+Word-count equality is only the drafting gate. In the final resume PDF, render
+and verify that every bullet within the same experience occupies the same number
+of lines at the actual column width. If equal word counts wrap differently,
+revise wording until both word count and rendered line count are equal without
+padding, repetition, vague filler, or loss of meaning.
+
+Each bullet must:
+
+- follow a compact STAR logic by connecting context or task, the candidate's
+  action, and a concrete technical, operational, educational, or measured
+  result;
+- begin with a strong, accurate action verb and avoid repetitive openings;
+- preserve relevant scale, metrics, technologies, systems, and outcomes;
+- use natural ATS-searchable language instead of keyword stuffing;
+- remain understandable to HR while retaining the technical detail needed to
+  establish credibility; and
+- avoid invented outcomes, decorative adjectives, self-praise, and empty
+  responsibility statements.
+
+Before recommending an Experience entry, count every bullet, report the common
+word count, and confirm the 3-to-5-bullet limit. After the revised resume is
+rendered, report the common line count for that entry before giving `ACC`.
+
 ## Source of Truth and Scope
 
 - `PROJECT.md` is the Portfolio Website source of truth for positioning,
