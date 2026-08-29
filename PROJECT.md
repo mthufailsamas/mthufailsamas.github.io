@@ -65,9 +65,10 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 - **Content state:** Sequential resume review in progress. On 2026-08-29 the
   user confirmed that every existing project result and metric is authentic and
   real. Preserve those results and focus the review on the best ATS-friendly,
-  STAR-oriented, HR-readable wording. Header, Summary, and Lintasarta Experience
-  are `ACC`; the SMP GIKI 3 Experience entry is under review. Do not pre-empt or
-  revise later sections before they are reached.
+  STAR-oriented, HR-readable wording. Header, Summary, Lintasarta Experience,
+  and SMP GIKI 3 Experience are `ACC`; the UINSA Programming Teaching Assistant
+  entry is under review. Do not pre-empt or revise later sections before they
+  are reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -143,7 +144,7 @@ new material information changes the decision.
      interface.`
    The wording and 35-word drafting balance are approved. Rendered line-count
    equality remains a final PDF verification gate.
-4. **SMP GIKI 3 Experience - under review:** Preserve the employer, location,
+4. **SMP GIKI 3 Experience - ACC:** Preserve the employer, location,
    role, and dates as displayed in the current resume. The 1 active bullet set
    contains 3 visually balanced bullets:
    - `Taught Python fundamentals to Grade 8 and 9 students through structured
@@ -161,9 +162,29 @@ new material information changes the decision.
    15.6 pt range is 1.72% of the longest bullet. Final-line widths are
    approximately 378.0, 379.9, and 380.5 pt; the 2.5 pt range is 0.48% of the
    usable line width. This replaces the invalid equal-word-count proxy that
-   produced visibly unequal wrapping. The entry remains unapproved until the
-   user gives `ACC`, and the final edited PDF must be rendered and measured
-   again before final resume approval.
+   produced visibly unequal wrapping. The user accepted this wording by asking
+   to continue on 2026-08-29. The final edited PDF must still be rendered and
+   measured again before final resume approval.
+5. **UINSA Programming Teaching Assistant Experience - under review:** Preserve
+   the institution, location, role, and dates as displayed in the current
+   resume. The 1 active recommendation contains 3 bullets:
+   - `Guided undergraduate students across 4 semesters of programming courses
+     in MATLAB and Python, using practical exercises and assignment support to
+     strengthen computational problem-solving.`
+   - `Supported students in debugging, data handling, and algorithmic thinking,
+     helping them translate mathematical and computational concepts into
+     working code for course exercises and assignments.`
+   - `Developed introductory machine learning materials covering Linear
+     Regression, K-Nearest Neighbors, and K-Means clustering, and provided
+     structured technical feedback on student assignments.`
+   At the current resume geometry of Times New Roman 11.04 pt and approximately
+   524.7 pt usable width, the draft simulation produces 2 lines per bullet.
+   Total typographic widths are approximately 870.7, 868.6, and 867.0 pt; the
+   3.7 pt range is 0.42% of the longest bullet. Final-line widths are
+   approximately 352.0, 356.2, and 347.0 pt; the 9.2 pt range is 1.75% of the
+   usable line width. This entry remains unapproved until the user gives `ACC`,
+   and the final edited PDF must be rendered and measured again before final
+   resume approval.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
