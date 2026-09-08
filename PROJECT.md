@@ -67,9 +67,8 @@ Do not call the overall portfolio synchronized while any overlapping fact is
   real. Preserve those results and focus the review on the best ATS-friendly,
   STAR-oriented, HR-readable wording. Header, Summary, Lintasarta Experience,
   SMP GIKI 3 Experience, UINSA Programming Teaching Assistant Experience, BMKG
-  Data Science Intern Experience, and Education are `ACC`. Skills is the next
-  pending section. Do not pre-empt or revise later sections before they are
-  reached.
+  Data Science Intern Experience, and Education are `ACC`. Skills is under
+  review. Do not pre-empt or revise later sections before they are reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -227,6 +226,37 @@ new material information changes the decision.
    coursework. The English thesis wording is semantically consistent with the
    Indonesian publication title. No alternative produces a material gain, so
    this section was accepted as-is on 2026-09-08.
+8. **Skills - recommended improvement, under review:** Replace the current
+   Skills section with the following 5-category version:
+   - `Programming & Query Languages: Python, SQL, R, MATLAB`
+   - `Data Engineering & Databases: Pandas, NumPy, PostgreSQL, MySQL, pgvector,
+     psycopg, Data Ingestion, Data Validation, Data Transformation, Incremental
+     Data Pipelines`
+   - `Machine Learning & Statistics: scikit-learn, XGBoost,
+     TensorFlow/Keras, statsmodels, ARIMA, Feature Engineering, Statistical
+     Analysis, Model Evaluation, Cross-Validation, Time-Series Analysis &
+     Forecasting`
+   - `AI Engineering & Automation: FastAPI, n8n, Ollama, RAG, Embeddings,
+     Vector Search, Structured LLM Outputs, REST APIs, Human-in-the-Loop
+     Workflows, Idempotency, Retry and Recovery Workflows`
+   - `Development, Delivery & Visualization: Docker, Docker Compose, Git,
+     GitHub, GitHub Actions, CI/CD, Unit Testing (unittest), Jupyter Notebook,
+     Model Serving, Batch Inference, Matplotlib, HTML, CSS, JavaScript`
+   This preserves every currently listed skill while strengthening 3 category
+   labels: `Data Processing` becomes evidence-supported `Data Engineering`,
+   `Applied AI` becomes evidence-supported `AI Engineering`, and `Development
+   & Visualization` becomes `Development, Delivery & Visualization` to match
+   its actual contents. `Structured LLM Output` becomes the grammatical
+   `Structured LLM Outputs`, and `unittest` is exposed as ATS-readable `Unit
+   Testing (unittest)`. ARIMA is supported by the rice-price forecasting
+   project, while Matplotlib is directly used across the forecasting and
+   classification projects. At the current Times New Roman 11.04 pt layout,
+   the draft simulation occupies 1, 2, 2, 2, and 2 lines respectively, keeping
+   the same 9 total rendered lines as the current Skills section. The website
+   currently expresses the same broad capability families but omits explicit
+   ARIMA and Matplotlib; synchronize those details only after the resume review
+   is complete. This recommendation remains unapproved until the user gives
+   `ACC` and must be verified again in the final edited PDF.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
