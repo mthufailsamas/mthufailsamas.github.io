@@ -66,9 +66,10 @@ Do not call the overall portfolio synchronized while any overlapping fact is
   user confirmed that every existing project result and metric is authentic and
   real. Preserve those results and focus the review on the best ATS-friendly,
   STAR-oriented, HR-readable wording. Header, Summary, Lintasarta Experience,
-  SMP GIKI 3 Experience, and UINSA Programming Teaching Assistant Experience
-  are `ACC`; the BMKG Data Science Intern entry is under review. Do not pre-empt
-  or revise later sections before they are reached.
+  SMP GIKI 3 Experience, UINSA Programming Teaching Assistant Experience, BMKG
+  Data Science Intern Experience, and Education are `ACC`. Skills is the next
+  pending section. Do not pre-empt or revise later sections before they are
+  reached.
 
 ### Current cross-surface synchronization matrix
 
@@ -185,7 +186,7 @@ new material information changes the decision.
    usable line width. The user accepted this wording by asking to continue on
    2026-08-29. The final edited PDF must still be rendered and measured again
    before final resume approval.
-6. **BMKG Data Science Intern Experience - under review:** Preserve the
+6. **BMKG Data Science Intern Experience - ACC:** Preserve the
    institution, location, role, and dates as displayed in the current resume.
    The 1 active recommendation contains 3 bullets:
    - `Developed a 1-page extreme-weather early-warning dashboard using HTML,
@@ -204,9 +205,28 @@ new material information changes the decision.
    lines per bullet. Total typographic widths are approximately 884.8, 896.8,
    and 899.6 pt; the 14.8 pt range is 1.65% of the longest bullet. Final-line
    widths are approximately 377.7, 373.4, and 378.1 pt; the 4.7 pt range is
-   0.90% of the usable line width. This entry remains unapproved until the user
-   gives `ACC`, and the final edited PDF must be rendered and measured again
+   0.90% of the usable line width. The user explicitly accepted this wording on
+   2026-09-08. The final edited PDF must still be rendered and measured again
    before final resume approval.
+7. **Education - ACC as-is:** Preserve the complete current Education entry as
+   displayed in the resume:
+   - Institution: `Universitas Islam Negeri Sunan Ampel Surabaya (UINSA)`
+   - Location: `Surabaya, Indonesia`
+   - Degree: `Bachelor of Mathematics (S.Mat.)`
+   - Dates: `August 2021 - January 2025`
+   - `GPA: 3.46/4.00`
+   - `Undergraduate Thesis: Rainfall Forecasting in Sumenep Regency Using
+     XGBoost and Grid Search.`
+   - `Academic Highlight: Completed the 4-year bachelor's program in 7
+     semesters (3.5 years).`
+   - `Relevant Coursework: Artificial Intelligence, Programming, Mathematical
+     Statistics, Statistical Methods, Multivariate Analysis, Numerical Methods,
+     and Applied Linear Algebra.`
+   The entry already gives HR a clear credential, academic performance,
+   accelerated completion, Data and AI-relevant thesis, and ATS-searchable
+   coursework. The English thesis wording is semantically consistent with the
+   Indonesian publication title. No alternative produces a material gain, so
+   this section was accepted as-is on 2026-09-08.
 
 The current PDF remains unchanged until the user manually edits it or
 explicitly authorizes artifact replacement. After a revised PDF is supplied,
