@@ -60,10 +60,11 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 - **Active local artifact:** `documents/m-thufail-alwannabil-samas-cv.pdf`
 - **Local/live SHA-256:**
   `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`
-- **Delivery state:** Local replacement prepared for release `20260909-01`;
-  all 3 website download links resolve to the same cache-versioned PDF. Live
-  byte-for-byte verification remains pending until GitHub Pages publishes the
-  release.
+- **Delivery state:** Published and synced in release `20260909-01` at portfolio
+  commit `e2e86dcf48693f392500513963b7b7496213c14a`; GitHub Pages run
+  `34327237886` completed successfully. All 3 website download links resolve to
+  the same cache-versioned PDF, and the live file matches the accepted local
+  artifact byte for byte.
 - **Content state:** Final resume review completed and `ACC` on 2026-09-09.
   The accepted 2-page A4 PDF preserves every user-confirmed result and metric,
   contains embedded font subsets, exposes all 22 bullets cleanly to both tested
@@ -75,7 +76,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 
 | Shared record | Current state | Required control or action |
 | --- | --- | --- |
-| Final resume artifact | Approved; website delivery pending | Publish the accepted PDF through all 3 versioned download links and verify the live file hash after GitHub Pages completes. |
+| Final resume artifact | Synced | Published through all 3 versioned download links; the accepted local and live PDF share SHA-256 `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`. |
 | Resume content | Canonical | Preserve the approved identity, chronology, capabilities, project results, publication, certification, links, and evidence boundaries recorded in the final PDF. |
 | Website content synchronization | Pending | Audit and revise the visible website against the final resume while allowing evidence-consistent additional depth; do not treat this PDF-only release as completion of the website-content synchronization. |
 
@@ -375,6 +376,13 @@ flagship projects. All 3 resume links use the same cache-versioned PDF.
 Pages run `33087663392` completed successfully, and the live HTML, release marker,
 and downloadable PDF match release `20260827-03`.
 
+**Final resume publication status:** Release `20260909-01` replaces the
+downloadable resume with the fully approved 2-page artifact. Portfolio commit
+`e2e86dcf48693f392500513963b7b7496213c14a` and Pages run `34327237886`
+published all 3 cache-versioned resume links, and the live PDF matches the
+accepted local SHA-256 byte for byte. The next checkpoint is visible website
+content synchronization against the final resume.
+
 **Crawler metadata revision:** Release `20260828-01` aligns the machine-readable
 Person metadata with the approved Data & AI Professional positioning and the
 verified capabilities already present in the Skills section. The revision also
@@ -644,7 +652,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
 - **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed sensor count. Website resynchronization is pending completion of the resume-first review.
+- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed sensor count. Website-content resynchronization is the next checkpoint after final resume publication.
 
 ### xgboost-rainfall-forecasting
 
@@ -677,7 +685,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed classification metrics. Website resynchronization is pending completion of the resume-first review.
+- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed classification metrics. Website-content resynchronization is the next checkpoint after final resume publication.
 
 ### bilstm-rainfall-forecasting
 
@@ -692,7 +700,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed BiLSTM metrics. Website resynchronization is pending completion of the resume-first review.
+- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed BiLSTM metrics. Website-content resynchronization is the next checkpoint after final resume publication.
 
 ### arima-rice-price-forecasting
 
@@ -707,7 +715,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed MAPE results. Website resynchronization is pending completion of the resume-first review.
+- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed MAPE results. Website-content resynchronization is the next checkpoint after final resume publication.
 
 ### Registry audit queue
 
@@ -717,8 +725,8 @@ These entries are audit directions only. They are not completed registry records
 | --- | --- | --- | --- |
 | Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
 | AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card uses the focused workflow visual without cost, quality, duplicate metric, or redundant architecture labels | Published |
-| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Preserve approximately 400 configured directional sensors, the varying active subset, 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests | Website sync pending after resume approval |
-| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Preserve every current result and metric as user-confirmed authentic evidence | Website sync pending after resume approval |
+| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Preserve approximately 400 configured directional sensors, the varying active subset, 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests | Website-content sync is the next checkpoint |
+| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Preserve every current result and metric as user-confirmed authentic evidence | Website-content sync is the next checkpoint |
 
 ## 5. Evidence-first portfolio rules
 
