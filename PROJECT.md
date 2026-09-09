@@ -78,7 +78,12 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | --- | --- | --- |
 | Final resume artifact | Synced | Published through all 3 versioned download links; the accepted local and live PDF share SHA-256 `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`. |
 | Resume content | Canonical | Preserve the approved identity, chronology, capabilities, project results, publication, certification, links, and evidence boundaries recorded in the final PDF. |
-| Website content synchronization | Pending | Audit and revise the visible website against the final resume while allowing evidence-consistent additional depth; do not treat this PDF-only release as completion of the website-content synchronization. |
+| Identity and positioning | Synced | The local release uses the approved Data and AI Professional positioning and Surabaya, East Java, Indonesia location. |
+| Experience and chronology | Synced | All 4 roles preserve the approved employers, dates, responsibilities, scale, and shared BiLSTM results; the website uses reverse chronology by role end date. |
+| Skills and capabilities | Synced | All resume capability families and named tools are represented without adding unsupported technologies. |
+| Shared project facts and metrics | Synced | The 3 resume projects and all overlapping project metrics preserve the same evaluation boundaries; the website adds 4 evidence-backed projects and deeper limitations. |
+| Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
+| Website content publication | Approved | Release `20260909-02` is approved locally after source and synchronization review; change to Published only after GitHub Pages and live desktop/mobile verification succeed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -251,9 +256,8 @@ new material information changes the decision.
    Testing (unittest)`. ARIMA is supported by the rice-price forecasting
    project, while Matplotlib is directly used across the forecasting and
    classification projects. The final PDF occupies 1, 2, 2, 2, and 2 rendered
-   lines respectively. The website currently expresses the same broad
-   capability families but omits explicit ARIMA and Matplotlib; address that
-   during the next website-content synchronization pass.
+   lines respectively. Website release `20260909-02` now exposes all 5
+   categories, including the previously omitted ARIMA and Matplotlib entries.
 9. **Projects - ACC:** Preserve the paragraph format with one concise
    Problem-Solution-Result narrative per project. The final resume intentionally
    selects AI Service Request Automation, Retail Sales Forecasting & Planning
@@ -380,8 +384,8 @@ and downloadable PDF match release `20260827-03`.
 downloadable resume with the fully approved 2-page artifact. Portfolio commit
 `e2e86dcf48693f392500513963b7b7496213c14a` and Pages run `34327237886`
 published all 3 cache-versioned resume links, and the live PDF matches the
-accepted local SHA-256 byte for byte. The next checkpoint is visible website
-content synchronization against the final resume.
+accepted local SHA-256 byte for byte. The final resume is the approved shared
+record used by website content release `20260909-02`.
 
 **Crawler metadata revision:** Release `20260828-01` aligns the machine-readable
 Person metadata with the approved Data & AI Professional positioning and the
@@ -465,8 +469,17 @@ completed successfully. Live QA at 1440x1000 and 390x844 confirmed release
 working menu and project filters, 44-pixel mobile controls, no browser
 warning/error, and removal of the metrics then treated as unverified. The user
 subsequently confirmed those existing project results as authentic on
-2026-08-29; website resynchronization remains deferred until the resume review
-is complete.
+2026-08-29. Release `20260909-02` restores them after the final resume review
+and cross-surface audit.
+
+**2026-09-09 synchronized-source optimization:** Release `20260909-02`
+removes the obsolete 112,502-byte Retail V1 WebP whose embedded metrics no
+longer matched the active V2 evidence. A semantic HTML/CSS workflow panel now
+communicates the current 7-table contract, 30-candidate 4-fold selection, and
+V2 delivery parity at every display density without another image request.
+The active asset tree is 675,629 bytes; `index.html`, `styles.css`, and
+`script.js` are 48,908, 22,654, and 2,493 bytes and remain within their source
+budgets.
 
 ## 2. Evidence required for each role family
 
@@ -608,19 +621,19 @@ Copy this block for each audited project. Do not remove required fields.
 ### retail-sales-forecasting-ai-engineering
 
 - **Workspace folder:** `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`
-- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the current Git worktree, public `main` at `b044bfafe251254d02606f4e326fc98f15a8d1c9`, release `v1.0.0` at `71de0055bf61767d7c1e4e995c22efad9d7c6d48`, and successful GitHub Actions run `32442894170`.
-- **Last audited:** 2026-08-21
+- **Source-of-truth files inspected:** `AGENTS.md`, `PROJECT.md`, `README.md`, the accepted `retail-history-selection-01-v1` evidence recorded there, the active V2 artifact contract, current Git worktree, public `main` at `7aec2f52dad4dd2673c5b978529e1337a1b81029`, and successful GitHub Actions run `34216126189`.
+- **Last audited:** 2026-09-09
 - **Display title:** Retail Sales Forecasting & Planning System
 - **Context:** Independent portfolio project using authorized Kaggle competition data, controlled chronological model evaluation, and locally verified batch, API, and Docker inference.
 - **Primary role family:** AI/ML Engineering
 - **Supporting role families:** Data Science
-- **Verified metrics:** Validation RMSLE 0.4131 and WAPE 13.5188%; protected internal-test RMSLE 0.4140, WAPE 15.6431%, and signed bias 0.7623%; 28,512 forecasts across 1,782 store-family series; 44/44 core contract tests passed locally and in GitHub Actions; local FastAPI and healthy Docker inference each matched all 28,512 notebook predictions.
+- **Verified metrics:** The active V2 configuration was selected from 3 Ridge and 27 XGBoost configurations evaluated across 4 predeclared chronological folds. It recorded mean fold RMSLE 0.524617 and mean fold WAPE 15.2366%, followed by protected internal-test RMSLE 0.407651, WAPE 14.6689%, and signed bias -0.2556%. The versioned artifact generated 28,512 forecasts across 1,782 store-family series with exact notebook, fresh-process batch, local FastAPI, and Docker parity. All 78 synthetic checks passed locally and in GitHub Actions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual asset source:** 5 stage icons from the official MIT-licensed Bootstrap Icons library, rasterized into the local WebP project visual with no runtime third-party request.
-- **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. Model evidence comes from one fixed validation window and one protected internal-test window. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
-- **Approved Project Output wording:** The system produces a checked 16-day forecast for every store-family series, giving planning teams one consistent demand view through the same reusable artifact across batch, API, and containerized inference.
-- **Approved Evidence & Scope wording:** One fixed validation window and one protected internal-test window establish RMSLE, WAPE, and signed-bias evidence on 2013–2017 competition data. The locally verified containerized API serves the complete 28,512-row, 16-day product-family forecast through the same versioned artifact used by batch inference.
-- **Portfolio status:** Published at portfolio commit `6c38681468a9e1ba23799d114a3f84fa2dde0133`; Pages run `32631716909` completed successfully. The live card shows 44/44 core contract evidence and the updated Full HD visual; desktop and 390-pixel mobile verification found no horizontal overflow, missing asset, or browser warning/error.
+- **Visual presentation:** Release `20260909-02` replaces the obsolete V1 raster infographic with a semantic HTML/CSS workflow panel covering the 7-table data contract, 30-candidate 4-fold selection, and V2 batch/API/Docker parity. The panel is resolution-independent and adds no image request.
+- **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
+- **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
+- **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
+- **Portfolio status:** Release `20260909-02` is approved locally with the active V2 results and 78/78 synthetic-check evidence; publication remains pending until GitHub Pages and live verification complete.
 
 ### ai-service-request-automation
 
@@ -652,7 +665,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
 - **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed sensor count. Website-content resynchronization is the next checkpoint after final resume publication.
+- **Portfolio status:** Release `20260909-02` is approved locally with the approximately 400 configured-sensor scale, variable active subset, 5-minute cadence, and 3 operational views; publication remains pending until GitHub Pages and live verification complete.
 
 ### xgboost-rainfall-forecasting
 
@@ -685,7 +698,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed classification metrics. Website-content resynchronization is the next checkpoint after final resume publication.
+- **Portfolio status:** Release `20260909-02` is approved locally with the completed V1 metrics and non-clinical evaluation boundary; publication remains pending until GitHub Pages and live verification complete.
 
 ### bilstm-rainfall-forecasting
 
@@ -700,7 +713,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed BiLSTM metrics. Website-content resynchronization is the next checkpoint after final resume publication.
+- **Portfolio status:** Release `20260909-02` is approved locally with MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation; publication remains pending until GitHub Pages and live verification complete.
 
 ### arima-rice-price-forecasting
 
@@ -715,18 +728,12 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
-- **Portfolio status:** Live release `20260828-02` currently omits the user-confirmed MAPE results. Website-content resynchronization is the next checkpoint after final resume publication.
+- **Portfolio status:** Release `20260909-02` is approved locally with medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation; publication remains pending until GitHub Pages and live verification complete.
 
 ### Registry audit queue
 
-These entries are audit directions only. They are not completed registry records and must not be used as approved publishing claims.
-
-| Project candidate | Workspace routing | Provisional direction | Registry status |
-| --- | --- | --- | --- |
-| Retail Sales Forecasting | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Engineer/`; follow its `AGENTS.md` and project source of truth | The live card shows the verified 44/44 core contract evidence | Published |
-| AI Service Request Automation | `C:/Users/Thufail/Documents/Portfolio/Independent Projects/AI Automation/`; follow its `AGENTS.md` and project source of truth | The live card uses the focused workflow visual without cost, quality, duplicate metric, or redundant architecture labels | Published |
-| DWDM Monitoring | `C:/Users/Thufail/Documents/Portfolio/Professional Projects/Lintasarta DWDM Monitoring/` | Preserve approximately 400 configured directional sensors, the varying active subset, 2 source systems, 5-minute telemetry, 3 operational views, and 67/67 contract tests | Website-content sync is the next checkpoint |
-| Thyroid, BiLSTM, and ARIMA claims | Use each project-specific workspace record above | Preserve every current result and metric as user-confirmed authentic evidence | Website-content sync is the next checkpoint |
+No project claim is waiting in the audit queue. Release `20260909-02` contains
+the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules
 

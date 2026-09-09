@@ -1,10 +1,11 @@
-# M. Thufail Alwannabil Samas - Data & AI Portfolio
+# M. Thufail Alwannabil Samas - Data and AI Portfolio
 
 [View the live portfolio](https://mthufailsamas.github.io/)
 
-This repository contains my personal Data & AI portfolio. It connects selected
+This repository contains the professional Data and AI portfolio of M. Thufail
+Alwannabil Samas. It connects selected
 work across data analysis, statistical modeling, machine learning, practical
-data engineering, and applied AI automation with my professional experience,
+data engineering, and applied AI automation with professional experience,
 publication, certification, and technical background.
 
 ## Portfolio Overview
@@ -25,7 +26,7 @@ The featured case studies cover:
 - Rainfall Forecasting with TensorFlow/Keras BiLSTM and Grid Search; and
 - Rice Price Forecasting with statsmodels ARIMA and Walk-Forward Validation.
 
-Each case study focuses on the problem, my contribution, system or analytical
+Each case study focuses on the problem, contribution, system or analytical
 workflow, validation evidence, practical output, and limitations. Public
 project repositories are linked where available. Confidential work is
 presented only through approved summaries and non-sensitive visual material.
@@ -43,14 +44,9 @@ includes:
   current published revision;
 - accessible navigation and structured page sections;
 - optimized `1920x1080` WebP visuals for evidence-backed project figures,
-  lightweight semantic HTML workflow panels where result claims remain under
-  revalidation, and responsive profile, hero, and social-preview images; and
+  lightweight semantic HTML workflow panels for text-led project evidence,
+  and responsive profile, hero, and social-preview images; and
 - downloadable English resume.
-
-The retail-system visual uses icons from the official
-[Bootstrap Icons](https://icons.getbootstrap.com/) library under its MIT
-license. The icons are bundled into the local project image rather than loaded
-from a third-party service at runtime.
 
 The site has no frontend framework, build step, package manager, backend,
 analytics, or tracking.
@@ -78,7 +74,6 @@ Portfolio Website/
 |   `-- projects/
 |       |-- ai-service-request-automation.webp
 |       |-- dwdm-monitoring.webp
-|       |-- retail-sales-forecasting.webp
 |       `-- xgboost-rainfall.webp
 |-- documents/
 |   `-- m-thufail-alwannabil-samas-cv.pdf
