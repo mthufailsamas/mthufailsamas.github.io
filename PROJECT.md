@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-08-28
+Last updated: 2026-09-09
 
 ## Purpose and authority
 
@@ -59,24 +59,25 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 
 - **Active local artifact:** `documents/m-thufail-alwannabil-samas-cv.pdf`
 - **Local/live SHA-256:**
-  `22C69A32996DE3D74BF3A769D9454A2F78029434A99D399666445A61EFDA5146`
-- **Delivery state:** Synced; all current website download links resolve to the
-  same PDF and the live file matches the local artifact byte for byte.
-- **Content state:** Sequential resume review in progress. On 2026-08-29 the
-  user confirmed that every existing project result and metric is authentic and
-  real. Preserve those results and focus the review on the best ATS-friendly,
-  STAR-oriented, HR-readable wording. Header, Summary, Lintasarta Experience,
-  SMP GIKI 3 Experience, UINSA Programming Teaching Assistant Experience, BMKG
-  Data Science Intern Experience, and Education are `ACC`. Skills is under
-  review. Do not pre-empt or revise later sections before they are reached.
+  `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`
+- **Delivery state:** Local replacement prepared for release `20260909-01`;
+  all 3 website download links resolve to the same cache-versioned PDF. Live
+  byte-for-byte verification remains pending until GitHub Pages publishes the
+  release.
+- **Content state:** Final resume review completed and `ACC` on 2026-09-09.
+  The accepted 2-page A4 PDF preserves every user-confirmed result and metric,
+  contains embedded font subsets, exposes all 22 bullets cleanly to both tested
+  text extractors, and retains active portfolio, email, LinkedIn, GitHub, and
+  DOI links. Header, Summary, all 4 Experience entries, Education, Skills,
+  Projects, Publications, and Certifications are approved.
 
 ### Current cross-surface synchronization matrix
 
 | Shared record | Current state | Required control or action |
 | --- | --- | --- |
-| Resume Header | Resume canonical; website review deferred | `ACC as-is` with the exact name, `Data and AI Professional` wording, `Surabaya, East Java, Indonesia`, contact details, and links currently present in the PDF. Do not suggest stylistic substitutions unless they create a material improvement. |
-| Experience, education, skills, projects, publication, and certification | Sequential review pending | Review 1 section at a time from top to bottom. Preserve every existing result and metric as authentic; do not pre-empt later decisions. |
-| Website synchronization | Pending final resume | Do not revise the website during the resume-first review. After the complete resume is approved, synchronize the website to the locked resume decisions while allowing evidence-consistent additional depth. |
+| Final resume artifact | Approved; website delivery pending | Publish the accepted PDF through all 3 versioned download links and verify the live file hash after GitHub Pages completes. |
+| Resume content | Canonical | Preserve the approved identity, chronology, capabilities, project results, publication, certification, links, and evidence boundaries recorded in the final PDF. |
+| Website content synchronization | Pending | Audit and revise the visible website against the final resume while allowing evidence-consistent additional depth; do not treat this PDF-only release as completion of the website-content synchronization. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -118,32 +119,31 @@ new material information changes the decision.
    FastAPI services, Docker-based inference, and local LLM workflows with
    human-in-the-loop controls. BNSP-certified Data Scientist and first author
    of a peer-reviewed XGBoost rainfall forecasting publication.`
-3. **Lintasarta Experience - ACC:** Preserve the employer, location,
-   role, and dates as displayed in the current resume. The 1 active bullet set
-   contains 4 bullets of exactly 35 words each and is derived from the current
-   DWDM implementation:
-   - `Developed an end-to-end DWDM monitoring and assurance system covering
+3. **Lintasarta Experience - ACC:** Preserve the employer, location, role, and
+   dates as displayed in the final resume. The accepted 4-bullet set is:
+   - `Developed an end-to-end DWDM monitoring and assurance system for
      approximately 400 configured directional sensors, integrating 5-minute
-     PRTG telemetry with ENIMS network metadata to identify active failures,
-     persistent signal shifts, gradual degradation, and operational
-     investigation priorities.`
-   - `Built an incremental Python and PostgreSQL pipeline that synchronized
-     sensor metadata, collected telemetry, repaired missing intervals,
-     generated quality-controlled observations, detected events, correlated
-     opposite-direction sensor evidence, maintained checkpoints, and updated
-     current sensor-priority rankings for operational review.`
-   - `Implemented sensor-adaptive analytics using robust 6-hour medians, PELT
+     PRTG telemetry with ENIMS network metadata to detect active failures,
+     persistent optical-signal changes, gradual degradation, and prioritized
+     conditions for operations review.`
+   - `Built an incremental Python and PostgreSQL pipeline for metadata
+     synchronization, telemetry collection, gap repair, quality-controlled
+     observations, event detection, opposite-direction sensor correlation,
+     checkpoint preservation, current sensor-priority updates, and recoverable
+     processing across repeated collection cycles.`
+   - `Implemented sensor-adaptive analytics with robust 6-hour medians, PELT
      change-point detection, Theil-Sen slope estimation, and
      serial-correlation-corrected Mann-Kendall testing to distinguish persistent
-     downward shifts and gradual degradation from failures, missing
-     observations, and short-term telemetry noise across sensors.`
-   - `Created a Python API and browser-based interface with Operations Board,
-     Event Explorer, and Management Overview views, enabling operations teams
-     to examine failures, historical events, paired-sensor evidence,
-     investigation charts, and prioritized sensor conditions in one
-     interface.`
-   The wording and 35-word drafting balance are approved. Rendered line-count
-   equality remains a final PDF verification gate.
+     downward shifts and gradual degradation from failures, missing data, and
+     short-term telemetry noise across sensors.`
+   - `Created a Python API and browser interface with Operations Board, Event
+     Explorer, and Management Overview views, enabling operations teams to
+     inspect active failures, historical events, paired-sensor evidence,
+     investigation charts, and prioritized sensor conditions within one
+     interface for consistent operational review.`
+   Final-PDF verification produced 3 rendered lines per bullet, a 0.74% total
+   typographic-width spread, and a 2.89% final-line-width spread against the
+   usable line width, passing all locked acceptance gates.
 4. **SMP GIKI 3 Experience - ACC:** Preserve the employer, location,
    role, and dates as displayed in the current resume. The 1 active bullet set
    contains 3 visually balanced bullets:
@@ -226,8 +226,7 @@ new material information changes the decision.
    coursework. The English thesis wording is semantically consistent with the
    Indonesian publication title. No alternative produces a material gain, so
    this section was accepted as-is on 2026-09-08.
-8. **Skills - recommended improvement, under review:** Replace the current
-   Skills section with the following 5-category version:
+8. **Skills - ACC:** Preserve the final 5-category Skills section:
    - `Programming & Query Languages: Python, SQL, R, MATLAB`
    - `Data Engineering & Databases: Pandas, NumPy, PostgreSQL, MySQL, pgvector,
      psycopg, Data Ingestion, Data Validation, Data Transformation, Incremental
@@ -242,7 +241,7 @@ new material information changes the decision.
    - `Development, Delivery & Visualization: Docker, Docker Compose, Git,
      GitHub, GitHub Actions, CI/CD, Unit Testing (unittest), Jupyter Notebook,
      Model Serving, Batch Inference, Matplotlib, HTML, CSS, JavaScript`
-   This preserves every currently listed skill while strengthening 3 category
+   This preserves every previously listed skill while strengthening 3 category
    labels: `Data Processing` becomes evidence-supported `Data Engineering`,
    `Applied AI` becomes evidence-supported `AI Engineering`, and `Development
    & Visualization` becomes `Development, Delivery & Visualization` to match
@@ -250,19 +249,29 @@ new material information changes the decision.
    `Structured LLM Outputs`, and `unittest` is exposed as ATS-readable `Unit
    Testing (unittest)`. ARIMA is supported by the rice-price forecasting
    project, while Matplotlib is directly used across the forecasting and
-   classification projects. At the current Times New Roman 11.04 pt layout,
-   the draft simulation occupies 1, 2, 2, 2, and 2 lines respectively, keeping
-   the same 9 total rendered lines as the current Skills section. The website
-   currently expresses the same broad capability families but omits explicit
-   ARIMA and Matplotlib; synchronize those details only after the resume review
-   is complete. This recommendation remains unapproved until the user gives
-   `ACC` and must be verified again in the final edited PDF.
+   classification projects. The final PDF occupies 1, 2, 2, 2, and 2 rendered
+   lines respectively. The website currently expresses the same broad
+   capability families but omits explicit ARIMA and Matplotlib; address that
+   during the next website-content synchronization pass.
+9. **Projects - ACC:** Preserve the paragraph format with one concise
+   Problem-Solution-Result narrative per project. The final resume intentionally
+   selects AI Service Request Automation, Retail Sales Forecasting & Planning
+   System, and Thyroid Cancer Recurrence Classification in that order while the
+   website remains broader. Preserve their displayed evaluation boundaries and
+   metrics exactly; omission of the other portfolio projects is allowed for
+   resume space and does not create a contradiction.
+10. **Publications - ACC:** Preserve the complete publication title, `First
+    Author`, MIND Journal volume, issue, pages, June 2026 date, and DOI
+    `10.26760/mindjournal.v11i1.30-43`. The DOI is an active black hyperlink
+    without visible underlining in the final PDF.
+11. **Certifications - ACC:** Preserve `Data Scientist - Badan Nasional
+    Sertifikasi Profesi (BNSP) | September 2024 - September 2027`. The issuer
+    focus and validity range are deliberate and match the verified certificate.
 
-The current PDF remains unchanged until the user manually edits it or
-explicitly authorizes artifact replacement. After a revised PDF is supplied,
-confirm the complete text and rendered 2-page layout, replace the old PDF rather
-than retaining both, update every resume link to 1 versioned path, and verify
-the live hash.
+The accepted resume replaces the previous downloadable PDF at the single
+canonical path. Do not retain parallel resume copies. All public links must use
+the release-versioned canonical path, and publication is complete only after
+the live SHA-256 matches the accepted local artifact.
 
 ## 1. Portfolio positioning
 
