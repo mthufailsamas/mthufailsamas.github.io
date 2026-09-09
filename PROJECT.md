@@ -83,7 +83,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Skills and capabilities | Synced | All resume capability families and named tools are represented without adding unsupported technologies. |
 | Shared project facts and metrics | Synced | The 3 resume projects and all overlapping project metrics preserve the same evaluation boundaries; the website adds 4 evidence-backed projects and deeper limitations. |
 | Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
-| Website content publication | Approved | Release `20260909-02` is approved locally after source and synchronization review; change to Published only after GitHub Pages and live desktop/mobile verification succeed. |
+| Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -481,6 +481,16 @@ The active asset tree is 675,629 bytes; `index.html`, `styles.css`, and
 `script.js` are 48,908, 22,654, and 2,493 bytes and remain within their source
 budgets.
 
+**2026-09-09 synchronization publication status:** Portfolio commit
+`e88ef71566c52562684a0984cbbd963c94348936` and GitHub Pages run
+`34332482575` published release `20260909-02`. The live accessibility tree and
+desktop rendering expose the synchronized identity, chronology, capabilities,
+and project evidence. Live Edge QA at 390x844 confirmed exact viewport width,
+the responsive hero source, no broken images, browser warning, or runtime
+error, a working mobile menu, and 4 visible cards under the Academic filter.
+The obsolete Retail raster returns no live reference, and all 3 resume links
+still resolve to the accepted PDF version.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -633,7 +643,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** Release `20260909-02` is approved locally with the active V2 results and 78/78 synthetic-check evidence; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` and live desktop/mobile verification succeeded.
 
 ### ai-service-request-automation
 
@@ -665,7 +675,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
 - **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
-- **Portfolio status:** Release `20260909-02` is approved locally with the approximately 400 configured-sensor scale, variable active subset, 5-minute cadence, and 3 operational views; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes the approximately 400 configured-sensor scale, variable active subset, 5-minute cadence, and 3 operational views.
 
 ### xgboost-rainfall-forecasting
 
@@ -698,7 +708,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
-- **Portfolio status:** Release `20260909-02` is approved locally with the completed V1 metrics and non-clinical evaluation boundary; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes the completed V1 metrics and non-clinical evaluation boundary.
 
 ### bilstm-rainfall-forecasting
 
@@ -713,7 +723,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
-- **Portfolio status:** Release `20260909-02` is approved locally with MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation.
 
 ### arima-rice-price-forecasting
 
@@ -728,7 +738,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
-- **Portfolio status:** Release `20260909-02` is approved locally with medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation.
 
 ### Registry audit queue
 
