@@ -86,7 +86,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
-| Public metric precision | Approved | Release `20260909-05` formats visible accuracy, error, and related model-performance scores to 4 decimal places while preserving counts, ratios, thresholds, and other non-performance quantities; change to Published only after Pages and live verification succeed. |
+| Public metric precision | Published | Release `20260909-05` was published from commit `11914104e35e5eff4810a3c911650f29434b52e5`; Pages run `34363802628` succeeded and live desktop/mobile verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -539,7 +539,12 @@ category accuracy displays as 75.0000%; Thyroid scores display as 97.2500%,
 Counts such as 78/78, sample totals, horizons, thresholds, identifiers, DOI
 values, and GPA are outside this formatting rule. No metric meaning,
 evaluation boundary, resume fact, or project evidence changes. `index.html` is
-49,035 bytes and the asset tree remains 810,979 bytes.
+49,035 bytes and the asset tree remains 810,979 bytes. Commit
+`11914104e35e5eff4810a3c911650f29434b52e5` was published successfully by
+Pages run `34363802628`. The live release marker returned `20260909-05` with
+HTTP 200 at desktop 1440x1000 and mobile 390x844. All 22 values across 7
+headline metric rows fit their cells without horizontal overflow; no obsolete
+display values or browser errors were found.
 
 ## 2. Evidence required for each role family
 
