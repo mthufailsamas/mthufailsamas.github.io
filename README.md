@@ -43,9 +43,10 @@ includes:
 - an automatic release-freshness check that replaces a cached page with the
   current published revision;
 - accessible navigation and structured page sections;
-- optimized `1920x1080` WebP visuals for evidence-backed project figures,
-  lightweight semantic HTML workflow panels for text-led project evidence,
-  and responsive profile, hero, and social-preview images; and
+- optimized `1920x1080` WebP evidence visuals, a lightweight
+  resolution-independent SVG for the Retail workflow, semantic HTML panels
+  for text-led project evidence, and responsive profile, hero, and
+  social-preview images; and
 - downloadable English resume.
 
 The site has no frontend framework, build step, package manager, backend,
@@ -74,6 +75,7 @@ Portfolio Website/
 |   `-- projects/
 |       |-- ai-service-request-automation.webp
 |       |-- dwdm-monitoring.webp
+|       |-- retail-sales-forecasting.svg
 |       `-- xgboost-rainfall.webp
 |-- documents/
 |   `-- m-thufail-alwannabil-samas-cv.pdf

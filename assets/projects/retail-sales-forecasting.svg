@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Retail Sales Forecasting and Planning System</title>
+  <desc id="description">A three-stage diagram showing the validated retail data contract, repeated four-fold model selection, and consistent V2 inference across batch, FastAPI, and Docker.</desc>
+  <rect width="1600" height="900" fill="#f4f8f8"/>
+  <rect width="1600" height="176" fill="#071b24"/>
+  <rect x="0" y="170" width="1600" height="6" fill="#bfd454"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="72" y="78" fill="#58bdb5" font-size="27" font-weight="700" letter-spacing="3">AI/ML ENGINEERING • RETAIL FORECASTING</text>
+    <text x="72" y="138" fill="#ffffff" font-size="50" font-weight="800">Retail Sales Forecasting &amp; Planning System</text>
+
+    <g transform="translate(70 245)">
+      <rect width="430" height="370" rx="18" fill="#ffffff" stroke="#9db3b8" stroke-width="3"/>
+      <rect width="430" height="12" rx="6" fill="#58bdb5"/>
+      <circle cx="215" cy="94" r="53" fill="#e7f4f3"/>
+      <g fill="none" stroke="#0b5960" stroke-width="9">
+        <ellipse cx="215" cy="70" rx="39" ry="15"/>
+        <path d="M176 70v50c0 9 18 16 39 16s39-7 39-16V70"/>
+        <path d="M176 94c0 9 18 16 39 16s39-7 39-16"/>
+      </g>
+      <text x="215" y="188" fill="#071b24" font-size="39" font-weight="800" text-anchor="middle">Data Contract</text>
+      <text x="215" y="238" fill="#34535b" font-size="27" text-anchor="middle">7 validated source files</text>
+      <text x="215" y="278" fill="#34535b" font-size="27" text-anchor="middle">3,000,888 labeled rows</text>
+      <rect x="75" y="320" width="280" height="3" fill="#d7e2e4"/>
+      <text x="215" y="350" fill="#0b5960" font-size="22" font-weight="700" text-anchor="middle">54 STORES • 33 FAMILIES</text>
+    </g>
+
+    <g transform="translate(585 245)">
+      <rect width="430" height="370" rx="18" fill="#ffffff" stroke="#9db3b8" stroke-width="3"/>
+      <rect width="430" height="12" rx="6" fill="#f17b64"/>
+      <circle cx="215" cy="94" r="53" fill="#fff0ec"/>
+      <g fill="none" stroke="#b94c3b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M172 125V91h28v34"/>
+        <path d="M202 125V65h28v60"/>
+        <path d="M232 125V78h28v47"/>
+        <path d="M165 129h100"/>
+      </g>
+      <text x="215" y="188" fill="#071b24" font-size="39" font-weight="800" text-anchor="middle">Repeated Selection</text>
+      <text x="215" y="238" fill="#34535b" font-size="27" text-anchor="middle">3 Ridge + 27 XGBoost</text>
+      <text x="215" y="278" fill="#34535b" font-size="27" text-anchor="middle">4 chronological folds</text>
+      <rect x="75" y="320" width="280" height="3" fill="#d7e2e4"/>
+      <text x="215" y="350" fill="#b94c3b" font-size="22" font-weight="700" text-anchor="middle">PROTECTED INTERNAL TEST</text>
+    </g>
+
+    <g transform="translate(1100 245)">
+      <rect width="430" height="370" rx="18" fill="#ffffff" stroke="#9db3b8" stroke-width="3"/>
+      <rect width="430" height="12" rx="6" fill="#bfd454"/>
+      <circle cx="215" cy="94" r="53" fill="#f4f8df"/>
+      <g fill="none" stroke="#607116" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M215 53l43 24v49l-43 25-43-25V77z"/>
+        <path d="M172 77l43 25 43-25"/>
+        <path d="M215 102v49"/>
+      </g>
+      <text x="215" y="188" fill="#071b24" font-size="39" font-weight="800" text-anchor="middle">Consistent Delivery</text>
+      <text x="215" y="238" fill="#34535b" font-size="27" text-anchor="middle">1 versioned V2 artifact</text>
+      <text x="215" y="278" fill="#34535b" font-size="27" text-anchor="middle">Batch • FastAPI • Docker</text>
+      <rect x="75" y="320" width="280" height="3" fill="#d7e2e4"/>
+      <text x="215" y="350" fill="#607116" font-size="22" font-weight="700" text-anchor="middle">EXACT PREDICTION PARITY</text>
+    </g>
+
+    <g fill="#0b5960">
+      <path d="M520 422h40v-18l30 26-30 26v-18h-40z"/>
+      <path d="M1035 422h40v-18l30 26-30 26v-18h-40z"/>
+    </g>
+
+    <rect x="70" y="665" width="1460" height="150" rx="18" fill="#0b2530"/>
+    <line x1="557" y1="699" x2="557" y2="781" stroke="#587078" stroke-width="2"/>
+    <line x1="1043" y1="699" x2="1043" y2="781" stroke="#587078" stroke-width="2"/>
+
+    <text x="313" y="726" fill="#ffffff" font-size="41" font-weight="800" text-anchor="middle">28,512</text>
+    <text x="313" y="769" fill="#b9c9cd" font-size="24" font-weight="600" text-anchor="middle">FORECAST ROWS</text>
+    <text x="800" y="726" fill="#ffffff" font-size="41" font-weight="800" text-anchor="middle">16 DAYS</text>
+    <text x="800" y="769" fill="#b9c9cd" font-size="24" font-weight="600" text-anchor="middle">COMPLETE HORIZON</text>
+    <text x="1287" y="726" fill="#ffffff" font-size="41" font-weight="800" text-anchor="middle">78/78</text>
+    <text x="1287" y="769" fill="#b9c9cd" font-size="24" font-weight="600" text-anchor="middle">SYNTHETIC CHECKS</text>
+
+    <text x="800" y="866" fill="#5d747b" font-size="21" font-weight="700" letter-spacing="2" text-anchor="middle">CONTROLLED LOCAL EVIDENCE • COMPETITION DATA 2013–2017</text>
+  </g>
+</svg>

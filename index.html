@@ -99,7 +99,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260909-02";
+        const embeddedRelease = "20260909-03";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -287,14 +287,12 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <div class="project-workflow" aria-label="Retail forecasting and delivery workflow">
-                  <p class="project-workflow-title">Repeated evaluation to consistent inference</p>
-                  <div class="project-workflow-steps" role="list">
-                    <div role="listitem"><span>01</span><strong>Data Contract</strong><small>7 source tables and forecast-safe features</small></div>
-                    <div role="listitem"><span>02</span><strong>Model Selection</strong><small>30 candidates across 4 chronological folds</small></div>
-                    <div role="listitem"><span>03</span><strong>Delivery Parity</strong><small>1 V2 artifact across batch, FastAPI, and Docker</small></div>
-                  </div>
-                </div>
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/retail-sales-forecasting.svg?v=20260909a" target="_blank" rel="noopener noreferrer" aria-label="Open the current Retail Sales Forecasting and Planning System visual at full size">
+                    <img src="assets/projects/retail-sales-forecasting.svg?v=20260909a" alt="Retail forecasting workflow from 7 validated source files through 30-candidate four-fold selection to one V2 artifact with exact batch, FastAPI, and Docker prediction parity" width="1600" height="900" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Current V2 workflow: validated retail inputs, repeated chronological selection, and one consistent inference artifact.</figcaption>
+                </figure>
                 <div class="metric-row" aria-label="Retail forecasting evaluation and delivery results">
                   <div><strong>0.52</strong><span>Mean 4-Fold RMSLE</span></div>
                   <div><strong>14.67%</strong><span>Internal-Test WAPE</span></div>

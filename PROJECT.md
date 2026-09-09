@@ -84,6 +84,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Shared project facts and metrics | Synced | The 3 resume projects and all overlapping project metrics preserve the same evaluation boundaries; the website adds 4 evidence-backed projects and deeper limitations. |
 | Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
+| Retail visual restoration | Approved | Release `20260909-03` adds a current V2 SVG visual without changing the synchronized project claims; change to Published only after Pages and live verification succeed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -491,6 +492,17 @@ error, a working mobile menu, and 4 visible cards under the Academic filter.
 The obsolete Retail raster returns no live reference, and all 3 resume links
 still resolve to the accepted PDF version.
 
+**2026-09-09 Retail visual restoration:** Release `20260909-03` restores a
+dedicated project image as a 5,281-byte SVG rather than reusing the stale V1
+WebP. The resolution-independent diagram shows the current 7-file data
+contract, 3 Ridge plus 27 XGBoost candidates across 4 chronological folds, 1
+versioned V2 artifact, exact batch/FastAPI/Docker parity, 28,512 forecast rows,
+a 16-day horizon, and 78/78 synthetic checks. The surrounding metric row keeps
+the model-quality results in live HTML. The active asset tree is 680,910 bytes
+and `index.html` is 48,969 bytes, so the restoration remains within the public
+source and asset budgets. Local desktop and 390-pixel mobile renders are
+approved; publication remains pending.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -639,11 +651,11 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** The active V2 configuration was selected from 3 Ridge and 27 XGBoost configurations evaluated across 4 predeclared chronological folds. It recorded mean fold RMSLE 0.524617 and mean fold WAPE 15.2366%, followed by protected internal-test RMSLE 0.407651, WAPE 14.6689%, and signed bias -0.2556%. The versioned artifact generated 28,512 forecasts across 1,782 store-family series with exact notebook, fresh-process batch, local FastAPI, and Docker parity. All 78 synthetic checks passed locally and in GitHub Actions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual presentation:** Release `20260909-02` replaces the obsolete V1 raster infographic with a semantic HTML/CSS workflow panel covering the 7-table data contract, 30-candidate 4-fold selection, and V2 batch/API/Docker parity. The panel is resolution-independent and adds no image request.
+- **Visual presentation:** Release `20260909-03` replaces the temporary text-only panel with a 5,281-byte, resolution-independent SVG. It presents the current 7-file data contract, 30-candidate 4-fold selection, V2 artifact, batch/API/Docker parity, 28,512-row horizon, and 78/78 checks without restoring the obsolete V1 metrics.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` and live desktop/mobile verification succeeded.
+- **Portfolio status:** The synchronized V2 copy is published in release `20260909-02`. Its dedicated SVG restoration is approved locally for release `20260909-03`; publication remains pending until GitHub Pages and live verification complete.
 
 ### ai-service-request-automation
 
@@ -742,7 +754,7 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260909-02` contains
+No project claim is waiting in the audit queue. Release `20260909-03` preserves
 the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules
