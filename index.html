@@ -99,7 +99,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260909-04";
+        const embeddedRelease = "20260909-05";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -282,20 +282,20 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>Used 3,000,888 labeled rows from the Kaggle Store Sales competition covering 2013–2017. The prediction contract produces 1 forecast for every date, store, and product-family combination over the next 16 days.</dd></div>
                     <div><dt>Approach</dt><dd>Compared 3 Ridge and 27 XGBoost configurations across 4 predeclared chronological folds. The selected XGBoost configuration was frozen before 1 protected internal-test window and final refitting.</dd></div>
-                    <div><dt>Validation &amp; Delivery</dt><dd>The active model recorded 0.52 mean fold RMSLE, 15.24% mean fold WAPE, and 14.67% protected internal-test WAPE. Its versioned artifact generated 28,512 forecasts with exact notebook, fresh-process batch, local FastAPI, and Docker parity; all 78 synthetic checks passed locally and in GitHub Actions.</dd></div>
+                    <div><dt>Validation &amp; Delivery</dt><dd>The active model recorded 0.5246 mean fold RMSLE, 15.2366% mean fold WAPE, and 14.6689% protected internal-test WAPE. Its versioned artifact generated 28,512 forecasts with exact notebook, fresh-process batch, local FastAPI, and Docker parity; all 78 synthetic checks passed locally and in GitHub Actions.</dd></div>
                   </dl>
                 </details>
               </div>
               <div class="project-result-column">
                 <figure class="project-visual">
                   <a class="project-image-link" href="assets/projects/retail-sales-forecasting.webp?v=20260909b" target="_blank" rel="noopener noreferrer" aria-label="Open the current Retail Sales Forecasting and Planning System visual at full size">
-                    <img src="assets/projects/retail-sales-forecasting.webp?v=20260909b" alt="Retail forecasting workflow from source tables and forecast-safe features through 30-candidate four-fold model selection, a V2 artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
+                    <img src="assets/projects/retail-sales-forecasting.webp?v=20260909b" alt="Retail forecasting workflow from source tables and forecast-safe features through 30-candidate 4-fold model selection, a V2 artifact, and matching batch, FastAPI, and Docker inference" width="1920" height="1080" loading="lazy" decoding="async">
                   </a>
                   <figcaption>Current V2 workflow: validated retail inputs, repeated chronological selection, and one consistent inference artifact.</figcaption>
                 </figure>
                 <div class="metric-row" aria-label="Retail forecasting evaluation and delivery results">
-                  <div><strong>0.52</strong><span>Mean 4-Fold RMSLE</span></div>
-                  <div><strong>14.67%</strong><span>Internal-Test WAPE</span></div>
+                  <div><strong>0.5246</strong><span>Mean 4-Fold RMSLE</span></div>
+                  <div><strong>14.6689%</strong><span>Internal-Test WAPE</span></div>
                   <div><strong>78/78</strong><span>Synthetic Checks Passed</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.</span></p>
@@ -321,7 +321,7 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>The controlled local system handles 5 backend request types across 8 employee IT categories using fictional English and Indonesian cases, policies, identities, permissions, approvals, and downstream records.</dd></div>
                     <div><dt>Approach</dt><dd>FastAPI and PostgreSQL own permissions, state, validation, approvals, idempotency, and audit evidence. n8n coordinates authenticated workflow entries, while local Ollama models provide structured analysis, catalog matching, and grounded policy retrieval behind deterministic and human controls.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>The frozen final gate completed 40/40 cases. Classification, required fields, retrieval, and citations reached 100.0%; route and semantic task success reached 96.7%. Of 30 semantic requests, 27 progressed without service-agent triage review and 3 were safely held for review.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>The frozen final gate completed 40/40 cases. Classification, required fields, retrieval, and citations reached 100.0000%; route and semantic task success reached 96.6667%. Of 30 semantic requests, 27 progressed without service-agent triage review and 3 were safely held for review.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -334,9 +334,9 @@
                 </figure>
                 <div class="metric-row four-metrics" aria-label="AI Service Request Automation controlled evaluation results">
                   <div><strong>40/40</strong><span>Final Cases Completed</span></div>
-                  <div><strong>100.0%</strong><span>Classification &amp; Fields</span></div>
-                  <div><strong>100.0%</strong><span>Retrieval &amp; Citations</span></div>
-                  <div><strong>96.7%</strong><span>Route &amp; Task Success</span></div>
+                  <div><strong>100.0000%</strong><span>Classification &amp; Fields</span></div>
+                  <div><strong>100.0000%</strong><span>Retrieval &amp; Citations</span></div>
+                  <div><strong>96.6667%</strong><span>Route &amp; Task Success</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.</span></p>
                 <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.</span></p>
@@ -361,7 +361,7 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>Used 1,461 daily BMKG observation dates from the Trunojoyo area in Sumenep Regency. Codes 8888 and 9999 were treated as unknown values; all 366 final dates received forecasts, with 308 observed targets available for evaluation.</dd></div>
                     <div><dt>Approach</dt><dd>Compared default and tuned 2-stage XGBoost, direct Tweedie XGBoost, and their development-weighted ensemble through 5,184 temporal CV fits. Development evidence selected a 0.50 wet threshold and a 40% 2-stage plus 60% Tweedie amount forecast.</dd></div>
-                    <div><dt>Validation &amp; Results</dt><dd>Used 2 expanding full-year TimeSeriesSplit checks before a reused final calendar year. The selected ensemble recorded RMSE 9.2521 mm, 5.8982% total bias, 0.7679 wet/dry balanced accuracy, 75.0% BMKG category accuracy, and 0.4429 BMKG Macro-F1.</dd></div>
+                    <div><dt>Validation &amp; Results</dt><dd>Used 2 expanding full-year TimeSeriesSplit checks before a reused final calendar year. The selected ensemble recorded RMSE 9.2521 mm, 5.8982% total bias, 0.7679 wet/dry balanced accuracy, 75.0000% BMKG category accuracy, and 0.4429 BMKG Macro-F1.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -375,7 +375,7 @@
                 <div class="metric-row" aria-label="XGBoost rainfall reused-final results">
                   <div><strong>9.2521 mm</strong><span>Reused-Final RMSE</span></div>
                   <div><strong>0.7679</strong><span>Wet/Dry Balanced Accuracy</span></div>
-                  <div><strong>75.0%</strong><span>BMKG Category Match</span></div>
+                  <div><strong>75.0000%</strong><span>BMKG Category Match</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>The selected experiment produces 366 next-day forecasts with wet/dry alerts and BMKG intensity labels, supported by development-selection tables, calibration, error-regime diagnostics, feature importance, and a reproducible local evidence bundle.</span></p>
                 <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>Controlled evidence comes from 2 annual development checks and 1 reused final year. Correct-category counts were 4/15 for moderate and 0/3 for heavy rainfall, which remains the main model limitation. Original observations remain private; the displayed metrics come from the documented forecasting experiment.</span></p>
@@ -401,7 +401,7 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>The public UCI file contains 383 differentiated thyroid cancer rows with clinical, pathological, treatment, response, and recurrence variables. V1 removes 19 exact full-row repetitions and retains 364 rows.</dd></div>
                     <div><dt>Approach</dt><dd>Handled numeric, binary, ordinal, and nominal features explicitly, then combined entropy-based Information Gain selection with XGBoost and a checkpointed Grid Search path.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>The completed V1 design uses shuffled, non-nested 10-fold K-Fold evaluation and repeats Information Gain selection inside each training fold. It achieved 97.25% pooled out-of-fold accuracy, 95.37% F1, 98.05% specificity, and 98.60% ROC-AUC.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>The completed V1 design uses shuffled, non-nested 10-fold K-Fold evaluation and repeats Information Gain selection inside each training fold. It achieved 97.2500% pooled out-of-fold accuracy, 95.3700% F1, 98.0500% specificity, and 98.6000% ROC-AUC.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -415,9 +415,9 @@
                   </div>
                 </div>
                 <div class="metric-row" aria-label="Thyroid classification evaluation results">
-                  <div><strong>97.25%</strong><span>OOF Accuracy</span></div>
-                  <div><strong>95.37%</strong><span>F1 Score</span></div>
-                  <div><strong>98.60%</strong><span>ROC-AUC</span></div>
+                  <div><strong>97.2500%</strong><span>OOF Accuracy</span></div>
+                  <div><strong>95.3700%</strong><span>F1 Score</span></div>
+                  <div><strong>98.6000%</strong><span>ROC-AUC</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>The completed V1 workflow transforms 383 source rows into a 364-row modeling set after removing 19 exact full-row repetitions, then combines fold-local feature selection with exhaustive XGBoost search and multi-metric out-of-fold evaluation.</span></p>
                 <p class="project-interpretation"><strong>Evidence &amp; Scope</strong><span>The reported metrics belong to a shuffled, non-nested 10-fold academic evaluation whose selection criterion was accuracy. They support a reproducible classification study, not clinical diagnosis, patient care, or deployment claims.</span></p>
@@ -483,7 +483,7 @@
                   <dl class="case-details">
                     <div><dt>Data &amp; Context</dt><dd>60 public monthly observations from January 2020 through December 2024 cover medium and premium rice prices from the Open Data Jawa Timur portal.</dd></div>
                     <div><dt>Approach</dt><dd>Modeled medium and premium prices separately with ARIMA, using ADF-based differencing, ACF and PACF inspection, candidate evaluation, convergence checks, and residual diagnostics.</dd></div>
-                    <div><dt>Validation &amp; Controls</dt><dd>Started with the first 48 observations, forecast the next month, added the newly available actual price, and repeated the process across the remaining 12 months. The selected models recorded 2.08% MAPE for medium rice and 1.82% for premium rice.</dd></div>
+                    <div><dt>Validation &amp; Controls</dt><dd>Started with the first 48 observations, forecast the next month, added the newly available actual price, and repeated the process across the remaining 12 months. The selected models recorded 2.0800% MAPE for medium rice and 1.8200% for premium rice.</dd></div>
                   </dl>
                 </details>
               </div>
@@ -497,8 +497,8 @@
                   </div>
                 </div>
                 <div class="metric-row" aria-label="ARIMA rice-price evaluation results">
-                  <div><strong>2.08%</strong><span>Medium Rice MAPE</span></div>
-                  <div><strong>1.82%</strong><span>Premium Rice MAPE</span></div>
+                  <div><strong>2.0800%</strong><span>Medium Rice MAPE</span></div>
+                  <div><strong>1.8200%</strong><span>Premium Rice MAPE</span></div>
                   <div><strong>12</strong><span>Walk-Forward Steps</span></div>
                 </div>
                 <p class="project-output"><strong>Project Output</strong><span>The workflow turns 60 public monthly observations into explainable 1-step-ahead forecasts, selected ARIMA orders, diagnostic records, error summaries, and comparison visuals for both rice categories.</span></p>

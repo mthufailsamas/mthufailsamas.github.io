@@ -86,6 +86,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
+| Public metric precision | Approved | Release `20260909-05` formats visible accuracy, error, and related model-performance scores to 4 decimal places while preserving counts, ratios, thresholds, and other non-performance quantities; change to Published only after Pages and live verification succeed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -525,6 +526,21 @@ Pages run `34356927342`. The live release marker returned `20260909-04`; the
 WebP returned HTTP 200 with the correct `image/webp` content type, and clicking
 it opened the same 1920x1080 intrinsic image on desktop and mobile.
 
+**2026-09-09 public metric precision:** Release `20260909-05` standardizes
+visible accuracy, error, and related model-performance scores to 4 decimal
+places across project details and headline metric rows. The Retail card now
+shows mean 4-fold RMSLE 0.5246, mean fold WAPE 15.2366%, and protected
+internal-test WAPE 14.6689%. The AI Service Request Automation card derives
+96.6667% from its accepted 29/30 result rather than padding the older rounded
+96.7% display; its exact perfect scores display as 100.0000%. XGBoost rainfall
+category accuracy displays as 75.0000%; Thyroid scores display as 97.2500%,
+95.3700%, 98.0500%, and 98.6000%; and ARIMA MAPE displays as 2.0800% and
+1.8200%. Existing 4-decimal rainfall and BiLSTM metrics remain unchanged.
+Counts such as 78/78, sample totals, horizons, thresholds, identifiers, DOI
+values, and GPA are outside this formatting rule. No metric meaning,
+evaluation boundary, resume fact, or project evidence changes. `index.html` is
+49,035 bytes and the asset tree remains 810,979 bytes.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -776,7 +792,7 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260909-04` preserves
+No project claim is waiting in the audit queue. Release `20260909-05` preserves
 the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules
@@ -793,6 +809,13 @@ Keep the following evidence levels distinct:
 ### Claim and wording controls
 
 - Never convert WAPE, RMSLE, MAE, or another error metric into “accuracy.”
+- Display public accuracy, error, and related model-performance scores with 4
+  digits after the decimal point. Round from the most precise accepted source
+  value when available; otherwise append trailing zeros only as presentation
+  formatting and never imply that new measurement precision was created.
+  Preserve integer counts and ratios such as `78/78`, and do not apply this
+  rule to data volumes, horizons, thresholds, versions, identifiers, DOI
+  values, dates, durations, GPA, or other non-performance quantities.
 - Use digits for every explicit quantity, count, duration, range, measurement,
   configuration total, version, metric, and ordinal position in visible copy,
   captions, alt text, diagrams, and public README prose. Before publication,
