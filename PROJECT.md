@@ -85,6 +85,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
+| Retail visual composition alignment | Approved | Release `20260909-04` restores the established 5-stage Full HD composition while replacing every superseded V1 result and artifact label; change to Published only after Pages and live verification succeed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -506,6 +507,20 @@ Pages run `34353389509`. Live desktop and 390-pixel mobile checks returned HTTP
 200, release `20260909-03`, the expected 1600x900 SVG intrinsic dimensions,
 zero horizontal overflow, and no browser console, page, or request errors.
 
+**2026-09-09 Retail visual composition alignment:** Release `20260909-04`
+returns the Retail visual to the established 5-stage composition shared with
+the other independent-project workflow visual and exports it as a native
+1920x1080 WebP. The 135,350-byte image preserves Source Tables, Feature
+Pipeline, Model Selection, Versioned Artifact, and Inference Paths while
+replacing the superseded V1 fields with 3 Ridge and 27 XGBoost candidates,
+4-fold mean RMSLE selection, a V2.0.0 artifact, protected internal-test WAPE
+14.6689%, RMSLE 0.4077, signed bias -0.2556%, and 78/78 checks. The unchanged
+contract evidence remains 28,512 rows across 1,782 store-family series and 16
+days. The active asset tree is 810,979 bytes and `index.html` is 48,985 bytes.
+Local desktop and 390-pixel mobile checks confirmed the same 1920x1080
+intrinsic dimensions as the AI Service Request Automation visual, exact mobile
+rendered dimensions, zero horizontal overflow, and no browser errors.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -654,11 +669,11 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** The active V2 configuration was selected from 3 Ridge and 27 XGBoost configurations evaluated across 4 predeclared chronological folds. It recorded mean fold RMSLE 0.524617 and mean fold WAPE 15.2366%, followed by protected internal-test RMSLE 0.407651, WAPE 14.6689%, and signed bias -0.2556%. The versioned artifact generated 28,512 forecasts across 1,782 store-family series with exact notebook, fresh-process batch, local FastAPI, and Docker parity. All 78 synthetic checks passed locally and in GitHub Actions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual presentation:** Release `20260909-03` replaces the temporary text-only panel with a 5,281-byte, resolution-independent SVG. It presents the current 7-file data contract, 30-candidate 4-fold selection, V2 artifact, batch/API/Docker parity, 28,512-row horizon, and 78/78 checks without restoring the obsolete V1 metrics.
+- **Visual presentation:** Release `20260909-04` uses the established 5-stage independent-project workflow composition as a 135,350-byte native 1920x1080 WebP. Its visible V2 evidence covers 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, the V2.0.0 artifact, batch/API/Docker parity, protected internal-test WAPE 14.6689%, RMSLE 0.4077, signed bias -0.2556%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** Published in release `20260909-03` at portfolio commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` completed successfully and live desktop/mobile verification confirmed the dedicated SVG, expected release marker, zero horizontal overflow, and no browser errors.
+- **Portfolio status:** The synchronized V2 copy is published through release `20260909-03`. Its Full HD composition alignment is approved locally for release `20260909-04`; publication remains pending until GitHub Pages and live verification complete.
 
 ### ai-service-request-automation
 
@@ -757,7 +772,7 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260909-03` preserves
+No project claim is waiting in the audit queue. Release `20260909-04` preserves
 the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules

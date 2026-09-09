@@ -43,8 +43,8 @@ includes:
 - an automatic release-freshness check that replaces a cached page with the
   current published revision;
 - accessible navigation and structured page sections;
-- optimized `1920x1080` WebP evidence visuals, a lightweight
-  resolution-independent SVG for the Retail workflow, semantic HTML panels
+- optimized `1920x1080` WebP evidence visuals with a consistent Full HD
+  workflow composition for the 2 independent projects, semantic HTML panels
   for text-led project evidence, and responsive profile, hero, and
   social-preview images; and
 - downloadable English resume.
@@ -75,7 +75,7 @@ Portfolio Website/
 |   `-- projects/
 |       |-- ai-service-request-automation.webp
 |       |-- dwdm-monitoring.webp
-|       |-- retail-sales-forecasting.svg
+|       |-- retail-sales-forecasting.webp
 |       `-- xgboost-rainfall.webp
 |-- documents/
 |   `-- m-thufail-alwannabil-samas-cv.pdf
