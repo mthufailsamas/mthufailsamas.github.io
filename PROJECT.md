@@ -84,7 +84,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Shared project facts and metrics | Synced | The 3 resume projects and all overlapping project metrics preserve the same evaluation boundaries; the website adds 4 evidence-backed projects and deeper limitations. |
 | Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
-| Retail visual restoration | Approved | Release `20260909-03` adds a current V2 SVG visual without changing the synchronized project claims; change to Published only after Pages and live verification succeed. |
+| Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -500,8 +500,11 @@ versioned V2 artifact, exact batch/FastAPI/Docker parity, 28,512 forecast rows,
 a 16-day horizon, and 78/78 synthetic checks. The surrounding metric row keeps
 the model-quality results in live HTML. The active asset tree is 680,910 bytes
 and `index.html` is 48,969 bytes, so the restoration remains within the public
-source and asset budgets. Local desktop and 390-pixel mobile renders are
-approved; publication remains pending.
+source and asset budgets. Commit
+`a686212357ccac22619082d2eaaaaec653ebd6de` was published successfully by
+Pages run `34353389509`. Live desktop and 390-pixel mobile checks returned HTTP
+200, release `20260909-03`, the expected 1600x900 SVG intrinsic dimensions,
+zero horizontal overflow, and no browser console, page, or request errors.
 
 ## 2. Evidence required for each role family
 
@@ -655,7 +658,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** The synchronized V2 copy is published in release `20260909-02`. Its dedicated SVG restoration is approved locally for release `20260909-03`; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-03` at portfolio commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` completed successfully and live desktop/mobile verification confirmed the dedicated SVG, expected release marker, zero horizontal overflow, and no browser errors.
 
 ### ai-service-request-automation
 
