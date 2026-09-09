@@ -85,7 +85,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
-| Retail visual composition alignment | Approved | Release `20260909-04` restores the established 5-stage Full HD composition while replacing every superseded V1 result and artifact label; change to Published only after Pages and live verification succeed. |
+| Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -519,7 +519,11 @@ contract evidence remains 28,512 rows across 1,782 store-family series and 16
 days. The active asset tree is 810,979 bytes and `index.html` is 48,985 bytes.
 Local desktop and 390-pixel mobile checks confirmed the same 1920x1080
 intrinsic dimensions as the AI Service Request Automation visual, exact mobile
-rendered dimensions, zero horizontal overflow, and no browser errors.
+rendered dimensions, zero horizontal overflow, and no browser errors. Commit
+`00e9a922bef313602272563afffb0c16e6afdabc` was published successfully by
+Pages run `34356927342`. The live release marker returned `20260909-04`; the
+WebP returned HTTP 200 with the correct `image/webp` content type, and clicking
+it opened the same 1920x1080 intrinsic image on desktop and mobile.
 
 ## 2. Evidence required for each role family
 
@@ -673,7 +677,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** The synchronized V2 copy is published through release `20260909-03`. Its Full HD composition alignment is approved locally for release `20260909-04`; publication remains pending until GitHub Pages and live verification complete.
+- **Portfolio status:** Published in release `20260909-04` at portfolio commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` completed successfully, and live desktop/mobile checks confirmed the aligned 1920x1080 visual, full-size click behavior, expected release marker, zero horizontal overflow, and no browser errors.
 
 ### ai-service-request-automation
 
