@@ -86,7 +86,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
-| Public metric precision | Published | Release `20260909-05` was published from commit `11914104e35e5eff4810a3c911650f29434b52e5`; Pages run `34363802628` succeeded and live desktop/mobile verification passed. |
+| Public metric formatting | Approved | Release `20260909-06` applies adaptive precision to visible performance metrics: at most 4 decimal places for non-percentage values, at most 2 for percentages, and no trailing decimal zeros; change to Published only after Pages and live verification succeed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -526,25 +526,20 @@ Pages run `34356927342`. The live release marker returned `20260909-04`; the
 WebP returned HTTP 200 with the correct `image/webp` content type, and clicking
 it opened the same 1920x1080 intrinsic image on desktop and mobile.
 
-**2026-09-09 public metric precision:** Release `20260909-05` standardizes
-visible accuracy, error, and related model-performance scores to 4 decimal
-places across project details and headline metric rows. The Retail card now
-shows mean 4-fold RMSLE 0.5246, mean fold WAPE 15.2366%, and protected
-internal-test WAPE 14.6689%. The AI Service Request Automation card derives
-96.6667% from its accepted 29/30 result rather than padding the older rounded
-96.7% display; its exact perfect scores display as 100.0000%. XGBoost rainfall
-category accuracy displays as 75.0000%; Thyroid scores display as 97.2500%,
-95.3700%, 98.0500%, and 98.6000%; and ARIMA MAPE displays as 2.0800% and
-1.8200%. Existing 4-decimal rainfall and BiLSTM metrics remain unchanged.
-Counts such as 78/78, sample totals, horizons, thresholds, identifiers, DOI
-values, and GPA are outside this formatting rule. No metric meaning,
-evaluation boundary, resume fact, or project evidence changes. `index.html` is
-49,035 bytes and the asset tree remains 810,979 bytes. Commit
-`11914104e35e5eff4810a3c911650f29434b52e5` was published successfully by
-Pages run `34363802628`. The live release marker returned `20260909-05` with
-HTTP 200 at desktop 1440x1000 and mobile 390x844. All 22 values across 7
-headline metric rows fit their cells without horizontal overflow; no obsolete
-display values or browser errors were found.
+**2026-09-09 adaptive metric formatting:** Release `20260909-06` replaces the
+forced 4-decimal presentation with compact, value-sensitive formatting.
+Visible non-percentage performance scores use at most 4 decimal places;
+visible percentages use at most 2 decimal places; and trailing decimal zeros
+are removed. Examples include RMSLE 0.5246, WAPE 15.24% and 14.67%, exact
+perfect scores at 100%, route and task success at 96.67%, total bias at 5.9%,
+BMKG category accuracy at 75%, Thyroid ROC-AUC at 98.6%, and ARIMA MAPE at
+2.08% and 1.82%. Counts, ratios, sample totals, horizons, thresholds,
+identifiers, DOI values, dates, GPA, and other non-performance quantities are
+outside this rule. The Retail visual retains its approved 1920x1080 layout and
+now displays WAPE 14.67%, RMSLE 0.4077, and signed bias -0.26%. No metric
+meaning, evaluation boundary, resume fact, or project evidence changes.
+`index.html` is 48,971 bytes, the Retail WebP is 162,712 bytes, and the asset
+tree is 838,341 bytes.
 
 ## 2. Evidence required for each role family
 
@@ -694,7 +689,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** The active V2 configuration was selected from 3 Ridge and 27 XGBoost configurations evaluated across 4 predeclared chronological folds. It recorded mean fold RMSLE 0.524617 and mean fold WAPE 15.2366%, followed by protected internal-test RMSLE 0.407651, WAPE 14.6689%, and signed bias -0.2556%. The versioned artifact generated 28,512 forecasts across 1,782 store-family series with exact notebook, fresh-process batch, local FastAPI, and Docker parity. All 78 synthetic checks passed locally and in GitHub Actions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual presentation:** Release `20260909-04` uses the established 5-stage independent-project workflow composition as a 135,350-byte native 1920x1080 WebP. Its visible V2 evidence covers 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, the V2.0.0 artifact, batch/API/Docker parity, protected internal-test WAPE 14.6689%, RMSLE 0.4077, signed bias -0.2556%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
+- **Visual presentation:** Release `20260909-06` preserves the established 5-stage independent-project workflow composition as a 162,712-byte native 1920x1080 WebP. Its visible V2 evidence covers 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, the V2.0.0 artifact, batch/API/Docker parity, protected internal-test WAPE 14.67%, RMSLE 0.4077, signed bias -0.26%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
@@ -797,7 +792,7 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260909-05` preserves
+No project claim is waiting in the audit queue. Release `20260909-06` preserves
 the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules
@@ -814,12 +809,12 @@ Keep the following evidence levels distinct:
 ### Claim and wording controls
 
 - Never convert WAPE, RMSLE, MAE, or another error metric into “accuracy.”
-- Display public accuracy, error, and related model-performance scores with 4
-  digits after the decimal point. Round from the most precise accepted source
-  value when available; otherwise append trailing zeros only as presentation
-  formatting and never imply that new measurement precision was created.
-  Preserve integer counts and ratios such as `78/78`, and do not apply this
-  rule to data volumes, horizons, thresholds, versions, identifiers, DOI
+- Display public accuracy, error, and related model-performance scores with at
+  most 4 digits after the decimal point for non-percentage values and at most 2
+  for percentages. Round from the most precise accepted source value, then
+  remove trailing decimal zeros and the decimal point when no fractional part
+  remains. Preserve integer counts and ratios such as `78/78`, and do not apply
+  this rule to data volumes, horizons, thresholds, versions, identifiers, DOI
   values, dates, durations, GPA, or other non-performance quantities.
 - Use digits for every explicit quantity, count, duration, range, measurement,
   configuration total, version, metric, and ordinal position in visible copy,
