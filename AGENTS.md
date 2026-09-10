@@ -327,6 +327,11 @@ copies.
   `previous`, dated duplicate, or prior-version fallback. Git history is the
   recovery record.
 - Do not retain an unused PNG after switching the live reference to WebP.
+- Every displayed project must retain a dedicated evidence-backed visual.
+  Optimization may resize, compress, or convert that visual, but must not
+  remove it or replace it with an HTML placeholder without explicit user
+  approval. When a previously withheld project result is restored, restore
+  its corresponding visual in the same revision.
 - Do not retain an old resume after a replacement PDF is accepted and every
   link points to the new file.
 - Update the README repository tree whenever the active file set changes.

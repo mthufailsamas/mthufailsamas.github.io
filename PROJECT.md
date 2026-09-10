@@ -87,6 +87,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
 | Public metric formatting | Published | Release `20260909-06` was published from commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` succeeded and live desktop/mobile verification passed. |
+| Academic visual restoration | Approved | Release `20260910-01` restores the project-native Thyroid, BiLSTM, and ARIMA result visuals as optimized Full HD WebP assets while preserving the approved card copy and metrics. Publication and live verification are pending. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -465,6 +466,10 @@ the complete active `assets/` tree is 788,131 bytes. A responsive `<picture>`
 selects the 88,154 byte desktop hero or 178,186 byte mobile hero instead of
 requesting both intentionally.
 
+The HTML-panel substitution for the Thyroid, BiLSTM, and ARIMA cards is a
+superseded presentation decision as of release `20260910-01`; the original
+project-native result visuals are restored in that release.
+
 **2026-08-28 optimization publication status:** Published at portfolio commit
 `b3d816924f23cce4208c250705d8e8a9ca7c7745`; Pages run `33181444257`
 completed successfully. Live QA at 1440x1000 and 390x844 confirmed release
@@ -546,6 +551,20 @@ and mobile 390x844, the release marker returned `20260909-06`, all 22 headline
 values fit their cells, the Retail visual retained its native 1920x1080
 dimensions, and no obsolete display values, horizontal overflow, failed
 requests, browser warnings, or runtime errors were found.
+
+**2026-09-10 academic visual restoration:** Release `20260910-01` restores
+the exact project-native Thyroid Information Gain, BiLSTM observed-versus-
+predicted rainfall, and ARIMA observed-versus-forecast rice-price visuals from
+Git history. Each source visual is exported as a native `1920x1080` WebP and
+linked from its card for full-size inspection. The optimized files are 75,576,
+95,786, and 93,234 bytes respectively, all below the 250 KB target without
+reducing their Full HD resolution. The approved card copy, metric rows, and
+evaluation boundaries are unchanged. The superseded HTML workflow panels,
+their unused CSS, the temporary conversion script, and the restored PNG source
+copies are removed in the same revision. `index.html`, `styles.css`, and
+`script.js` are 48,752, 21,091, and 2,493 bytes; the complete active `assets/`
+tree is 1,102,937 bytes. Commit, Pages publication, and live desktop/mobile
+verification are pending.
 
 ## 2. Evidence required for each role family
 
@@ -762,6 +781,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** None.
 - **Verified metrics:** The V1 preparation path loads 383 source rows and 17 columns, removes 19 exact full-row repetitions, and retains 364 rows with 256 `No` and 108 `Yes` labels. V1 uses shuffled 10-fold K-Fold, fold-local Information Gain, and XGBoost Grid Search. The completed result records 97.25% pooled out-of-fold accuracy, 95.37% F1-score, 98.05% specificity, and 98.60% ROC-AUC. The user explicitly confirmed these existing metrics as authentic on 2026-08-29.
 - **Public repository:** https://github.com/mthufailsamas/xgboost-thyroid-recurrence-classification
+- **Visual asset source:** Exact project-native V1 Information Gain chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
+- **Visual factual inventory:** Title `Top 10 Features by Mean Information Gain`; subtitle `Mean Information Gain across 10 Training Folds`; ranked bars `Response 0.666`, `Risk 0.424`, `N 0.277`, `T 0.274`, `Adenopathy_No 0.267`, `Age 0.221`, `Stage 0.176`, `Focality 0.097`, `Adenopathy_Bilateral 0.091`, and `M 0.091`; x-axis `Mean Information Gain across 10 Training Folds (bits)`. These are the user-confirmed historical V1 feature-selection results, not causal or clinical importance claims.
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
 - **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes the completed V1 metrics and non-clinical evaluation boundary.
@@ -777,6 +798,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** None.
 - **Verified metrics:** The runnable reference workflow uses a 7-day input window, 3 stacked BiLSTM layers, and a focused 27-configuration grid across units, batch size, and learning-rate drop period. It uses an 80:20 chronological split and returns predictions to millimeters before scoring. The completed run recorded MAAPE 0.8073 and RMSE 10.2734 mm; the user explicitly confirmed these existing metrics as authentic on 2026-08-29.
 - **Public repository:** https://github.com/mthufailsamas/bilstm-rainfall-prediction
+- **Visual asset source:** Exact project-native completed-run actual-versus-predicted chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
+- **Visual factual inventory:** Title `BiLSTM Rainfall Prediction`; subtitle `Observed Rainfall and Next-Day Predictions over the Chronological Test Period`; legend labels `Observed` and `Predicted`; daily series across October 2023-May 2024; y-axis `24-hour rainfall (mm)` and x-axis `Date`. The visual represents the user-confirmed historical internship run whose source observations remain private.
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
 - **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation.
@@ -792,13 +815,15 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** None.
 - **Verified metrics:** The included public dataset contains 60 monthly observations from January 2020 through December 2024 for 2 price series. The default 80:20 design uses 48 initial months and 12 expanding-history 1-step forecasts. The completed results recorded MAPE 2.08% and 1.82%; the user explicitly confirmed these existing metrics as authentic on 2026-08-29.
 - **Public repository:** https://github.com/mthufailsamas/arima-rice-price-forecasting
+- **Visual asset source:** Exact project-native completed-run walk-forward chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
+- **Visual factual inventory:** Title `ARIMA Walk-Forward Forecasts`; subtitle `Observed and One-Step-Ahead Forecasts over the Held-Out Monthly Period`; panels `Medium Rice` and `Premium Rice`; legend labels `Observed` and `Forecast`; y-axis `IDR/kg` and x-axis `Test Month` across January-December 2024. The visible series and period match the included 60-row public monthly dataset and 12-step walk-forward design.
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
 - **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260909-06` preserves
+No project claim is waiting in the audit queue. Release `20260910-01` preserves
 the approved website synchronization for the current canonical registry.
 
 ## 5. Evidence-first portfolio rules

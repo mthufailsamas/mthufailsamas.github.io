@@ -99,7 +99,7 @@
     <script>
       (() => {
         const releaseParameter = "release";
-        const embeddedRelease = "20260909-06";
+        const embeddedRelease = "20260910-01";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -406,14 +406,12 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <div class="project-workflow" aria-label="Thyroid classification evaluation workflow">
-                  <p class="project-workflow-title">Completed classification evaluation workflow</p>
-                  <div class="project-workflow-steps" role="list">
-                    <div role="listitem"><span>01</span><strong>Data Audit</strong><small>Mixed feature types and exact-row review</small></div>
-                    <div role="listitem"><span>02</span><strong>Fold-Local Selection</strong><small>Information Gain inside each training fold</small></div>
-                    <div role="listitem"><span>03</span><strong>Exhaustive Search</strong><small>XGBoost grid evaluated across 10 folds</small></div>
-                  </div>
-                </div>
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/thyroid-classification.webp?v=20260910a" target="_blank" rel="noopener noreferrer" aria-label="Open the thyroid classification project visual at full size">
+                    <img src="assets/projects/thyroid-classification.webp?v=20260910a" alt="Top 10 encoded features using their original column names, ranked by mean Information Gain across 10 training folds" width="1920" height="1080" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Top 10 encoded features by mean Information Gain across 10 training folds.</figcaption>
+                </figure>
                 <div class="metric-row" aria-label="Thyroid classification evaluation results">
                   <div><strong>97.25%</strong><span>OOF Accuracy</span></div>
                   <div><strong>95.37%</strong><span>F1 Score</span></div>
@@ -447,14 +445,12 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <div class="project-workflow" aria-label="BiLSTM rainfall forecasting workflow">
-                  <p class="project-workflow-title">Sequence forecasting workflow</p>
-                  <div class="project-workflow-steps" role="list">
-                    <div role="listitem"><span>01</span><strong>Sequence Build</strong><small>Chronological weather windows</small></div>
-                    <div role="listitem"><span>02</span><strong>Focused Search</strong><small>Units, batch size, and learning-rate period</small></div>
-                    <div role="listitem"><span>03</span><strong>Holdout Review</strong><small>Predictions returned to millimeters</small></div>
-                  </div>
-                </div>
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/bilstm-rainfall.webp?v=20260910a" target="_blank" rel="noopener noreferrer" aria-label="Open the BiLSTM rainfall project visual at full size">
+                    <img src="assets/projects/bilstm-rainfall.webp?v=20260910a" alt="Observed rainfall and next-day BiLSTM predictions over the chronological test period" width="1920" height="1080" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Observed rainfall and next-day predictions over the chronological test period.</figcaption>
+                </figure>
                 <div class="metric-row" aria-label="BiLSTM rainfall evaluation results">
                   <div><strong>0.8073</strong><span>MAAPE</span></div>
                   <div><strong>10.2734 mm</strong><span>RMSE</span></div>
@@ -488,14 +484,12 @@
                 </details>
               </div>
               <div class="project-result-column">
-                <div class="project-workflow" aria-label="ARIMA rice-price forecasting workflow">
-                  <p class="project-workflow-title">Explainable monthly forecasting workflow</p>
-                  <div class="project-workflow-steps" role="list">
-                    <div role="listitem"><span>01</span><strong>Series Audit</strong><small>Public monthly prices and stationarity checks</small></div>
-                    <div role="listitem"><span>02</span><strong>Order Plan</strong><small>ADF, ACF, PACF, and diagnostic screening</small></div>
-                    <div role="listitem"><span>03</span><strong>Walk-Forward</strong><small>Expanding history and 1-step forecasts</small></div>
-                  </div>
-                </div>
+                <figure class="project-visual">
+                  <a class="project-image-link" href="assets/projects/arima-rice.webp?v=20260910a" target="_blank" rel="noopener noreferrer" aria-label="Open the ARIMA rice-price project visual at full size">
+                    <img src="assets/projects/arima-rice.webp?v=20260910a" alt="Observed and 1-step-ahead forecast prices for medium and premium rice during walk-forward evaluation" width="1920" height="1080" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Observed and 1-step-ahead forecasts over the walk-forward test period.</figcaption>
+                </figure>
                 <div class="metric-row" aria-label="ARIMA rice-price evaluation results">
                   <div><strong>2.08%</strong><span>Medium Rice MAPE</span></div>
                   <div><strong>1.82%</strong><span>Premium Rice MAPE</span></div>

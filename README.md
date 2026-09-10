@@ -74,8 +74,11 @@ Portfolio Website/
 |   |   `-- data-ai-system-mobile.webp
 |   `-- projects/
 |       |-- ai-service-request-automation.webp
+|       |-- arima-rice.webp
+|       |-- bilstm-rainfall.webp
 |       |-- dwdm-monitoring.webp
 |       |-- retail-sales-forecasting.webp
+|       |-- thyroid-classification.webp
 |       `-- xgboost-rainfall.webp
 |-- documents/
 |   `-- m-thufail-alwannabil-samas-cv.pdf
