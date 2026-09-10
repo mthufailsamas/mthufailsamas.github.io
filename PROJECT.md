@@ -87,7 +87,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
 | Public metric formatting | Published | Release `20260909-06` was published from commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` succeeded and live desktop/mobile verification passed. |
-| Academic visual restoration | Approved | Release `20260910-01` restores the project-native Thyroid, BiLSTM, and ARIMA result visuals as optimized Full HD WebP assets while preserving the approved card copy and metrics. Publication and live verification are pending. |
+| Academic visual restoration | Published | Release `20260910-01` was published from commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` succeeded and live desktop/mobile plus asset-integrity verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -564,7 +564,13 @@ their unused CSS, the temporary conversion script, and the restored PNG source
 copies are removed in the same revision. `index.html`, `styles.css`, and
 `script.js` are 48,752, 21,091, and 2,493 bytes; the complete active `assets/`
 tree is 1,102,937 bytes. Commit, Pages publication, and live desktop/mobile
-verification are pending.
+verification completed successfully at portfolio commit
+`5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442`
+completed successfully. Live checks at 1440x1000 and 390x844 confirmed all 4
+Academic cards, native `1920x1080` dimensions for every visual, no horizontal
+overflow, working filtering and mobile navigation, and no browser warnings or
+runtime errors. Each restored WebP returned HTTP 200 with `image/webp`, and its
+live byte count and SHA-256 matched the local final asset.
 
 ## 2. Evidence required for each role family
 
@@ -785,7 +791,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual factual inventory:** Title `Top 10 Features by Mean Information Gain`; subtitle `Mean Information Gain across 10 Training Folds`; ranked bars `Response 0.666`, `Risk 0.424`, `N 0.277`, `T 0.274`, `Adenopathy_No 0.267`, `Age 0.221`, `Stage 0.176`, `Focality 0.097`, `Adenopathy_Bilateral 0.091`, and `M 0.091`; x-axis `Mean Information Gain across 10 Training Folds (bits)`. These are the user-confirmed historical V1 feature-selection results, not causal or clinical importance claims.
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
 - **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
-- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes the completed V1 metrics and non-clinical evaluation boundary.
+- **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves the completed V1 metrics and non-clinical evaluation boundary while restoring the project-native Information Gain visual.
 
 ### bilstm-rainfall-forecasting
 
@@ -802,7 +808,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual factual inventory:** Title `BiLSTM Rainfall Prediction`; subtitle `Observed Rainfall and Next-Day Predictions over the Chronological Test Period`; legend labels `Observed` and `Predicted`; daily series across October 2023-May 2024; y-axis `24-hour rainfall (mm)` and x-axis `Date`. The visual represents the user-confirmed historical internship run whose source observations remain private.
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
 - **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
-- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation.
+- **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation while restoring the project-native actual-versus-predicted visual.
 
 ### arima-rice-price-forecasting
 
@@ -819,7 +825,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual factual inventory:** Title `ARIMA Walk-Forward Forecasts`; subtitle `Observed and One-Step-Ahead Forecasts over the Held-Out Monthly Period`; panels `Medium Rice` and `Premium Rice`; legend labels `Observed` and `Forecast`; y-axis `IDR/kg` and x-axis `Test Month` across January-December 2024. The visible series and period match the included 60-row public monthly dataset and 12-step walk-forward design.
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
 - **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
-- **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation.
+- **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation while restoring the project-native walk-forward visual.
 
 ### Registry audit queue
 
