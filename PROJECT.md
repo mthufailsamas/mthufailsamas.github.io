@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 ## Purpose and authority
 
@@ -86,7 +86,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
-| Public metric formatting | Approved | Release `20260909-06` applies adaptive precision to visible performance metrics: at most 4 decimal places for non-percentage values, at most 2 for percentages, and no trailing decimal zeros; change to Published only after Pages and live verification succeed. |
+| Public metric formatting | Published | Release `20260909-06` was published from commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` succeeded and live desktop/mobile verification passed. |
 
 The matrix records current public risk; it does not authorize publishing an
 unverified row. Each affected project's registry record and project-level
@@ -526,7 +526,7 @@ Pages run `34356927342`. The live release marker returned `20260909-04`; the
 WebP returned HTTP 200 with the correct `image/webp` content type, and clicking
 it opened the same 1920x1080 intrinsic image on desktop and mobile.
 
-**2026-09-09 adaptive metric formatting:** Release `20260909-06` replaces the
+**2026-09-10 adaptive metric formatting:** Release `20260909-06` replaces the
 forced 4-decimal presentation with compact, value-sensitive formatting.
 Visible non-percentage performance scores use at most 4 decimal places;
 visible percentages use at most 2 decimal places; and trailing decimal zeros
@@ -539,7 +539,13 @@ outside this rule. The Retail visual retains its approved 1920x1080 layout and
 now displays WAPE 14.67%, RMSLE 0.4077, and signed bias -0.26%. No metric
 meaning, evaluation boundary, resume fact, or project evidence changes.
 `index.html` is 48,971 bytes, the Retail WebP is 162,712 bytes, and the asset
-tree is 838,341 bytes.
+tree is 838,341 bytes. Commit
+`397376ac88cdffbae2de4413ba242b13a7849ce8` was published successfully by
+Pages run `34419198907`. Live checks returned HTTP 200 at desktop 1440x1000
+and mobile 390x844, the release marker returned `20260909-06`, all 22 headline
+values fit their cells, the Retail visual retained its native 1920x1080
+dimensions, and no obsolete display values, horizontal overflow, failed
+requests, browser warnings, or runtime errors were found.
 
 ## 2. Evidence required for each role family
 
@@ -693,7 +699,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
 - **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
-- **Portfolio status:** Published in release `20260909-04` at portfolio commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` completed successfully, and live desktop/mobile checks confirmed the aligned 1920x1080 visual, full-size click behavior, expected release marker, zero horizontal overflow, and no browser errors.
+- **Portfolio status:** Published in release `20260909-06` at portfolio commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` completed successfully, and live desktop/mobile checks confirmed compact metric formatting, the aligned 1920x1080 visual, expected release marker, zero horizontal overflow, and no browser errors.
 
 ### ai-service-request-automation
 
