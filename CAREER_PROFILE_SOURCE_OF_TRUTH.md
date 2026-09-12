@@ -52,7 +52,7 @@ Use these states:
 ## Resume decisions
 
 - **Status:** Accepted and canonical as of the final 2026-09-09 audit recorded
-  in `Portfolio Website/PROJECT.md`.
+  in `PROJECT.md`.
 - **Experience:** 3-5 compact STAR bullets per entry. Within each experience,
   bullets must have the same rendered line count and visually balanced length
   under the actual resume geometry; do not pad them with filler.
@@ -63,8 +63,8 @@ Use these states:
   free from keyword stuffing or invented impact.
 - **Artifact editing:** provide copy-ready text by default. Do not edit, export,
   or replace the resume file unless the user explicitly authorizes file work.
-- **Detailed accepted content:** governed by `Portfolio Website/PROJECT.md` and
-  the active resume PDF linked there.
+- **Detailed accepted content:** governed by `PROJECT.md` and the active resume
+  PDF linked there.
 
 ## Portfolio website decisions
 
@@ -77,8 +77,7 @@ Use these states:
 - Public project claims must come from each project's current evidence and the
   Portfolio Website Project Registry.
 - Detailed implementation, performance, cleanup, synchronization, and release
-  gates are governed by `Portfolio Website/AGENTS.md` and
-  `Portfolio Website/PROJECT.md`.
+  gates are governed by `AGENTS.md` and `PROJECT.md`.
 
 ## LinkedIn decisions
 
@@ -117,6 +116,29 @@ Use these states:
 - **Upload state:** active local asset prepared; live LinkedIn upload is
   currently unverified.
 
+### About section
+
+- **Format:** one concise opening paragraph combining role, professional value,
+  and credibility; the transition `Some examples of my work include:`; exactly
+  3 evidence-backed examples with relevant scale or metrics; and one closing
+  paragraph naming the opportunity families sought plus an invitation to
+  connect on LinkedIn.
+- **Reference use:** the supplied LinkedIn Summary Template and Salsa Hirawan
+  example govern structure only. Do not copy another person's wording,
+  experience, employers, or metrics.
+- **Years-of-experience treatment:** do not force an `X+ years` claim while the
+  resume chronology includes overlapping roles that could make a single total
+  misleading. Lead with demonstrated scope, value, credentials, and results.
+- **Example selection:** use DWDM monitoring for professional Data Engineering
+  and Data Analysis evidence, Retail Sales Forecasting for Data Science and
+  AI/ML Engineering evidence, and AI Service Request Automation for AI
+  Automation evidence.
+- **Voice:** natural first person is permitted in the LinkedIn opening and
+  closing. Examples remain concise, outcome-oriented, and technically credible.
+- **Metric control:** retain the evaluation boundary beside controlled or local
+  results and use the accepted cross-channel metric formatting.
+- **Copy state:** format is locked; exact wording remains pending user review.
+
 ## Future job-platform profiles
 
 Before creating or revising a profile on another job site:
@@ -133,9 +155,10 @@ Before creating or revising a profile on another job site:
 | Surface | State | Note |
 | --- | --- | --- |
 | Resume | Synced | Final content was accepted on 2026-09-09; project evidence remains authoritative for technical claims. |
-| Portfolio website | Synced | Current public state is recorded in `Portfolio Website/PROJECT.md`; re-verify before any new live claim. |
+| Portfolio website | Synced | Current public state is recorded in `PROJECT.md`; re-verify before any new live claim. |
 | LinkedIn headline | Pending update | Approved two-line-oriented wording exists; live application is unverified. |
 | LinkedIn cover | Pending update | Final local asset exists; live upload is unverified. |
+| LinkedIn About | Pending update | Format is locked; exact wording is awaiting user approval. |
 | Other job-platform profiles | Unverified | Add each platform only when it enters scope. |
 
 ## Decision log
@@ -145,3 +168,4 @@ Before creating or revising a profile on another job site:
 | 2026-09-12 | All career surfaces | Use this register to capture every explicit requirement and approved recommendation, then audit shared facts across channels. | Locked |
 | 2026-09-12 | LinkedIn headline | Use the approved `Data & AI Professional` headline with end-to-end pipelines, insights, predictive systems, and practical AI workflows. | Locked; live application unverified |
 | 2026-09-12 | LinkedIn cover | Preserve the reference-inspired hierarchy, aligned text grid, geometric navy/teal background, fitted value strip, no role panel, and no portfolio URL. | Locked; local asset prepared |
+| 2026-09-12 | LinkedIn About | Use an intro, exactly 3 quantified evidence-backed examples, and an opportunity-focused close; do not force a potentially misleading `X+ years` claim. | Format locked; exact wording pending review |

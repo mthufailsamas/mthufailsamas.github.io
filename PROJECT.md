@@ -88,7 +88,7 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
 | Public metric formatting | Published | Release `20260909-06` was published from commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` succeeded and live desktop/mobile verification passed. |
 | Academic visual restoration | Published | Release `20260910-01` was published from commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` succeeded and live desktop/mobile plus asset-integrity verification passed. |
-| LinkedIn positioning | Pending update | The approved headline and cover decisions are recorded in `CAREER_PROFILE_SOURCE_OF_TRUTH.md`; live LinkedIn application remains unverified. |
+| LinkedIn positioning | Pending update | The approved headline, cover, and About-format decisions are recorded in `CAREER_PROFILE_SOURCE_OF_TRUTH.md`; live LinkedIn application remains unverified. |
 | Other job-platform profiles | Unverified | Add platform-specific rows only when a platform enters scope, then audit every shared fact before calling it synchronized. |
 
 The matrix records current public risk; it does not authorize publishing an
