@@ -7,8 +7,10 @@ canonical claims, evidence, resume synchronization, release status, and the
 next checkpoint.
 
 This repository owns the public portfolio at `https://mthufailsamas.github.io/`
-and its downloadable resume. Treat both as one professional communication
-system with two different levels of detail, not as independent documents.
+and its downloadable resume. Treat both as part of the professional
+communication system governed across the workspace by
+`CAREER_PROFILE_SOURCE_OF_TRUTH.md`, including LinkedIn and future job-platform
+profiles when they are in scope.
 
 Before material work:
 
@@ -20,7 +22,9 @@ Before material work:
    evidence before using a technical claim; and
 5. inspect the complete current resume PDF when identity, experience,
    education, certification, skills, projects, metrics, publication, links, or
-   positioning may be affected.
+   positioning may be affected; and
+6. inspect `CAREER_PROFILE_SOURCE_OF_TRUTH.md` whenever an affected fact or
+   presentation decision can overlap LinkedIn or another job-platform profile.
 
 ## Priority Order
 
@@ -28,7 +32,7 @@ When goals conflict, prioritize:
 
 1. Correct public content and task completion
 2. Security, confidentiality, and evidence integrity
-3. Resume-website semantic consistency
+3. Cross-channel semantic consistency
 4. Preservation of approved behavior and compatibility
 5. HR readability and strong professional positioning
 6. Navigation, accessibility, reading comfort, and responsive behavior
@@ -134,11 +138,12 @@ from the final PDF before giving `ACC`.
 - Keep this repository scoped to the portfolio website. Do not import another
   project's architecture, metrics, maturity status, or implementation claims.
 
-## Resume and Website Synchronization Contract
+## Resume, Website, and Career-Profile Synchronization Contract
 
-The resume and website may have different depth, but they must never disagree.
-Omission for space is allowed; contradiction, status inflation, or mixed
-evidence is not.
+The resume, website, LinkedIn, and in-scope job-platform profiles may have
+different depth and platform-specific presentation, but they must never
+disagree. Omission for space is allowed; contradiction, status inflation, or
+mixed evidence is not.
 
 Treat these as shared canonical facts whenever they appear on either surface:
 
@@ -165,6 +170,11 @@ For every affected shared fact:
    and live business validation; and
 6. mark the synchronization state as `Synced`, `Website broader`, `Resume
    broader`, `Pending resume update`, `Revision required`, or `Blocked`.
+
+Record every explicit new cross-channel requirement or accepted recommendation
+in `CAREER_PROFILE_SOURCE_OF_TRUTH.md` during the same task. A question,
+concern, example, or proposed alternative remains discussion input until the
+user explicitly approves it or makes it mandatory.
 
 `Website broader` and `Resume broader` are acceptable only when the broader
 surface adds verified detail without changing the meaning of the shared fact.
