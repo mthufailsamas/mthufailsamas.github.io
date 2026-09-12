@@ -126,9 +126,12 @@ Use these states:
 - **Reference use:** the supplied LinkedIn Summary Template and Salsa Hirawan
   example govern structure only. Do not copy another person's wording,
   experience, employers, or metrics.
-- **Years-of-experience treatment:** do not force an `X+ years` claim while the
-  resume chronology includes overlapping roles that could make a single total
-  misleading. Lead with demonstrated scope, value, credentials, and results.
+- **Years-of-experience treatment:** open with `3+ years of combined
+  experience`. The total is supported by approximately 38 role-months across
+  Programming Teaching Assistant, Data Science Intern, Coding and AI Teacher,
+  and Junior Programmer experience. Because the Teaching Assistant and BMKG
+  periods overlap, retain `combined` and do not describe this as 3+ years of
+  continuous full-time data-industry experience.
 - **Example selection:** use DWDM monitoring for professional Data Engineering
   and Data Analysis evidence, Retail Sales Forecasting for Data Science and
   AI/ML Engineering evidence, and AI Service Request Automation for AI
@@ -168,4 +171,4 @@ Before creating or revising a profile on another job site:
 | 2026-09-12 | All career surfaces | Use this register to capture every explicit requirement and approved recommendation, then audit shared facts across channels. | Locked |
 | 2026-09-12 | LinkedIn headline | Use the approved `Data & AI Professional` headline with end-to-end pipelines, insights, predictive systems, and practical AI workflows. | Locked; live application unverified |
 | 2026-09-12 | LinkedIn cover | Preserve the reference-inspired hierarchy, aligned text grid, geometric navy/teal background, fitted value strip, no role panel, and no portfolio URL. | Locked; local asset prepared |
-| 2026-09-12 | LinkedIn About | Use an intro, exactly 3 quantified evidence-backed examples, and an opportunity-focused close; do not force a potentially misleading `X+ years` claim. | Format locked; exact wording pending review |
+| 2026-09-12 | LinkedIn About | Follow the reference structure with `3+ years of combined experience`, an intro and value proposition, exactly 3 quantified evidence-backed examples, and an opportunity-focused close. Retain `combined` because 2 resume roles overlap. | Format locked; exact wording pending review |
