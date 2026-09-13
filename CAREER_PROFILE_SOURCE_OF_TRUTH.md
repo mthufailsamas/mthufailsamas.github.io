@@ -169,7 +169,11 @@ Use these states:
   About result merely because they are quantitative. The portfolio remains the
   destination for methodology, supporting metrics, and detailed evidence.
 - **Voice:** natural first person is permitted in the LinkedIn opening and
-  closing. Examples remain concise, outcome-oriented, and technically credible.
+  closing, but use it sparingly rather than centering every paragraph on `I`.
+  Project examples use professional action-led statements with an implied
+  first-person subject and must not repeat `I` in every case study. Do not force
+  awkward passive voice merely to remove first person. Examples remain concise,
+  outcome-oriented, and technically credible.
 - **Metric control:** retain the evaluation boundary beside controlled or local
   results and use the accepted cross-channel metric formatting.
 - **Copy state:** format is locked; exact wording remains pending user review.
@@ -207,3 +211,4 @@ Before creating or revising a profile on another job site:
 | 2026-09-13 | All career surfaces | Require HR-first communication, natural human-written copy, evidence-bounded confident positioning, and consistent professional American English with separate quality passes. | Locked |
 | 2026-09-13 | All career surfaces | Require a dedicated redundancy pass: every retained sentence, bullet, metric, tool mention, and section must add distinct value or serve a distinct reader task. | Locked |
 | 2026-09-13 | LinkedIn About | Require each of the 3 case studies to be exactly 1 self-contained Problem-Solution-Result sentence with at least 1 verified, immediately understandable quantitative result; reserve unexplained technical metrics, test counts, methodology, and supporting evidence for the portfolio. | Locked; exact wording pending review |
+| 2026-09-13 | LinkedIn About | Use first person sparingly in the opening and close; keep project examples as professional action-led statements with an implied subject instead of repeating `I` in every case study. | Locked; exact wording pending review |
