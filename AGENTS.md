@@ -265,8 +265,11 @@ jargon when it interrupts a general reader, especially in LinkedIn About copy.
 Reject formulaic AI-sounding prose: generic self-description, interchangeable
 buzzwords, repeated sentence templates, forced rhetorical contrasts, excessive
 transition phrases, and ornamental wording without evidence. Copy must sound
-like a specific professional describing actual work. Before approval, perform
-separate factual, HR-readability, human-voice, and standard-English passes.
+like a specific professional describing actual work. Remove repeated claims,
+metrics, tool lists, conclusions, and paraphrased sentences unless each
+occurrence serves a distinct reader task. Cross-surface repetition required for
+semantic consistency is not a defect. Before approval, perform separate
+factual, HR-readability, human-voice, standard-English, and redundancy passes.
 
 ## Information Architecture and Navigation
 

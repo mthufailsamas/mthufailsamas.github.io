@@ -117,9 +117,11 @@ Across the resume, website, LinkedIn, and future job-platform profiles, use the
 cross-channel writing contract in `CAREER_PROFILE_SOURCE_OF_TRUTH.md`. English
 copy defaults to professional American English and must pass separate checks
 for factual consistency, HR readability, natural human voice, and language
-quality. Platform-specific depth remains deliberate: LinkedIn About uses the
-broadest plain language, the resume balances HR and ATS needs, and the
-portfolio preserves the deepest supporting evidence.
+quality. A separate redundancy check removes repeated claims, metrics, tool
+lists, and conclusions unless each occurrence serves a distinct reader task.
+Platform-specific depth remains deliberate: LinkedIn About uses the broadest
+plain language, the resume balances HR and ATS needs, and the portfolio
+preserves the deepest supporting evidence.
 
 ### Locked sequential resume-review decisions
 
