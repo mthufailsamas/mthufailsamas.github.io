@@ -1,6 +1,6 @@
 # Career Profile Source of Truth
 
-Last updated: 2026-09-12
+Last updated: 2026-09-13
 
 ## Purpose
 
@@ -48,6 +48,20 @@ Use these states:
 6. When an accepted revision replaces content or an asset, remove the unused
    prior version and temporary files after reference checks. Do not retain
    backup, old, copy, or parallel-final files.
+7. Every surface must be HR-friendly: lead with the reader's practical context,
+   the candidate's contribution, and a concrete result or value before dense
+   technical detail. Preserve supported ATS keywords without keyword stuffing.
+8. English career copy uses professional American English consistently,
+   including grammar, spelling, punctuation, capitalization, tense, articles,
+   prepositions, terminology, and parallel structure. Prefer the accepted
+   American forms `modeling`, `labeled`, and `behavior` over mixed dialects.
+9. Copy must read as deliberately human-written. Use specific evidence,
+   natural sentence rhythm, and platform-appropriate depth; reject generic
+   self-praise, interchangeable buzzwords, repetitive templates, inflated
+   transitions, and polished filler that could describe any candidate.
+10. Apply separate acceptance passes for factual consistency, HR readability,
+    natural human voice, and standard English. A surface does not pass merely
+    because its grammar is correct or its keywords are present.
 
 ## Resume decisions
 
@@ -172,3 +186,4 @@ Before creating or revising a profile on another job site:
 | 2026-09-12 | LinkedIn headline | Use the approved `Data & AI Professional` headline with end-to-end pipelines, insights, predictive systems, and practical AI workflows. | Locked; live application unverified |
 | 2026-09-12 | LinkedIn cover | Preserve the reference-inspired hierarchy, aligned text grid, geometric navy/teal background, fitted value strip, no role panel, and no portfolio URL. | Locked; local asset prepared |
 | 2026-09-12 | LinkedIn About | Follow the reference structure with `3+ years of combined experience`, an intro and value proposition, exactly 3 quantified evidence-backed examples, and an opportunity-focused close. Retain `combined` because 2 resume roles overlap. | Format locked; exact wording pending review |
+| 2026-09-13 | All career surfaces | Require HR-first communication, natural human-written copy, evidence-bounded confident positioning, and consistent professional American English with separate quality passes. | Locked |

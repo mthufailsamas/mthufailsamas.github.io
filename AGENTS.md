@@ -249,6 +249,25 @@ Use the canonical `My Contribution` label only as a section label. The text
 under it remains direct professional description rather than conversational
 owner narration.
 
+### English language and human-voice standard
+
+Use professional American English across the website, resume recommendations,
+LinkedIn drafts, and other job-platform copy. Keep grammar, spelling,
+punctuation, capitalization, tense, articles, prepositions, terminology, and
+parallel construction correct and consistent. Prefer American forms already
+used by the accepted resume, including `modeling`, `labeled`, and `behavior`.
+
+HR-friendly does not mean removing every technical term. Lead with the problem,
+action, output, or professional value; then retain the supported terminology
+needed by ATS and technical reviewers. Explain, simplify, or move uncommon
+jargon when it interrupts a general reader, especially in LinkedIn About copy.
+
+Reject formulaic AI-sounding prose: generic self-description, interchangeable
+buzzwords, repeated sentence templates, forced rhetorical contrasts, excessive
+transition phrases, and ornamental wording without evidence. Copy must sound
+like a specific professional describing actual work. Before approval, perform
+separate factual, HR-readability, human-voice, and standard-English passes.
+
 ## Information Architecture and Navigation
 
 - Keep one coherent narrative page unless a real user task requires another

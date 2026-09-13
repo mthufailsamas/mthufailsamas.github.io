@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-09-12
+Last updated: 2026-09-13
 
 ## Purpose and authority
 
@@ -112,6 +112,14 @@ deployment, scale, ownership, or business impact.
 Avoid fresh-graduate framing, first-person owner narration, keyword stuffing,
 generic self-praise, and defensive copy. Keep the positioning centered on a
 Data and AI Professional whose work is demonstrated through current evidence.
+
+Across the resume, website, LinkedIn, and future job-platform profiles, use the
+cross-channel writing contract in `CAREER_PROFILE_SOURCE_OF_TRUTH.md`. English
+copy defaults to professional American English and must pass separate checks
+for factual consistency, HR readability, natural human voice, and language
+quality. Platform-specific depth remains deliberate: LinkedIn About uses the
+broadest plain language, the resume balances HR and ATS needs, and the
+portfolio preserves the deepest supporting evidence.
 
 ### Locked sequential resume-review decisions
 
