@@ -87,6 +87,40 @@
     controls.hidden = false;
   }
 
+  function initializeMotion() {
+    // Content is visible by default; motion is a one-shot enhancement only.
+    if (!window.matchMedia || !window.IntersectionObserver) return;
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (preference.matches) return;
+    const headings = Array.from(document.querySelectorAll(
+      ".split-heading h2, .section-heading h2, .publication-grid h2, .credentials-grid h2, .contact-grid h2, .project-copy h3"
+    ));
+    if (!headings.length) return;
+    let remaining = headings.length;
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (!isIntersecting || preference.matches) return;
+        observer.unobserve(target);
+        remaining -= 1;
+        if (!target.contains(document.activeElement)) {
+          target.classList.add("motion-enter");
+          target.addEventListener("animationend", () => target.classList.remove("motion-enter"), { once: true });
+        }
+      });
+      if (!remaining) observer.disconnect();
+    }, { threshold: 0.15 });
+    headings.forEach((heading) => observer.observe(heading));
+
+    const stopMotion = () => {
+      if (!preference.matches) return;
+      observer.disconnect();
+      headings.forEach((heading) => heading.classList.remove("motion-enter"));
+    };
+    if (preference.addEventListener) preference.addEventListener("change", stopMotion);
+    else preference.addListener(stopMotion);
+  }
+
   initializeNavigation();
   initializeProjectFilters();
+  initializeMotion();
 })();

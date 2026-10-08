@@ -290,8 +290,11 @@ factual, HR-readability, human-voice, standard-English, and redundancy passes.
 - Core content must remain readable when JavaScript fails. JavaScript may
   enhance navigation, filtering, and freshness; it must not be required to
   reveal identity, experience, project copy, or contact information.
-- Respect reduced-motion preferences. Avoid decorative animation, scroll
-  hijacking, autoplay, parallax, or interaction that depends on hover.
+- Respect reduced-motion preferences. The user explicitly approved restrained
+  motion on 2026-10-08: short one-shot entrances and interaction feedback are
+  allowed, but content must never start hidden or depend on animation. Avoid
+  repeating decoration, scroll hijacking, autoplay, parallax, or interaction
+  that depends on hover. Prefer native CSS/JS before adding a motion library.
 - Keep headings, line length, paragraph density, spacing, contrast, and project
   hierarchy comfortable on desktop, tablet, and narrow mobile widths.
 

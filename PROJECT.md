@@ -700,6 +700,47 @@ live byte count and SHA-256 matched the local final asset.
   warning/error. Returning to All restores all 7 cards. The user's pre-existing
   career-register job-search edits remain untouched and outside the commit.
 
+### 2026-10-08 restrained motion and editorial styling
+
+- **Scope:** The user explicitly permits a little lightweight animation and
+  requests a distinctive, non-template-like appearance. Additional technology
+  is allowed when useful; this implementation needs only existing CSS/JS.
+  Approved copy, metrics, links, image bytes, resume, and project order remain
+  unchanged, as confirmed by normalized HTML text and reference comparison.
+- **Motion:** A short hero signal-line draw and 8-pixel heading settling effect
+  complete in 420-520 ms. An IntersectionObserver enhances section/project
+  headings once, unobserves each target, removes completed animation classes,
+  and disconnects when finished. No content starts hidden. No scroll listener,
+  permanent GPU hint, timer loop, animated statistic, parallax, or video is
+  introduced. Hover-only movement is limited to fine pointers; charts remain
+  uncropped and unscaled. Menus and native details retain their accessible
+  states while their icons change; filters and links have brief feedback.
+- **Design:** Capability groups use an editorial ruled layout rather than
+  repeated rounded boxes. The established navy/teal/coral palette, typography,
+  image-led case studies, and evidence hierarchy remain coherent.
+- **Accessibility:** Initial reduced motion skips observer setup. Changing to
+  reduced motion disconnects pending entrances and clears active classes; CSS
+  cancels animations and suppresses smooth scrolling and transition duration.
+  Browsers missing the motion APIs retain the complete static document.
+- **Verification:** All 10 dependency-free tests pass, including initial/dynamic
+  reduced motion, legacy media listeners, absent APIs, one-shot cleanup, and
+  focused-content handling. Browser checks at 320, 390, 600, 720, 860, 862,
+  1080, and 1440 pixels show no horizontal or relevant-text overflow; the
+  720-pixel check covers 1440-pixel/200%-zoom-equivalent reflow. Mobile menu
+  state, Escape, filters/counts/numbering, all 7 native details, skip-link focus,
+  and all 7 native 1920x1080 images pass. A temporary QA page forced the exact
+  reduced-motion CSS rules and preference: animation was `none`, opacity `1`,
+  scrolling `auto`, and menu focus recovery worked. This checks behavior
+  without changing the user's OS preference. A script-free 320-pixel preview
+  retained navigation, all 7 cards, and native details. Both QA files are
+  removed. No browser warning/error was reported in the inspected states.
+- **Release:** `20261008-03`, CSS and JS query version `20261008c`; same-day
+  sitemap `lastmod` remains `2026-10-08`. Live publication verification pending.
+- **Budgets:** HTML/CSS/JS are 49,136 / 23,520 / 5,147 bytes before transport
+  compression. Combined CSS/JS growth is 3,163 bytes versus the preceding
+  visual release. Image payloads are unchanged; no library, font, asset,
+  dependency, build step, or runtime network request is added.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis

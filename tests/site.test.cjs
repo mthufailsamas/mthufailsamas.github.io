@@ -118,6 +118,7 @@ function element(attributes = {}) {
   return {
     hidden: true, dataset: {}, textContent: "", attributes,
     classList: { add: (name) => classes.add(name), contains: (name) => classes.has(name),
+      remove: (name) => classes.delete(name),
       toggle: (name, enabled) => enabled ? classes.add(name) : classes.delete(name) },
     setAttribute(name, value) { this.attributes[name] = value; },
     getAttribute(name) { return this.attributes[name]; },
@@ -204,4 +205,73 @@ test("missing controls fail safely and legacy media listeners still work", () =>
   const { button, body, media } = initialize({ legacyMedia: true });
   button.emit("click"); media.matches = false; media.change();
   assert.equal(body.classList.contains("menu-open"), false);
+});
+
+function initializeHeadingMotion(options = {}) {
+  const headings = Array.from({ length: 3 }, () => element());
+  headings.forEach((heading) => { heading.hidden = false; });
+  const document = element();
+  document.querySelectorAll = () => headings;
+  document.activeElement = options.focused ? headings[2] : element();
+  const preference = element(); preference.matches = Boolean(options.reduced);
+  if (options.legacyMedia) {
+    preference.addListener = (handler) => { preference.change = handler; };
+    preference.addEventListener = undefined;
+  }
+  const observers = [];
+  class Observer {
+    constructor(callback, settings) {
+      this.callback = callback; this.settings = settings;
+      this.observed = new Set(); this.disconnected = false;
+      observers.push(this);
+    }
+    observe(target) { this.observed.add(target); }
+    unobserve(target) { this.observed.delete(target); }
+    disconnect() { this.disconnected = true; this.observed.clear(); }
+    intersect(target, isIntersecting = true) { this.callback([{ target, isIntersecting }]); }
+  }
+  const window = {
+    matchMedia: options.missingMedia ? undefined : () => preference,
+    IntersectionObserver: options.missingObserver ? undefined : Observer,
+  };
+  vm.runInNewContext(read("script.js"), { document, window });
+  return { headings, preference, observers };
+}
+
+test("heading motion never hides content and skips reduced or unavailable APIs", () => {
+  for (const options of [{ reduced: true }, { missingObserver: true }, { missingMedia: true }]) {
+    const { headings, observers } = initializeHeadingMotion(options);
+    assert.equal(observers.length, 0);
+    assert.ok(headings.every((heading) => !heading.hidden && !heading.classList.contains("motion-enter")));
+  }
+  assert.match(read("styles.css"), /prefers-reduced-motion: reduce[\s\S]*animation: none !important/);
+});
+
+test("heading motion observes once, cleans up, and leaves focused content stationary", () => {
+  const { headings, observers } = initializeHeadingMotion({ focused: true });
+  const observer = observers[0];
+  assert.equal(observer.observed.size, 3);
+  observer.intersect(headings[0], false);
+  assert.equal(headings[0].classList.contains("motion-enter"), false);
+  observer.intersect(headings[0]);
+  assert.equal(observer.observed.has(headings[0]), false);
+  assert.equal(headings[0].classList.contains("motion-enter"), true);
+  headings[0].emit("animationend");
+  assert.equal(headings[0].classList.contains("motion-enter"), false);
+  observer.intersect(headings[1]); observer.intersect(headings[2]);
+  assert.equal(headings[2].classList.contains("motion-enter"), false);
+  assert.equal(observer.disconnected, true);
+});
+
+test("changing to reduced motion cancels entrances, including legacy media listeners", () => {
+  for (const legacyMedia of [false, true]) {
+    const { headings, preference, observers } = initializeHeadingMotion({ legacyMedia });
+    const observer = observers[0]; observer.intersect(headings[0]);
+    preference.matches = true;
+    if (legacyMedia) preference.change(); else preference.emit("change");
+    assert.equal(observer.disconnected, true);
+    assert.ok(headings.every((heading) => !heading.classList.contains("motion-enter")));
+    observer.intersect(headings[1]);
+    assert.equal(headings[1].classList.contains("motion-enter"), false);
+  }
 });
