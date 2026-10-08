@@ -751,6 +751,43 @@ live byte count and SHA-256 matched the local final asset.
   QA pages/patches are removed. Only the new motion decision is committed from
   the career register; pre-existing job-search edits remain untouched.
 
+### 2026-10-08 professional public-copy revision
+
+- **Scope:** Website copy and the public README overview only. Remove internal
+  approval, revision, version, gate, and cleanup narration; shorten repetition
+  and use direct professional American English. No redesign or source-project
+  changes are included.
+- **Reader hierarchy:** Hero introduces the work; About adds professional,
+  academic, and teaching context. Project problems, contributions, technical
+  details, outputs, and evaluation boundaries serve distinct reader tasks.
+  Repetition is retained only where summary/detail navigation benefits readers.
+- **Evidence:** Checked the current two-page downloadable resume and the
+  current project records. Preserved every headline result, number format,
+  evaluation population, confidential-data restriction, and maturity boundary.
+  Reused final-year, non-nested CV, same-holdout selection, synthetic examples,
+  and local-only evaluation remain explicit. Real deliverable identifiers,
+  HTML metadata, network metadata, and technical audit trails are not banned.
+- **Surfaces:** Website facts `Synced` with the current resume; deeper project
+  methodology `Broader`. Resume bytes and live LinkedIn are unchanged; LinkedIn
+  application remains `Unverified`. This is not a new model-results audit.
+- **Assets:** All seven approved native 1920x1080 project images, the resume,
+  image links, project order, and CSS/JS payloads remain unchanged. Thyroid's
+  existing visual remains until an original confusion matrix or prediction
+  artifact can establish a replacement without inventing counts.
+- **Safeguards:** Public-copy rules are recorded in `AGENTS.md` and the career
+  register. The dependency-free suite now has 11 passing tests, including a
+  check for internal narrative labels, preserved headline results, and material
+  evaluation boundaries.
+- **Release:** `20261008-04`; CSS/JS retain `20261008c`, and same-day sitemap
+  `lastmod` remains `2026-10-08`.
+- **Responsive QA:** Desktop 1440x1000, mobile 390x844 and 320x844, and
+  720-pixel reflow showed no horizontal overflow. All seven technical details
+  opened, every project image loaded at 1920x1080, Academic filtering preserved
+  four correctly numbered cards, and All restored seven. Menu navigation and
+  Escape worked; no browser warning/error was reported. HTML is 46,491 bytes,
+  down from 49,136; CSS/JS remain 23,520 / 5,147 bytes.
+- **Publication:** Pending commit, push, and live GitHub Pages verification.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -901,8 +938,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
 - **Visual presentation:** Release `20260909-06` preserves the established 5-stage independent-project workflow composition as a 162,712-byte native 1920x1080 WebP. Its visible V2 evidence covers 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, the V2.0.0 artifact, batch/API/Docker parity, protected internal-test WAPE 14.67%, RMSLE 0.4077, signed bias -0.26%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
-- **Approved Project Output wording:** The system produces 28,512 checked forecasts across the complete 16-day store-family contract, giving planning teams a consistent demand view through the same reusable artifact across batch, API, and containerized inference.
-- **Approved Evidence & Scope wording:** Four fixed historical folds establish repeated-window evidence before the protected internal test is opened. Results cover 2013–2017 competition data and locally verified delivery; they do not represent live retail deployment or measured business impact.
+- **Approved Project Output wording:** Delivers 28,512 forecasts across 1,782 store-family series for the next 16 days, with matching results from batch, API, and container execution.
+- **Approved Evidence & Scope wording:** Model selection used 4 fixed historical windows from 2013–2017 competition data, followed by a separate internal test. Delivery was verified locally; business impact remains unmeasured.
 - **Portfolio status:** Published in release `20260909-06` at portfolio commit `397376ac88cdffbae2de4413ba242b13a7849ce8`; Pages run `34419198907` completed successfully, and live desktop/mobile checks confirmed compact metric formatting, the aligned 1920x1080 visual, expected release marker, zero horizontal overflow, and no browser errors.
 
 ### ai-service-request-automation
@@ -918,8 +955,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Public repository:** https://github.com/mthufailsamas/ai-service-request-automation
 - **Visual asset source:** Project-native 5-stage lifecycle and technical-backbone infographic rendered locally as a 1920x1080 WebP with no third-party image or runtime request.
 - **Limitations:** Evidence uses fictional data, installed local models, and controlled local services. The system retains deterministic and human authority around probabilistic output. No external deployment, real-user adoption, production throughput, employee hours saved, uptime change, financial return, or other live business impact has been demonstrated.
-- **Approved Project Output wording:** Delivered a reproducible Employee Service Desk and authorized Service Operations workspace that turns short IT messages into traceable catalog work, asks at most 1 focused follow-up, and preserves approval, escalation, resolution, retry, and recovery evidence.
-- **Approved Evidence & Scope wording:** The frozen final gate used 30 untouched bilingual semantic cases and 10 deterministic workflow controls. 90.0% progressed without service-agent triage review; all services and models cleaned up, and hosted or paid AI calls were 0. Results are controlled local evidence with fictional data, not production or measured business impact.
+- **Approved Project Output wording:** Provides Employee Service Desk and authorized Service Operations workspaces with catalog-matched tickets, at most 1 follow-up question, and recorded approvals, escalations, resolutions, and recovery attempts.
+- **Approved Evidence & Scope wording:** In the controlled local evaluation, 27 of 30 requests (90%) progressed without service-agent triage review; 3 were held for review. Cases, policies, and service records were fictional, and hosted or paid AI calls totaled 0. Business impact was not measured.
 - **Portfolio status:** Published at portfolio commit `29577e6392d8330e9736db1841b58a992fc0ecc5`; Pages run `32634340800` completed successfully. Live release `20260823-03` removes the cost and quality badges plus the redundant architecture heading while preserving the illustrated workflow and normalizing its typography. The public page, release marker, and versioned Full HD image each returned successfully.
 
 ### dwdm-optical-sensor-monitoring
@@ -934,7 +971,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Verified metrics:** The implemented contract combines 2 source systems, approximately 400 configured directional optical sensors with the active subset varying over time below or above 300, native 5-minute PRTG telemetry, and 3 operational views: Operations Board, Event Explorer, and Management Overview. All 67 local contract tests passed again on 2026-08-29 when the project's `src` directory was placed on `PYTHONPATH`. The scale and variability are an explicit user-attested professional record accepted on 2026-08-29.
 - **Public repository:** No public repository is available; the local project is proprietary and currently has no valid Git repository baseline.
 - **Limitations:** Production telemetry, database contents, credentials, source access, and operational screenshots are confidential. Statistical events are investigation evidence rather than confirmed physical root causes. The local dashboard is not internet-facing and has no production authentication, TLS termination, or web-server hardening.
-- **Approved Evidence & Scope wording:** The analysis helps teams decide what to investigate first but does not claim a physical root cause. Internal telemetry, source code, credentials, infrastructure, database contents, and operational screenshots remain confidential.
+- **Approved Project Output wording:** Operations Board, Event Explorer, and Management Overview provide current priorities, event history, and paired-sensor charts for investigation.
+- **Approved Evidence & Scope wording:** Statistical flags guide investigation; they do not establish physical causes. Operational data, source code, credentials, infrastructure, and screenshots remain confidential.
 - **Portfolio status:** Published in release `20260909-02` at portfolio commit `e88ef71566c52562684a0984cbbd963c94348936`; the live card exposes the approximately 400 configured-sensor scale, variable active subset, 5-minute cadence, and 3 operational views.
 
 ### xgboost-rainfall-forecasting
@@ -951,8 +989,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual asset source:** Project-native selected-ensemble actual-versus-forecast evidence rendered locally from `final_predictions.csv` as a `1920x1080` WebP. The visual contains no third-party image or runtime request.
 - **Visual factual inventory:** Centered title `XGBoost Rainfall Forecasting`; subtitle `Actual and Forecast Rainfall across the Reused Final Calendar Period`; legend labels `Actual Rainfall` and `Daily XGBoost Forecast`; footer values `366 Daily Forecasts`, `308 Observed Targets`, `RMSE 9.2521 mm`, and `Wet/Dry Balanced Accuracy 0.7679`. The time-series lines and every displayed value trace to `final_predictions.csv` and `final_comparison.csv` from the canonical output directory.
 - **Limitations:** The original observations are private and are not redistributed. The 4-year source represents 1 observation context, 58 of 366 final targets are unknown, and only 2 full-year development checks are available. The final year had informed prior analysis and is reused temporal evidence. Moderate and heavy rainfall remain weak: 4/15 moderate and 0/3 heavy dates received the correct BMKG category. The experiment does not establish regional transfer, warning capability, deployment, or measured salt-production impact.
-- **Approved Project Output wording:** The selected experiment produces 366 next-day forecasts with wet/dry alerts and BMKG intensity labels, supported by development-selection tables, calibration, error-regime diagnostics, feature importance, and a reproducible local evidence bundle.
-- **Approved Evidence & Scope wording:** Controlled evidence comes from 2 annual development checks and 1 reused final year. Correct-category counts were 4/15 for moderate and 0/3 for heavy rainfall, which remains the main model limitation. Original observations remain private; the displayed metrics come from the documented forecasting experiment.
+- **Approved Project Output wording:** Produces 366 next-day rainfall forecasts, wet/dry alerts, and BMKG intensity labels, with error summaries and comparison charts.
+- **Approved Evidence & Scope wording:** Results cover 2 annual development checks and a final year previously used in analysis. Intensity classification matched 4/15 moderate and 0/3 heavy rainfall observations. Source BMKG observations remain private.
 - **Portfolio status:** Published at portfolio commit `14acbb12987cbb122e867a948cabc5185bb849f9`; Pages run `33062369997` completed successfully with release `20260827-02`. The live desktop and 390-pixel mobile card contain no internal experiment-version labels, horizontal overflow, or browser warning/error.
 
 ### xgboost-thyroid-recurrence-classification
@@ -969,7 +1007,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual asset source:** Exact project-native V1 Information Gain chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
 - **Visual factual inventory:** Title `Top 10 Features by Mean Information Gain`; subtitle `Mean Information Gain across 10 Training Folds`; ranked bars `Response 0.666`, `Risk 0.424`, `N 0.277`, `T 0.274`, `Adenopathy_No 0.267`, `Age 0.221`, `Stage 0.176`, `Focality 0.097`, `Adenopathy_Bilateral 0.091`, and `M 0.091`; x-axis `Mean Information Gain across 10 Training Folds (bits)`. These are the user-confirmed historical V1 feature-selection results, not causal or clinical importance claims.
 - **Limitations:** The V1 design uses shuffled, non-nested 10-fold evaluation and accuracy as its default selection metric on 364 retained rows. V2 model design, final grid, selection rule, calibration, refit, and results are not implemented. The dataset does not support clinical diagnosis or deployment claims.
-- **Approved Evidence & Scope wording:** Preserve the completed classification metrics in confident professional wording. The project remains academic classification work and does not claim clinical diagnosis or deployment.
+- **Approved Project Output wording:** Produces cross-validated recurrence predictions, selected-feature summaries, and classification performance reports.
+- **Approved Evidence & Scope wording:** Model selection and reporting use the same non-nested cross-validation, with accuracy as the selection criterion. Results describe internal academic evaluation, not clinical diagnosis, patient care, or deployment.
 - **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves the completed V1 metrics and non-clinical evaluation boundary while restoring the project-native Information Gain visual.
 
 ### bilstm-rainfall-forecasting
@@ -986,7 +1025,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual asset source:** Exact project-native completed-run actual-versus-predicted chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
 - **Visual factual inventory:** Title `BiLSTM Rainfall Prediction`; subtitle `Observed Rainfall and Next-Day Predictions over the Chronological Test Period`; legend labels `Observed` and `Predicted`; daily series across October 2023-May 2024; y-axis `24-hour rainfall (mm)` and x-axis `Date`. The visual represents the user-confirmed historical internship run whose source observations remain private.
 - **Limitations:** The original observations are private and are not redistributed. The public workflow defaults to synthetic same-schema data. The same chronological holdout selects and reports the best configuration, so the result is model-selection evidence rather than an untouched final estimate. The current notebook has uncommitted changes and cannot establish a frozen historical result.
-- **Approved Evidence & Scope wording:** Preserve MAAPE 0.8073 and RMSE 10.2734 mm as the completed BiLSTM experiment results, alongside the 7-day sequence, focused Grid Search, and chronological 80:20 design.
+- **Approved Project Output wording:** Produces next-day rainfall estimates from 7 days of weather history, with a saved model, error summaries, and observed-versus-predicted charts.
+- **Approved Evidence & Scope wording:** The reported results use original BMKG observations; the public repository includes a synthetic sample with the same schema. Model selection and scoring used the same chronological holdout, so the metrics reflect that selection process.
 - **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves MAAPE 0.8073, RMSE 10.2734 mm, and the shared-holdout limitation while restoring the project-native actual-versus-predicted visual.
 
 ### arima-rice-price-forecasting
@@ -1003,7 +1043,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Visual asset source:** Exact project-native completed-run walk-forward chart recovered from the repository history and exported locally as a `1920x1080` WebP. The image contains no third-party asset or runtime request.
 - **Visual factual inventory:** Title `ARIMA Walk-Forward Forecasts`; subtitle `Observed and One-Step-Ahead Forecasts over the Held-Out Monthly Period`; panels `Medium Rice` and `Premium Rice`; legend labels `Observed` and `Forecast`; y-axis `IDR/kg` and x-axis `Test Month` across January-December 2024. The visible series and period match the included 60-row public monthly dataset and 12-step walk-forward design.
 - **Limitations:** The included dataset has 60 monthly observations and no external predictors. Candidate selection and reporting use the same 12-month walk-forward period, so the selected score is not an untouched generalization estimate. Walk-forward results represent 1-step forecasting rather than long-horizon accuracy.
-- **Approved Evidence & Scope wording:** The public dataset and runnable workflow are included in the repository. Candidate orders are ranked and reported on the same 12-month walk-forward period, so the selected result is not an untouched final estimate. The univariate models use past prices only.
+- **Approved Project Output wording:** Produces next-month price forecasts for medium and premium rice, with selected ARIMA orders, residual diagnostics, and observed-versus-forecast charts.
+- **Approved Evidence & Scope wording:** The public dataset and code are included in the repository. Model selection and scoring use the same 12-month walk-forward period; results describe 1-step-ahead forecasts based on past prices.
 - **Portfolio status:** Published in release `20260910-01` at portfolio commit `5d8f785a034d828528abb6c808ac680e895d645b`; Pages run `34421710442` completed successfully. The live card preserves medium-rice MAPE 2.08%, premium-rice MAPE 1.82%, and the same-period selection/reporting limitation while restoring the project-native walk-forward visual.
 
 ### Registry audit queue

@@ -87,6 +87,13 @@ Use these states:
 
 ## Portfolio website decisions
 
+- Visitor-facing copy describes actual work and results, not internal approval,
+  revision, or portfolio-audit steps. Remove internal experiment-version labels,
+  test-gate narration, and disposable-environment cleanup. Use concise natural
+  professional English and give each section a distinct reader purpose.
+  Preserve technical metadata, actual deliverable identifiers, metrics, and
+  material evaluation or confidentiality boundaries. Apply this standard to
+  future career-profile writing; this revision changes the website only.
 - Use semantic HTML, CSS, and small vanilla JavaScript; avoid unnecessary
   frameworks, runtime dependencies, and web fonts.
 - Keep the website lightweight on low-end devices and slow networks without
@@ -215,3 +222,5 @@ Before creating or revising a profile on another job site:
 | 2026-10-08 | Portfolio website | Refactor only the portfolio website. Preserve approved career copy, metrics, resume, project visuals, and visual direction; improve static-code maintainability and interaction reliability. Other projects and career-profile surfaces remain out of scope. | Approved scope |
 | 2026-10-08 | Portfolio website | Make the website more eye-catching after the refactor while keeping it lightweight. Refine visual hierarchy, typography, spacing, and project presentation within the existing navy/teal/coral identity; preserve approved facts, copy, resume, and sharp project images. | Approved visual refinement scope |
 | 2026-10-08 | Portfolio website | Add a little lightweight animation and keep the design distinctive rather than generic/template-like. Use brief, restrained motion tied to the site's data/signal identity; retain visible content, reduced-motion support, and sharp visuals. Additional technology is permitted when justified, not required. | Approved motion and design scope |
+| 2026-10-08 | Portfolio website: Thyroid visual | Replace the Information Gain image with a confusion matrix from the completed classification run. Preserve the accepted metrics, native Full HD quality, and other project visuals. Inspection of public main `51d6ff789d9a20c8f5a5710c117f9f89b0a71f7f`, both historical notebook revisions, and local ignored outputs found no saved matrix or out-of-fold predictions. Do not infer classification counts from rounded metrics or rerun the expensive search merely for this visual; retain the existing image until an original aggregate matrix, executed notebook output, or local prediction artifact is supplied and verified. | Approved replacement; pending original result artifact |
+| 2026-10-08 | Portfolio website copy; future career-profile writing | Remove internal-process narration and redundant copy; replace formulaic AI-sounding language with natural professional American English. Keep facts, metrics, technical deliverable identifiers, and material evaluation boundaries intact. Apply now to the website and its public overview; the resume and live LinkedIn remain unchanged. | Locked; website revision in progress |

@@ -57,6 +57,42 @@ test("local references, anchor targets, image attributes, and budgets", () => {
   }
 });
 
+test("public copy avoids internal revision narration and preserves result context", () => {
+  const main = html.match(/<main\b[\s\S]*?<\/main>/)[0];
+  for (const phrase of [/\bV[12]\b/, /frozen final gate/i, /all services and models cleaned up/i,
+    /current workflow/i, /approved wording/i, /source of truth/i, /results-driven/i,
+    /leveraging cutting-edge/i, /seamlessly/i, /unlocking actionable insights/i]) {
+    assert.doesNotMatch(main, phrase);
+  }
+  const cards = [...main.matchAll(/<article\b[\s\S]*?<\/article>/g)]
+    .map((match) => match[0]).filter((card) => card.includes("data-project-context="));
+  const expected = [
+    ["~400", "5 min", "3"],
+    ["0.5246", "14.67%", "78/78"],
+    ["40/40", "100%", "100%", "96.67%"],
+    ["9.2521 mm", "0.7679", "75%"],
+    ["97.25%", "95.37%", "98.6%"],
+    ["0.8073", "10.2734 mm", "27"],
+    ["2.08%", "1.82%", "12"],
+  ];
+  assert.equal(cards.length, expected.length);
+  for (const [index, card] of cards.entries()) {
+    const row = card.match(/<div class="metric-row\b[\s\S]*?<\/div>\s*<\/div>/)[0];
+    assert.deepEqual([...row.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1]), expected[index]);
+    for (const label of ["Problem", "My Contribution", "Technical details", "Project Output", "Evidence &amp; Scope"]) {
+      assert.ok(card.includes(label), `Project ${index + 1}: missing ${label}`);
+    }
+  }
+  assert.match(cards[1], /separate internal test/);
+  assert.match(cards[2], /controlled local evaluation/);
+  assert.match(cards[2], /held out from development/);
+  assert.match(cards[2], /fictional/);
+  assert.match(cards[3], /final year previously used in analysis/);
+  assert.match(cards[4], /same non-nested cross-validation/);
+  assert.match(cards[5], /same chronological holdout/);
+  assert.match(cards[6], /same 12-month walk-forward period/);
+});
+
 async function checkRelease(marker, options = {}) {
   const url = new URL(options.url || "https://example.test/?ref=profile#projects");
   const replaced = [];

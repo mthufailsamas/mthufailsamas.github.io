@@ -2,18 +2,16 @@
 
 [View the live portfolio](https://mthufailsamas.github.io/)
 
-This repository contains the professional Data and AI portfolio of M. Thufail
-Alwannabil Samas. It connects selected
-work across data analysis, statistical modeling, machine learning, practical
-data engineering, and applied AI automation with professional experience,
-publication, certification, and technical background.
+This portfolio presents M. Thufail Alwannabil Samas's work in monitoring,
+forecasting, classification, and AI service automation, alongside professional
+experience, education, certification, and publication.
 
 ## Portfolio Overview
 
 The featured case studies cover:
 
 - DWDM Optical Sensor Monitoring with Change-Point and Degradation Detection,
-  developed as professional project-stage work at PT Aplikanusa Lintasarta;
+  developed at PT Aplikanusa Lintasarta;
 - a Retail Sales Forecasting &amp; Planning System with chronological Ridge and
   XGBoost evaluation, a versioned model artifact, reusable batch inference,
   local FastAPI delivery, Docker packaging, and contract tests;
@@ -29,7 +27,7 @@ The featured case studies cover:
 Each case study focuses on the problem, contribution, system or analytical
 workflow, validation evidence, practical output, and limitations. Public
 project repositories are linked where available. Confidential work is
-presented only through approved summaries and non-sensitive visual material.
+represented through non-sensitive illustrations and summaries.
 
 ## Technical Implementation
 

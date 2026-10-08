@@ -271,6 +271,26 @@ occurrence serves a distinct reader task. Cross-surface repetition required for
 semantic consistency is not a defect. Before approval, perform separate
 factual, HR-readability, human-voice, standard-English, and redundancy passes.
 
+### No internal-process narration in public career copy
+
+The user explicitly requires this rule as of 2026-10-08. Write about the work,
+contribution, deliverable, and measured result, not the process of preparing or
+auditing the portfolio. Remove internal experiment labels such as `V1` and
+`Current V2 workflow`, approval/revision commentary, gate-status narration, and
+disposable test-environment cleanup from visitor-facing prose and alt text.
+Use direct professional language such as `controlled local evaluation` when
+explaining a test. Keep actual model-artifact identifiers where they identify
+a technical deliverable rather than narrate a revision.
+
+Do not confuse this with HTML metadata, ENIMS network metadata, audit trails,
+internal-test results, or material evaluation boundaries. Those are legitimate
+technical facts. Preserve held-out case populations, non-nested validation,
+reused evaluation periods, synthetic inputs, privacy, and clinical-use limits;
+explain them concisely instead of deleting them. Give Hero, About, contribution,
+technical details, and output distinct purposes. Remove repetitive workflow
+summaries and tool lists, while retaining metric repetition that serves a
+separate summary-versus-detail reading task.
+
 ## Information Architecture and Navigation
 
 - Keep one coherent narrative page unless a real user task requires another
