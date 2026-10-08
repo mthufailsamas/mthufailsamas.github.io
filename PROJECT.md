@@ -685,12 +685,20 @@ live byte count and SHA-256 matched the local final asset.
   details. No browser warning/error was reported in these inspected states.
 - **Release:** `20261008-02`, with `styles.css?v=20261008b`; unchanged script
   and image URLs retain their existing versions. Sitemap `lastmod` remains
-  `2026-10-08`, the date of this same-day revision. Publication verification is
-  pending until the live Pages deployment is inspected.
+  `2026-10-08`, the date of this same-day revision.
 - **Budgets:** HTML/CSS/JS are 49,136 / 21,876 / 3,628 bytes before transport
   compression. CSS grows by 975 bytes; JavaScript and every image retain their
   previous sizes. Responsive hero-plus-profile payloads remain 99,466 bytes
   on desktop and 189,498 bytes on mobile, with no additional network request.
+- **Publication:** Published from commit
+  `acb6aaea00fe1caf0e62fd673016e9a75fd73a5d`; GitHub Pages run `37738496320`
+  succeeded. All 17 unique referenced public files, including HTML, CSS, JS,
+  release marker, sitemap, every image, and the resume, returned HTTP 200 and
+  matched local bytes exactly. Live 1440x1000 desktop and 390x844 mobile
+  inspections passed with the correct responsive hero, working navigation,
+  sequential Academic filter numbers, no horizontal overflow, and no browser
+  warning/error. Returning to All restores all 7 cards. The user's pre-existing
+  career-register job-search edits remain untouched and outside the commit.
 
 ## 2. Evidence required for each role family
 
