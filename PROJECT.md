@@ -655,6 +655,43 @@ live byte count and SHA-256 matched the local final asset.
   Temporary QA variants and patch files were removed; no backup assets remain.
 
 
+### 2026-10-08 lightweight visual refinement
+
+- **Scope:** The user explicitly reopened visual presentation after the
+  refactor, requesting a more eye-catching website that remains lightweight.
+  The change refines the existing navy/teal/coral identity; approved career
+  wording, metrics, project order, links, resume, and image bytes are unchanged.
+- **Direction:** Deliberate 2-line desktop name composition, tighter heading
+  typography, clearer hero artwork, coral section markers, stronger project
+  numbering, slightly wider desktop visuals, easier-to-read project copy,
+  bordered result rows, and distinct publication and capability panels. The
+  capability grid fills both desktop rows and collapses for tablet/mobile.
+- **Implementation:** CSS and one presentational heading span only. No new
+  JavaScript, dependency, font, image, third-party request, continuous animation,
+  backdrop blur, or build step. Obsolete featured-card classes, the old surface
+  token, superseded grid-border rules, and the temporary script-free QA page
+  are removed rather than retained as fallbacks.
+- **Preservation:** Normalized HTML text and every image, resume, and career
+  link match the preceding release. All 7 project images still decode at native
+  1920x1080. Shared career facts are preserved, not newly re-audited; other
+  surfaces remain outside this website-only visual task.
+- **Verification:** All 7 dependency-free regression tests pass. Browser
+  checks at 320, 390, 600, 720, 860, 862, 1080, and 1440 pixels show no page,
+  heading, metric, button, or capability-text overflow. The 720-pixel check
+  covers reflow equivalent to a 1440-pixel desktop at 200% zoom. All context
+  filters preserve counts and numbering, all 7 native details open, and the
+  320x480 menu scrolls and closes on Escape/selection with focus recovery.
+  A script-free 320-pixel preview retains navigation, all 7 cards, and native
+  details. No browser warning/error was reported in these inspected states.
+- **Release:** `20261008-02`, with `styles.css?v=20261008b`; unchanged script
+  and image URLs retain their existing versions. Sitemap `lastmod` remains
+  `2026-10-08`, the date of this same-day revision. Publication verification is
+  pending until the live Pages deployment is inspected.
+- **Budgets:** HTML/CSS/JS are 49,136 / 21,876 / 3,628 bytes before transport
+  compression. CSS grows by 975 bytes; JavaScript and every image retain their
+  previous sizes. Responsive hero-plus-profile payloads remain 99,466 bytes
+  on desktop and 189,498 bytes on mobile, with no additional network request.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis

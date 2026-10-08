@@ -101,7 +101,7 @@
         // Direct-file previews and older browsers retain the static document.
         if (window.location.protocol === "file:" || !window.fetch || !window.URL || !window.URLSearchParams) return;
         const releaseParameter = "release";
-        const embeddedRelease = "20261008-01";
+        const embeddedRelease = "20261008-02";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -131,7 +131,7 @@
           });
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261008a">
+    <link rel="stylesheet" href="styles.css?v=20261008b">
     <script src="script.js?v=20261008a" defer></script>
   </head>
   <body>
@@ -178,7 +178,7 @@
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="content hero-content">
           <p class="eyebrow light">Data and AI Professional</p>
-          <h1>M. Thufail Alwannabil Samas</h1>
+          <h1><span class="hero-name-start">M. Thufail</span> Alwannabil Samas</h1>
           <p class="hero-lead">
             Machine Learning, Data Systems, and Applied AI.
           </p>
@@ -236,7 +236,7 @@
         </div>
 
         <div class="project-list">
-          <article class="project featured-project" data-project-context="professional">
+          <article class="project" data-project-context="professional">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>01</span><p>Data engineering &amp; monitoring analytics | Python, PostgreSQL, HTML/CSS/JavaScript</p></div>
@@ -272,7 +272,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" id="retail-sales-forecasting" data-project-context="independent">
+          <article class="project" id="retail-sales-forecasting" data-project-context="independent">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>02</span><p>AI/ML engineering &amp; retail forecasting | Python, XGBoost, FastAPI, Docker</p></div>
@@ -311,7 +311,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-context="independent">
+          <article class="project" data-project-context="independent">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>03</span><p>AI automation &amp; workflow engineering | Python/FastAPI, n8n, PostgreSQL/pgvector, Ollama, Docker</p></div>
@@ -351,7 +351,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-context="academic">
+          <article class="project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>04</span><p>Data Science | Python, XGBoost, scikit-learn</p></div>
@@ -391,7 +391,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-context="academic">
+          <article class="project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>05</span><p>Clinical classification | Python, XGBoost, scikit-learn</p></div>
@@ -430,7 +430,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-context="academic">
+          <article class="project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>06</span><p>Deep learning &amp; time-series forecasting | Python, TensorFlow/Keras, NumPy, Pandas</p></div>
@@ -469,7 +469,7 @@
             </div>
           </article>
 
-          <article class="project featured-project" data-project-context="academic">
+          <article class="project" data-project-context="academic">
             <div class="content project-grid">
               <div class="project-copy">
                 <div class="project-kicker"><span>07</span><p>Statistical time-series forecasting | Python, statsmodels, Pandas</p></div>
