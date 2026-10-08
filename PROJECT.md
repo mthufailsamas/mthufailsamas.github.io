@@ -786,7 +786,15 @@ live byte count and SHA-256 matched the local final asset.
   four correctly numbered cards, and All restored seven. Menu navigation and
   Escape worked; no browser warning/error was reported. HTML is 46,491 bytes,
   down from 49,136; CSS/JS remain 23,520 / 5,147 bytes.
-- **Publication:** Pending commit, push, and live GitHub Pages verification.
+- **Publication:** Commit `b1f1a79a79393cfe3f2beed6338f35ce7c086b10` was
+  published by successful Pages run `37744088617`. All 18 public files returned
+  HTTP 200 and matched local bytes exactly. Live desktop 1440x1000 confirmed the
+  revised About copy and zero overflow. Live mobile 390x844 confirmed navigation,
+  Academic filtering and numbering, restoration of all seven projects, all
+  seven expanded details, and every native 1920x1080 project image. No browser
+  warning/error was reported. Temporary PDF renders and staging patches were
+  removed, and the preview server was stopped. Pre-existing job-search edits in
+  the career register remain uncommitted and untouched.
 
 ## 2. Evidence required for each role family
 
@@ -1049,8 +1057,10 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20260910-01` preserves
-the approved website synchronization for the current canonical registry.
+No project claim is waiting in the audit queue. Release `20261008-04` preserves
+the current canonical facts with the professional public-copy revision recorded
+above. Thyroid's visual replacement remains pending an original result artifact;
+its accepted metrics and existing image are unchanged.
 
 ## 5. Evidence-first portfolio rules
 
