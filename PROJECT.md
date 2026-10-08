@@ -643,9 +643,16 @@ live byte count and SHA-256 matched the local final asset.
   other-platform application states remain as previously recorded and are not
   newly verified. The pre-existing job-search edits in the career register are
   outside this commit; only the new website-only scope decision is included.
-- **Publication:** Release `20261008-01` is locally verified and ready for
-  direct publication. Confirm the Pages deployment and live desktop/mobile
-  result before marking this checkpoint published.
+- **Publication:** Published release `20261008-01` from portfolio commit
+  `0593cd00a4addbba003101192a7f3e51c1c05389`. GitHub Pages run `37736759830`
+  succeeded. Live HTML, versioned CSS/JS, sitemap, and resume returned HTTP 200
+  and matched local contents (the PDF byte for byte). All 10 referenced image
+  assets, including all 7 project visuals and both responsive heroes, matched
+  local SHA-256 values. Live desktop 1440x1000 and mobile 390x844 checks passed
+  with working navigation/filtering, sequential Academic numbers, no
+  horizontal overflow, correct responsive hero selection, and no browser
+  warning/error. The Thyroid full-size link opened its native 1920x1080 WebP.
+  Temporary QA variants and patch files were removed; no backup assets remain.
 
 
 ## 2. Evidence required for each role family
