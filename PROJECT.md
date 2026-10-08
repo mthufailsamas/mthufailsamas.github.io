@@ -735,11 +735,21 @@ live byte count and SHA-256 matched the local final asset.
   retained navigation, all 7 cards, and native details. Both QA files are
   removed. No browser warning/error was reported in the inspected states.
 - **Release:** `20261008-03`, CSS and JS query version `20261008c`; same-day
-  sitemap `lastmod` remains `2026-10-08`. Live publication verification pending.
+  sitemap `lastmod` remains `2026-10-08`.
 - **Budgets:** HTML/CSS/JS are 49,136 / 23,520 / 5,147 bytes before transport
   compression. Combined CSS/JS growth is 3,163 bytes versus the preceding
   visual release. Image payloads are unchanged; no library, font, asset,
   dependency, build step, or runtime network request is added.
+- **Publication:** Commit `8f1cbaf61d1879d1f934b3843b18bf0a168eabbb` was
+  published successfully by GitHub Pages run `37740064607`. All 17 public
+  files, including HTML, versioned CSS/JS, marker, sitemap, images, and resume,
+  returned HTTP 200 and matched local bytes exactly. Live desktop 1440x1000
+  inspection confirmed the single-iteration hero animation and editorial
+  capability layout, with no lingering entrance class. Live mobile 390x844
+  navigation, Escape, Academic filtering/numbering, responsive hero selection,
+  and overflow checks passed; no browser warning/error was reported. Temporary
+  QA pages/patches are removed. Only the new motion decision is committed from
+  the career register; pre-existing job-search edits remain untouched.
 
 ## 2. Evidence required for each role family
 
