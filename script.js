@@ -1,73 +1,92 @@
-const menuButton = document.querySelector(".menu-button");
-const navigation = document.querySelector(".primary-navigation");
+(() => {
+  "use strict";
 
-function closeMenu() {
-  if (!menuButton || !navigation) return;
-  menuButton.setAttribute("aria-expanded", "false");
-  menuButton.setAttribute("aria-label", "Open navigation");
-  navigation.classList.remove("open");
-  document.body.classList.remove("menu-open");
-}
+  function initializeNavigation() {
+    const header = document.querySelector(".site-header");
+    const button = document.querySelector(".menu-button");
+    const navigation = document.querySelector(".primary-navigation");
+    if (!header || !button || !navigation || !window.matchMedia) return;
 
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
-    navigation.classList.toggle("open", !isOpen);
-    document.body.classList.toggle("menu-open", !isOpen);
-  });
+    // Keep this breakpoint aligned with the mobile navigation rule in styles.css.
+    const mobileViewport = window.matchMedia("(max-width: 860px)");
+    const isOpen = () => button.getAttribute("aria-expanded") === "true";
 
-  navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    function setMenuState(open) {
+      const expanded = open && mobileViewport.matches;
+      button.setAttribute("aria-expanded", String(expanded));
+      button.setAttribute("aria-label", expanded ? "Close navigation" : "Open navigation");
+      navigation.classList.toggle("open", expanded);
+      document.body.classList.toggle("menu-open", expanded);
+    }
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
-  });
+    button.addEventListener("click", () => setMenuState(!isOpen()));
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMenuState(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !isOpen()) return;
+      const returnFocus = navigation.contains(document.activeElement);
+      setMenuState(false);
+      if (returnFocus) button.focus();
+    });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 860) closeMenu();
-  });
-}
+    // Dismiss without stealing focus from the user's next destination.
+    document.addEventListener("click", (event) => {
+      if (isOpen() && !header.contains(event.target)) setMenuState(false);
+    });
+    document.addEventListener("focusin", (event) => {
+      if (isOpen() && !header.contains(event.target)) setMenuState(false);
+    });
 
-const projectFilterButtons = document.querySelectorAll("[data-project-filter]");
-const filterableProjects = document.querySelectorAll("[data-project-context]");
-const filterStatus = document.querySelector(".filter-status");
+    const closeOnBreakpointChange = () => setMenuState(false);
+    if (mobileViewport.addEventListener) {
+      mobileViewport.addEventListener("change", closeOnBreakpointChange);
+    } else {
+      mobileViewport.addListener(closeOnBreakpointChange);
+    }
+    setMenuState(false);
+    header.classList.add("navigation-ready");
+    button.hidden = false;
+  }
 
-function applyProjectFilter(selectedFilter) {
-  let visibleCount = 0;
+  function initializeProjectFilters() {
+    const controls = document.querySelector(".project-filter");
+    if (!controls) return;
+    const buttons = Array.from(controls.querySelectorAll("[data-project-filter]"));
+    const projects = Array.from(document.querySelectorAll("[data-project-context]"), (element) => ({
+      element,
+      context: element.dataset.projectContext,
+      number: element.querySelector(".project-kicker span"),
+    }));
+    const status = controls.querySelector(".filter-status");
+    if (!buttons.length || !projects.length) return;
 
-  filterableProjects.forEach((project) => {
-    const isVisible = selectedFilter === "all" || project.dataset.projectContext === selectedFilter;
-    project.hidden = !isVisible;
-
-    if (isVisible) {
-      visibleCount += 1;
-
-      const projectNumber = project.querySelector(".project-kicker span");
-      if (projectNumber) {
-        projectNumber.textContent = String(visibleCount).padStart(2, "0");
+    function applyFilter(selected) {
+      if (!buttons.some((button) => button.dataset.projectFilter === selected)) return;
+      let visibleCount = 0;
+      projects.forEach(({ element, context, number }) => {
+        const visible = selected === "all" || context === selected;
+        element.hidden = !visible;
+        if (visible) {
+          visibleCount += 1;
+          if (number) number.textContent = String(visibleCount).padStart(2, "0");
+        }
+      });
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.projectFilter === selected));
+      });
+      if (status) {
+        status.textContent = `Showing ${visibleCount} ${visibleCount === 1 ? "project" : "projects"}.`;
       }
     }
-  });
 
-  projectFilterButtons.forEach((button) => {
-    const isActive = button.dataset.projectFilter === selectedFilter;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
-
-  if (filterStatus) {
-    const projectLabel = visibleCount === 1 ? "project" : "projects";
-    filterStatus.textContent = `Showing ${visibleCount} ${projectLabel}.`;
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => applyFilter(button.dataset.projectFilter));
+    });
+    applyFilter("all");
+    controls.hidden = false;
   }
-}
 
-projectFilterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    applyProjectFilter(button.dataset.projectFilter);
-  });
-});
-
-if (projectFilterButtons.length > 0 && filterableProjects.length > 0) {
-  applyProjectFilter("all");
-}
+  initializeNavigation();
+  initializeProjectFilters();
+})();

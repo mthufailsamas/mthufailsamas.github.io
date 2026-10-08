@@ -98,8 +98,10 @@
     </script>
     <script>
       (() => {
+        // Direct-file previews and older browsers retain the static document.
+        if (window.location.protocol === "file:" || !window.fetch || !window.URL || !window.URLSearchParams) return;
         const releaseParameter = "release";
-        const embeddedRelease = "20260910-01";
+        const embeddedRelease = "20261008-01";
         const loadedRelease = new URLSearchParams(window.location.search).get(releaseParameter);
         const releaseMarkerUrl = new URL("site-version.json", window.location.href);
         releaseMarkerUrl.searchParams.set("check", Date.now().toString());
@@ -107,17 +109,18 @@
         fetch(releaseMarkerUrl, { cache: "no-store" })
           .then((response) => (response.ok ? response.json() : null))
           .then((releaseMarker) => {
-            const latestRelease = releaseMarker?.release;
-            if (!latestRelease) return;
+            const latestRelease = releaseMarker && releaseMarker.release;
+            if (typeof latestRelease !== "string" || !/^\d{8}-\d{2}$/.test(latestRelease)) return;
 
-            if (latestRelease !== embeddedRelease) {
+            // Ignore an older deployment marker and never reload the same stale URL twice.
+            if (latestRelease > embeddedRelease && loadedRelease !== latestRelease) {
               const latestUrl = new URL(window.location.href);
               latestUrl.searchParams.set(releaseParameter, latestRelease);
               window.location.replace(latestUrl);
               return;
             }
 
-            if (loadedRelease) {
+            if (latestRelease === embeddedRelease && loadedRelease) {
               const cleanUrl = new URL(window.location.href);
               cleanUrl.searchParams.delete(releaseParameter);
               window.history.replaceState(null, "", cleanUrl);
@@ -128,8 +131,8 @@
           });
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260828d">
-    <script src="script.js?v=9f86dc0" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261008a">
+    <script src="script.js?v=20261008a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -156,6 +159,7 @@
         <button
           class="menu-button"
           type="button"
+          hidden
           aria-expanded="false"
           aria-controls="primary-navigation"
           aria-label="Open navigation"
@@ -165,7 +169,7 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
       <section class="hero" id="top">
         <picture class="hero-wallpaper" aria-hidden="true">
           <source media="(max-width: 600px)" srcset="assets/hero/data-ai-system-mobile.webp?v=20260828a">
@@ -220,10 +224,10 @@
           </p>
         </div>
 
-        <div class="content project-filter" aria-label="Filter projects by context">
+        <div class="content project-filter" aria-label="Filter projects by context" hidden>
           <p>Project context</p>
           <div class="project-filter-actions" role="group" aria-label="Project context">
-            <button class="filter-button active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-project-filter="all" aria-pressed="true">All</button>
             <button class="filter-button" type="button" data-project-filter="professional" aria-pressed="false">Professional</button>
             <button class="filter-button" type="button" data-project-filter="independent" aria-pressed="false">Independent</button>
             <button class="filter-button" type="button" data-project-filter="academic" aria-pressed="false">Academic</button>

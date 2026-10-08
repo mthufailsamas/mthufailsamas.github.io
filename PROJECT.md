@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-09-13
+Last updated: 2026-10-08
 
 ## Purpose and authority
 
@@ -370,7 +370,7 @@ GitHub Pages controls the cache lifetime of the unversioned HTML, so a browser m
 The following rules are mandatory for every future user-visible website revision:
 
 1. Update both the `release` value in `site-version.json` and the inline `embeddedRelease` value in `index.html` in the same revision as the public website change. Both values must match, use a new monotonically increasing release, and never reuse a previous release value.
-2. Keep the release check inline in `index.html`. On every page load it must fetch `site-version.json` with `cache: "no-store"` and a unique query value, compare the published release with the embedded HTML release, and use `window.location.replace` when they differ.
+2. Keep the release check inline in `index.html`. On HTTP(S) page loads in supported browsers, fetch `site-version.json` with `cache: "no-store"` and a unique query value. Validate the marker, compare it with the embedded HTML release, and use `window.location.replace` for a newer release only when that release is not already in the loaded URL. Ignore older deployment markers and preserve the document if the newer HTML remains cached; never repeatedly replace the same URL.
 3. Give every changed CSS, JavaScript, image, document, or other public asset a new query version or filename in `index.html`. Refreshing the HTML does not invalidate an asset whose URL remains unchanged.
 4. Do not update `site-version.json` for an internal documentation-only commit that cannot change the rendered website.
 5. Do not call a revision live until the Pages deployment succeeds and the public site returns the new release marker, the versioned HTML, and every changed asset.
@@ -588,6 +588,65 @@ Academic cards, native `1920x1080` dimensions for every visual, no horizontal
 overflow, working filtering and mobile navigation, and no browser warnings or
 runtime errors. Each restored WebP returned HTTP 200 with `image/webp`, and its
 live byte count and SHA-256 matched the local final asset.
+
+## Current website refactor checkpoint
+
+### 2026-10-08 website-only refactor checkpoint
+
+- **Scope:** User-authorized refactor of Portfolio Website only. Other project
+  repositories, the resume artifact, LinkedIn, and job-platform profiles are
+  unchanged. Approved wording, claims, metric formatting, visual direction,
+  project order, and all 7 native Full HD project images are preserved.
+- **Implementation:** The runtime remains semantic HTML, CSS, and vanilla
+  JavaScript. Navigation and filters have independent initializers in a private
+  scope; one menu-state function owns ARIA, visibility, and scroll locking.
+  Breakpoint changes replace the continuous resize listener. Escape restores
+  focus when needed; outside clicks and focus departure dismiss the menu.
+  Filter numbers are cached once, and `aria-pressed` also controls their style.
+- **Progressive enhancement:** Mobile links remain visible if scripts fail;
+  the inactive menu button and filters stay hidden. Native project details
+  remain usable. The skip-link target is focusable, short-screen menus scroll,
+  and interactive mobile controls have at least 44-pixel targets.
+- **CSS cleanup:** Shared gutter/header tokens replace repeated geometry.
+  Component sections are labeled, obsolete stage/note/context selectors and
+  redundant declarations are removed, capability-grid borders remain correct
+  at each breakpoint, and flexible heading columns avoid tablet overflow.
+- **Release safety:** The inline guard tolerates unavailable browser APIs,
+  direct-file previews, failed requests, malformed markers, older deployment
+  markers, and repeated stale HTML. Existing query parameters and anchors are
+  preserved during a refresh.
+- **Regression suite:** `node --test tests/site.test.cjs` passes all 7 tests
+  covering static references, IDs, image attributes, source/asset budgets,
+  orphan assets, release alignment and fail-open behavior, menu state and
+  focus, filter order/count/numbering, missing controls, and legacy media-query
+  listeners. It is development-only, with no third-party dependency or build
+  requirement. Browser rendering remains a separate gate.
+- **Local browser verification:** Checked 320, 390, 600, 720, 860, 862, 1080,
+  and 1440-pixel viewports, including 720-pixel reflow equivalent to a
+  1440-pixel desktop at 200% zoom and a 320x480 short-screen menu. Desktop and
+  mobile rendering, all context filters, all 7 native details, keyboard Escape,
+  skip-link focus, breakpoint dismissal, menu scroll containment, and a
+  temporary script-free fallback passed. All 7 images decoded at 1920x1080;
+  no page or relevant text overflow or browser warning/error remained in the
+  inspected states. The existing reduced-motion rule is retained.
+- **Content preservation:** Compared normalized HTML text and every asset and
+  resume reference against pre-refactor Git HEAD; all are identical. No image
+  or resume bytes changed. The accepted resume SHA-256 remains
+  `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`.
+  This is a preservation check, not a new project-evidence or resume audit.
+- **Budgets:** Local HTML/CSS/JS are 49,218 / 20,901 / 3,628 bytes before
+  transport compression. The unchanged desktop/mobile hero plus profile
+  payloads are 99,466 / 189,498 bytes. All project assets remain below 250 KB;
+  no runtime framework, web font, third-party request, or package manager was
+  introduced.
+- **Synchronization:** Website/resume shared facts are preserved; LinkedIn and
+  other-platform application states remain as previously recorded and are not
+  newly verified. The pre-existing job-search edits in the career register are
+  outside this commit; only the new website-only scope decision is included.
+- **Publication:** Release `20261008-01` is locally verified and ready for
+  direct publication. Confirm the Pages deployment and live desktop/mobile
+  result before marking this checkpoint published.
+
 
 ## 2. Evidence required for each role family
 
