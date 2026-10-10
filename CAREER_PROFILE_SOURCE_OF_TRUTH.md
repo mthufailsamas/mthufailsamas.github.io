@@ -1,6 +1,6 @@
 # Career Profile Source of Truth
 
-Last updated: 2026-09-13
+Last updated: 2026-10-10
 
 ## Purpose
 
@@ -200,8 +200,8 @@ Before creating or revising a profile on another job site:
 
 | Surface | State | Note |
 | --- | --- | --- |
-| Resume | Synced | Final content was accepted on 2026-09-09; project evidence remains authoritative for technical claims. |
-| Portfolio website | Synced | Current public state is recorded in `PROJECT.md`; re-verify before any new live claim. |
+| Resume | Pending update | Existing project facts and metrics agree; manual wording changes remain for internal version/gate labels, policy-retrieval readability, and synthetic-test context. The accepted PDF is unchanged. S2 entry details are still pending. |
+| Portfolio website | Broader | Website-only corrections approved on 2026-10-10; release and origin-verification state are recorded in `PROJECT.md`. Shared metrics remain unchanged; full cross-channel completion awaits the user's resume revision and S2 details. |
 | LinkedIn headline | Pending update | Approved two-line-oriented wording exists; live application is unverified. |
 | LinkedIn cover | Pending update | Final local asset exists; live upload is unverified. |
 | LinkedIn About | Pending update | Format is locked; exact wording is awaiting user approval. |
@@ -224,3 +224,4 @@ Before creating or revising a profile on another job site:
 | 2026-10-08 | Portfolio website | Add a little lightweight animation and keep the design distinctive rather than generic/template-like. Use brief, restrained motion tied to the site's data/signal identity; retain visible content, reduced-motion support, and sharp visuals. Additional technology is permitted when justified, not required. | Approved motion and design scope |
 | 2026-10-08 | Portfolio website: Thyroid visual | Replace the Information Gain image with a confusion matrix from the completed classification run. Preserve the accepted metrics, native Full HD quality, and other project visuals. Inspection of public main `51d6ff789d9a20c8f5a5710c117f9f89b0a71f7f`, both historical notebook revisions, and local ignored outputs found no saved matrix or out-of-fold predictions. Do not infer classification counts from rounded metrics or rerun the expensive search merely for this visual; retain the existing image until an original aggregate matrix, executed notebook output, or local prediction artifact is supplied and verified. | Approved replacement; pending original result artifact |
 | 2026-10-08 | Portfolio website copy; future career-profile writing | Remove internal-process narration and redundant copy; replace formulaic AI-sounding language with natural professional American English. Keep facts, metrics, technical deliverable identifiers, and material evaluation boundaries intact. Apply now to the website and its public overview; the resume and live LinkedIn remain unchanged. | Locked; website applied and verified in release `20261008-04` |
+| 2026-10-10 | Portfolio corrections; resume ownership | Correct the website findings from the full audit: current social-preview identity, embedded Retail version label, explicit original-publication versus extended-experiment scope, and canonical XGBoost repository link. Preserve genuine metrics and existing visuals. The user will edit the resume manually; provide exact wording changes and leave the downloadable PDF unchanged. S2 and the Thyroid confusion-matrix replacement still await their missing details/artifact. | Approved; website implementation tracked in PROJECT.md; manual resume update pending |

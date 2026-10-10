@@ -17,8 +17,9 @@ The featured case studies cover:
   local FastAPI delivery, Docker packaging, and contract tests;
 - AI Service Request Automation with FastAPI, n8n, PostgreSQL/pgvector, local
   Ollama models, human review, downstream delivery, and scheduled recovery;
-- next-day Rainfall Forecasting with 2-stage and direct Tweedie XGBoost,
-  Grid Search, and annual TimeSeriesSplit evaluation;
+- an extended next-day Rainfall Forecasting experiment with 2-stage and direct
+  Tweedie XGBoost, Grid Search, and annual TimeSeriesSplit evaluation, linked
+  separately to its original peer-reviewed study;
 - Thyroid Cancer Recurrence Classification with Python, XGBoost,
   scikit-learn, Information Gain, and Grid Search;
 - Rainfall Forecasting with TensorFlow/Keras BiLSTM and Grid Search; and
@@ -118,11 +119,13 @@ Run the development-only checks with Node.js 18.17 or newer:
 node --test tests/site.test.cjs
 ```
 
-The dependency-free suite checks release alignment, local references, image
+The dependency-free suite checks release alignment, social-preview metadata,
+publication-scope wording, local references, image
 attributes, asset budgets and orphans, menu state, filter numbering, and
 fail-open release handling, one-shot motion cleanup, API fallbacks, and changes
 to reduced-motion preferences. It does not replace browser testing: before
-publishing, inspect desktop and narrow mobile layouts, keyboard navigation,
+publishing, inspect the actual text and numbers inside social/project images,
+desktop and narrow mobile layouts, keyboard navigation,
 project details, full-size visuals, and the no-JavaScript fallback. Change
 the `860px` navigation breakpoint in both CSS and JavaScript together.
 

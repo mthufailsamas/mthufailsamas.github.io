@@ -57,6 +57,20 @@ test("local references, anchor targets, image attributes, and budgets", () => {
   }
 });
 
+test("social metadata resolves one current local image and consistent positioning", () => {
+  const get = (name) => html.match(new RegExp(`<meta (?:property|name)="${name}" content="([^"]+)"`))[1];
+  const image = new URL(get("og:image"));
+  assert.equal(image.origin, "https://mthufailsamas.github.io");
+  assert.equal(image.pathname, "/assets/social-preview.jpg");
+  assert.equal(get("twitter:image"), image.href);
+  assert.ok(fs.existsSync(path.join(root, image.pathname.slice(1))));
+  assert.match(image.searchParams.get("v"), /^\d{8}[a-z]$/);
+  assert.equal(get("og:image:type"), "image/jpeg");
+  for (const name of ["og:title", "twitter:title"]) assert.match(get(name), /Data and AI Professional/);
+  assert.match(html, /property="og:image:alt"\s+content="[^"]*Data and AI Professional/);
+  assert.match(html, /name="twitter:image:alt"\s+content="[^"]*Data and AI Professional/);
+});
+
 test("public copy avoids internal revision narration and preserves result context", () => {
   const main = html.match(/<main\b[\s\S]*?<\/main>/)[0];
   for (const phrase of [/\bV[12]\b/, /frozen final gate/i, /all services and models cleaned up/i,
@@ -88,6 +102,9 @@ test("public copy avoids internal revision narration and preserves result contex
   assert.match(cards[2], /held out from development/);
   assert.match(cards[2], /fictional/);
   assert.match(cards[3], /final year previously used in analysis/);
+  assert.match(cards[3], /results below describe this extended experiment/);
+  assert.match(cards[3], /Read original study/);
+  assert.match(cards[3], /github\.com\/mthufailsamas\/xgboost-rainfall-forecasting/);
   assert.match(cards[4], /same non-nested cross-validation/);
   assert.match(cards[5], /same chronological holdout/);
   assert.match(cards[6], /same 12-month walk-forward period/);

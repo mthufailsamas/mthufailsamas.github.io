@@ -1,6 +1,6 @@
 # Portfolio Website Source of Truth
 
-Last updated: 2026-10-08
+Last updated: 2026-10-10
 
 ## Purpose and authority
 
@@ -77,12 +77,12 @@ Do not call the overall portfolio synchronized while any overlapping fact is
 | Shared record | Current state | Required control or action |
 | --- | --- | --- |
 | Final resume artifact | Synced | Published through all 3 versioned download links; the accepted local and live PDF share SHA-256 `8FB2E0D21CB736D9217960AD838028C664171E022C41D9F0F48C8D18B3CF6D0C`. |
-| Resume content | Canonical | Preserve the approved identity, chronology, capabilities, project results, publication, certification, links, and evidence boundaries recorded in the final PDF. |
-| Identity and positioning | Synced | The local release uses the approved Data and AI Professional positioning and Surabaya, East Java, Indonesia location. |
+| Resume content | Pending resume update | Preserve all approved facts and metrics. The 2026-10-10 audit identified internal version/gate wording and dense retrieval/test labels for manual editing; the user owns the revision and the PDF remains unchanged. |
+| Identity and positioning | Synced | Visible copy, metadata, and the replacement social image use Data and AI Professional; name and Surabaya, East Java, Indonesia remain unchanged. LinkedIn live application is still unverified. |
 | Experience and chronology | Synced | All 4 roles preserve the approved employers, dates, responsibilities, scale, and shared BiLSTM results; the website uses reverse chronology by role end date. |
 | Skills and capabilities | Synced | All resume capability families and named tools are represented without adding unsupported technologies. |
 | Shared project facts and metrics | Synced | The 3 resume projects and all overlapping project metrics preserve the same evaluation boundaries; the website adds 4 evidence-backed projects and deeper limitations. |
-| Education, publication, and certification | Synced | Degree, institution, dates, GPA, accelerated completion, thesis focus, publication record, and BNSP validity match the approved resume. |
+| Education, publication, and certification | Pending resume update | Existing S1, publication bibliographic record, and BNSP validity match. Ongoing S2 is user-attested but institution, official degree wording, and dates are pending for both surfaces. The website distinguishes the original paper from its later experiment. |
 | Website content publication | Published | Release `20260909-02` was published from commit `e88ef71566c52562684a0984cbbd963c94348936`; Pages run `34332482575` succeeded and live desktop/mobile verification passed. |
 | Retail visual restoration | Published | Release `20260909-03` was published from commit `a686212357ccac22619082d2eaaaaec653ebd6de`; Pages run `34353389509` succeeded and live desktop/mobile verification passed. |
 | Retail visual composition alignment | Published | Release `20260909-04` was published from commit `00e9a922bef313602272563afffb0c16e6afdabc`; Pages run `34356927342` succeeded and live desktop/mobile plus full-size click verification passed. |
@@ -796,6 +796,62 @@ live byte count and SHA-256 matched the local final asset.
   removed, and the preview server was stopped. Pre-existing job-search edits in
   the career register remain uncommitted and untouched.
 
+### 2026-10-10 audit corrections and manual resume handoff
+
+- **Scope:** User-authorized website correction after the read-only full audit.
+  Keep the downloadable PDF unchanged; provide manual resume substitutions.
+  S2 details and the original Thyroid confusion matrix remain pending. ARIMA's
+  tight title margin is optional polish, not a factual defect; its accepted
+  historical plot remains unchanged in this focused correction.
+- **Social visual:** Replace the obsolete Data Scientist artwork with a
+  1200x630 JPEG matching the navy/teal/coral website. Exact visible copy:
+  `M. Thufail`, `Alwannabil Samas`, `Data and AI Professional`, and
+  `Machine Learning, Data Systems and Applied AI`. No URL, extra credential,
+  metric, or capability is introduced. Both crawler image URLs and alt text
+  agree and request query version `20261010a`.
+- **Retail visual:** Replace only `V2.0.0 Artifact` with `Saved Model` in the
+  approved diagram. The built-in imagegen edit supplied the replacement pill;
+  export composites only that area onto the original 1920x1080 artwork, keeping
+  the original composition and every metric. The WebP is 127,406 bytes. The
+  preview is 138,058 bytes; no runtime dependency or image request is added.
+  Prompt intent: replace only the Retail pill while preserving every other
+  label/result; create a navy/teal/coral preview with the exact copy above,
+  aligned sans-serif typography, flowing data signals, and no additional text.
+- **XGBoost scope:** The project's current contract explicitly separates its
+  frozen journal reference from the extended experiment. The journal abstract
+  at `https://ejurnal.itenas.ac.id/index.php/mindjournal/article/view/14810`
+  reports MAAPE 0.9152 and RMSE 11.9566; the current experiment records RMSE
+  9.2521 mm. Contribution copy names the extension, the DOI link reads `Read
+  original study`, and the repository uses the canonical `forecasting` URL.
+  Existing experiment scores, reuse boundary, sparse-rain results, and all
+  other project metrics remain unchanged.
+- **Resume handoff:** Replace `In the frozen 40-case acceptance gate` with
+  `In a controlled local evaluation of 40 cases`; `The selected V2 XGBoost
+  model` with `The selected XGBoost model`; and `in the completed V1 evaluation`
+  with `in non-nested cross-validation`. Improve `retrieval Recall@3` to
+  `top-3 policy retrieval (Recall@3)` and `passed 78/78 checks` to `passed all
+  78 synthetic contract checks`. Preserve every result and its evaluation
+  meaning. These are recommended manual substitutions, not an accepted new PDF.
+- **Verification:** The full 2026-10-10 audit covered the seven source-project
+  claims, public/local assets, two rendered resume pages and embedded fonts,
+  filters/details/navigation, eight responsive widths, keyboard access, and
+  source budgets. This correction adds a regression check for consistent
+  crawler images/local-file resolution and explicit XGBoost publication scope.
+  All 12 tests pass. Pixel review confirms the exported preview copy and Retail
+  numbers; browser and deployment gates are tracked below.
+- **Release:** `20261010-01`; changed images use `20261010a`; CSS/JS and PDF
+  versions are unchanged; sitemap lastmod is `2026-10-10`.
+- **Local browser QA:** Desktop 1440x1000, mobile 390x844 and 320x844, and
+  720-pixel reflow show no horizontal overflow. Revised XGBoost copy and
+  original-study link are readable; Retail decodes at 1920x1080 with its
+  original composition. Academic/Independent filters and native details work;
+  the inspected browser log has no warning/error. All 12 regression tests pass,
+  and the downloadable resume hash is unchanged. Temporary export scripts are
+  removed before commit.
+- **Publication:** Approved for commit/push after local QA; live origin checks
+  are pending. WhatsApp/LinkedIn cache refresh is separate from origin
+  verification and has not been claimed.
+
 ## 2. Evidence required for each role family
 
 ### Data Analysis
@@ -944,7 +1000,7 @@ Copy this block for each audited project. Do not remove required fields.
 - **Supporting role families:** Data Science
 - **Verified metrics:** The active V2 configuration was selected from 3 Ridge and 27 XGBoost configurations evaluated across 4 predeclared chronological folds. It recorded mean fold RMSLE 0.524617 and mean fold WAPE 15.2366%, followed by protected internal-test RMSLE 0.407651, WAPE 14.6689%, and signed bias -0.2556%. The versioned artifact generated 28,512 forecasts across 1,782 store-family series with exact notebook, fresh-process batch, local FastAPI, and Docker parity. All 78 synthetic checks passed locally and in GitHub Actions.
 - **Public repository:** https://github.com/mthufailsamas/retail-sales-forecasting-ai-engineering
-- **Visual presentation:** Release `20260909-06` preserves the established 5-stage independent-project workflow composition as a 162,712-byte native 1920x1080 WebP. Its visible V2 evidence covers 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, the V2.0.0 artifact, batch/API/Docker parity, protected internal-test WAPE 14.67%, RMSLE 0.4077, signed bias -0.26%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
+- **Visual presentation:** Release `20261010-01` preserves the established 5-stage composition as a 127,406-byte 1920x1080 WebP. Only the internal version pill changes to `Saved Model`; the diagram preserves 3 Ridge and 27 XGBoost candidates, 4-fold mean RMSLE selection, batch/API/Docker parity, internal-test WAPE 14.67%, RMSLE 0.4077, signed bias -0.26%, the 28,512-row 16-day contract across 1,782 store-family series, and 78/78 checks.
 - **Limitations:** The competition data covers 2013-2017 and supports product-family rather than SKU forecasting. The source does not provide inventory, supplier, cost, margin, or capacity inputs. The 4-fold aggregate gives equal weight to predeclared operating scenarios rather than estimating their natural frequency. Runtime verification is local and containerized; no external deployment or live business impact has been demonstrated.
 - **Approved Project Output wording:** Delivers 28,512 forecasts across 1,782 store-family series for the next 16 days, with matching results from batch, API, and container execution.
 - **Approved Evidence & Scope wording:** Model selection used 4 fixed historical windows from 2013–2017 competition data, followed by a separate internal test. Delivery was verified locally; business impact remains unmeasured.
@@ -993,7 +1049,8 @@ Copy this block for each audited project. Do not remove required fields.
 - **Primary role family:** Data Science
 - **Supporting role families:** None.
 - **Verified metrics:** The 2026-08-27 canonical Run All completed all 14 code cells without notebook errors and produced 47 local evidence artifacts after 5,184 temporal CV fits. Development OOF evidence selected a 40% 2-stage and 60% direct Tweedie ensemble with a 0.50 wet threshold. Across 308 observed targets in the reused 366-day final calendar period, the ensemble recorded RMSE 9.2521 mm, MAE 4.1061 mm, total bias 5.8982%, R-squared 0.2370, wet-day balanced accuracy 0.7679, wet-day F1 0.6897, BMKG intensity accuracy 75.0%, and BMKG Macro-F1 0.4429. Correct-category counts were 175/206 dry, 52/84 light, 4/15 moderate, and 0/3 heavy; the final period contained no observed very-heavy target.
-- **Public repository:** https://github.com/mthufailsamas/xgboost-rainfall-prediction
+- **Public repository:** https://github.com/mthufailsamas/xgboost-rainfall-forecasting
+- **Publication scope — clarified 2026-10-10:** The linked article reports the original study (MAAPE 0.9152, RMSE 11.9566). The current card's 23-feature ensemble and RMSE 9.2521 mm belong to its later extended experiment. The contribution and publication link explicitly distinguish these evidence populations; no result is removed or reassigned.
 - **Visual asset source:** Project-native selected-ensemble actual-versus-forecast evidence rendered locally from `final_predictions.csv` as a `1920x1080` WebP. The visual contains no third-party image or runtime request.
 - **Visual factual inventory:** Centered title `XGBoost Rainfall Forecasting`; subtitle `Actual and Forecast Rainfall across the Reused Final Calendar Period`; legend labels `Actual Rainfall` and `Daily XGBoost Forecast`; footer values `366 Daily Forecasts`, `308 Observed Targets`, `RMSE 9.2521 mm`, and `Wet/Dry Balanced Accuracy 0.7679`. The time-series lines and every displayed value trace to `final_predictions.csv` and `final_comparison.csv` from the canonical output directory.
 - **Limitations:** The original observations are private and are not redistributed. The 4-year source represents 1 observation context, 58 of 366 final targets are unknown, and only 2 full-year development checks are available. The final year had informed prior analysis and is reused temporal evidence. Moderate and heavy rainfall remain weak: 4/15 moderate and 0/3 heavy dates received the correct BMKG category. The experiment does not establish regional transfer, warning capability, deployment, or measured salt-production impact.
@@ -1057,10 +1114,11 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-No project claim is waiting in the audit queue. Release `20261008-04` preserves
-the current canonical facts with the professional public-copy revision recorded
-above. Thyroid's visual replacement remains pending an original result artifact;
-its accepted metrics and existing image are unchanged.
+The 2026-10-10 audit corrections are approved for website release `20261010-01`;
+publication verification is tracked in the checkpoint above. Shared metrics are
+unchanged. Resume wording awaits the user's manual update, ongoing S2 awaits
+institution/program/date details, and Thyroid's visual replacement awaits an
+original result artifact; its accepted metrics and existing image are unchanged.
 
 ## 5. Evidence-first portfolio rules
 

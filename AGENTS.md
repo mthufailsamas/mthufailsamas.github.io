@@ -446,6 +446,23 @@ Use progressive verification and do not rerun an unchanged expensive check.
 - Do not expose personal data beyond the contact information the user has
   explicitly approved for the public portfolio and resume.
 
+## Social Preview and Visual Copy Verification
+
+Treat social-preview artwork and text embedded in project images as public
+career copy, not decorative exceptions. Inspect the actual exported pixels for
+identity, positioning, internal revision labels, every numeric result, and
+readability. HTML text scans cannot verify text inside a raster image.
+
+For a changed preview, verify that Open Graph and Twitter use the same locally
+bundled, versioned image; the image's real dimensions and format match metadata;
+and its visible name, role, and capabilities match the canonical record. A
+successful deployment cannot force WhatsApp or LinkedIn to refresh an already
+cached preview; distinguish verified origin delivery from platform cache state.
+
+Keep publication-original findings distinct from later project experiments.
+Link the original study explicitly when the displayed methods or scores belong
+to a later extension; preserve both sets of genuine results in their own scope.
+
 ## Self-Review and Definition of Done
 
 Before finishing, confirm:
