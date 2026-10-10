@@ -848,8 +848,13 @@ live byte count and SHA-256 matched the local final asset.
   the inspected browser log has no warning/error. All 12 regression tests pass,
   and the downloadable resume hash is unchanged. Temporary export scripts are
   removed before commit.
-- **Publication:** Approved for commit/push after local QA; live origin checks
-  are pending. WhatsApp/LinkedIn cache refresh is separate from origin
+- **Publication:** Published release `20261010-01` from commit
+  `574d02ee2cefdbea17318051bae74172c76fad9c`. GitHub Pages run `38034004853`
+  succeeded. Live HTML, release marker, sitemap, social-preview JPEG, and Retail
+  WebP returned HTTP 200 and matched local SHA-256 values. Live desktop
+  1440x1000 and mobile 390x844 checks confirmed the revised copy and links,
+  working project filters/details, the native 1920x1080 Retail image, and no
+  horizontal overflow. WhatsApp/LinkedIn cache refresh is separate from origin
   verification and has not been claimed.
 
 ## 2. Evidence required for each role family
@@ -1114,7 +1119,7 @@ Copy this block for each audited project. Do not remove required fields.
 
 ### Registry audit queue
 
-The 2026-10-10 audit corrections are approved for website release `20261010-01`;
+The 2026-10-10 audit corrections are published in website release `20261010-01`;
 publication verification is tracked in the checkpoint above. Shared metrics are
 unchanged. Resume wording awaits the user's manual update, ongoing S2 awaits
 institution/program/date details, and Thyroid's visual replacement awaits an
